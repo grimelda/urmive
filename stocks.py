@@ -1,54 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 29 11:59:11 2019
-
-@author: jvanderzaag
-"""
+# Created on Thu Aug 29 11:59:11 2019
+# @author: jvanderzaag
 
 import pandas as pd 
+import numpy as np
 import functions as func
 import time; start = time.time()
 
-DATA = {"cbs_pv" : "Personenauto_s__voertuigkenmerken__regio_s__1_januari_29082019_133946.csv",
-        "cbs_bv" : "Bedrijfsvoertuigen__voertuigkenmerken__regio_s__1_januari_29082019_134509.csv",
-        "cbs_mf" : "Motorfietsen__voertuigkenmerken__regio_s__1_januari__29082019_120413.csv",
-        "cbs_bf" : "Bromfietsen__soort_voertuig__brandstof__bouwjaar__1_januari_29082019_121054.csv",
-        "cbs_lv" : "Luchtvloot__omvang_en_samenstelling__31_december_29082019_120654.csv",
-        }
 
-MAPS = {"lv_weight" : "cbs_ilt_mapping.tsv",
-        }
+#%%
 
+DATA = {
+        'lv_x' : 'LV_x.csv',        # aircraft, count
+        'lv_kg' : 'LV_kg.csv',      # aircraft, weight
+        'sv_x_gt' : 'SV_x_gt.csv',  # seagoing vessel, count, gross tonnage 
+        'iv_x_gt' : 'IV_x_gt.csv',  # inland vessel, count, gross tonnage 
+        "pv_x_kg" : "PV_x_kg.csv",  # personal vehicles, count, weight class
+        'pv_x_bs' : 'PV_x_bs.csv',  # personal vehicles, count, fuel type
+        "bv_x_kg" : "BV_x_kg.csv",  # company vehilces, count, weight class
+        "bv_x_bs" : "BV_x_bs.csv",  # company vehilces, count, fuel type
+        "mf_x_cc" : "MF_x_cc.csv",  # motorbikes, count, cc
+        "bf_x_bs" : "BF_x_bs.csv",  # mopeds, count, fuel type
+        }
 
 db = dict.fromkeys(list(DATA.keys()))
 for key in list(DATA.keys()):
     db[key] = pd.read_csv(str("data/"+DATA[key]),sep=";")
-    
 
+db = func.CleanDataframes(db)    
+db = func.AddVehicleTypeColumn(db)
 
-db["cbs_pv"]['Vtype'] = (pd.Series(['Personenauto:']*len(db["cbs_pv"])) 
-                         + db["cbs_pv"]['Onderwerp']
-                         )
-db["cbs_bv"]['Vtype'] = (db["cbs_bv"]['Voertuigtype'] 
-                         + pd.Series([':']*len(db["cbs_bv"])) 
-                         + db["cbs_pv"]['Onderwerp']
-                         )
-db["cbs_mf"]['Vtype'] = (pd.Series(['Motorfiets:']*len(db["cbs_mf"])) 
-                         + db["cbs_mf"]['Onderwerp']
-                         )
-db["cbs_bf"]['Vtype'] = (pd.Series(['Bromfiets:']*len(db["cbs_bf"])) 
-                         + db["cbs_bf"]['Onderwerp']
-                         )
-db["cbs_lv"]['Vtype'] = (pd.Series(['Luchtvloot:']*len(db["cbs_lv"])) 
-                         + db["cbs_lv"]['Onderwerp']
-                         )
+Vtypes = func.MakeVehicleTypeList(DATA, db)
 
-Vtypes = []
-for key in list(DATA.keys()):
-    newlist = list(db[key]['Vtype'])
-    Vtypes = Vtypes + newlist
-Vtypes = list(set(Vtypes))
 
   
 print(round(time.time()-start,5),'s have elapsed, all is good!'); del start
