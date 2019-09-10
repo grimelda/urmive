@@ -320,6 +320,46 @@ def PlotMaterialVehicle(mat,
                                               ))
     fig.show()
     
+    
+def PlotVehicleMaterial(mat, 
+                        exclude=[None],
+                        include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]):
+
+    mat = mat[~(mat['Vehicle'].isin(exclude))]
+    mat = mat[mat['Vehicle'].isin(include)]
+        
+    ### combine masses
+    mat = mat.groupby(['Year','Vehicle','Material']).sum().reset_index(drop=False)
+    
+    ### allow sorting by material and vehicle in plot
+    mat['MatSum'] = mat['Material'].map(dict(mat.groupby(by='Material')
+                                                .sum()['Mass']
+                                                .sort_values(ascending=False)))
+    mat['VehSum'] = mat['Vehicle'].map(dict(mat[mat['Year']==2017].groupby(by='Vehicle')
+                                               .sum()['Mass']
+                                               .sort_values(ascending=False)))
+    mat = mat.sort_values(['VehSum', 'MatSum'], ascending=['True', 'True'])
+    
+    '''
+    ### allow sorting by material and vehicle in plot
+    mat['VehSum'] = mat['Vehicle'].map(dict(mat[mat['Year']==2017].groupby(by='Vehicle')
+                                                .sum()['Mass']
+                                                .sort_values(ascending=False)))
+    mat = mat.sort_values('VehSum', ascending=True)
+    '''
+    
+    ### plot the shit
+    fig = px.area(mat, x = 'Year', y = 'Mass', 
+                  color = 'Vehicle', 
+                  line_group='Material',
+                  ).update_layout(legend=dict(
+                                              y=0.5, 
+                                              traceorder='reversed', 
+                                              font_size=10,
+                                              ))
+    fig.show()
+
+    
 
 #%% simple defs
 

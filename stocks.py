@@ -36,7 +36,7 @@ mat = func.CalcMass(dbx, dbm)
 #%% Plotting
     
 func.PlotMaterialVehicle(mat) #, exclude=['bicycle'], include=['A330','B747']
-                         
+func.PlotVehicleMaterial(mat) #, exclude=['bicycle'], include=['A330','B747']
 func.PlotVehicleMass(mat)#, exclude=['bicycle'], include=['A330','B747']
     
 #%%
