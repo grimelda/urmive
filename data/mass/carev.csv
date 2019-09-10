@@ -1,0 +1,125 @@
+Flowid,Ecoinvent Flow,Partmass,Unit,Part,Material,Unitmass
+-,Avg EV,1558,kilogram,,,
+-,Glider,0.913,kilogram,Avg EV,,
+-,EV Powertrain,0.0874,kilogram,,,
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.164,kilogram,Car Glider,Steel,185.7560322
+[G1292],"printed wiring board, mounted mainboard, desktop computer, Pb free_market for printed wiring board, mounted mainboard, desktop computer, Pb free[GLO]",0.00253,kilogram,-,,
+[G1240],"polypropylene, granulate_market for polypropylene, granulate[GLO]",0.0633,kilogram,Car Glider,Polypropylene,71.69729778
+[G2509],"polyurethane, flexible foam_market for polyurethane, flexible foam[GLO]",0.0349,kilogram,Car Glider,Polyurethane,40.83026794
+[G2651],"polyvinylchloride, suspension polymerised_market for polyvinylchloride, suspension polymerised[GLO]",0.0124,kilogram,Car Glider,Polyvinylchloride,14.5070293
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.00477,kilogram,Car Glider,Aluminium,5.580526593
+[G3102],"polyethylene, low density, granulate_market for polyethylene, low density, granulate[GLO]",0.0186,kilogram,Car Glider,Polyethylene,21.76054395
+[G3496],magnesium_market for magnesium[GLO],0.000851,kilogram,Car Glider,Magnesium,0.9956033817
+[G3787],lead_market for lead[GLO],0.00298,kilogram,Car Glider,Lead,3.486366718
+[G4490],acrylonitrile-butadiene-styrene copolymer_market for acrylonitrile-butadiene-styrene copolymer[GLO],0.00559,kilogram,Car Glider,ABS,6.539862401
+[G4627],"glass fibre reinforced plastic, polyester resin, hand lay-up_market for glass fibre reinforced plastic, polyester resin, hand lay-up[GLO]",0.000533,kilogram,Car Glider,GFRP,0.6235682755
+[G5916],reinforcing steel_market for reinforcing steel[GLO],0.806,kilogram,Car Glider,Steel,942.9569044
+[G5949],copper_market for copper[GLO],0.00847,kilogram,Car Glider,Copper,9.909236948
+[G6207],nylon 6_market for nylon 6[GLO],0.00372,kilogram,Car Glider,Nylon,4.352108789
+[G8942],"polyethylene terephthalate, granulate, amorphous_market for polyethylene terephthalate, granulate, amorphous[GLO]",0.00186,kilogram,Car Glider,Polyethylene,2.176054395
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.00135,kilogram,Car Glider,Aluminium,1.579394319
+[G9685],zinc_market for zinc[GLO],0.0017,kilogram,Car Glider,Zinc,1.98886692
+[G11853],synthetic rubber_market for synthetic rubber[GLO],0.0565,kilogram,Car Glider,Rubber,66.10057704
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",0.0258,kilogram,Car Glider,Steel,30.18398031
+[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",0.04,kilogram,Car Glider,Glass,46.7968687
+[G437],"cable, three-conductor cable_market for cable, three-conductor cable[GLO]",0.0374,meter,EV Powertrain,,
+[G4202],"power distribution unit, for electric passenger car_market for power distribution unit, for electric passenger car[GLO]",0.0486,kilogram,EV Powertrain,,
+[G4854],"inverter, for electric passenger car_market for inverter, for electric passenger car[GLO]",0.118,kilogram,EV Powertrain,,
+[G9195],"converter, for electric passenger car_market for converter, for electric passenger car[GLO]",0.0561,kilogram,EV Powertrain,,
+[G11677],"charger, electric passenger car_market for charger, electric passenger car[GLO]",0.0773,kilogram,EV Powertrain,,
+[G12479],"electric motor, electric passenger car_market for electric motor, electric passenger car[GLO]",0.661,kilogram,EV Powertrain,,
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",0.548,kilogram,Cable,Polyethylene,2.984828864
+[G5949],copper_market for copper[GLO],0.492,kilogram,Cable,Copper,2.679809856
+[G110],brass_market for brass[RoW],0.077,kilogram,Power distribution unit,Brass,0.3921400622
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.0795,kilogram,Power distribution unit,Steel,0.4048718824
+[G4640],brass_market for brass[CH],0.000387,kilogram,Power distribution unit,Brass,0.001970885767
+[G5605],aluminium oxide_market for aluminium oxide[GLO],0.0298,kilogram,Power distribution unit,Aluminium,0.1517632968
+[G5949],copper_market for copper[GLO],0.227,kilogram,Power distribution unit,Copper,1.156049274
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.577,kilogram,Power distribution unit,Aluminium,2.938504102
+[G10871],"printed wiring board, surface mounted, unspecified, Pb free_market for printed wiring board, surface mounted, unspecified, Pb free[GLO]",0.12,kilogram,Power distribution unit,,
+[G14870],"polystyrene, high impact_market for polystyrene, high impact[GLO]",0.0153,kilogram,Power distribution unit,Polystyrene,0.07791873962
+[G10871],Aluminium,0.08159513015,kilogram,PCB,Aluminium,0.7392861549
+[G10871],Barite,0.06628653727,kilogram,PCB,Barite,0.6005838727
+[G10871],Brass,0.01492381205,kilogram,PCB,Brass,0.1352160062
+[G10871],Chromium,0.00009884425919,kilogram,PCB,Chromium,0.0008955705098
+[G10871],Copper,0.07416302259,kilogram,PCB,Copper,0.6719481384
+[G10871],GFRP,0.2078097764,kilogram,PCB,GFRP,1.882843869
+[G10871],Glass,0.005953071036,kilogram,PCB,Glass,0.0539373243
+[G10871],Gold,0.007788992042,kilogram,PCB,Gold,0.07057153983
+[G10871],Iron,0.004718129455,kilogram,PCB,Iron,0.04274823481
+[G10871],Lead,0.02663159902,kilogram,PCB,Lead,0.2412934742
+[G10871],Molybdenum,0.002570291777,kilogram,PCB,Molybdenum,0.0232879232
+[G10871],Nickel,0.0211256838,kilogram,PCB,Nickel,0.1914075695
+[G10871],Nylon,0.05844259189,kilogram,PCB,Nylon,0.5295144325
+[G10871],Palladium,0.000264619317,kilogram,PCB,Palladium,0.00239756217
+[G10871],Selenium,0.07085714286,kilogram,PCB,Selenium,0.6419954793
+[G10871],Silica,0.3273562738,kilogram,PCB,Silica,2.965985353
+[G10871],Silicon,0.0003000089296,kilogram,PCB,Silicon,0.002718206927
+[G10871],Silver,0.009296932877,kilogram,PCB,Silver,0.08423411723
+[G10871],Tin,0.04797907766,kilogram,PCB,Tin,0.4347105982
+[G10871],Titanium,0.03415725991,kilogram,PCB,Titanium,0.3094791233
+[G10871],Zinc,0.00495596817,kilogram,PCB,Zinc,0.04490315347
+[G110],brass_market for brass[RoW],0.0342,kilogram,Inverter,Brass,0.5495244235
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.0426,kilogram,Inverter,Steel,0.6844953346
+[G3102],"polyethylene, low density, granulate_market for polyethylene, low density, granulate[GLO]",0.00255,kilogram,Inverter,Polyethylene,0.04097331228
+[G4640],brass_market for brass[CH],0.000172,kilogram,Inverter,Brass,0.002763690083
+[G5605],aluminium oxide_market for aluminium oxide[GLO],0.00298,kilogram,Inverter,Aluminium,0.04788253749
+[G5735],"resistor, auxilliaries and energy use_market for resistor, auxilliaries and energy use[GLO]",0.00295,kilogram,Inverter,,
+[G5949],copper_market for copper[GLO],0.153,kilogram,Inverter,Copper,2.458398737
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.664,kilogram,Inverter,Aluminium,10.66912916
+[G9542],silicone product_market for silicone product[GLO],0.000425,kilogram,Inverter,Silicone,0.00682888538
+[G10037],ferrite_market for ferrite[GLO],0.032,kilogram,Inverter,Ferrous Alloys,0.5141748992
+[G10871],"printed wiring board, surface mounted, unspecified, Pb free_market for printed wiring board, surface mounted, unspecified, Pb free[GLO]",0.16855,kilogram,Inverter,,
+[G13750],"capacitor, film type, for through-hole mounting_market for capacitor, film type, for through-hole mounting[GLO]",0.0939,kilogram,Inverter,,
+[G14870],"polystyrene, high impact_market for polystyrene, high impact[GLO]",0.0211,kilogram,Inverter,Polystyrene,0.3390340742
+[G110],brass_market for brass[RoW],0.0134,kilogram,Converter,Brass,0.1023638344
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.05,kilogram,Converter,Steel,0.381954606
+[G4640],brass_market for brass[CH],6.73E-05,kilogram,Converter,Brass,5.14E-04
+[G5605],aluminium oxide_market for aluminium oxide[GLO],0.00561,kilogram,Converter,Aluminium,0.04285530679
+[G5735],"resistor, auxilliaries and energy use_market for resistor, auxilliaries and energy use[GLO]",0.00556,kilogram,Converter,,
+[G5949],copper_market for copper[GLO],0.12,kilogram,Converter,Copper,0.9166910544
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.598,kilogram,Converter,Aluminium,4.568177088
+[G9542],silicone product_market for silicone product[GLO],0.000559,kilogram,Converter,Silicone,0.004270252495
+[G10037],ferrite_market for ferrite[GLO],0.114,kilogram,Converter,Ferrite,0.8708565017
+[G10871],"printed wiring board, surface mounted, unspecified, Pb free_market for printed wiring board, surface mounted, unspecified, Pb free[GLO]",0.09506,kilogram,Converter,,
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",0.0264,kilogram,Converter,Steel,0.201672032
+[G13750],"capacitor, film type, for through-hole mounting_market for capacitor, film type, for through-hole mounting[GLO]",0.0302,kilogram,Converter,,
+[G13883],"polyester resin, unsaturated_market for polyester resin, unsaturated[GLO]",0.0244,kilogram,Converter,Polyester,0.1863938477
+[G14870],"polystyrene, high impact_market for polystyrene, high impact[GLO]",0.0055,kilogram,Converter,Polystyrene,0.04201500666
+[G110],brass_market for brass[RoW],0.016,kilogram,Charger,Brass,0.1684140666
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.0667,kilogram,Charger,Steel,0.70207614
+[G4640],brass_market for brass[CH],0.0000805,kilogram,Charger,Brass,0.0008473332724
+[G5605],aluminium oxide_market for aluminium oxide[GLO],0.000977,kilogram,Charger,Aluminium,0.01028378394
+[G5735],"resistor, auxilliaries and energy use_market for resistor, auxilliaries and energy use[GLO]",0.000968,kilogram,Charger,,
+[G5949],copper_market for copper[GLO],0.117,kilogram,Charger,Copper,1.231527862
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.615,kilogram,Charger,Aluminium,6.473415683
+[G9542],silicone product_market for silicone product[GLO],0.000652,kilogram,Charger,Silicone,0.006862873212
+[G10037],ferrite_market for ferrite[GLO],0.123,kilogram,Charger,Ferrite,1.294683137
+[G10871],"printed wiring board, surface mounted, unspecified, Pb free_market for printed wiring board, surface mounted, unspecified, Pb free[GLO]",0.083068,kilogram,Charger,,
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",0.0383,kilogram,Charger,Steel,0.4031411718
+[G13750],"capacitor, film type, for through-hole mounting_market for capacitor, film type, for through-hole mounting[GLO]",0.0556,kilogram,Charger,,
+[G13883],"polyester resin, unsaturated_market for polyester resin, unsaturated[GLO]",0.0271,kilogram,Charger,Polyester,0.2852513252
+[G14870],"polystyrene, high impact_market for polystyrene, high impact[GLO]",0.0144,kilogram,Charger,Polystyrene,0.1515726599
+[G110],brass_market for brass[RoW],0.00357,kilogram,EV electric motor,Brass,0.3213279931
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.676,kilogram,EV electric motor,Steel,60.84530065
+[G4640],brass_market for brass[CH],0.0000179,kilogram,EV electric motor,Brass,0.001611140357
+[G5605],aluminium oxide_market for aluminium oxide[GLO],0.00326,kilogram,EV electric motor,Aluminium,0.2934255623
+[G5735],"resistor, auxilliaries and energy use_market for resistor, auxilliaries and energy use[GLO]",0.00323,kilogram,EV electric motor,,
+[G5949],copper_market for copper[GLO],0.135,kilogram,EV electric motor,Copper,12.15105856
+[G6207],nylon 6_market for nylon 6[GLO],0.00476,kilogram,EV electric motor,Nylon,0.4284373241
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.242,kilogram,EV electric motor,Aluminium,21.78189757
+[G10041],"permanent magnet, for electric motor_market for permanent magnet, electric passenger car motor[GLO]",0.0374,kilogram,EV electric motor,,
+[G10871],"printed wiring board, surface mounted, unspecified, Pb free_market for printed wiring board, surface mounted, unspecified, Pb free[GLO]",0.003985,kilogram,EV electric motor,,
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",0.121,kilogram,EV electric motor,Steel,10.89094879
+[G13883],"polyester resin, unsaturated_market for polyester resin, unsaturated[GLO]",0.00208,kilogram,EV electric motor,Polyester,0.1872163097
+[G14870],"polystyrene, high impact_market for polystyrene, high impact[GLO]",0.000953,kilogram,EV electric motor,Polystyrene,0.08577747266
+[G1513],"anode, for metal electrolysis_market for anode, for metal electrolysis[GLO]",0.448,kilogram,Permanent magnet,,
+[G3339],pig iron_market for pig iron[GLO],2.11,kilogram,Permanent magnet,Iron,0.2114546762
+[G4985],"cathode, for aluminium electrolysis_market for cathode, for aluminium electrolysis[GLO]",0.0181,kilogram,Permanent magnet,,
+[G5222],neodymium oxide_market for neodymium oxide[GLO],0.908,kilogram,Permanent magnet,Neodymium Oxide,0.0909956616
+[G9088],boric oxide_market for boric oxide[GLO],0.0934,kilogram,Permanent magnet,Boric Oxide,0.009360126425
+[G10551],cryolite_market for cryolite[GLO],0.0016,kilogram,Permanent magnet,Cryolite,0.0001603447782
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.393,kilogram,Cathode,Aluminium,0.000712862819
+[G14004],lithium manganese oxide_market for lithium manganese oxide[GLO],0.623,kilogram,Cathode,LiMn2O4,0.001130059889
+[G1987],"graphite, battery grade_market for graphite, battery grade[GLO]",0.494,kilogram,Anode,Graphite,0.02217888971
+[G5949],copper_market for copper[GLO],0.524,kilogram,Anode,Copper,0.02352578585

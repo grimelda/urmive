@@ -1,0 +1,110 @@
+Class,Component,Part Name,Material,Simapro Material Name,Unitmass
+Engine,GE CF6- 80E1,GE CF6-80E1,Ferrous alloys,"Iron-nickel-chromium alloy, at plant/RER U",864
+Engine,GE CF6- 80E2,GE CF6-80E1,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",465
+Engine,GE CF6- 80E3,GE CF6-80E1,Composites,Composites,216
+Engine,GE CF6- 80E4,GE CF6-80E1,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",1310
+Engine,GE CF6- 80E5,GE CF6-80E1,Nickel,"Nickel, 99,5%, at plant/DE U",1474
+Engine,GE CF6- 80E6,GE CF6-80E1,Composites,"Chromium, at regional storage/RER U",447
+Engine,GE CF6- 80E7,GE CF6-80E1,Aluminium,"Molybdenite, at plant/GLO U",76
+Engine,GE CF6- 80E8,GE CF6-80E1,Iron,"Cast iron, at plant/GLO U",456
+Engine,GE CF6- 80E9,GE CF6-80E1,Niobium and tantalum,"Tantalum, powder, capacitor-grade, at regional storage/GLO",94
+Engine,Parts,inlet cowl,Composites,Composites,140.5
+Engine,Parts,inlet cowl,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",140.5
+Engine,Parts,fan cowl,Composites,Composites,62.5
+Engine,Parts,fan cowl,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",62.5
+Engine,Parts,thrust reverser,Composites,Composites,351.5
+Engine,Parts,thrust reverser,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",351.5
+Engine,Parts,core cowl,Composites,Composites,30.5
+Engine,Parts,core cowl,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",30.5
+Engine,Parts,primary nozzle,Composites,Composites,39.5
+Engine,Parts,primary nozzle,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",39.5
+Engine,Pylon,removable leading edge,Steel,"Reinforcing steel, at plant/RER U",2179
+Engine,Pylon,removable leading edge,Composites,Composites,192
+Engine,Pylon,removable leading edge,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",192
+Landing Gear,Main Landing Gear - Structure,main landing gear,Steel,"Reinforcing steel, at plant/RER U",3677.4
+Landing Gear,Main Landing Gear - Structure,main landing gear,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",204.3
+Landing Gear,Main Landing Gear - Structure,main landing gear,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",204.3
+Landing Gear,Main Landing Gear - Structure,MLG sidestray assembly inc. locking system,Steel,"Reinforcing steel, at plant/RER U",161
+Landing Gear,Main Landing Gear - Structure,MLG sidestray assembly inc. locking system,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",8.9
+Landing Gear,Main Landing Gear - Structure,MLG sidestray assembly inc. locking system,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",8.9
+Landing Gear,Main Landing Gear - Structure,MLG retraction actuator (wet),Steel,"Reinforcing steel, at plant/RER U",85
+Landing Gear,Main Landing Gear - Structure,MLG leg fairing,Composites,Composites,34.4
+Landing Gear,Main Landing Gear - Structure,MLG outer hinged doors,Composites,Composites,15.4
+Landing Gear,Main Landing Gear - Structure,MLG wheels (4 off) with tires brakes and fans,Steel,"Reinforcing steel, at plant/RER U",1573.4
+Landing Gear,Main Landing Gear - Structure,MLG wheels (4 off) with tires brakes and fans,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",87.4
+Landing Gear,Main Landing Gear - Structure,MLG wheels (4 off) with tires brakes and fans,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",87.4
+Landing Gear,Nose Landing Gear - Structure,nose landing gear,Steel,"Reinforcing steel, at plant/RER U",672.8
+Landing Gear,Nose Landing Gear - Structure,nose landing gear,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",37.4
+Landing Gear,Nose Landing Gear - Structure,nose landing gear,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",37.4
+Landing Gear,Nose Landing Gear - Structure,NLG telescopic strut,Steel,"Reinforcing steel, at plant/RER U",131.5
+Landing Gear,Nose Landing Gear - Structure,NLG telescopic strut,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",7.3
+Landing Gear,Nose Landing Gear - Structure,NLG telescopic strut,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",7.3
+Landing Gear,Nose Landing Gear - Structure,NLG retraction actuator,Steel,"Reinforcing steel, at plant/RER U",26.2
+Landing Gear,Nose Landing Gear - Structure,NLG leg fairing,Composites,Composites,5
+Landing Gear,Nose Landing Gear - Structure,NLG hinged doors forward (2 off),Composites,Composites,56
+Landing Gear,Nose Landing Gear - Structure,NLG wheels (2 off) with tires,Steel,"Reinforcing steel, at plant/RER U",189.7
+Landing Gear,Nose Landing Gear - Structure,NLG wheels (2 off) with tires,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",10.5
+Landing Gear,Nose Landing Gear - Structure,NLG wheels (2 off) with tires,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",10.5
+Fuselage,Fuselage - Cilinder,cilinder,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",22500
+Fuselage,Fuselage - Cilinder,cilinder,Composites,Composites,1250
+Fuselage,Fuselage - Cilinder,cilinder,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",1250
+Fuselage,Fuselage - Cilinder,belly fairing,Composites,Composites,125
+Fuselage,Fuselage - Cilinder,belly fairing,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",125
+Fuselage,Fuselage - Cilinder,radome,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",28
+Fuselage,Fuselage - Cabin Doors,cabin door FWD,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",131
+Fuselage,Fuselage - Cabin Doors,cabin door MID,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",124
+Fuselage,Fuselage - Cabin Doors,cabin door AFT,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",125
+Fuselage,Fuselage - Cabin Doors,emergency exit,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",68
+Fuselage,Fuselage - Cargo Doors,cargo door FWD,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",190
+Fuselage,Fuselage - Cargo Doors,cargo door AFT,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",201
+Fuselage,Fuselage - Cargo Doors,bulk cargo door,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",34
+Fuselage,Fuselage - Landing Gear Doors,main landing gear doors,Composites,Composites,326.8
+Fuselage,Fuselage - Landing Gear Doors,,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",17.2
+Fuselage,Fuselage - Landing Gear Doors,nose landing gear main and intermediate doors,Steel,"Reinforcing steel, at plant/RER U",58
+Fuselage,Fuselage - Control units flap and slat,"control unit, flap",Steel,"Reinforcing steel, at plant/RER U",42
+Fuselage,Fuselage - Control units flap and slat,"control unit, slat",Steel,"Reinforcing steel, at plant/RER U",40
+Fuselage,Fuselage - Actuator Trimmable Horizontal Stabilizer,"actuator, trimmable horizontal stabilizer",Steel,"Reinforcing steel, at plant/RER U",107
+Engine,GE CF6- 80E1,GE CF6-80E1,Ferrous alloys,"Iron-nickel-chromium alloy, at plant/RER U",864
+Engine,GE CF6- 80E1,GE CF6-80E1,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",465
+Engine,GE CF6- 80E1,GE CF6-80E1,Composites,Composites,216
+Engine,GE CF6- 80E1,GE CF6-80E1,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",1310
+Engine,GE CF6- 80E1,GE CF6-80E1,Nickel,"Nickel, 99,5%, at plant/DE U",1474
+Engine,GE CF6- 80E1,GE CF6-80E1,Composites,"Chromium, at regional storage/RER U",447
+Engine,GE CF6- 80E1,GE CF6-80E1,Aluminium,"Molybdenite, at plant/GLO U",76
+Engine,GE CF6- 80E1,GE CF6-80E1,Iron,"Cast iron, at plant/GLO U",456
+Engine,GE CF6- 80E1,GE CF6-80E1,Niobium and tantalum,"Tantalum, powder, capacitor-grade, at regional storage/GLO",94
+Engine,Parts,inlet cowl,Composites,Composites,140.5
+Engine,Parts,inlet cowl,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",140.5
+Engine,Parts,fan cowl,Composites,Composites,62.5
+Engine,Parts,fan cowl,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",62.5
+Engine,Parts,thrust reverser,Composites,Composites,351.5
+Engine,Parts,thrust reverser,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",351.5
+Engine,Parts,core cowl,Composites,Composites,30.5
+Engine,Parts,core cowl,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",30.5
+Engine,Parts,primary nozzle,Composites,Composites,39.5
+Engine,Parts,primary nozzle,Titanium,"Titanium zinc plate, without pre-weathering, at plant/DE U",39.5
+Engine,Pylon,removable leading edge,Steel,"Reinforcing steel, at plant/RER U",2179
+Engine,Pylon,removable leading edge,Composites,Composites,192
+Engine,Pylon,removable leading edge,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",192
+Vertical stabiliser,Vertical Tail - Box,box,Composites,Composites,321.1
+Vertical stabiliser,Vertical Tail - Box,box,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",321.1
+Vertical stabiliser,Vertical Tail - Box,box,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",33.8
+Vertical stabiliser,Vertical Tail - Rudder,rudder,Composites,Composites,335
+Vertical stabiliser,Vertical Tail - Removable leading edge,removable leading edge,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",127
+Vertical stabiliser,Vertical Tail - Removable leading edge,removable leading edge,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",6.7
+Vertical stabiliser,Vertical Tail - Tip,tip,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",17
+Vertical stabiliser,Vertical Tail - Fuselage fairing,fuselage fairing,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",30
+Horizontal stabiliser,Horizontal Tail - Box,box,Composites,Composites,1270
+Horizontal stabiliser,Horizontal Tail - Box,box,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",67
+Horizontal stabiliser,Horizontal Tail - Elevator,elevator,Composites,Composites,270
+Horizontal stabiliser,Horizontal Tail - Removable leading edge,removable leading edge,Composites,Composites,182
+Horizontal stabiliser,Horizontal Tail - Tip,tip,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",34
+Horizontal stabiliser,Horizontal Tail - Tailplane fuselage fairing,Tail fuselage fairing,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",54
+Horizontal stabiliser,Horizontal Tail - Elevator,elevator,Composites,Composites,270
+Horizontal stabiliser,Horizontal Tail - Removable leading edge,removable leading edge,Composites,Composites,182
+Horizontal stabiliser,Horizontal Tail - Tip,tip,Aluminium,"Aluminium alloy, AlMg3, at plant/RER U",34
+Horizontal stabiliser,Horizontal Tail - Tailplane fuselage fairing,Tail fuselage fairing,Composites,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",54
+Wings,Wings,Wings,Aluminium,,36786
+Wings,Wings,Wings,Steel,,1237
+Wings,Wings,Wings,Composites,,3358
+Wings,Wings,Wings,Titanium,,2341
