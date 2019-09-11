@@ -1,6 +1,6 @@
-Vehicle,Material,Unitmass
-B767,Aluminium,70775.2
-B767,Steel,12385.66
-B767,Titanium,1769.38
-B767,Composites,2654.07
-B767,Other,884.69
+Vehicle,Material,Unitmass,Class
+B767,Aluminium,70775.2,Airplanes
+B767,Steel,12385.66,Airplanes
+B767,Titanium,1769.38,Airplanes
+B767,Composites,2654.07,Airplanes
+B767,Other,884.69,Airplanes

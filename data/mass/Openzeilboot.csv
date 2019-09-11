@@ -1,0 +1,13 @@
+Component,Unitmass,Material,Class
+Motor,37.5,Steel,Pleziervaartuigen
+Motor,25.0,Steel,Pleziervaartuigen
+Motor,25.0,Steel,Pleziervaartuigen
+Romp,450.0,Steel,Pleziervaartuigen
+Romp,275.0,Polyester,Pleziervaartuigen
+Romp,300.0,Wood,Pleziervaartuigen
+Kiel,225.0,Steel,Pleziervaartuigen
+Kiel,175.0,Polyester,Pleziervaartuigen
+Kiel,150.0,Wood,Pleziervaartuigen
+Overig,75.0,Unknown,Pleziervaartuigen
+Overig,50.0,Unknown,Pleziervaartuigen
+Overig,50.0,Unknown,Pleziervaartuigen

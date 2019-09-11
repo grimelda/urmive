@@ -4,19 +4,47 @@
 # @author: jvanderzaag
 
 import os
-import pandas as pd
+import time
 import numpy as np
+import pandas as pd
 import plotly.express as px
 
+#%% this is useful to have at the top
+
+def RemapVehicles(dbx):
+    
+    MAP = {
+           'Aircraft:||4-motorig' : 'B747',
+           'Aircraft:||2-motorig' : 'A330',
+           'Personalcar:Elektriciteit' : 'evcar',
+           'Personalcar:Benzine' : 'icecar',
+           'Personalcar:CNG' : 'icecar',
+           'Personalcar:Diesel' : 'icecar',
+           'Personalcar:LPG' : 'icecar',
+           'Personalcar:Benzine' : 'icecar',
+           'Personalcar:Overig/Onbekend' : 'icecar',
+           'Bestelauto:Elektriciteit' : 'evutcar',
+           'Bestelauto:Benzine' : 'iceutcar',
+           'Bestelauto:CNG' : 'iceutcar',
+           'Bestelauto:Diesel' : 'iceutcar',
+           'Bestelauto:LPG' : 'iceutcar',
+           'Bestelauto:Benzine' : 'iceutcar',
+           'Bestelauto:Overig/Onbekend' : 'iceutcar',
+           }
+    
+    for key in list(MAP.keys()):
+        dbx.loc[:,'Vehicle'] = dbx['Vehicle'].replace(key,MAP[key])
+    
+    return dbx
 
 #%% high level defs
 
-def UnifyCountData(dbx):
+def UnifyCountData(dbx, startyear=2000, endyear=2017):
     
     dbx = CleanDataframes(dbx)    
     dbx = AddVehicleTypeColumn(dbx)
     Vtypes = MakeVehicleTypeList(dbx)
-    dbx = CombineDataframes(dbx)
+    dbx = CombineDataframes(dbx, startyear, endyear)
     dbx = dbx.dropna(subset = ['Waarde'])
     dbx = dbx.rename(columns = {
                                 'Vtype' : 'Vehicle',
@@ -29,26 +57,15 @@ def UnifyCountData(dbx):
 
 
 #%% complexer defs
+    
 
-
-    
-def RemapVehicles(dbx):
-    
-    MAP = {
-           'Aircraft:||4-motorig' : 'B747',
-           'Aircraft:||2-motorig' : 'A330',
-           'Personalcar:Elektriciteit' : 'carev',
-           }
-    
-    for key in list(MAP.keys()):
-        dbx.loc[:,'Vehicle'] = dbx['Vehicle'].replace(key,MAP[key])
-    
-    return dbx
-    
 def CalcMass(
              dbx, 
              dbm,
+             exclude=[None],
+             include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
              ):
+    
     missing = list(set(dbx['Vehicle']) - set(dbm.keys()))
     if len(missing) > 0:
         print('No material data was found for',len(missing),'vehicle types...\n')
@@ -63,7 +80,11 @@ def CalcMass(
         df['Mass'] = df['Value'] * df['Unitmass']
         
         mat = pd.concat([mat, df], ignore_index=True, sort=False)
-        
+    
+    ### exlcude or include certain vehicles. be sane plz
+    mat = mat[~(mat['Vehicle'].isin(exclude))]
+    mat = mat[mat['Vehicle'].isin(include)] 
+
     return mat
 
 
@@ -85,7 +106,7 @@ def UnifyMassData(dbm, dbx):
     for key in veh:
         if len(dbx[dbx['Vehicle'] == key]) == 0: continue
         else:
-            ma[key] = dbm[key].loc[:,['Material','Unitmass']]#.set_index('material')
+            ma[key] = dbm[key].loc[:,['Material','Unitmass','Class']]#.set_index('material')
             ma[key]['Vehicle'] = key
     
             ma[key].loc[:,'Unitmass'] = pd.to_numeric(ma[key]['Unitmass'], errors='coerce')
@@ -120,17 +141,16 @@ def AddVehicleTypeColumn(db): #2
     return db
 
 
-def CombineDataframes(dbx):
+def CombineDataframes(dbx, startyear, endyear):
 
     count = [x.replace('.csv','') for x in os.listdir('data/count/') if x.endswith('.csv')]
-    #count = [x. for x in count]
     DBX = pd.DataFrame()
     for key in count:    
         DBX = pd.concat([DBX, dbx[key].loc[:,['Vtype','Waarde', 'Perioden']]], ignore_index=True, sort=False)
         
     DBX['Waarde'] = pd.to_numeric(DBX['Waarde'], errors='coerce')
     DBX['Perioden'] = pd.to_numeric(DBX['Perioden'], errors='coerce')
-    DBX = DBX[(DBX['Perioden'] >= 1996) & (DBX['Perioden'] <= 2017)]
+    DBX = DBX[(DBX['Perioden'] >= startyear) & (DBX['Perioden'] <= endyear)]
     #DBX = DBX.dropna(subset='Waarde')
     
     return DBX
@@ -206,7 +226,7 @@ def ReadData():
     return dbx, dbm, dba
 
 
-def CleanWeightClassData(dba):
+def CleanWeightClassData(dba): # not used in stocks.py but keeping it for manual output
 
     dba['PC_wclass']['Voertuigtype'] = 'Personenauto'
     
@@ -246,7 +266,7 @@ def CleanWeightClassData(dba):
     return dba
 
 
-def CarAvgWeight(dba):
+def CarAvgWeight(dba): # not used in stocks.py but keeping it for manual output
     # aggregate data for vehicle types
     CavW = pd.pivot_table(dba['Wclass'], 
                       index = ['Voertuigtype'], 
@@ -262,99 +282,54 @@ def CarAvgWeight(dba):
 
 
 #%% visualisation plots plotting defs
-
-def PlotVehicleMass(mat, 
-                    exclude=[None],
-                    include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]):
-
-    mat = mat[~(mat['Vehicle'].isin(exclude))]
-    mat = mat[mat['Vehicle'].isin(include)]
+    
+def PlotMass2D(
+               mat, 
+               D=['Material', 'Vehicle']
+               ):
         
     ### combine masses
-    mat = mat.groupby(['Year','Vehicle']).sum().reset_index(drop=False)
+    mat = mat.groupby(['Year',D[0],D[1]]).sum().reset_index(drop=False)
     
     ### allow sorting by material and vehicle in plot
-    mat['VehSum'] = mat['Vehicle'].map(dict(mat[mat['Year']==2017].groupby(by='Vehicle')
-                                                .sum()['Mass']
-                                                .sort_values(ascending=False)))
-    mat = mat.sort_values('VehSum', ascending=True)
+    for i in range(len(D)):
+        mat[str(D[i]+'Sum')] = mat[D[i]].map(dict(mat[mat['Year']==max(mat['Year'])].groupby(by=D[i]).sum()['Mass']))
+    #mat.loc[:,'idx'] = list(mat.index)
+    mat = mat.sort_values([str(D[0]+'Sum'), str(D[1]+'Sum')], ascending=[False, True])
+    
     
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
-                  color = 'Vehicle', 
+                  color = D[0], 
+                  line_group = D[1],
+                  #category_orders = {'idx' : list(mat.index)}
                   ).update_layout(legend=dict(
                                               y=0.5, 
-                                              traceorder='reversed', 
+                                              #traceorder='reversed', 
                                               font_size=10,
                                               ))
     fig.show()
     
-    
-def PlotMaterialVehicle(mat, 
-                        exclude=[None],
-                        include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]):
+def PlotMass1D(
+               mat,
+               D='Vehicle'
+               ):
 
-    mat = mat[~(mat['Vehicle'].isin(exclude))]
-    mat = mat[mat['Vehicle'].isin(include)]
-        
     ### combine masses
-    mat = mat.groupby(['Year','Vehicle','Material']).sum().reset_index(drop=False)
+    mat = mat.groupby(['Year', D]).sum().reset_index(drop=False)
     
     ### allow sorting by material and vehicle in plot
-    mat['MatSum'] = mat['Material'].map(dict(mat.groupby(by='Material')
-                                                .sum()['Mass']
-                                                .sort_values(ascending=False)))
-    mat['VehSum'] = mat['Vehicle'].map(dict(mat.groupby(by='Vehicle')
-                                               .sum()['Mass']
-                                               .sort_values(ascending=False)))
-    mat = mat.sort_values(['MatSum', 'VehSum'], ascending=['True', 'True'])
+    mat[str(D+'Sum')] = mat[D].map(dict(mat[mat['Year']==max(mat['Year'])].groupby(by=D)
+                                                                          .sum()['Mass']
+                                                                          .sort_values(ascending=False)))
+    mat = mat.sort_values(str(D+'Sum'), ascending=False)
     
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
-                  color = 'Material', 
-                  line_group='Vehicle',
+                  color = D, 
                   ).update_layout(legend=dict(
                                               y=0.5, 
-                                              traceorder='reversed', 
-                                              font_size=10,
-                                              ))
-    fig.show()
-    
-    
-def PlotVehicleMaterial(mat, 
-                        exclude=[None],
-                        include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]):
-
-    mat = mat[~(mat['Vehicle'].isin(exclude))]
-    mat = mat[mat['Vehicle'].isin(include)]
-        
-    ### combine masses
-    mat = mat.groupby(['Year','Vehicle','Material']).sum().reset_index(drop=False)
-    
-    ### allow sorting by material and vehicle in plot
-    mat['MatSum'] = mat['Material'].map(dict(mat.groupby(by='Material')
-                                                .sum()['Mass']
-                                                .sort_values(ascending=False)))
-    mat['VehSum'] = mat['Vehicle'].map(dict(mat[mat['Year']==2017].groupby(by='Vehicle')
-                                               .sum()['Mass']
-                                               .sort_values(ascending=False)))
-    mat = mat.sort_values(['VehSum', 'MatSum'], ascending=['True', 'True'])
-    
-    '''
-    ### allow sorting by material and vehicle in plot
-    mat['VehSum'] = mat['Vehicle'].map(dict(mat[mat['Year']==2017].groupby(by='Vehicle')
-                                                .sum()['Mass']
-                                                .sort_values(ascending=False)))
-    mat = mat.sort_values('VehSum', ascending=True)
-    '''
-    
-    ### plot the shit
-    fig = px.area(mat, x = 'Year', y = 'Mass', 
-                  color = 'Vehicle', 
-                  line_group='Material',
-                  ).update_layout(legend=dict(
-                                              y=0.5, 
-                                              traceorder='reversed', 
+                                              #traceorder='reversed', 
                                               font_size=10,
                                               ))
     fig.show()
@@ -373,6 +348,8 @@ def StripChars(df, col, chars):
         df.loc[:,col] = [i.replace(char,'') for i in df[col]]
     return df
 
+def TimePrint(start):
+    print(round(time.time()-start,5),'s have elapsed, all is good!')
 
 #%% i might ever need these snippets
 

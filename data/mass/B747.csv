@@ -1,6 +1,6 @@
-Vehicle,Material,Unitmass
-B747,Aluminium,148635
-B747,Steel,23855
-B747,Titanium,7340
-B747,Composites,1835
-B747,Other,1835
+Vehicle,Material,Unitmass,Class
+B747,Aluminium,148635,Airplanes
+B747,Steel,23855,Airplanes
+B747,Titanium,7340,Airplanes
+B747,Composites,1835,Airplanes
+B747,Other,1835,Airplanes

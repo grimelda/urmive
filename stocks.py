@@ -5,11 +5,12 @@
 import time; start = time.time()
 import functions as func
 
-
+'''
 import os
 import pandas as pd 
 import numpy as np
 import plotly.express as px
+'''
 
 
 #%%
@@ -23,7 +24,7 @@ import plotly.express as px
 (
  dbx,
  Vtypes,
- ) = func.UnifyCountData(dbx)
+ ) = func.UnifyCountData(dbx, startyear=2000, endyear=2017)
 
 #%%
 (
@@ -31,13 +32,19 @@ import plotly.express as px
  ) = func.UnifyMassData(dbm, dbx)
 
 #%%
-mat = func.CalcMass(dbx, dbm)
+mat = func.CalcMass(dbx, 
+                    dbm,
+                    #include=['A330','B747'], #['A330','B747']
+                    #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                    ) # include/exclude are kinda mutually exclusive, be sane.
+
 
 #%% Plotting
-    
-func.PlotMaterialVehicle(mat) #, exclude=['bicycle'], include=['A330','B747']
-func.PlotVehicleMaterial(mat) #, exclude=['bicycle'], include=['A330','B747']
-func.PlotVehicleMass(mat)#, exclude=['bicycle'], include=['A330','B747']
+
+func.PlotMass2D(mat, D=['Material', 'Vehicle'])
+func.PlotMass2D(mat, D=['Vehicle', 'Material'])
+func.PlotMass1D(mat, D='Vehicle')
+
     
 #%%
-print(round(time.time()-start,5),'s have elapsed, all is good!'); del start
+func.TimePrint(start); del start
