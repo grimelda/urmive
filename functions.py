@@ -63,7 +63,7 @@ def CalcMass(
              dbx, 
              dbm,
              exclude=[None],
-             include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
+             include=[x.replace('.csv','') for x in os.listdir('content/data/mass/') if x.endswith('.csv')]
              ):
     
     missing = list(set(dbx['Vehicle']) - set(dbm.keys()))
@@ -89,7 +89,7 @@ def CalcMass(
 
 
 def UnifyMassData(dbm, dbx):
-    veh = [x for x in os.listdir('data/mass/') if x.endswith('.csv')]
+    veh = [x for x in os.listdir('content/data/mass/') if x.endswith('.csv')]
     veh = [x.replace('.csv','') for x in veh]
     
     df = pd.DataFrame()
@@ -143,7 +143,7 @@ def AddVehicleTypeColumn(db): #2
 
 def CombineDataframes(dbx, startyear, endyear):
 
-    count = [x.replace('.csv','') for x in os.listdir('data/count/') if x.endswith('.csv')]
+    count = [x.replace('.csv','') for x in os.listdir('content/data/count/') if x.endswith('.csv')]
     DBX = pd.DataFrame()
     for key in count:    
         DBX = pd.concat([DBX, dbx[key].loc[:,['Vtype','Waarde', 'Perioden']]], ignore_index=True, sort=False)
