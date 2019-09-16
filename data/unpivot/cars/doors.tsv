@@ -1,0 +1,23 @@
+Material Group	Material/Component	Unit	Body-in-white	Body panels	Bumpers	Body hardware	Weld blanks and fasteners (electronics to body)	Weld blanks and fasteners (other systems to body)	Doors, including trunk lid	Assembly processes, body shop	Assembly processes, mechanical processing	Assembly processes, press shop	Windscreen glass	Rear screen glass	Side body glass (6)
+Ferous metals	Rolled steel	kg	0	19.11733046	0	0	0	0	0	0	0	0	0	0	0
+Ferous metals	EAF steel	kg	0	10.3166	0	0.36732	4.216709878	4.216709878	0	0	0	0	0	0	0
+Ferous metals	galv steel	kg	211.2188312	4.5781	8.43342	0	0	0	93	0	0	0	0	0	0
+Ferous metals	hot rolled steel	kg	0	33.45532831	0	0	0	0	0	0	0	0	0	0	0
+Ferous metals	stainless steel	kg	0	0	0	0.079655544	0	0	0	0	0	0	0	0	0
+Ferous metals	Cast iron	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Wrought Aluminium	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Cast Aluminium	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Copper	kg	0	0	0	0.199580643	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Magnesium	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Zinc	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Platinum	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Lead (Pb)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0
+Glass	Glass	kg	0	0	0	0.059874193	0	0	0.074842741	0	0	0	11.6	4.57	12.53
+Polymers	Plastic	kg	0	0	0	6.150684932	3.424657534	3.424657534	12	0	0	0	0	0	0
+Polymers	Rubber	kg	0	0	0	0.229517739	0	0	0	0	0	0	0	0	0
+Scrap	Scrap, Rolled steel	kg	0	4.016673876	0	0	0	0	0	0	0	0	0	0	0
+Scrap	Scrap, EAF steel	kg	0	2.167583899	0	0.07717629	0.885957819	0.885957819	0	0	0	0	0	0	0
+Scrap	Scrap, galv steel	kg	44.37843259	0.961888204	1.77191569	0	0	0	19.53989712	0	0	0	0	0	0
+Scrap	Scrap, hot rolled steel	kg	0	7.029179283	0	0	0	0	0	0	0	0	0	0	0
+Scrap	Scrap, stainless steel	kg	0	0	0	0.016736141	0	0	0	0	0	0	0	0	0
+Scrap	Scrap, glass	kg	0	0	0	0.003151273	0	0	0.003939092	0	0	0	0.610526316	0.240526316	0.659473684

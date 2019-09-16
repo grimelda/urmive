@@ -23,23 +23,59 @@ def RemapVehicles(dbx):
            'Personalcar:LPG' : 'icecar',
            'Personalcar:Benzine' : 'icecar',
            'Personalcar:Overig/Onbekend' : 'icecar',
-           'Bestelauto:Elektriciteit' : 'evutcar',
-           'Bestelauto:Benzine' : 'iceutcar',
-           'Bestelauto:CNG' : 'iceutcar',
-           'Bestelauto:Diesel' : 'iceutcar',
-           'Bestelauto:LPG' : 'iceutcar',
-           'Bestelauto:Benzine' : 'iceutcar',
-           'Bestelauto:Overig/Onbekend' : 'iceutcar',
+           #'Bestelauto:Elektriciteit' : 'evvan',
+           #'Bestelauto:Benzine' : 'icevan',
+           #'Bestelauto:CNG' : 'icevan',
+           #'Bestelauto:Diesel' : 'icevan',
+           #'Bestelauto:LPG' : 'icevan',
+           #'Bestelauto:Benzine' : 'icevan',
+           #'Bestelauto:Overig/Onbekend' : 'icevan',
+           'Bestelauto:1249':'icevan',
+           'Bestelauto:1749':'icevan',
+           'Bestelauto:2249':'icevan',
+           'Bestelauto:250':'icevan',
+           'Bestelauto:2749':'icevan',
+           'Bestelauto:3249':'icevan',
+           'Bestelauto:749':'icevan',
+           'Trekker voor oplegger:10249':'lorry28t',
+           'Trekker voor oplegger:10749':'lorry28t',
+           'Trekker voor oplegger:11249':'lorry28t',
+           'Trekker voor oplegger:11749':'lorry40t',
+           'Trekker voor oplegger:12249':'lorry40t',
+           'Trekker voor oplegger:1249':'lorry16t',
+           'Trekker voor oplegger:12749':'lorry16t',
+           'Trekker voor oplegger:1749':'lorry16t',
+           'Trekker voor oplegger:2249':'lorry16t',
+           'Trekker voor oplegger:250':'lorry16t',
+           'Trekker voor oplegger:2749':'lorry16t',
+           'Trekker voor oplegger:3249':'lorry16t',
+           'Trekker voor oplegger:3749':'lorry16t',
+           'Trekker voor oplegger:4249':'lorry16t',
+           'Trekker voor oplegger:4749':'lorry16t',
+           'Trekker voor oplegger:5249':'lorry16t',
+           'Trekker voor oplegger:5749':'lorry16t',
+           'Trekker voor oplegger:6249':'lorry16t',
+           'Trekker voor oplegger:6749':'lorry16t',
+           'Trekker voor oplegger:7249':'lorry16t',
+           'Trekker voor oplegger:749':'lorry16t',
+           'Trekker voor oplegger:7749':'lorry16t',
+           'Trekker voor oplegger:8249':'lorry28t',
+           'Trekker voor oplegger:8749':'lorry28t',
+           'Trekker voor oplegger:9249':'lorry28t',
+           'Trekker voor oplegger:9749':'lorry28t',
            }
     
     for key in list(MAP.keys()):
-        dbx.loc[:,'Vehicle'] = dbx['Vehicle'].replace(key,MAP[key])
+        dbx.loc[:,'Vehicle'] = dbx.loc[:,'Vehicle'].replace(key,MAP[key])
     
     return dbx
 
 #%% high level defs
 
-def UnifyCountData(dbx, startyear=2000, endyear=2017):
+def UnifyCountData(dbx, 
+                   startyear=2000, 
+                   endyear=2017,
+                   ):
     
     dbx = CleanDataframes(dbx)    
     dbx = AddVehicleTypeColumn(dbx)
@@ -72,19 +108,35 @@ def CalcMass(
     
     mat = pd.DataFrame() 
     for key in list(dbm.keys()):
-        df = dbx[dbx['Vehicle'] == key].merge(
-                                              dbm[key], 
-                                              on='Vehicle', 
-                                              how='outer',
-                                              )
+        df = dbx.loc[dbx['Vehicle'] == key].merge(
+                                                  dbm[key], 
+                                                  on='Vehicle', 
+                                                  how='outer',
+                                                  )
         df['Mass'] = df['Value'] * df['Unitmass']
         
         mat = pd.concat([mat, df], ignore_index=True, sort=False)
     
     ### exlcude or include certain vehicles. be sane plz
-    mat = mat[~(mat['Vehicle'].isin(exclude))]
-    mat = mat[mat['Vehicle'].isin(include)] 
+    mat = mat.loc[~(mat['Vehicle'].isin(exclude))]
+    mat = mat.loc[mat['Vehicle'].isin(include)]
+    
+    ### for each vehicle type which has weight info in count table:
+    mat = CalcWeightFromCount(mat, slx=[
+                                        'icevan',
+                                        'lorry16t',
+                                        'lorry28t',
+                                        'lorry40t',
+                                        ])
+        
+    return mat
 
+def CalcWeightFromCount(mat, slx):
+    for i in slx:
+        mat.loc[mat['Vehicle']==i, 'Mass'] = (mat.loc[mat['Vehicle']==i,'Mass'] 
+                                              * 
+                                              mat.loc[mat['Vehicle']==i,'Onderwerp'].astype('int')
+                                              )
     return mat
 
 
@@ -98,13 +150,13 @@ def UnifyMassData(dbm, dbx):
             print('No count data found for vehicle:', key)
         else:
             df = pd.concat(#
-                           [df, dbx[dbx['Vehicle'] == key]], 
+                           [df, dbx[dbx.loc[:,'Vehicle'] == key]], 
                            ignore_index=True, 
                            sort=False,
                            )
     ma = dict()
     for key in veh:
-        if len(dbx[dbx['Vehicle'] == key]) == 0: continue
+        if len(dbx[dbx.loc[:,'Vehicle'] == key]) == 0: continue
         else:
             ma[key] = dbm[key].loc[:,['Material','Unitmass','Class']]#.set_index('material')
             ma[key]['Vehicle'] = key
@@ -146,12 +198,11 @@ def CombineDataframes(dbx, startyear, endyear):
     count = [x.replace('.csv','') for x in os.listdir('data/count/') if x.endswith('.csv')]
     DBX = pd.DataFrame()
     for key in count:    
-        DBX = pd.concat([DBX, dbx[key].loc[:,['Vtype','Waarde', 'Perioden']]], ignore_index=True, sort=False)
+        DBX = pd.concat([DBX, dbx[key].loc[:,['Vtype','Waarde', 'Perioden','Onderwerp']]], ignore_index=True, sort=False)
         
     DBX['Waarde'] = pd.to_numeric(DBX['Waarde'], errors='coerce')
     DBX['Perioden'] = pd.to_numeric(DBX['Perioden'], errors='coerce')
     DBX = DBX[(DBX['Perioden'] >= startyear) & (DBX['Perioden'] <= endyear)]
-    #DBX = DBX.dropna(subset='Waarde')
     
     return DBX
 
@@ -168,18 +219,36 @@ def CleanDfEurostat(df, colnames):
 
 
 def CleanDataframes(db): #1
+
+    db['compcars'] = db['compcars'].dropna(subset=['Waarde'])
+    db['compcars'] = db['compcars'][~db['compcars']['Onderwerp'].str.contains('otaal')]
+    db['compcars'] = db['compcars'][~db['compcars']['Voertuigtype'].str.contains('otaal')]
+    db['compcars'].loc[:,'Onderwerp'] = db['compcars']['Onderwerp'].str.replace(' ','')
+    db['compcars'].loc[:,'Onderwerp'] = db['compcars']['Onderwerp'].str.replace('kg','')
+    
     db['perscars'] = ReplaceValues(db['perscars'],
                                   'Onderwerp',
-                                  '2451 kg en meer',
-                                  '2451-3500 kg')
+                                  '2451enmeer',
+                                  '2451-3500')
     db['compcars'] = ReplaceValues(db['compcars'],
                                   'Onderwerp',
-                                  '30 000 kg en meer',
-                                  '30 000 - 50 000 kg')
+                                  '30000enmeer',
+                                  '30000-50000')
     db['compcars'] = ReplaceValues(db['compcars'],
                                   'Onderwerp',
-                                  'Leeggewicht onbekend',
-                                  '10 000 - 10 001kg')
+                                  'Leeggewichtonbekend',
+                                  '10000-10001')    
+    db['compcars'] = ReplaceValues(db['compcars'],
+                                  'Onderwerp',
+                                  '<500',
+                                  '0-500')
+    ### get middle weight for compcars
+    for i in list(set(db['compcars']['Onderwerp'])):
+        db['compcars'] = ReplaceValues(db['compcars'],
+                                      'Onderwerp',
+                                      i,
+                                      str(int(np.mean([int(x) for x in i.split('-')])))
+                                      )
     return db
 
 
@@ -230,8 +299,10 @@ def CleanWeightClassData(dba): # not used in stocks.py but keeping it for manual
 
     dba['PC_wclass']['Voertuigtype'] = 'Personenauto'
     
+    wclass = ['CC_wclass','PC_wclass']
+    
     #drop rows with nans or totals 
-    for i in ['CC_wclass','PC_wclass']:
+    for i in wclass:
         dba[i] = dba[i].dropna(subset=['Waarde'])
         dba[i] = dba[i][~dba[i]['Onderwerp'].str.contains('otaal')]
         dba[i] = dba[i][~dba[i]['Voertuigtype'].str.contains('otaal')]
@@ -265,7 +336,6 @@ def CleanWeightClassData(dba): # not used in stocks.py but keeping it for manual
 
     return dba
 
-
 def CarAvgWeight(dba): # not used in stocks.py but keeping it for manual output
     # aggregate data for vehicle types
     CavW = pd.pivot_table(dba['Wclass'], 
@@ -291,12 +361,10 @@ def PlotMass2D(
     ### combine masses
     mat = mat.groupby(['Year',D[0],D[1]]).sum().reset_index(drop=False)
     
-    ### allow sorting by material and vehicle in plot
+    ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
     for i in range(len(D)):
-        mat[str(D[i]+'Sum')] = mat[D[i]].map(dict(mat[mat['Year']==max(mat['Year'])].groupby(by=D[i]).sum()['Mass']))
-    #mat.loc[:,'idx'] = list(mat.index)
-    mat = mat.sort_values([str(D[0]+'Sum'), str(D[1]+'Sum')], ascending=[False, True])
-    
+        mat[str(D[i]+'Sum')] = mat[D[i]].map(dict(mat.groupby(by=D[i]).sum()['Mass']))
+    mat = mat.sort_values([str(D[0]+'Sum'), str(D[1]+'Sum')], ascending=[True, False])
     
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
@@ -305,7 +373,7 @@ def PlotMass2D(
                   #category_orders = {'idx' : list(mat.index)}
                   ).update_layout(legend=dict(
                                               y=0.5, 
-                                              #traceorder='reversed', 
+                                              traceorder='reversed', 
                                               font_size=10,
                                               ))
     fig.show()
@@ -318,18 +386,18 @@ def PlotMass1D(
     ### combine masses
     mat = mat.groupby(['Year', D]).sum().reset_index(drop=False)
     
-    ### allow sorting by material and vehicle in plot
-    mat[str(D+'Sum')] = mat[D].map(dict(mat[mat['Year']==max(mat['Year'])].groupby(by=D)
-                                                                          .sum()['Mass']
-                                                                          .sort_values(ascending=False)))
-    mat = mat.sort_values(str(D+'Sum'), ascending=False)
+    ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
+    mat[str(D+'Sum')] = mat[D].map(dict(mat.groupby(by=D)
+                                           .sum()['Mass']
+                                           .sort_values(ascending=False)))
+    mat = mat.sort_values(str(D+'Sum'), ascending=True)
     
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
                   color = D, 
                   ).update_layout(legend=dict(
                                               y=0.5, 
-                                              #traceorder='reversed', 
+                                              traceorder='reversed', 
                                               font_size=10,
                                               ))
     fig.show()
@@ -339,7 +407,7 @@ def PlotMass1D(
 #%% simple defs
 
 def ReplaceValues(df, col, oldval, newval):
-    df.loc[df[col] == oldval, col] = newval
+    df.loc[df.loc[:,col] == oldval, col] = newval
     return df
 
 

@@ -1,0 +1,40 @@
+Material Group	Material/Component	Unit	Paint/Paint shop	Under body finisher	Bumper covers (4)	Wheel arc closures (4)	Road wheel finishers (4)	Bumpers (2)	Rear lamps (2)	Radiator Grille	Other, exterior trim (GREET data)	Sealers/deadeners	Exterior electrical (GREET data)	Assembly and processing of synthetic pieces	Assembly and processing of trim pieces	Centre console	Dashboard	Glove Box	Air Duct	Steering Column Finisher	Other, Instrument panel (GREET data)	B post finishers (2)	C post finishers (2)	Sill finishers (2)	A post finishers (2)	Other, Trim and Insulation (GREET data)	Doors, including trunk lid, interior plastics etc.	Assembly, doors and cockpit	Squab pads	Cushion pads	Seat Belts (2)	Height Controls (2)	Head Rest Pads (4)	Other, Seating and restraint (GREET data)	Assembly, seats	HVAC (GREET)	Interior electrical (GREET)	Weld blanks and fasteners (interior to body) (GREET)	Engine Finisher	Wash Fluid Tank	Steering Oil Tank	Brake Fluid Tank	Wheel Arc Finisher	Load Space Finishers (2)	Latch Finisher	Tool Box
+Ferous metals	Cast iron (GREET/MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Ferous metals	Steel (GREET)	kg	0	0	0	0	0	0	0	0	0.429098382	0	0	0	0	0	0	0	0	0	11.05858198	0	0	0	0	6.556677708	0	0	0	0	0	0	0	34.72703185	0	0	0	4.98951607	0	0	0	0	0	0	0	0
+Ferous metals	Rolled steel (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6.2	0	0	0	0	0	0	0	0	0	0
+Ferous metals	EAF steel (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.1	0	0	0	0	0	0	0	0	0	0
+Ferous metals	Galvanized steel (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5.3	0	0	0	0	0	0	0	0	0	0
+Ferous metals	Hot rolled steel (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Ferous metals	Stainless steel (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.2	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Wrought Aluminium	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.240403956	0	0	0	0	0.022226026	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Cast Aluminium	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5.3	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Extruded aluminum (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	12	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Rolled aluminum (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.9	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Copper	kg	0	0	0	0	0	0	0	0	0	0	4.091403177	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.332996735	4.091403177	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Magnesium	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.240403956	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Zinc	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.099790321	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Platinum	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Lead (Pb)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Non-ferrous metals	Other metals	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.8	0	0	0	0	0	0	0	0	0	0
+Polymers	Acrylonitrile butadiene styrene (ABS)	kg	0	0	0	0	0	0	0.905	0	0	0	0	0	0	0.584	0	2.136	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.4	0	0	0	0	0	0	0	0	0	0
+Polymers	Acrylonitrile styrene acrylate (ASA)	kg	0	0	0	0	0	0	0	0.276	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Ethylene propylene diene monomer (EPDM-TD10)	kg	0	0	0	0	0	5.07	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Nylon 6 (PA6)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.266	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Nylon 6, 10% Glass fiber, 20% Minerals (PA6-(GF10+MX20))	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.291	0	0	0	0	0	0	0
+Polymers	Nylon 66, 25% Glass fiber (PA66-GF25)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.223	0	0	0	0	0
+Polymers	Nylon 66, 30% Mineral powder (PA66-MD30)	kg	0	0	0	0	0.164	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Polypropylene ether (PE)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.701	0	0	0	0	0.217	0.405	0.405	0.405	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0.063	0	0	0.315	0.154
+Polymers	High density polyethylene (PE-HD)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.614	0	0	0	0	0	0
+Polymers	Polyethylene terephthalate (PET)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.378	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Polymethyl methacrylate (PMMA)	kg	0	0	0	0	0	0	0.905	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Polypropylene (PP)	kg	0	0	0	3.832	0	5.07	0	0	0	0	0	0	0	0	0	0	0	0	0	0.217	0.405	0.405	0.405	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.063	0	1.694	0.315	0
+Polymers	Polypropylene, 25% Fiberglass (PP-GF25)	kg	0	0.866	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Polypropylene, 20% Talc (PP-TD20)	kg	0	0	0.48	0	0	0	0	0	0	0	0	0	0	0	0	0	0.238	0.09	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.566	0	0	0
+Polymers	Polystyrene (PS)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.701	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Polyurethane (polyether type) (PUR-E)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.499	5.423	0	0	0.496	0	0	0	0	0	0	0	0	0	0	0	0	0
+Polymers	Nylon 66 (PA66)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.2	0	0	0	0	0	0	0	0	0	0
+Polymers	Other plastic (GREET)	kg	0	0	0	0	0	0	0	0	0	0	5.887628963	0	0	0	0	0	0	0	0	0	0	0	0	12.07188956	12	0	0	0	0	0	0	15.08516099	0	10	5.887628963	4.98951607	0	0	0	0	0	0	0	0
+Polymers	Rubber (GREET)	kg	0	0	0	0	0	0	0	0	0.149685482	0.9	0	0	0	0	0	0	0	0	0.240403956	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3.1	0	0	0	0	0	0	0	0	0	0
+Polymers	Extruded rubber (MUSES)	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.9	0	0	0	0	0	0	0	0	0	0
+Other	Paint	kg	11.79340162	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Other	Other	kg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.13970645	0	0	0	0	0	0	0	0	0	0

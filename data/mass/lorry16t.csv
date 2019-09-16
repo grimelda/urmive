@@ -1,0 +1,42 @@
+Flow ID,Ecoinvent Flow,Ecoinvmass,Unit,Part,Material,Unitmass,Class
+Lorry16t,-,6424.8,,Lorry,,,Lorries
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",11.4,kilogram,Lorry,Ferrousmetal,1.77437E-03,Lorries
+[G621],"electronics, for control units_market for electronics, for control units[GLO]",30,kilogram,Lorry,,,Lorries
+[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",40,kilogram,Lorry,Paint,6.22587E-03,Lorries
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",68.8,kilogram,Lorry,Aluminium,1.07085E-02,Lorries
+[G3339],pig iron_market for pig iron[GLO],1.63E+03,kilogram,Lorry,Ferrous metal,2.53704E-01,Lorries
+[G3787],lead_market for lead[GLO],73.6,kilogram,Lorry,Lead,1.14556E-02,Lorries
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",230,kilogram,Lorry,Polyethylene,3.57988E-02,Lorries
+[G4640],brass_market for brass[CH],20,kilogram,Lorry,Brass,3.11294E-03,Lorries
+[G5916],reinforcing steel_market for reinforcing steel[GLO],2.26E+03,kilogram,Lorry,Ferrous metal,3.51762E-01,Lorries
+[G5949],copper_market for copper[GLO],30,kilogram,Lorry,Copper,4.66941E-03,Lorries
+[G8652],cast iron_market for cast iron[GLO],1.45E+03,kilogram,Lorry,Ferrous metal,2.25688E-01,Lorries
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",146,kilogram,Lorry,Aluminium,2.27244E-02,Lorries
+[G10528],"stone wool, packed_market for stone wool, packed[GLO]",10,kilogram,Lorry,Stone wool,1.55647E-03,Lorries
+[G11853],synthetic rubber_market for synthetic rubber[GLO],375,kilogram,Lorry,Rubber,5.83676E-02,Lorries
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",5,kilogram,Lorry,Chromium steel,7.78234E-04,Lorries
+[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",45,kilogram,Lorry,Glass,7.00411E-03,Lorries
+-,Aluminium,0.00571165911,kilogram,Electronics,Aluminium,2.66701E-05,Lorries
+-,Barite,0.004640057609,kilogram,Electronics,Barite,2.16663E-05,Lorries
+-,Brass,0.001150474844,kilogram,Electronics,Brass,5.37203E-06,Lorries
+-,Chromium,0.000006919098143,kilogram,Electronics,Chromium,3.23081E-08,Lorries
+-,Composites,0.01454668435,kilogram,Electronics,Composites,6.79244E-05,Lorries
+-,Copper,0.03275191158,kilogram,Electronics,Copper,1.52932E-04,Lorries
+-,Glass,0.0004167149725,kilogram,Electronics,Glass,1.94581E-06,Lorries
+-,Gold,0.000545229443,kilogram,Electronics,Gold,2.54590E-06,Lorries
+-,Iron,0.0003302690618,kilogram,Electronics,Iron,1.54216E-06,Lorries
+-,Lead,0.001864211931,kilogram,Electronics,Lead,8.70476E-06,Lorries
+-,Molybdenum,0.0001799204244,kilogram,Electronics,Molybdenum,8.40122E-07,Lorries
+-,Nickel,0.001478797866,kilogram,Electronics,Nickel,6.90511E-06,Lorries
+-,Nylon,0.004090981432,kilogram,Electronics,Nylon,1.91025E-05,Lorries
+-,Palladium,0.00001852335219,kilogram,Electronics,Palladium,8.64931E-08,Lorries
+-,Polyethylene,0.345094,kilogram,Electronics,Polyethylene,1.61138E-03,Lorries
+-,Polyvinylchloride,0.02912535,kilogram,Electronics,Polyvinylchloride,1.35998E-04,Lorries
+-,Selenium,0.00496,kilogram,Electronics,Selenium,2.31603E-05,Lorries
+-,Silica,0.02291493916,kilogram,Electronics,Silica,1.06999E-04,Lorries
+-,Silicon,0.00002100062507,kilogram,Electronics,Silicon,9.80604E-08,Lorries
+-,Silver,0.0006507853014,kilogram,Electronics,Silver,3.03878E-06,Lorries
+-,Steel,0.92,kilogram,Electronics,Steel,4.29585E-03,Lorries
+-,Tin,0.003358535436,kilogram,Electronics,Tin,1.56824E-05,Lorries
+-,Titanium,0.002391008194,kilogram,Electronics,Titanium,1.11646E-05,Lorries
+-,Zinc,0.0003469177719,kilogram,Electronics,Zinc,1.61990E-06,Lorries

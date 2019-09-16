@@ -1,0 +1,35 @@
+flowid,Ecoinvent Flow,Partmass,unit,Part,Material,Unitmass,Class
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",4.9,kilogram,bicycle,Steel,4.900,Bicycles
+[G2509],"polyurethane, flexible foam_market for polyurethane, flexible foam[GLO]",0.03,kilogram,bicycle,Polyurethane,0.030,Bicycles
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",2.41,kilogram,bicycle,Aluminium,2.410,Bicycles
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",1.96,kilogram,bicycle,Polyethylene,1.960,Bicycles
+[G6662],"electric motor, vehicle_market for electric motor, vehicle[GLO]",4.4,kilogram,bicycle,,,Bicycles
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",5.12,kilogram,bicycle,Aluminium,5.120,Bicycles
+[G11853],synthetic rubber_market for synthetic rubber[GLO],0.563,kilogram,bicycle,Rubber,0.563,Bicycles
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",1.59,kilogram,bicycle,Chromium steel,1.590,Bicycles
+[G13179],"battery, Li-ion, rechargeable, prismatic_market for battery, Li-ion, rechargeable, prismatic[GLO]",2.6,kilogram,bicycle,,,Bicycles
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.75,kilogram,evengine,Steel,3.300,Bicycles
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.0528,kilogram,evengine,Aluminium,0.232,Bicycles
+[G5949],copper_market for copper[GLO],0.09,kilogram,evengine,Copper,0.396,Bicycles
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.112,kilogram,evengine,Aluminium,0.493,Bicycles
+[G4317],"battery cell, Li-ion_market for battery cell, Li-ion[GLO]",0.799,kilogram,battery,,,Bicycles
+[G5916],reinforcing steel_market for reinforcing steel[GLO],0.145,kilogram,battery,Steel,0.377,Bicycles
+[G6193],"cable, data cable in infrastructure_market for cable, data cable in infrastructure[GLO]",0.373,meter,battery,,,Bicycles
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",0.0342,kilogram,evcable,Polyethylene,0.033,Bicycles
+[G5949],copper_market for copper[GLO],0.0155,kilogram,evcable,Copper,0.015,Bicycles
+[G6812],glass fibre_market for glass fibre[GLO],0.0198,kilogram,evcable,Silica,0.019,Bicycles
+[G258],"cathode, LiMn2O4, for lithium-ion battery_market for cathode, LiMn2O4, for lithium-ion battery[GLO]",0.327,kilogram,batcell,,,Bicycles
+[G3102],"polyethylene, low density, granulate_market for polyethylene, low density, granulate[GLO]",0.0733,kilogram,batcell,Polyethylene,0.152,Bicycles
+[G7974],battery separator_market for battery separator[GLO],0.0537,kilogram,batcell,,,Bicycles
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.0165,kilogram,batcell,Aluminium,0.034,Bicycles
+[G11860],ethylene carbonate_market for ethylene carbonate[GLO],0.16,kilogram,batcell,Ethylene Carbonate,0.332,Bicycles
+[G11941],"anode, graphite, for lithium-ion battery_market for anode, graphite, for lithium-ion battery[GLO]",0.401,kilogram,batcell,,,Bicycles
+[G14613],lithium hexafluorophosphate_market for lithium hexafluorophosphate[GLO],0.019,kilogram,batcell,LiPF6,0.039,Bicycles
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.393,kilogram,cathode,Aluminium,0.267,Bicycles
+[G14004],lithium manganese oxide_market for lithium manganese oxide[GLO],0.623,kilogram,cathode,LiMn2O4,0.423,Bicycles
+[G1987],"graphite, battery grade_market for graphite, battery grade[GLO]",0.494,kilogram,anode,Graphite,0.412,Bicycles
+[G5949],copper_market for copper[GLO],0.524,kilogram,anode,Copper,0.437,Bicycles
+[G2574],polyvinylfluoride_market for polyvinylfluoride[GLO],0.192,kilogram,batsep,Polyvinylfluoride,0.021,Bicycles
+[G7183],silica sand_market for silica sand[GLO],0.218,kilogram,batsep,Silica,0.024,Bicycles
+[G7578],"fleece, polyethylene_market for fleece, polyethylene[GLO]",0.351,kilogram,batsep,Polyethylene,0.039,Bicycles
+[G12526],phthalic anhydride_market for phthalic anhydride[GLO],0.291,kilogram,batsep,Phthalic Anhydride,0.032,Bicycles

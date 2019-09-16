@@ -1,0 +1,30 @@
+Material Group	Material/Component	Unit	Electric Motor, Copper Windings, Base	Electric Motor, Nd2Fe14B Magnet	Electric Motor, Other	Controller	Inverter, for motor	Inverter, for charging	Battery Passive Cooling System	Other Battery-Related Equipment/Hardware
+Ferrous metals	High carbon steel, following Roder	kg	0	0	5.483243675	0	0	0	0	0
+Non-ferrous metals	Aluminum	kg	0	0	55.7	0.009614422	34.358	34.358	60	0
+Non-ferrous metals	Copper	kg	38.58	0	0	0.051677516	35.45	35.45	0	0
+Non-ferrous metals	Brass	kg	0	0	0.23	0.001201803	0	0	0	0
+Polymers	Fiber glass insulation	kg	0	0	3.1	0.068502754	0	0	0	0
+Wood	Wood	kg	0	0	23	0	0	0	0	0
+Polymers	Impregnation resin	kg	0	0	3.7	0	0	0	0	0
+Chemicals	Paint	kg	0	0	2.9	0	0	0	0	0
+Chemicals	Other chemicals	kg	0	0	0.16	0	0	0	0	0
+Non-ferrous metals	Neodymium	kg	0	1.666666667	0	0	0	0	0	0
+Ferrous metals	Iron	kg	0	4.516888285	0	0	0	0	0	0
+Chemicals	Boron	kg	0	0.062458692	0	0	0	0	0	0
+Ferrous metals	sinter, iron, at plant	kg	0	6.246013644	0	0	0	0	0	0
+Ferrous metals	iron ore, 65% Fe, at beneficiation	kg	0	6.558314326	0	0	0	0	0	0
+Ferrous metals	Steel, unspecified	kg	0	0	0	0.392989484	0	0	20	10
+Polymers	Epoxy	kg	0	0	0	0.054081122	0	0	0	0
+Chemicals	Brominated flame retardants	kg	0	0	0	0.01321983	0	0	0	0
+Non-ferrous metals	Tin	kg	0	0	0	0.01321983	0	0	0	0
+Non-ferrous metals	Lead	kg	0	0	0	0.008412619	0	0	0	0
+Non-ferrous metals	Nickel	kg	0	0	0	0.001201803	0	0	0	0
+Non-ferrous metals	Chromium	kg	0	0	0	0.000360541	0	0	0	0
+Non-ferrous metals	Silver	kg	0	0	0	0.00012018	0	0	0	0
+Non-ferrous metals	Gold	kg	0	0	0	0.00012018	0	0	0	0
+Silicon	Silicon	kg	0	0	0	0.032448673	0	0	0	0
+Non-ferrous metals	Bronze	kg	0	0	0	0.014421632	0	0	0	0
+Polymers	Polyethylene	kg	0	0	0	0.346119179	3.9	3.9	0	0
+Electronics	Circuit boards	kg	0	0	0	0	0.2	0.2	0	0
+Electronics	Other electronic components	kg	0	0	0	0	0.166666667	0.166666667	0	0
+Non-ferrous metals	Nuts and bolts	kg	0	0	0	0	0.166666667	0.166666667	0	0

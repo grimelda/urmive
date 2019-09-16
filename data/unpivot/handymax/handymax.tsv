@@ -1,0 +1,19 @@
+Class	Vehicle	Component	Ferrous Metals	Nonferrous Metals	Machinery	Electrical 	Minerals	Plastics	Joinery	Unkown
+Seavessels	handymax	Machinery piping	90000	5000						
+Seavessels	handymax	Electrical		12500		12500				
+Seavessels	handymax	Bridge equipment				6000				
+Seavessels	handymax	Tools and Spares	15000							
+Seavessels	handymax	Main Engine			220000					
+Seavessels	handymax	Shafts	28000							
+Seavessels	handymax	Propeller		17000						
+Seavessels	handymax	Auxilliary engines			38000					
+Seavessels	handymax	Machinery comp	75000				5000			
+Seavessels	handymax	Machinery equip			114000					1000
+Seavessels	handymax	Cranes			228000					
+Seavessels	handymax	Hatches	880000							
+Seavessels	handymax	Outfit For	55000	2000	30000	13600	66000	31700	16300	5400
+Seavessels	handymax	Outfit Mid	25000	2000		32400	60000	28800	38800	12900
+Seavessels	handymax	Outfit Aft	25000	2000	60000	73400	150100	72000	88100	29400
+Seavessels	handymax	Paint and Cathodes		76000						54000
+Seavessels	handymax	Steel hull elements	8451000							
+Seavessels	handymax	Tol and Marg	-203900							

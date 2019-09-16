@@ -1,0 +1,7 @@
+flowid,Ecoinvent Flow,Partmass,unit,Part,Material,Unitmass,Class
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",4.9,kilogram,bicycle,Steel,4.9,Bicycles
+[G2509],"polyurethane, flexible foam_market for polyurethane, flexible foam[GLO]",0.03,kilogram,bicycle,Polyurethane,0.03,Bicycles
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",1.96,kilogram,bicycle,Polyethylene,1.96,Bicycles
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",7.53,kilogram,bicycle,Aluminium,7.53,Bicycles
+[G11853],synthetic rubber_market for synthetic rubber[GLO],0.563,kilogram,bicycle,Rubber,0.563,Bicycles
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",1.59,kilogram,bicycle,Chromium steel,1.59,Bicycles

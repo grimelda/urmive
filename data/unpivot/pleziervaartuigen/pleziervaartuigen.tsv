@@ -1,0 +1,19 @@
+recreatie vaartuig	Materiaal	Aantal	Gem. lengte	Gem. gewicht kg/boot	Motor	Romp	Kiel	Overig
+Kajuitzeilboot	Steel	10.294	9,2	6000	0.08	0.40	0.35	0.17
+Kajuitzeilboot	Polyester	63.124	9,2	4500	0.08	0.45	0.35	0.12
+Kajuitzeilboot	Wood	4.56	9,2	4500	0.10	0.50	0.30	0.10
+Openzeilboot	Steel	1.028	6,0	750	0.05	0.60	0.30	0.10
+Openzeilboot	Polyester	15.866	6,0	500	0.05	0.55	0.35	0.10
+Openzeilboot	Wood	4.562	6,0	500	0.05	0.60	0.30	0.10
+Platbodem	Steel	4.559	9,0	9500	0.10	0.70	0.00	0.20
+Platbodem	Polyester	131	9,0	5000	0.10	0.75	0.00	0.15
+Platbodem	Wood	426	9,0	4500	0.10	0.80	0.00	0.10
+Kajuitmotorboot	Steel	38.429	9,4	7000	0.05	0.75	0.00	0.20
+Kajuitmotorboot	Polyester	20.159	9,4	5000	0.10	0.70	0.00	0.20
+Kajuitmotorboot	Wood	745	9,4	5000	0.10	0.80	0.00	0.10
+Open motorboot	Steel	3.266	5,8	1500	0.20	0.85	0.00	0.10
+Openmotorboot	Polyester	21.904	5,8	1000	0.20	0.85	0.00	0.10
+Openmotorboot	Wood	1.393	5,8	1000	0.20	0.85	0.00	0.10
+Anders	Steel	3.385	4,5	750	0.05	0.85	0.00	0.10
+Anders	Polyester	3.103	4,5	500	0.05	0.85	0.00	0.10
+Anders	Wood	564	4,5	500	0.05	0.85	0.00	0.10

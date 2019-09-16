@@ -1,17 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# Created on Thu Aug 29 11:59:11 2019
-# @author: jvanderzaag
 import time; start = time.time()
 import functions as func
-
-'''
-import os
-import pandas as pd 
-import numpy as np
-import plotly.express as px
-'''
-
 
 #%%
 (
@@ -41,9 +29,9 @@ mat = func.CalcMass(dbx,
 
 #%% Plotting
 
-func.PlotMass2D(mat, D=['Material', 'Vehicle'])
-func.PlotMass2D(mat, D=['Vehicle', 'Material'])
-func.PlotMass1D(mat, D='Vehicle')
+func.PlotMass2D(mat, D=['Material', 'Class'])
+func.PlotMass2D(mat, D=['Class', 'Material'])
+func.PlotMass1D(mat, D='Class')
 
     
 #%%
