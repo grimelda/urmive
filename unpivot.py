@@ -23,7 +23,7 @@ def UnpivotHandymax():
     co = co[~(co['Unitmass'].isna())].reset_index(drop=True)
     
     for vehicle in list(set(co['Vehicle'])):
-        co.loc[co['Vehicle'] == vehicle, ['Unitmass','Material', 'Class']].to_csv(str('data/mass/'+vehicle+'.csv') ,
+        co.loc[co['Vehicle'] == vehicle, ['Unitmass','Material', 'Class', 'Component']].to_csv(str('data/mass/'+vehicle+'.csv') ,
                   index=False,
                   header=True,
                   )
@@ -155,6 +155,6 @@ def UnpivotWalpleziervaart():
 
 
 UnpivotCars()
-UnpivotHandymax()
+# UnpivotHandymax() ### deprecated, download from drive instead.
 UnpivotWalpleziervaart()
 UnpivotPleziervaartuigen()

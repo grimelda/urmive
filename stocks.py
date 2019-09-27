@@ -9,7 +9,7 @@ import functions as func
  ) = func.ReadData()
 
 #%%
-(
+( ### row 207 in combinedataframes passes listlike warning
  dbx,
  Vtypes,
  ) = func.UnifyCountData(dbx, startyear=2000, endyear=2017)
@@ -29,9 +29,11 @@ mat = func.CalcMass(dbx,
 
 #%% Plotting
 
-func.PlotMass2D(mat, D=['Material', 'Class'])
-func.PlotMass2D(mat, D=['Class', 'Material'])
-func.PlotMass1D(mat, D='Class')
+### todo: fix that icecar doesnt have class.... wtf
+
+func.PlotMass2D(mat, D=['Material', 'Vehicle'])
+func.PlotMass2D(mat, D=['Vehicle', 'Material'])
+func.PlotMass1D(mat, D='Vehicle')
 
     
 #%%

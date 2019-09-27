@@ -1,208 +1,207 @@
-Material Group,Material/Component,Unit,Component,Unitmass,Part,Material,Class,Hawkinsmass,Partmass
-Avgcar,Avgcar,kg,Avgcar,,,,,1231.645477,1121
-Ferrous metals,"Fe, cast, machined",kg,Crankcase,27.05919083,icemotor,Iron,Cars,29.73,0.02413843964
-Other,Tools,kg,Crankcase,0.001365246762,icemotor,Steel,Cars,0.0015,0.000001217882928
-Ferrous metals,"Shavings, Fe, cast, machined",kg,Crankcase,4.339664375,icemotor,Iron,Cars,4.768,0.003871243867
-Ferrous metals,"Scrap, Fe, cast, machined",kg,Crankcase,0.2248106335,icemotor,Steel,Cars,0.247,0.0002005447222
-Other,Emulsion,kg,Crankcase,0.5397275534,icemotor,Emulsion,Cars,0.593,0.0004814697176
-Ferrous metals,"Fe, forged, machined",kg,Crankshaft,7.527970648,icemotor,Iron,Cars,8.271,0.006715406466
-Other,Tools,kg,Crankshaft,0.03485019902,icemotor,Steel,Cars,0.03829,0.00003108849154
-Ferrous metals,"Shavings, Fe, forged, machined",kg,Crankshaft,1.245105047,icemotor,Iron,Cars,1.368,0.00111070923
-Ferrous metals,"Scrap, Fe, forged, machined",kg,Crankshaft,0.04956755912,icemotor,Iron,Cars,0.05446,0.00004421726951
-Other,Emulsion,kg,Crankshaft,1.013013098,icemotor,Emulsion,Cars,1.113,0.0009036691327
-Ferrous metals,"Fe, cast, machined",kg,Flywheel,5.776814134,icemotor,Iron,Cars,6.347,0.00515326863
-Other,Tools,kg,Flywheel,0.001219620441,icemotor,Steel,Cars,0.00134,0.000001087975416
-Ferrous metals,"Shavings, Fe, cast, machined",kg,Flywheel,1.071263626,icemotor,Iron,Cars,1.177,0.0009556321376
-Ferrous metals,"Scrap, Fe, cast, machined",kg,Flywheel,0.01365246762,icemotor,Steel,Cars,0.015,0.00001217882928
-Other,Emulsion,kg,Flywheel,0.8500936507,icemotor,Emulsion,Cars,0.934,0.0007583351032
-Ferrous metals,"Steel, cast, heat treat",kg,Ring gear,0.4596330767,icemotor,Steel,Cars,0.505,0.0004100205858
-Other,Tools,kg,Ring gear,0.01215069619,icemotor,Steel,Cars,0.01335,0.00001083915806
-Ferrous metals,"Shavings, Steel, cast, heat treated",kg,Ring gear,0.223900469,icemotor,Steel,Cars,0.246,0.0001997328002
-Ferrous metals,"Scrap, Steel, cast, heat treated",kg,Ring gear,0.002930729717,icemotor,Steel,Cars,0.00322,0.000002614388686
-Other,Emulsion,kg,Ring gear,0.6098102205,icemotor,Emulsion,Cars,0.67,0.0005439877079
-Ferrous metals,"Fe, cast, machined",kg,"Connecting rod, 4 pc.",1.356145117,icemotor,Iron,Cars,1.49,0.001209763709
-Other,Tools,kg,"Connecting rod, 4 pc.",0.005215242632,icemotor,Steel,Cars,0.00573,0.000004652312785
-Ferrous metals,"Shavings, Fe, cast, machined",kg,"Connecting rod, 4 pc.",0.7090181519,icemotor,Iron,Cars,0.779,0.0006324872007
-Ferrous metals,"Scrap, Fe, cast, machined",kg,"Connecting rod, 4 pc.",0.01604620028,icemotor,Steel,Cars,0.01763,0.00001431418401
-Other,Emulsion,kg,"Connecting rod, 4 pc.",0.8227887155,icemotor,Emulsion,Cars,0.904,0.0007339774447
-Non-ferrous metals,"Al, cast, machined",kg,Cylinder head,7.287687218,icemotor,Aluminium,Cars,8.007,0.00650105907
-Other,Tools,kg,Cylinder head,0.0004095740287,icemotor,Steel,Cars,0.00045,0.0000003653648784
-Non-ferrous metals,"Shavings, Al, cast, machined",kg,Cylinder head,1.810317207,icemotor,Aluminium,Cars,1.989,0.001614912763
-Non-ferrous metals,"Scrap, Al, cast, machined",kg,Cylinder head,0.0008555546378,icemotor,Aluminium,Cars,0.00094,0.0000007632066349
-Other,Emulsion,kg,Cylinder head,0.8073159188,icemotor,Emulsion,Cars,0.887,0.0007201747715
-Ferrous metals,"Steel, extruded",kg,Camshaft,0.07918431222,icemotor,Steel,Cars,0.087,0.00007063720983
-Ferrous metals,"Steel, extruded, machined",kg,Camshaft,1.911345467,icemotor,Steel,Cars,2.1,0.001705036099
-Other,Tools,kg,Camshaft,0.01264218502,icemotor,Steel,Cars,0.01389,0.00001127759591
-Ferrous metals,"Shavings, Steel, extruded, machined",kg,Camshaft,0.381358929,icemotor,Steel,Cars,0.419,0.0003401952979
-Ferrous metals,"Scrap, Steel, extruded, machined",kg,Camshaft,0.03933731005,icemotor,Steel,Cars,0.04322,0.00003509126677
-Other,Emulsion,kg,Camshaft,0.6453066364,icemotor,Emulsion,Cars,0.709,0.000575652664
-Ferrous metals,"Steel, extruded",kg,"Intake valve, 4 pc.",0.2157089885,icemotor,Steel,Cars,0.237,0.0001924255026
-Other,Tools,kg,"Intake valve, 4 pc.",0.3612806999,icemotor,Steel,Cars,0.39694,0.0003222842997
-Ferrous metals,"Shavings, Steel, extruded, machined",kg,"Intake valve, 4 pc.",0.04914888345,icemotor,Steel,Cars,0.054,0.00004384378541
-Ferrous metals,"Scrap, Steel, extruded, machined",kg,"Intake valve, 4 pc.",0.009092543438,icemotor,Steel,Cars,0.00999,0.000008111100301
-Other,Emulsion,kg,"Intake valve, 4 pc.",1.250566034,icemotor,Emulsion,Cars,1.374,0.001115580762
-Ferrous metals,"Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",0.277600175,icemotor,Iron,Cars,0.305,0.0002476361954
-Other,Tools,kg,"Hydraulic valve lifter, 8 pc",0.003267490585,icemotor,Steel,Cars,0.00359,0.000002914799808
-Ferrous metals,"Shavings, Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",0.01547279664,icemotor,Iron,Cars,0.017,0.00001380267319
-Ferrous metals,"Scrap, Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",0.006362049913,icemotor,Steel,Cars,0.00699,0.000005675334445
-Other,Emulsion,kg,"Hydraulic valve lifter, 8 pc",0.5979780819,icemotor,Emulsion,Cars,0.657,0.0005334327225
-Non-ferrous metals,"Al, cast",kg,Block and other,0.1802125726,icemotor,Aluminium,Cars,0.198,0.0001607605465
-Non-ferrous metals,"Al, cast, machined",kg,Block and other,17.01370515,icemotor,Aluminium,Cars,18.693,0.01517725705
-Non-ferrous metals,"Al, no specification",kg,Block and other,1.117682016,icemotor,Aluminium,Cars,1.228,0.0009970401571
-Non-ferrous metals,"Al, rolled, stamped",kg,Block and other,1.547279664,icemotor,Aluminium,Cars,1.7,0.001380267319
-Ferrous metals,"Fe, cast",kg,Block and other,0.1383450053,icemotor,Iron,Cars,0.152,0.0001234121367
-Ferrous metals,"Fe, cast, machined",kg,Block and other,26.06529119,icemotor,Iron,Cars,28.638,0.02325182086
-Ferrous metals,"Fe, forged, machined",kg,Block and other,13.04174724,icemotor,Iron,Cars,14.329,0.01163402965
-Ferrous metals,"Steel, cast, heat treat",kg,Block and other,0.8482733217,icemotor,Steel,Cars,0.932,0.0007567112593
-Ferrous metals,"Steel, cast, machined",kg,Block and other,6.917250263,icemotor,Steel,Cars,7.6,0.006170606836
-Ferrous metals,"Steel, col rolled, stamped",kg,Block and other,3.913707386,icemotor,Steel,Cars,4.3,0.003491264394
-Ferrous metals,"Steel, cold rolled",kg,Block and other,0.3340303745,icemotor,Steel,Cars,0.367,0.0002979753564
-Ferrous metals,"Steel, extruded",kg,Block and other,2.162550872,icemotor,Steel,Cars,2.376,0.001929126558
-Ferrous metals,"Steel, galvanized, stamped",kg,Block and other,2.457444172,icemotor,Steel,Cars,2.7,0.002192189271
-Ferrous metals,"Steel, no specification",kg,Block and other,4.676425243,icemotor,Steel,Cars,5.138,0.00417165499
-Ferrous metals,"Steel, other",kg,Block and other,2.457444172,icemotor,Steel,Cars,2.7,0.002192189271
-Polymers,"Plastic, injection molded",kg,Block and other,1.09219741,icemotor,Plastic,Cars,1.2,0.0009743063425
-Polymers,"Rubber, injection molded",kg,Block and other,0.09101645083,icemotor,Rubber,Cars,0.1,0.00008119219521
-Polymers,"Rubber, no specification",kg,Block and other,0.492316174,icemotor,Rubber,Cars,0.540909,0.0004391758912
-Polymers,"Rubber, other",kg,Block and other,0.09101645083,icemotor,Rubber,Cars,0.1,0.00008119219521
-Other,"Other, other",kg,Block and other,0.546098705,icemotor,Plastic,Cars,0.6,0.0004871531712
-Other,Paint,kg,Paint/Paint shop,10.73393559,interior,Paint,Cars,11.79340162,0.009575321665
-Polymers,"Polypropylene, 25% Fiberglass (PP-GF25)",kg,Under body finisher,0.7882024642,interior,Polypropylene,Cars,0.866,0.0007031244105
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Bumper covers (4),0.436878964,interior,Polypropylene,Cars,0.48,0.000389722537
-Polymers,Polypropylene (PP),kg,Wheel arc closures (4),3.487750396,interior,Polypropylene,Cars,3.832,0.00311128492
-Polymers,"Nylon 66, 30% Mineral powder (PA66-MD30)",kg,Road wheel finishers (4),0.1492669794,interior,Nylon,Cars,0.164,0.0001331552001
-Polymers,Ethylene propylene diene monomer (EPDM-TD10),kg,Bumpers (2),4.614534057,interior,EPDM,Cars,5.07,0.004116444297
-Polymers,Polypropylene (PP),kg,Bumpers (2),4.614534057,interior,Polypropylene,Cars,5.07,0.004116444297
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,Rear lamps (2),0.82369888,interior,ABS,Cars,0.905,0.0007347893666
-Polymers,Polymethyl methacrylate (PMMA),kg,Rear lamps (2),0.82369888,interior,Polymethylmethacrylate,Cars,0.905,0.0007347893666
-Polymers,Acrylonitrile styrene acrylate (ASA),kg,Radiator Grille,0.2512054043,interior,ASA,Cars,0.276,0.0002240904588
-Ferous metals,Steel (GREET),kg,"Other, exterior trim (GREET data)",0.3905501179,interior,Steel,Cars,0.429098382,0.0003483943959
-Polymers,Rubber (GREET),kg,"Other, exterior trim (GREET data)",0.1362384131,interior,Rubber,Cars,0.149685482,0.0001215329287
-Polymers,Rubber (GREET),kg,Sealers/deadeners,0.8191480574,interior,Rubber,Cars,0.9,0.0007307297569
-Non-ferrous metals,Copper,kg,Exterior electrical (GREET data),3.723849961,interior,Copper,Cars,4.091403177,0.003321900054
-Polymers,Other plastic (GREET),kg,Exterior electrical (GREET data),5.35871092,interior,Plastic,Cars,5.887628963,0.004780295201
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,Centre console,0.5315360728,interior,ABS,Cars,0.584,0.00047416242
-Polymers,Polypropylene ether (PE),kg,Dashboard,3.368518845,interior,Polypropylene,Cars,3.701,0.003004923145
-Polymers,Polystyrene (PS),kg,Dashboard,3.368518845,interior,Polystyrene,Cars,3.701,0.003004923145
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,Glove Box,1.94411139,interior,ABS,Cars,2.136,0.00173426529
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Air Duct,0.216619153,interior,Polypropylene,Cars,0.238,0.0001932374246
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Steering Column Finisher,0.08191480574,interior,Polypropylene,Cars,0.09,0.00007307297569
-Ferous metals,Steel (GREET),kg,"Other, Instrument panel (GREET data)",10.06512883,interior,Steel,Cars,11.05858198,0.008978705468
-Non-ferrous metals,Wrought Aluminium,kg,"Other, Instrument panel (GREET data)",0.2188071484,interior,Aluminium,Cars,0.240403956,0.0001951892492
-Non-ferrous metals,Magnesium,kg,"Other, Instrument panel (GREET data)",0.2188071484,interior,Magnesium,Cars,0.240403956,0.0001951892492
-Polymers,Rubber (GREET),kg,"Other, Instrument panel (GREET data)",0.2188071484,interior,Rubber,Cars,0.240403956,0.0001951892492
-Polymers,Polypropylene ether (PE),kg,B post finishers (2),0.1975056983,interior,Polypropylene,Cars,0.217,0.0001761870636
-Polymers,Polypropylene (PP),kg,B post finishers (2),0.1975056983,interior,Polypropylene,Cars,0.217,0.0001761870636
-Polymers,Polypropylene ether (PE),kg,C post finishers (2),0.3686166258,interior,Polypropylene,Cars,0.405,0.0003288283906
-Polymers,Polypropylene (PP),kg,C post finishers (2),0.3686166258,interior,Polypropylene,Cars,0.405,0.0003288283906
-Polymers,Polypropylene ether (PE),kg,Sill finishers (2),0.3686166258,interior,Polypropylene,Cars,0.405,0.0003288283906
-Polymers,Polypropylene (PP),kg,Sill finishers (2),0.3686166258,interior,Polypropylene,Cars,0.405,0.0003288283906
-Polymers,Polypropylene ether (PE),kg,A post finishers (2),0.3686166258,interior,Polypropylene,Cars,0.405,0.0003288283906
-Polymers,Polypropylene (PP),kg,A post finishers (2),0.3686166258,interior,Polypropylene,Cars,0.405,0.0003288283906
-Ferous metals,Steel (GREET),kg,"Other, Trim and Insulation (GREET data)",5.967655342,interior,Steel,Cars,6.556677708,0.005323510564
-Non-ferrous metals,Wrought Aluminium,kg,"Other, Trim and Insulation (GREET data)",0.02022934003,interior,Aluminium,Cars,0.022226026,0.00001804579842
-Polymers,Other plastic (GREET),kg,"Other, Trim and Insulation (GREET data)",10.98740543,interior,Plastic,Cars,12.07188956,0.009801432137
-Polymers,Other plastic (GREET),kg,"Doors, including trunk lid, interior plastics etc.",10.9219741,interior,Plastic,Cars,12,0.009743063425
-Polymers,Polyurethane (polyether type) (PUR-E),kg,Squab pads,3.184665614,interior,Polyurethane,Cars,3.499,0.00284091491
-Polymers,Polyurethane (polyether type) (PUR-E),kg,Cushion pads,4.935822128,interior,Polyurethane,Cars,5.423,0.004403052746
-Polymers,Polyethylene terephthalate (PET),kg,Seat Belts (2),0.3440421841,interior,PET,Cars,0.378,0.0003069064979
-Polymers,Nylon 6 (PA6),kg,Height Controls (2),0.2421037592,interior,Nylon,Cars,0.266,0.0002159712393
-Polymers,Polyurethane (polyether type) (PUR-E),kg,Head Rest Pads (4),0.4514415961,interior,Polyurethane,Cars,0.496,0.0004027132882
-Ferous metals,Steel (GREET),kg,"Other, Seating and restraint (GREET data)",31.60731187,interior,Steel,Cars,34.72703185,0.02819563949
-Polymers,Other plastic (GREET),kg,"Other, Seating and restraint (GREET data)",13.72997813,interior,Plastic,Cars,15.08516099,0.01224797336
-Ferous metals,Rolled steel (MUSES),kg,HVAC (GREET),5.643019951,interior,Steel,Cars,6.2,0.005033916103
-Ferous metals,EAF steel (MUSES),kg,HVAC (GREET),0.09101645083,interior,Steel,Cars,0.1,0.00008119219521
-Ferous metals,Galvanized steel (MUSES),kg,HVAC (GREET),4.823871894,interior,Steel,Cars,5.3,0.004303186346
-Ferous metals,Stainless steel (MUSES),kg,HVAC (GREET),1.09219741,interior,Steel,Cars,1.2,0.0009743063425
-Non-ferrous metals,Cast Aluminium,kg,HVAC (GREET),4.823871894,interior,Aluminium,Cars,5.3,0.004303186346
-Non-ferrous metals,Extruded aluminum (MUSES),kg,HVAC (GREET),10.9219741,interior,Aluminium,Cars,12,0.009743063425
-Non-ferrous metals,Rolled aluminum (MUSES),kg,HVAC (GREET),0.8191480574,interior,Aluminium,Cars,0.9,0.0007307297569
-Non-ferrous metals,Copper,kg,HVAC (GREET),3.033575334,interior,Copper,Cars,3.332996735,0.002706133215
-Non-ferrous metals,Zinc,kg,HVAC (GREET),0.09082560844,interior,Zinc,Cars,0.099790321,0.00008102195222
-Non-ferrous metals,Other metals,kg,HVAC (GREET),0.7281316066,interior,Metal,Cars,0.8,0.0006495375617
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,HVAC (GREET),1.274230312,interior,ABS,Cars,1.4,0.001136690733
-Polymers,Polypropylene ether (PE),kg,HVAC (GREET),3.640658033,interior,Polypropylene,Cars,4,0.003247687808
-Polymers,Nylon 66 (PA66),kg,HVAC (GREET),0.1820329017,interior,Nylon,Cars,0.2,0.0001623843904
-Polymers,Other plastic (GREET),kg,HVAC (GREET),9.101645083,interior,Plastic,Cars,10,0.008119219521
-Polymers,Rubber (GREET),kg,HVAC (GREET),2.821509976,interior,Rubber,Cars,3.1,0.002516958051
-Polymers,Extruded rubber (MUSES),kg,HVAC (GREET),0.8191480574,interior,Rubber,Cars,0.9,0.0007307297569
-Other,Other,kg,HVAC (GREET),0.1271558524,interior,Other,Cars,0.13970645,0.0001134307336
-Non-ferrous metals,Copper,kg,Interior electrical (GREET),3.723849961,interior,Copper,Cars,4.091403177,0.003321900054
-Polymers,Other plastic (GREET),kg,Interior electrical (GREET),5.35871092,interior,Plastic,Cars,5.887628963,0.004780295201
-Ferous metals,Steel (GREET),kg,Weld blanks and fasteners (interior to body) (GREET),4.54128044,interior,Steel,Cars,4.98951607,0.004051097627
-Polymers,Other plastic (GREET),kg,Weld blanks and fasteners (interior to body) (GREET),4.54128044,interior,Plastic,Cars,4.98951607,0.004051097627
-Polymers,"Nylon 6, 10% Glass fiber, 20% Minerals (PA6-(GF10+MX20))",kg,Engine Finisher,1.17502238,interior,Nylon,Cars,1.291,0.00104819124
-Polymers,High density polyethylene (PE-HD),kg,Wash Fluid Tank,0.5588410081,interior,Polyethylene,Cars,0.614,0.0004985200786
-Polymers,"Nylon 66, 25% Glass fiber (PA66-GF25)",kg,Steering Oil Tank,0.2029666853,interior,Nylon,Cars,0.223,0.0001810585953
-Polymers,Polypropylene ether (PE),kg,Brake Fluid Tank,0.05734036402,interior,Polypropylene,Cars,0.063,0.00005115108298
-Polymers,Polypropylene (PP),kg,Brake Fluid Tank,0.05734036402,interior,Polypropylene,Cars,0.063,0.00005115108298
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Wheel Arc Finisher,1.42531762,interior,Polypropylene,Cars,1.566,0.001271469777
-Polymers,Polypropylene (PP),kg,Load Space Finishers (2),1.541818677,interior,Polypropylene,Cars,1.694,0.001375395787
-Polymers,Polypropylene ether (PE),kg,Latch Finisher,0.2867018201,interior,Polypropylene,Cars,0.315,0.0002557554149
-Polymers,Polypropylene (PP),kg,Latch Finisher,0.2867018201,interior,Polypropylene,Cars,0.315,0.0002557554149
-Polymers,Polypropylene ether (PE),kg,Tool Box,0.1401653343,interior,Polypropylene,Cars,0.154,0.0001250359806
-Ferous metals,Steel,kg,"Brakes, hardware",9.642825259,brakes,Steel,Cars,10.594596,0.008601985066
-Ferous metals,Cast iron,kg,"Brakes, hardware",16.53055758,brakes,Iron,Cars,18.16216457,0.01474626011
-Friction Materials,Barium Sulfate,kg,"Brakes, friction material",1.20E-08,brakes,Barium sulphate,Cars,1.32E-08,1.07E-11
-Friction Materials,Brass,kg,"Brakes, friction material",1.20E-09,brakes,Brass,Cars,1.32E-09,1.07E-12
-Friction Materials,Aluminum Oxide,kg,"Brakes, friction material",1.20E-08,brakes,Aluminium,Cars,1.32E-08,1.07E-11
-Friction Materials,Fibrous Glass,kg,"Brakes, friction material",1.20E-08,brakes,Glassfibre,Cars,1.32E-08,1.07E-11
-Friction Materials,Phenol Formaldehyde Resin,kg,"Brakes, friction material",6.01E-09,brakes,Resin,Cars,6.60E-09,5.36E-12
-Friction Materials,Silica sand,kg,"Brakes, friction material",0.6887732117,brakes,Silica,Cars,0.756756834,0.0006144274859
-Friction Materials,Ceramic,kg,"Brakes, friction material",1.377546422,brakes,Ceramic,Cars,1.513513667,0.001228854971
-Ferous metals,Steel,kg,Cradle,27.24768264,chassis,Steel,Cars,29.93709642,0.02430658576
-Ferous metals,Steel,kg,Driveshaft/axle,67.29351925,chassis,Steel,Cars,73.93555631,0.06002990121
-Ferous metals,Steel,kg,Corner suspension,37.15593088,chassis,Steel,Cars,40.8233133,0.03314534422
-Ferous metals,Steel,kg,Steering system,16.18347211,chassis,Steel,Cars,17.7808209,0.01443663881
-Non-ferrous metals,Wrought Aluminium,kg,Steering system,3.034401022,chassis,Aluminium,Cars,3.33390392,0.002706869779
-Polymers,Rubber,kg,Steering system,1.011467008,chassis,Rubber,Cars,1.111301307,0.0009022899265
-Non-ferrous metals,Copper,kg,Chassis electrical,3.723849961,chassis,Copper,Cars,4.091403177,0.003321900054
-Polymers,Plastic,kg,Chassis electrical,5.35871092,chassis,Plastic,Cars,5.887628963,0.004780295201
-Ferous metals,Steel,kg,Weld blanks and fasteners (chassis to body),9.082560881,chassis,Steel,Cars,9.97903214,0.008102195255
-Ferous metals,galv steel,kg,Body-in-white,192.2438836,doors,Steel,Cars,211.2188312,0.1714932057
-Scrap,"Scrap, galv steel",kg,Body-in-white,40.39167428,doors,Steel,Cars,44.37843259,0.03603182362
-Ferous metals,Rolled steel,kg,Body panels,17.39991568,doors,Steel,Cars,19.11733046,0.01552178027
-Ferous metals,EAF steel,kg,Body panels,9.389803166,doors,Steel,Cars,10.3166,0.008376274011
-Ferous metals,galv steel,kg,Body panels,4.166824135,doors,Steel,Cars,4.5781,0.003717059889
-Ferous metals,hot rolled steel,kg,Body panels,30.44985244,doors,Steel,Cars,33.45532831,0.02716311547
-Scrap,"Scrap, Rolled steel",kg,Body panels,3.655834003,doors,Steel,Cars,4.016673876,0.003261225694
-Scrap,"Scrap, EAF steel",kg,Body panels,1.972857934,doors,Steel,Cars,2.167583899,0.001759908951
-Scrap,"Scrap, galv steel",kg,Body panels,0.8754765042,doors,Steel,Cars,0.961888204,0.0007809781483
-Scrap,"Scrap, hot rolled steel",kg,Body panels,6.397709506,doors,Steel,Cars,7.029179283,0.005707144965
-Ferous metals,galv steel,kg,Bumpers,7.675799567,doors,Steel,Cars,8.43342,0.006847278829
-Scrap,"Scrap, galv steel",kg,Bumpers,1.612734773,doors,Steel,Cars,1.77191569,0.001438657246
-Ferous metals,EAF steel,kg,Body hardware,0.3343216272,doors,Steel,Cars,0.36732,0.0002982351714
-Ferous metals,stainless steel,kg,Body hardware,0.07249964904,doors,Steel,Cars,0.079655544,0.00006467408478
-Non-ferrous metals,Copper,kg,Body hardware,0.1816512178,doors,Copper,Cars,0.199580643,0.0001620439053
-Glass,Glass,kg,Body hardware,0.05449536543,doors,Glass,Cars,0.059874193,0.00004861317166
-Polymers,Plastic,kg,Body hardware,5.598135127,doors,Plastic,Cars,6.150684932,0.004993876117
-Polymers,Rubber,kg,Body hardware,0.2088989001,doors,Rubber,Cars,0.229517739,0.0001863504907
-Scrap,"Scrap, EAF steel",kg,Body hardware,0.07024312004,doors,Steel,Cars,0.07717629,0.00006266112403
-Scrap,"Scrap, stainless steel",kg,Body hardware,0.01523264154,doors,Steel,Cars,0.016736141,0.00001358844027
-Scrap,"Scrap, glass",kg,Body hardware,0.00286817684,doors,Glass,Cars,0.003151273,0.000002558587726
-Ferous metals,EAF steel,kg,Weld blanks and fasteners (electronics to body),3.837899673,doors,Steel,Cars,4.216709878,0.003423639315
-Polymers,Plastic,kg,Weld blanks and fasteners (electronics to body),3.11700174,doors,Plastic,Cars,3.424657534,0.00278055463
-Scrap,"Scrap, EAF steel",kg,Weld blanks and fasteners (electronics to body),0.8063673627,doors,Steel,Cars,0.885957819,0.0007193286019
-Ferous metals,EAF steel,kg,Weld blanks and fasteners (other systems to body),3.837899673,doors,Steel,Cars,4.216709878,0.003423639315
-Polymers,Plastic,kg,Weld blanks and fasteners (other systems to body),3.11700174,doors,Plastic,Cars,3.424657534,0.00278055463
-Scrap,"Scrap, EAF steel",kg,Weld blanks and fasteners (other systems to body),0.8063673627,doors,Steel,Cars,0.885957819,0.0007193286019
-Ferous metals,galv steel,kg,"Doors, including trunk lid",84.64529927,doors,Steel,Cars,93,0.07550874154
-Glass,Glass,kg,"Doors, including trunk lid",0.06811920656,doors,Glass,Cars,0.074842741,0.00006076646437
-Polymers,Plastic,kg,"Doors, including trunk lid",10.9219741,doors,Plastic,Cars,12,0.009743063425
-Scrap,"Scrap, galv steel",kg,"Doors, including trunk lid",17.78452085,doors,Steel,Cars,19.53989712,0.01586487141
-Scrap,"Scrap, glass",kg,"Doors, including trunk lid",0.003585221733,doors,Glass,Cars,0.003939092,0.000003198235266
-Glass,Glass,kg,Windscreen glass,10.5579083,doors,Glass,Cars,11.6,0.009418294644
-Scrap,"Scrap, glass",kg,Windscreen glass,0.5556793842,doors,Glass,Cars,0.610526316,0.0004956997183
-Glass,Glass,kg,Rear screen glass,4.159451803,doors,Glass,Cars,4.57,0.003710483321
-Scrap,"Scrap, glass",kg,Rear screen glass,0.2189185161,doors,Glass,Cars,0.240526316,0.000195288596
-Glass,Glass,kg,Side body glass (6),11.40436129,doors,Glass,Cars,12.53,0.01017338206
-Scrap,"Scrap, glass",kg,Side body glass (6),0.6002295413,doors,Glass,Cars,0.659473684,0.0005354411609
-polymers,Rubber,kg,Tires (x4),16.47876794,wheels,Rubber,Cars,18.10526316,0.01470006061
-Other,Graphite,kg,Tires (x4),7.580233252,wheels,Graphite,Cars,8.328421053,0.006762027879
-Ferrous metals,Steel (tires),kg,Tires (x4),5.163347287,wheels,Steel,Cars,5.672982456,0.00460601899
-Textiles,Textiles,kg,Tires (x4),1.757735247,wheels,Textile,Cars,1.93122807,0.001568006464
-Non-ferrous metals,Zinc oxide,kg,Tires (x4),0.3295753586,wheels,Zinc,Cars,0.362105263,0.000294001212
-Other,Sulphur,kg,Tires (x4),0.3295753586,wheels,Sulphur,Cars,0.362105263,0.000294001212
-Other,Additives,kg,Tires (x4),2.746461324,wheels,Other,Cars,3.01754386,0.002450010101
-Ferrous metals,Steel (wheels),kg,Wheels (x4),37.56877849,wheels,Steel,Cars,41.27691,0.03351362934
-Non-ferrous metals,Lead,kg,Wheels (x4),0.2730493525,wheels,Lead,Cars,0.3,0.0002435765856
+,Material Group,Material/Component,Unit,Component,Unitmass,Part,Material
+45,Ferrous metals,"Fe, cast, machined",kg,Crankcase,29.73,icemotor,Iron
+46,Other,Tools,kg,Crankcase,0.0015,icemotor,Steel
+47,Ferrous metals,"Shavings, Fe, cast, machined",kg,Crankcase,4.768,icemotor,Iron
+48,Ferrous metals,"Scrap, Fe, cast, machined",kg,Crankcase,0.247,icemotor,Steel
+49,Other,Emulsion,kg,Crankcase,0.593,icemotor,Other
+50,Ferrous metals,"Fe, forged, machined",kg,Crankshaft,8.271,icemotor,Iron
+51,Other,Tools,kg,Crankshaft,0.03829,icemotor,Steel
+52,Ferrous metals,"Shavings, Fe, forged, machined",kg,Crankshaft,1.368,icemotor,Iron
+53,Ferrous metals,"Scrap, Fe, forged, machined",kg,Crankshaft,0.05446,icemotor,Iron
+54,Other,Emulsion,kg,Crankshaft,1.113,icemotor,Other
+55,Ferrous metals,"Fe, cast, machined",kg,Flywheel,6.347,icemotor,Iron
+56,Other,Tools,kg,Flywheel,0.00134,icemotor,Steel
+57,Ferrous metals,"Shavings, Fe, cast, machined",kg,Flywheel,1.177,icemotor,Iron
+58,Ferrous metals,"Scrap, Fe, cast, machined",kg,Flywheel,0.015,icemotor,Steel
+59,Other,Emulsion,kg,Flywheel,0.934,icemotor,Other
+60,Ferrous metals,"Steel, cast, heat treat",kg,Ring gear,0.505,icemotor,Steel
+61,Other,Tools,kg,Ring gear,0.01335,icemotor,Steel
+62,Ferrous metals,"Shavings, Steel, cast, heat treated",kg,Ring gear,0.24600000000000002,icemotor,Steel
+63,Ferrous metals,"Scrap, Steel, cast, heat treated",kg,Ring gear,0.00322,icemotor,Steel
+64,Other,Emulsion,kg,Ring gear,0.67,icemotor,Other
+65,Ferrous metals,"Fe, cast, machined",kg,"Connecting rod, 4 pc.",1.49,icemotor,Iron
+66,Other,Tools,kg,"Connecting rod, 4 pc.",0.00573,icemotor,Steel
+67,Ferrous metals,"Shavings, Fe, cast, machined",kg,"Connecting rod, 4 pc.",0.779,icemotor,Iron
+68,Ferrous metals,"Scrap, Fe, cast, machined",kg,"Connecting rod, 4 pc.",0.01763,icemotor,Steel
+69,Other,Emulsion,kg,"Connecting rod, 4 pc.",0.904,icemotor,Other
+70,Non-ferrous metals,"Al, cast, machined",kg,Cylinder head,8.007,icemotor,Aluminium
+71,Other,Tools,kg,Cylinder head,0.00045,icemotor,Steel
+72,Non-ferrous metals,"Shavings, Al, cast, machined",kg,Cylinder head,1.989,icemotor,Aluminium
+73,Non-ferrous metals,"Scrap, Al, cast, machined",kg,Cylinder head,0.0009400000000000001,icemotor,Aluminium
+74,Other,Emulsion,kg,Cylinder head,0.887,icemotor,Other
+75,Ferrous metals,"Steel, extruded",kg,Camshaft,0.087,icemotor,Steel
+76,Ferrous metals,"Steel, extruded, machined",kg,Camshaft,2.1,icemotor,Steel
+77,Other,Tools,kg,Camshaft,0.013890000000000001,icemotor,Steel
+78,Ferrous metals,"Shavings, Steel, extruded, machined",kg,Camshaft,0.419,icemotor,Steel
+79,Ferrous metals,"Scrap, Steel, extruded, machined",kg,Camshaft,0.04322,icemotor,Steel
+80,Other,Emulsion,kg,Camshaft,0.7090000000000001,icemotor,Other
+81,Ferrous metals,"Steel, extruded",kg,"Intake valve, 4 pc.",0.237,icemotor,Steel
+82,Other,Tools,kg,"Intake valve, 4 pc.",0.39694,icemotor,Steel
+83,Ferrous metals,"Shavings, Steel, extruded, machined",kg,"Intake valve, 4 pc.",0.054000000000000006,icemotor,Steel
+84,Ferrous metals,"Scrap, Steel, extruded, machined",kg,"Intake valve, 4 pc.",0.00999,icemotor,Steel
+85,Other,Emulsion,kg,"Intake valve, 4 pc.",1.374,icemotor,Other
+86,Ferrous metals,"Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",0.305,icemotor,Iron
+87,Other,Tools,kg,"Hydraulic valve lifter, 8 pc",0.00359,icemotor,Steel
+88,Ferrous metals,"Shavings, Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",0.017,icemotor,Iron
+89,Ferrous metals,"Scrap, Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",0.0069900000000000006,icemotor,Steel
+90,Other,Emulsion,kg,"Hydraulic valve lifter, 8 pc",0.657,icemotor,Other
+91,Non-ferrous metals,"Al, cast",kg,Block and other,0.198,icemotor,Aluminium
+92,Non-ferrous metals,"Al, cast, machined",kg,Block and other,18.692999999999998,icemotor,Aluminium
+93,Non-ferrous metals,"Al, no specification",kg,Block and other,1.228,icemotor,Aluminium
+94,Non-ferrous metals,"Al, rolled, stamped",kg,Block and other,1.7,icemotor,Aluminium
+95,Ferrous metals,"Fe, cast",kg,Block and other,0.152,icemotor,Iron
+96,Ferrous metals,"Fe, cast, machined",kg,Block and other,28.638,icemotor,Iron
+97,Ferrous metals,"Fe, forged, machined",kg,Block and other,14.329,icemotor,Iron
+98,Ferrous metals,"Steel, cast, heat treat",kg,Block and other,0.932,icemotor,Steel
+99,Ferrous metals,"Steel, cast, machined",kg,Block and other,7.6,icemotor,Steel
+100,Ferrous metals,"Steel, col rolled, stamped",kg,Block and other,4.3,icemotor,Steel
+101,Ferrous metals,"Steel, cold rolled",kg,Block and other,0.36700000000000005,icemotor,Steel
+102,Ferrous metals,"Steel, extruded",kg,Block and other,2.376,icemotor,Steel
+103,Ferrous metals,"Steel, galvanized, stamped",kg,Block and other,2.7,icemotor,Steel
+104,Ferrous metals,"Steel, no specification",kg,Block and other,5.138,icemotor,Steel
+105,Ferrous metals,"Steel, other",kg,Block and other,2.7,icemotor,Steel
+106,Polymers,"Plastic, injection molded",kg,Block and other,1.2,icemotor,Plastic
+107,Polymers,"Rubber, injection molded",kg,Block and other,0.1,icemotor,Rubber
+108,Polymers,"Rubber, no specification",kg,Block and other,0.540909,icemotor,Rubber
+109,Polymers,"Rubber, other",kg,Block and other,0.1,icemotor,Rubber
+110,Other,"Other, other",kg,Block and other,0.6,icemotor,Plastic
+111,Other,Paint,kg,Paint/Paint shop,11.79340162,interior,Paint
+112,Polymers,"Polypropylene, 25% Fiberglass (PP-GF25)",kg,Under body finisher,0.866,interior,Polypropylene
+113,Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Bumper covers (4),0.48,interior,Polypropylene
+114,Polymers,Polypropylene (PP),kg,Wheel arc closures (4),3.832,interior,Polypropylene
+115,Polymers,"Nylon 66, 30% Mineral powder (PA66-MD30)",kg,Road wheel finishers (4),0.16399999999999998,interior,Nylon
+116,Polymers,Ethylene propylene diene monomer (EPDM-TD10),kg,Bumpers (2),5.07,interior,EPDM
+117,Polymers,Polypropylene (PP),kg,Bumpers (2),5.07,interior,Polypropylene
+118,Polymers,Acrylonitrile butadiene styrene (ABS),kg,Rear lamps (2),0.905,interior,ABS
+119,Polymers,Polymethyl methacrylate (PMMA),kg,Rear lamps (2),0.905,interior,Polymethylmethacrylate
+120,Polymers,Acrylonitrile styrene acrylate (ASA),kg,Radiator Grille,0.276,interior,ASA
+121,Ferous metals,Steel (GREET),kg,"Other, exterior trim (GREET data)",0.42909838200000006,interior,Steel
+122,Polymers,Rubber (GREET),kg,"Other, exterior trim (GREET data)",0.14968548199999998,interior,Rubber
+123,Polymers,Rubber (GREET),kg,Sealers/deadeners,0.9,interior,Rubber
+124,Non-ferrous metals,Copper,kg,Exterior electrical (GREET data),4.091403177,interior,Copper
+125,Polymers,Other plastic (GREET),kg,Exterior electrical (GREET data),5.887628962999999,interior,Other
+126,Polymers,Acrylonitrile butadiene styrene (ABS),kg,Centre console,0.584,interior,ABS
+127,Polymers,Polypropylene ether (PE),kg,Dashboard,3.701,interior,Polypropylene
+128,Polymers,Polystyrene (PS),kg,Dashboard,3.701,interior,Polystyrene
+129,Polymers,Acrylonitrile butadiene styrene (ABS),kg,Glove Box,2.136,interior,ABS
+130,Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Air Duct,0.23800000000000002,interior,Polypropylene
+131,Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Steering Column Finisher,0.09,interior,Polypropylene
+132,Ferous metals,Steel (GREET),kg,"Other, Instrument panel (GREET data)",11.05858198,interior,Steel
+133,Non-ferrous metals,Wrought Aluminium,kg,"Other, Instrument panel (GREET data)",0.240403956,interior,Aluminium
+134,Non-ferrous metals,Magnesium,kg,"Other, Instrument panel (GREET data)",0.240403956,interior,Magnesium
+135,Polymers,Rubber (GREET),kg,"Other, Instrument panel (GREET data)",0.240403956,interior,Rubber
+136,Polymers,Polypropylene ether (PE),kg,B post finishers (2),0.217,interior,Polypropylene
+137,Polymers,Polypropylene (PP),kg,B post finishers (2),0.217,interior,Polypropylene
+138,Polymers,Polypropylene ether (PE),kg,C post finishers (2),0.405,interior,Polypropylene
+139,Polymers,Polypropylene (PP),kg,C post finishers (2),0.405,interior,Polypropylene
+140,Polymers,Polypropylene ether (PE),kg,Sill finishers (2),0.405,interior,Polypropylene
+141,Polymers,Polypropylene (PP),kg,Sill finishers (2),0.405,interior,Polypropylene
+142,Polymers,Polypropylene ether (PE),kg,A post finishers (2),0.405,interior,Polypropylene
+143,Polymers,Polypropylene (PP),kg,A post finishers (2),0.405,interior,Polypropylene
+144,Ferous metals,Steel (GREET),kg,"Other, Trim and Insulation (GREET data)",6.556677708,interior,Steel
+145,Non-ferrous metals,Wrought Aluminium,kg,"Other, Trim and Insulation (GREET data)",0.022226026,interior,Aluminium
+146,Polymers,Other plastic (GREET),kg,"Other, Trim and Insulation (GREET data)",12.07188956,interior,Other
+147,Polymers,Other plastic (GREET),kg,"Doors, including trunk lid, interior plastics etc.",12.0,interior,Other
+148,Polymers,Polyurethane (polyether type) (PUR-E),kg,Squab pads,3.4989999999999997,interior,Polyurethane
+149,Polymers,Polyurethane (polyether type) (PUR-E),kg,Cushion pads,5.422999999999999,interior,Polyurethane
+150,Polymers,Polyethylene terephthalate (PET),kg,Seat Belts (2),0.37799999999999995,interior,PET
+151,Polymers,Nylon 6 (PA6),kg,Height Controls (2),0.266,interior,Nylon
+152,Polymers,Polyurethane (polyether type) (PUR-E),kg,Head Rest Pads (4),0.496,interior,Polyurethane
+153,Ferous metals,Steel (GREET),kg,"Other, Seating and restraint (GREET data)",34.72703185,interior,Steel
+154,Polymers,Other plastic (GREET),kg,"Other, Seating and restraint (GREET data)",15.08516099,interior,Other
+155,Ferous metals,Rolled steel (MUSES),kg,HVAC (GREET),6.2,interior,Steel
+156,Ferous metals,EAF steel (MUSES),kg,HVAC (GREET),0.1,interior,Steel
+157,Ferous metals,Galvanized steel (MUSES),kg,HVAC (GREET),5.3,interior,Steel
+158,Ferous metals,Stainless steel (MUSES),kg,HVAC (GREET),1.2,interior,Steel
+159,Non-ferrous metals,Cast Aluminium,kg,HVAC (GREET),5.3,interior,Aluminium
+160,Non-ferrous metals,Extruded aluminum (MUSES),kg,HVAC (GREET),12.0,interior,Aluminium
+161,Non-ferrous metals,Rolled aluminum (MUSES),kg,HVAC (GREET),0.9,interior,Aluminium
+162,Non-ferrous metals,Copper,kg,HVAC (GREET),3.332996735,interior,Copper
+163,Non-ferrous metals,Zinc,kg,HVAC (GREET),0.099790321,interior,Zinc
+164,Non-ferrous metals,Other metals,kg,HVAC (GREET),0.8,interior,Other
+165,Polymers,Acrylonitrile butadiene styrene (ABS),kg,HVAC (GREET),1.4,interior,ABS
+166,Polymers,Polypropylene ether (PE),kg,HVAC (GREET),4.0,interior,Polypropylene
+167,Polymers,Nylon 66 (PA66),kg,HVAC (GREET),0.2,interior,Nylon
+168,Polymers,Other plastic (GREET),kg,HVAC (GREET),10.0,interior,Other
+169,Polymers,Rubber (GREET),kg,HVAC (GREET),3.1,interior,Rubber
+170,Polymers,Extruded rubber (MUSES),kg,HVAC (GREET),0.9,interior,Rubber
+171,Other,Other,kg,HVAC (GREET),0.13970645,interior,Other
+172,Non-ferrous metals,Copper,kg,Interior electrical (GREET),4.091403177,interior,Copper
+173,Polymers,Other plastic (GREET),kg,Interior electrical (GREET),5.887628962999999,interior,Other
+174,Ferous metals,Steel (GREET),kg,Weld blanks and fasteners (interior to body) (GREET),4.98951607,interior,Steel
+175,Polymers,Other plastic (GREET),kg,Weld blanks and fasteners (interior to body) (GREET),4.98951607,interior,Other
+176,Polymers,"Nylon 6, 10% Glass fiber, 20% Minerals (PA6-(GF10+MX20))",kg,Engine Finisher,1.291,interior,Nylon
+177,Polymers,High density polyethylene (PE-HD),kg,Wash Fluid Tank,0.614,interior,Polyethylene
+178,Polymers,"Nylon 66, 25% Glass fiber (PA66-GF25)",kg,Steering Oil Tank,0.223,interior,Nylon
+179,Polymers,Polypropylene ether (PE),kg,Brake Fluid Tank,0.063,interior,Polypropylene
+180,Polymers,Polypropylene (PP),kg,Brake Fluid Tank,0.063,interior,Polypropylene
+181,Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Wheel Arc Finisher,1.5659999999999998,interior,Polypropylene
+182,Polymers,Polypropylene (PP),kg,Load Space Finishers (2),1.694,interior,Polypropylene
+183,Polymers,Polypropylene ether (PE),kg,Latch Finisher,0.315,interior,Polypropylene
+184,Polymers,Polypropylene (PP),kg,Latch Finisher,0.315,interior,Polypropylene
+185,Polymers,Polypropylene ether (PE),kg,Tool Box,0.154,interior,Polypropylene
+186,Ferous metals,Steel,kg,"Brakes, hardware",10.594596000000001,brakes,Steel
+187,Ferous metals,Cast iron,kg,"Brakes, hardware",18.16216457,brakes,Iron
+188,Friction Materials,Barium Sulfate,kg,"Brakes, friction material",1.32e-08,brakes,Barium sulphate
+189,Friction Materials,Brass,kg,"Brakes, friction material",1.32e-09,brakes,Brass
+190,Friction Materials,Aluminum Oxide,kg,"Brakes, friction material",1.32e-08,brakes,Aluminium
+191,Friction Materials,Fibrous Glass,kg,"Brakes, friction material",1.32e-08,brakes,Glassfibre
+192,Friction Materials,Phenol Formaldehyde Resin,kg,"Brakes, friction material",6.6e-09,brakes,Resin
+193,Friction Materials,Silica sand,kg,"Brakes, friction material",0.756756834,brakes,Silica
+194,Friction Materials,Ceramic,kg,"Brakes, friction material",1.5135136669999998,brakes,Ceramic
+195,Ferous metals,Steel,kg,Cradle,29.93709642,chassis,Steel
+196,Ferous metals,Steel,kg,Driveshaft/axle,73.93555631,chassis,Steel
+197,Ferous metals,Steel,kg,Corner suspension,40.823313299999995,chassis,Steel
+198,Ferous metals,Steel,kg,Steering system,17.7808209,chassis,Steel
+199,Non-ferrous metals,Wrought Aluminium,kg,Steering system,3.33390392,chassis,Aluminium
+200,Polymers,Rubber,kg,Steering system,1.111301307,chassis,Rubber
+201,Non-ferrous metals,Copper,kg,Chassis electrical,4.091403177,chassis,Copper
+202,Polymers,Plastic,kg,Chassis electrical,5.887628962999999,chassis,Plastic
+203,Ferous metals,Steel,kg,Weld blanks and fasteners (chassis to body),9.97903214,chassis,Steel
+204,Ferous metals,galv steel,kg,Body-in-white,211.21883119999998,doors,Steel
+205,Scrap,"Scrap, galv steel",kg,Body-in-white,44.37843259,doors,Steel
+206,Ferous metals,Rolled steel,kg,Body panels,19.11733046,doors,Steel
+207,Ferous metals,EAF steel,kg,Body panels,10.3166,doors,Steel
+208,Ferous metals,galv steel,kg,Body panels,4.5781,doors,Steel
+209,Ferous metals,hot rolled steel,kg,Body panels,33.45532831,doors,Steel
+210,Scrap,"Scrap, Rolled steel",kg,Body panels,4.0166738760000005,doors,Steel
+211,Scrap,"Scrap, EAF steel",kg,Body panels,2.1675838990000003,doors,Steel
+212,Scrap,"Scrap, galv steel",kg,Body panels,0.9618882040000001,doors,Steel
+213,Scrap,"Scrap, hot rolled steel",kg,Body panels,7.0291792829999995,doors,Steel
+214,Ferous metals,galv steel,kg,Bumpers,8.43342,doors,Steel
+215,Scrap,"Scrap, galv steel",kg,Bumpers,1.77191569,doors,Steel
+216,Ferous metals,EAF steel,kg,Body hardware,0.36732,doors,Steel
+217,Ferous metals,stainless steel,kg,Body hardware,0.07965554400000001,doors,Steel
+218,Non-ferrous metals,Copper,kg,Body hardware,0.199580643,doors,Copper
+219,Glass,Glass,kg,Body hardware,0.059874193,doors,Glass
+220,Polymers,Plastic,kg,Body hardware,6.150684932000001,doors,Plastic
+221,Polymers,Rubber,kg,Body hardware,0.229517739,doors,Rubber
+222,Scrap,"Scrap, EAF steel",kg,Body hardware,0.07717629,doors,Steel
+223,Scrap,"Scrap, stainless steel",kg,Body hardware,0.016736141,doors,Steel
+224,Scrap,"Scrap, glass",kg,Body hardware,0.003151273,doors,Glass
+225,Ferous metals,EAF steel,kg,Weld blanks and fasteners (electronics to body),4.2167098780000005,doors,Steel
+226,Polymers,Plastic,kg,Weld blanks and fasteners (electronics to body),3.4246575339999996,doors,Plastic
+227,Scrap,"Scrap, EAF steel",kg,Weld blanks and fasteners (electronics to body),0.885957819,doors,Steel
+228,Ferous metals,EAF steel,kg,Weld blanks and fasteners (other systems to body),4.2167098780000005,doors,Steel
+229,Polymers,Plastic,kg,Weld blanks and fasteners (other systems to body),3.4246575339999996,doors,Plastic
+230,Scrap,"Scrap, EAF steel",kg,Weld blanks and fasteners (other systems to body),0.885957819,doors,Steel
+231,Ferous metals,galv steel,kg,"Doors, including trunk lid",93.0,doors,Steel
+232,Glass,Glass,kg,"Doors, including trunk lid",0.07484274099999999,doors,Glass
+233,Polymers,Plastic,kg,"Doors, including trunk lid",12.0,doors,Plastic
+234,Scrap,"Scrap, galv steel",kg,"Doors, including trunk lid",19.53989712,doors,Steel
+235,Scrap,"Scrap, glass",kg,"Doors, including trunk lid",0.003939092,doors,Glass
+236,Glass,Glass,kg,Windscreen glass,11.6,doors,Glass
+237,Scrap,"Scrap, glass",kg,Windscreen glass,0.6105263160000001,doors,Glass
+238,Glass,Glass,kg,Rear screen glass,4.57,doors,Glass
+239,Scrap,"Scrap, glass",kg,Rear screen glass,0.24052631600000002,doors,Glass
+240,Glass,Glass,kg,Side body glass (6),12.53,doors,Glass
+241,Scrap,"Scrap, glass",kg,Side body glass (6),0.659473684,doors,Glass
+242,polymers,Rubber,kg,Tires (x4),18.10526316,wheels,Rubber
+243,Other,Graphite,kg,Tires (x4),8.328421053,wheels,Graphite
+244,Ferrous metals,Steel (tires),kg,Tires (x4),5.672982456000001,wheels,Steel
+245,Textiles,Textiles,kg,Tires (x4),1.93122807,wheels,Textile
+246,Non-ferrous metals,Zinc oxide,kg,Tires (x4),0.36210526299999996,wheels,Zinc
+247,Other,Sulphur,kg,Tires (x4),0.36210526299999996,wheels,Sulphur
+248,Other,Additives,kg,Tires (x4),3.01754386,wheels,Other
+249,Ferrous metals,Steel (wheels),kg,Wheels (x4),41.27691,wheels,Steel
+250,Non-ferrous metals,Lead,kg,Wheels (x4),0.3,wheels,Lead

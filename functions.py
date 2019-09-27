@@ -14,6 +14,7 @@ import plotly.express as px
 def RemapVehicles(dbx):
     
     MAP = {
+           'Aircraft:Ballonvaartuigen' : 'balloon',
            'Aircraft:||4-motorig' : 'B747',
            'Aircraft:||2-motorig' : 'A330',
            'Personalcar:Elektriciteit' : 'evcar',
@@ -43,7 +44,7 @@ def RemapVehicles(dbx):
            'Trekker voor oplegger:11749':'lorry40t',
            'Trekker voor oplegger:12249':'lorry40t',
            'Trekker voor oplegger:1249':'lorry16t',
-           'Trekker voor oplegger:12749':'lorry16t',
+           'Trekker voor oplegger:12749':'lorry40t',
            'Trekker voor oplegger:1749':'lorry16t',
            'Trekker voor oplegger:2249':'lorry16t',
            'Trekker voor oplegger:250':'lorry16t',
@@ -63,6 +64,10 @@ def RemapVehicles(dbx):
            'Trekker voor oplegger:8749':'lorry28t',
            'Trekker voor oplegger:9249':'lorry28t',
            'Trekker voor oplegger:9749':'lorry28t',
+           'Inlandvessel:1000000-2000000' : 'hmax',
+           'Inlandvessel:2000000-3000000' : 'hmax',
+           'Inlandvessel:3000000-4000000' : 'hmax',
+           'Inlandvessel:500000-1000000' : 'hmax',
            }
     
     for key in list(MAP.keys()):
@@ -88,6 +93,8 @@ def UnifyCountData(dbx,
                                 'Perioden' : 'Year',
                                 })
     dbx = RemapVehicles(dbx)
+    dbx = dbx[~dbx['Onderwerp'].str.contains('ota', na=False)]
+
     return dbx, Vtypes
 
 
@@ -127,6 +134,7 @@ def CalcMass(
                                         'lorry16t',
                                         'lorry28t',
                                         'lorry40t',
+                                        'hmax',
                                         ])
         
     return mat
@@ -243,12 +251,13 @@ def CleanDataframes(db): #1
                                   '<500',
                                   '0-500')
     ### get middle weight for compcars
-    for i in list(set(db['compcars']['Onderwerp'])):
-        db['compcars'] = ReplaceValues(db['compcars'],
-                                      'Onderwerp',
-                                      i,
-                                      str(int(np.mean([int(x) for x in i.split('-')])))
-                                      )
+    for o in ['compcars', 'inships']:
+        for i in list(set(db[o]['Onderwerp'])):
+            db[o] = ReplaceValues(db[o],
+                                  'Onderwerp',
+                                  i,
+                                  str(int(np.mean([int(x) for x in i.split('-')])))
+                                  )
     return db
 
 
