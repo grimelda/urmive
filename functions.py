@@ -20,7 +20,7 @@ def RemapVehicles(dbx):
            'Personalcar:Elektriciteit' : 'evcar',
            'Personalcar:Benzine' : 'icecar',
            'Personalcar:CNG' : 'icecar',
-           'Personalcar:Diesel' : 'icecar',
+           'Personalcar:§§iesel' : 'icecar',
            'Personalcar:LPG' : 'icecar',
            'Personalcar:Benzine' : 'icecar',
            'Personalcar:Overig/Onbekend' : 'icecar',
@@ -105,8 +105,6 @@ def UnifyCountData(dbx,
 def CalcMass(
              dbx, 
              dbm,
-             exclude=[None],
-             include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
              ):
     
     missing = list(set(dbx['Vehicle']) - set(dbm.keys()))
@@ -123,10 +121,6 @@ def CalcMass(
         df['Mass'] = df['Value'] * df['Unitmass']
         
         mat = pd.concat([mat, df], ignore_index=True, sort=False)
-    
-    ### exlcude or include certain vehicles. be sane plz
-    mat = mat.loc[~(mat['Vehicle'].isin(exclude))]
-    mat = mat.loc[mat['Vehicle'].isin(include)]
     
     ### for each vehicle type which has weight info in count table:
     mat = CalcWeightFromCount(mat, slx=[
@@ -210,7 +204,7 @@ def CombineDataframes(dbx, startyear, endyear):
         
     DBX['Waarde'] = pd.to_numeric(DBX['Waarde'], errors='coerce')
     DBX['Perioden'] = pd.to_numeric(DBX['Perioden'], errors='coerce')
-    DBX = DBX[(DBX['Perioden'] >= startyear) & (DBX['Perioden'] <= endyear)]
+    DBX = DBX.loc[(DBX['Perioden'] >= startyear) & (DBX['Perioden'] <= endyear)]
     
     return DBX
 
@@ -362,23 +356,44 @@ def CarAvgWeight(dba): # not used in stocks.py but keeping it for manual output
 
 #%% visualisation plots plotting defs
     
-def PlotMass2D(
+def PrepMat(mat, 
+            Mat, 
+            include, 
+            exclude,
+            ):
+    ### filter for selected materials
+    if Mat is None: pass
+    else: mat = mat.loc[mat['Material'].isin(Mat)]
+    
+    ### exlcude or include certain vehicles. be sane plz
+    mat = mat.loc[~(mat['Vehicle'].isin(exclude))]
+    mat = mat.loc[mat['Vehicle'].isin(include)]
+    
+    return mat
+    
+def PlotMass2Dim(
                mat, 
-               D=['Material', 'Vehicle']
+               Dim=['Material', 'Vehicle'],
+               Mat=None,
+               exclude=[None],
+               include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
                ):
+    
+    ### prepare mat df according to selection criteria
+    mat = PrepMat(mat, Mat, include, exclude)
         
     ### combine masses
-    mat = mat.groupby(['Year',D[0],D[1]]).sum().reset_index(drop=False)
+    mat = mat.groupby(['Year',Dim[0],Dim[1]]).sum().reset_index(drop=False)
     
     ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
-    for i in range(len(D)):
-        mat[str(D[i]+'Sum')] = mat[D[i]].map(dict(mat.groupby(by=D[i]).sum()['Mass']))
-    mat = mat.sort_values([str(D[0]+'Sum'), str(D[1]+'Sum')], ascending=[True, False])
+    for i in range(len(Dim)):
+        mat[str(Dim[i]+'Sum')] = mat[Dim[i]].map(dict(mat.groupby(by=Dim[i]).sum()['Mass']))
+    mat = mat.sort_values([str(Dim[0]+'Sum'), str(Dim[1]+'Sum')], ascending=[True, False])
     
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
-                  color = D[0], 
-                  line_group = D[1],
+                  color = Dim[0], 
+                  line_group = Dim[1],
                   #category_orders = {'idx' : list(mat.index)}
                   ).update_layout(legend=dict(
                                               y=0.5, 
@@ -386,30 +401,40 @@ def PlotMass2D(
                                               font_size=10,
                                               ))
     fig.show()
-    
-def PlotMass1D(
-               mat,
-               D='Vehicle'
-               ):
+    fig.write_image(str('figures/Mass'+Dim[0]+Dim[1]+'.pdf'))
 
+    
+def PlotMass1Dim(
+               mat,
+               Dim='Vehicle',
+               Mat=None,
+               exclude=[None],
+               include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
+               ):
+    
+    ### prepare mat df according to selection criteria
+    mat = PrepMat(mat, Mat, include, exclude)
+
+    
     ### combine masses
-    mat = mat.groupby(['Year', D]).sum().reset_index(drop=False)
+    mat = mat.groupby(['Year', Dim]).sum().reset_index(drop=False)
     
     ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
-    mat[str(D+'Sum')] = mat[D].map(dict(mat.groupby(by=D)
+    mat[str(Dim+'Sum')] = mat[Dim].map(dict(mat.groupby(by=Dim)
                                            .sum()['Mass']
                                            .sort_values(ascending=False)))
-    mat = mat.sort_values(str(D+'Sum'), ascending=True)
+    mat = mat.sort_values(str(Dim+'Sum'), ascending=True)
     
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
-                  color = D, 
+                  color = Dim, 
                   ).update_layout(legend=dict(
                                               y=0.5, 
                                               traceorder='reversed', 
                                               font_size=10,
                                               ))
     fig.show()
+    fig.write_image(str('figures/Mass'+Dim+'.pdf'))
 
     
 

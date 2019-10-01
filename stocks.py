@@ -22,18 +22,28 @@ import functions as func
 #%%
 mat = func.CalcMass(dbx, 
                     dbm,
-                    #include=['A330','B747'], #['A330','B747']
-                    #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
-                    ) # include/exclude are kinda mutually exclusive, be sane.
-
+                    ) 
 
 #%% Plotting
 
-### todo: fix that icecar doesnt have class.... wtf
+### include and exclude are kinda mutually exclusive, be sane.
 
-func.PlotMass2D(mat, D=['Material', 'Vehicle'])
-func.PlotMass2D(mat, D=['Vehicle', 'Material'])
-func.PlotMass1D(mat, D='Vehicle')
+func.PlotMass2Dim(mat, 
+                  Dim=['Material', 'Vehicle'], 
+                  Mat=['Copper'],
+                  #include=['A330','B747'], #['A330','B747']
+                  #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  )
+func.PlotMass2Dim(mat,
+                  Dim=['Class', 'Material'],
+                  #include=['A330','B747'], #['A330','B747']
+                  #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  )
+func.PlotMass1Dim(mat, 
+                  Dim='Vehicle',
+                  #include=['A330','B747'], #['A330','B747']
+                  #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  )
 
     
 #%%
