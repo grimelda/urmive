@@ -1,0 +1,48 @@
+Class,Component,Materialtype,Material,Vehiclemass,Part,Unitmass
+Seavessels,Handymax,,,11044000,,
+Seavessels,Machinery piping,Ferrous Metals,Steel,90000,,8.1492E-03
+Seavessels,Tools and Spares,Ferrous Metals,Steel,15000,,1.3582E-03
+Seavessels,Shafts,Ferrous Metals,Steel,28000,,2.5353E-03
+Seavessels,Machinery comp,Ferrous Metals,Steel,75000,,6.7910E-03
+Seavessels,Hatches,Ferrous Metals,Steel,880000,,7.9681E-02
+Seavessels,Outfit For,Ferrous Metals,Steel,55000,,4.9801E-03
+Seavessels,Outfit Mid,Ferrous Metals,Steel,25000,,2.2637E-03
+Seavessels,Outfit Aft,Ferrous Metals,Steel,25000,,2.2637E-03
+Seavessels,Steel hull elements,Ferrous Metals,Steel,8451000,,7.6521E-01
+Seavessels,Tol and Marg,Ferrous Metals,Steel,-203900,,-1.8463E-02
+Seavessels,Machinery piping,Nonferrous Metals,Copper,5000,,4.5273E-04
+Seavessels,Electrical,Nonferrous Metals,Copper,12500,,1.1318E-03
+Seavessels,Propeller,Nonferrous Metals,Copper,17000,,1.5393E-03
+Seavessels,Outfit For,Nonferrous Metals,Aluminium,2000,,1.8109E-04
+Seavessels,Outfit Mid,Nonferrous Metals,Aluminium,2000,,1.8109E-04
+Seavessels,Outfit Aft,Nonferrous Metals,Aluminium,2000,,1.8109E-04
+Seavessels,Paint and Cathodes,Nonferrous Metals,Copper,76000,,6.8816E-03
+Seavessels,Main Engine,Machinery,Steel,,,0.0000E+00
+Seavessels,Auxilliary engines,Machinery,Steel,38000,,3.4408E-03
+Seavessels,Machinery equip,Machinery,Steel,114000,,1.0322E-02
+Seavessels,Cranes,Machinery,Steel,228000,,2.0645E-02
+Seavessels,Outfit For,Machinery,Steel,30000,,2.7164E-03
+Seavessels,Outfit Aft,Machinery,Steel,60000,,5.4328E-03
+Seavessels,Electrical,Electrical,Copper,12500,,1.1318E-03
+Seavessels,Bridge equipment,Electrical,Copper,6000,,5.4328E-04
+Seavessels,Outfit For,Electrical,Copper,13600,,1.2314E-03
+Seavessels,Outfit Mid,Electrical,Copper,32400,,2.9337E-03
+Seavessels,Outfit Aft,Electrical,Copper,73400,,6.6461E-03
+Seavessels,Machinery comp,Minerals,Minerals,5000,,4.5273E-04
+Seavessels,Outfit For,Minerals,Minerals,66000,,5.9761E-03
+Seavessels,Outfit Mid,Minerals,Minerals,60000,,5.4328E-03
+Seavessels,Outfit Aft,Minerals,Minerals,150100,,1.3591E-02
+Seavessels,Outfit For,Plastics,Polymers,31700,,2.8703E-03
+Seavessels,Outfit Mid,Plastics,Polymers,28800,,2.6078E-03
+Seavessels,Outfit Aft,Plastics,Polymers,72000,,6.5194E-03
+Seavessels,Outfit For,Joinery,Wood,16300,,1.4759E-03
+Seavessels,Outfit Mid,Joinery,Wood,38800,,3.5132E-03
+Seavessels,Outfit Aft,Joinery,Wood,88100,,7.9772E-03
+Seavessels,Machinery equip,Unkown,Uknown,1000,,9.0547E-05
+Seavessels,Outfit For,Unkown,Uknown,5400,,4.8895E-04
+Seavessels,Outfit Mid,Unkown,Uknown,12900,,1.1681E-03
+Seavessels,Outfit Aft,Unkown,Uknown,29400,,2.6621E-03
+Seavessels,Paint and Cathodes,Unkown,Paint,54000,,4.8895E-03
+Seavessels,Main Engine,Machinery,Steel,191400,Main Engine,1.7331E-02
+Seavessels,Main Engine,Machinery,Copper,19140,Main Engine,1.7331E-03
+Seavessels,Main Engine,Machinery,Chromium steel,9460,Main Engine,8.5657E-04

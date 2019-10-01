@@ -1,0 +1,229 @@
+Count category,Material Category
+Aanhangwagen:10249,-
+Aanhangwagen:10749,-
+Aanhangwagen:11249,-
+Aanhangwagen:11749,-
+Aanhangwagen:12249,-
+Aanhangwagen:1249,-
+Aanhangwagen:12749,-
+Aanhangwagen:1749,-
+Aanhangwagen:2249,-
+Aanhangwagen:250,-
+Aanhangwagen:2749,-
+Aanhangwagen:3249,-
+Aanhangwagen:3749,-
+Aanhangwagen:4249,-
+Aanhangwagen:4749,-
+Aanhangwagen:5249,-
+Aanhangwagen:5749,-
+Aanhangwagen:6249,-
+Aanhangwagen:6749,-
+Aanhangwagen:7249,-
+Aanhangwagen:749,-
+Aanhangwagen:7749,-
+Aanhangwagen:8249,-
+Aanhangwagen:8749,-
+Aanhangwagen:9249,-
+Aanhangwagen:9749,-
+Aircraft:1-motorig,-
+Aircraft:2-motorig,-
+Aircraft:Ballonvaartuigen,balloon.csv
+Aircraft:Totale luchtvloot,-
+Aircraft:||1-motorig,-
+Aircraft:||2-motorig,A330.csv
+Aircraft:||3-motorig,-
+Aircraft:||4-motorig,B747.csv
+Aircraft:||Geen motor,-
+Aircraft:||Micro Light (MLA),-
+Aircraft:||Very Light (VLA),-
+Anderepleziervaartuigen,Anderepleziervaartuigen.csv
+Bestelauto:1249,icevan.csv
+Bestelauto:1749,icevan.csv
+Bestelauto:2249,icevan.csv
+Bestelauto:250,icevan.csv
+Bestelauto:2749,icevan.csv
+Bestelauto:3249,icevan.csv
+Bestelauto:749,icevan.csv
+Binnenwatervisboten,Binnenwatervisboten.csv
+Buitenwatervisboten,Binnenwatervisboten.csv
+Bus:10249,-
+Bus:10749,-
+Bus:11249,-
+Bus:11749,-
+Bus:12249,-
+Bus:1249,-
+Bus:12749,-
+Bus:1749,-
+Bus:2249,-
+Bus:250,-
+Bus:2749,-
+Bus:3249,-
+Bus:3749,-
+Bus:4249,-
+Bus:4749,-
+Bus:5249,-
+Bus:5749,-
+Bus:6249,-
+Bus:6749,-
+Bus:7249,-
+Bus:749,-
+Bus:7749,-
+Bus:8249,-
+Bus:8749,-
+Bus:9249,-
+Bus:9749,-
+Exwedstrijdzeilboten,Exwedstrijdzeilboten.csv
+Inlandvessel:1000000-2000000,-
+Inlandvessel:2000000-3000000,-
+Inlandvessel:3000000-4000000,-
+Inlandvessel:500000-1000000,-
+Jetskis,Jetskis.csv
+Kajuitmotorboot,Kajuitmotorboot.csv
+Kajuitzeilboot,Kajuitzeilboot.csv
+Kanos,Kanos.csv
+Kleinezeilboten,Kleinezeilboten.csv
+Mopeds:Bromfiets,-
+Mopeds:Brommobiel,-
+Mopeds:Overige voertuigen met bromfietskenteken,-
+Mopeds:Snorfiets,-
+Mopeds:Voertuigen met bromfietskenteken,-
+Motorbike:-     50 cc,-
+Motorbike:1001 - 1125 cc,-
+Motorbike:1126 cc en meer,-
+Motorbike:126  -  175 cc,-
+Motorbike:176  -  250 cc,-
+Motorbike:251  -  375 cc,-
+Motorbike:376  -  500 cc,-
+Motorbike:501  -  625 cc,-
+Motorbike:51   -   125 cc,-
+Motorbike:626  -  750 cc,-
+Motorbike:751  -  875 cc,-
+Motorbike:876  - 1000 cc,-
+Motorbike:Overig of Onbekend,-
+Open motorboot,Open motorboot.csv
+Opencatamarans,Opencatamarans.csv
+Openmotorboot,Openmotorboot.csv
+Openzeilboot,Openzeilboot.csv
+Oplegger:10249,-
+Oplegger:10749,-
+Oplegger:11249,-
+Oplegger:11749,-
+Oplegger:12249,-
+Oplegger:1249,-
+Oplegger:1749,-
+Oplegger:2249,-
+Oplegger:250,-
+Oplegger:2749,-
+Oplegger:3249,-
+Oplegger:3749,-
+Oplegger:4249,-
+Oplegger:4749,-
+Oplegger:5249,-
+Oplegger:5749,-
+Oplegger:6249,-
+Oplegger:6749,-
+Oplegger:7249,-
+Oplegger:749,-
+Oplegger:7749,-
+Oplegger:8249,-
+Oplegger:8749,-
+Oplegger:9249,-
+Oplegger:9749,-
+Overigecatamarans,Overigecatamarans.csv
+Overigekanos,Overigekanos.csv
+Overigemotorboten,Overigemotorboten.csv
+Personalcar:Benzine,icecar.csv
+Personalcar:CNG,icecar.csv
+Personalcar:Diesel,icecar.csv
+Personalcar:Elektriciteit,evcar.csv
+Personalcar:LPG,icecar.csv
+Personalcar:Overig/Onbekend,icecar.csv
+Platbodem,Platbodem.csv
+Roeiboten,Roeiboten.csv
+Seavessel:handel,-
+Seavessel:waterbouw,-
+Seavessel:zeesleepvaart,-
+Snellemotorboten,Snellemotorboten.csv
+Speciaal voertuig:10249,-
+Speciaal voertuig:10749,-
+Speciaal voertuig:11249,-
+Speciaal voertuig:11749,-
+Speciaal voertuig:12249,-
+Speciaal voertuig:1249,-
+Speciaal voertuig:12749,-
+Speciaal voertuig:1749,-
+Speciaal voertuig:2249,-
+Speciaal voertuig:250,-
+Speciaal voertuig:2749,-
+Speciaal voertuig:3249,-
+Speciaal voertuig:3749,-
+Speciaal voertuig:4249,-
+Speciaal voertuig:4749,-
+Speciaal voertuig:5249,-
+Speciaal voertuig:5749,-
+Speciaal voertuig:6249,-
+Speciaal voertuig:6749,-
+Speciaal voertuig:7249,-
+Speciaal voertuig:749,-
+Speciaal voertuig:7749,-
+Speciaal voertuig:8249,-
+Speciaal voertuig:8749,-
+Speciaal voertuig:9249,-
+Speciaal voertuig:9749,-
+Surfplanken,Surfplanken.csv
+Trekker voor oplegger:10249,lorry28t
+Trekker voor oplegger:10749,lorry28t
+Trekker voor oplegger:11249,lorry28t
+Trekker voor oplegger:11749,lorry40t
+Trekker voor oplegger:12249,lorry40t
+Trekker voor oplegger:1249,lorry16t
+Trekker voor oplegger:12749,lorry40t
+Trekker voor oplegger:1749,lorry16t
+Trekker voor oplegger:2249,lorry16t
+Trekker voor oplegger:250,lorry16t
+Trekker voor oplegger:2749,lorry16t
+Trekker voor oplegger:3249,lorry16t
+Trekker voor oplegger:3749,lorry16t
+Trekker voor oplegger:4249,lorry16t
+Trekker voor oplegger:4749,lorry16t
+Trekker voor oplegger:5249,lorry16t
+Trekker voor oplegger:5749,lorry16t
+Trekker voor oplegger:6249,lorry16t
+Trekker voor oplegger:6749,lorry16t
+Trekker voor oplegger:7249,lorry16t
+Trekker voor oplegger:749,lorry16t
+Trekker voor oplegger:7749,lorry16t
+Trekker voor oplegger:8249,lorry28t
+Trekker voor oplegger:8749,lorry28t
+Trekker voor oplegger:9249,lorry28t
+Trekker voor oplegger:9749,lorry28t
+Vrachtauto (excl. trekker voor oplegger):10249,-
+Vrachtauto (excl. trekker voor oplegger):10749,-
+Vrachtauto (excl. trekker voor oplegger):11249,-
+Vrachtauto (excl. trekker voor oplegger):11749,-
+Vrachtauto (excl. trekker voor oplegger):12249,-
+Vrachtauto (excl. trekker voor oplegger):1249,-
+Vrachtauto (excl. trekker voor oplegger):12749,-
+Vrachtauto (excl. trekker voor oplegger):1749,-
+Vrachtauto (excl. trekker voor oplegger):2249,-
+Vrachtauto (excl. trekker voor oplegger):250,-
+Vrachtauto (excl. trekker voor oplegger):2749,-
+Vrachtauto (excl. trekker voor oplegger):3249,-
+Vrachtauto (excl. trekker voor oplegger):3749,-
+Vrachtauto (excl. trekker voor oplegger):4249,-
+Vrachtauto (excl. trekker voor oplegger):4749,-
+Vrachtauto (excl. trekker voor oplegger):5249,-
+Vrachtauto (excl. trekker voor oplegger):5749,-
+Vrachtauto (excl. trekker voor oplegger):6249,-
+Vrachtauto (excl. trekker voor oplegger):6749,-
+Vrachtauto (excl. trekker voor oplegger):7249,-
+Vrachtauto (excl. trekker voor oplegger):749,-
+Vrachtauto (excl. trekker voor oplegger):7749,-
+Vrachtauto (excl. trekker voor oplegger):8249,-
+Vrachtauto (excl. trekker voor oplegger):8749,-
+Vrachtauto (excl. trekker voor oplegger):9249,-
+Vrachtauto (excl. trekker voor oplegger):9749,-
+Wedstrijdzeilboten,Wedstrijdzeilboten.csv
+Zwaardboten,Zwaardboten.csv
+bicycle,bicycle.csv
+ebicycle,ebicycle.csv
