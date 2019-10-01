@@ -1,6 +1,6 @@
 Vehicle,Material,Unitmass,Class
-B777,Aluminium,22135.4,Airplanes
-B777,Steel,11067.7,Airplanes
-B777,Titanium,16601.55,Airplanes
-B777,Composites,55388.5,Airplanes
-B777,Other,5533.885,Airplanes
+B777,Aluminium,22135.4,Aircraft
+B777,Steel,11067.7,Aircraft
+B777,Titanium,16601.55,Aircraft
+B777,Composites,55388.5,Aircraft
+B777,Other,5533.885,Aircraft

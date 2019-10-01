@@ -1,89 +1,42 @@
-Flowid,Ecoinvent Flow,Eimass,Unit,Part,Unitmass,Material,Class,,"Process = [P6731] lorry production, 40 metric ton[RER]",,,,
-,,15336.6,,Lorry,,,Lorries,,,,,,
-[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",33.8,kilogram,Lorry,Ferrous metal,0.002203878304,Lorries,,Description =,,,,
-[G621],"electronics, for control units_market for electronics, for control units[GLO]",76.8,kilogram,Lorry,,,Lorries,,ID = -,,,,
-[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",102,kilogram,Lorry,Paint,0.006650757013,Lorries,,Stage = [S1] -,,,,
-[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",176,kilogram,Lorry,Aluminium,0.01147581602,Lorries,,Region = [R2] RER,,,,
-[G3339],pig iron_market for pig iron[GLO],3.62E+03,kilogram,Lorry,Ferrous metal,2.36E-01,Lorries,,Author = ibm,,,,
-[G3787],lead_market for lead[GLO],73.6,kilogram,Lorry,Lead,0.004798977609,Lorries,,Date = 03-Mar-18,,,,
-[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",589,kilogram,Lorry,Polyethylene,0.03840486157,Lorries,,,,,,
-[G4640],brass_market for brass[CH],51.2,kilogram,Lorry,Brass,0.003338419206,Lorries,,Economic inflows,,,,
-[G5916],reinforcing steel_market for reinforcing steel[GLO],6.74E+03,kilogram,Lorry,Ferrous metal,4.39E-01,Lorries,,Label,Name,Value,Unit,Uncertainty
-[G5949],copper_market for copper[GLO],76.8,kilogram,Lorry,Copper,0.00500762881,Lorries,,[G174],"diesel, burned in building machine_market for diesel, burned in building machine[GLO]",20.1,megajoule,-
-[G8652],cast iron_market for cast iron[GLO],2.31E+03,kilogram,Lorry,Ferrous metal,1.51E-01,Lorries,,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",33.8,kilogram,-
-[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",374,kilogram,Lorry,Aluminium,0.02438610905,Lorries,,[G621],"electronics, for control units_market for electronics, for control units[GLO]",76.8,kilogram,-
-[G10528],"stone wool, packed_market for stone wool, packed[GLO]",25.6,kilogram,Lorry,Stone wool,0.001669209603,Lorries,,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",102,kilogram,-
-[G11853],synthetic rubber_market for synthetic rubber[GLO],960,kilogram,Lorry,Rubber,0.06259536012,Lorries,,[G1185],"acetic acid, without water, in 98% solution state_market for acetic acid, without water, in 98% solution state[GLO]",0.066,kilogram,-
-[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",12.8,kilogram,Lorry,Chromium steel,0.0008346048016,Lorries,,[G1533],"hydrochloric acid, without water, in 30% solution state_market for hydrochloric acid, without water, in 30% solution state[RER]",0.189,kilogram,-
-[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",115,kilogram,Lorry,Glass,0.007498402514,Lorries,,[G1757],diesel_market group for diesel[RER],167,kilogram,-
--,Aluminium,0.00571165911,kilogram,Electronics,Aluminium,0.4386554197,Lorries,,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",176,kilogram,-
--,Barite,0.004640057609,kilogram,Electronics,Barite,0.3563564243,Lorries,,[G3339],pig iron_market for pig iron[GLO],3.62E+03,kilogram,-
--,Brass,0.001150474844,kilogram,Electronics,Brass,0.08835646798,Lorries,,[G3787],lead_market for lead[GLO],73.6,kilogram,-
--,Chromium,0.000006919098143,kilogram,Electronics,Chromium,0.0005313867374,Lorries,,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",589,kilogram,-
--,Composites,0.01454668435,kilogram,Electronics,Composites,1.117185358,Lorries,,[G4605],sulfuric acid_market for sulfuric acid[GLO],27.9,kilogram,-
--,Copper,0.03275191158,kilogram,Electronics,Copper,2.515346809,Lorries,,[G4640],brass_market for brass[CH],51.2,kilogram,-
--,Glass,0.0004167149725,kilogram,Electronics,Glass,0.03200370989,Lorries,,[G5013],"electricity, medium voltage_market group for electricity, medium voltage[RER]",4.74E+03,kilowatt hour,-
--,Gold,0.000545229443,kilogram,Electronics,Gold,0.04187362122,Lorries,,[G5542],"propylene glycol, liquid_market for propylene glycol, liquid[GLO]",56.3,kilogram,-
--,Iron,0.0003302690618,kilogram,Electronics,Iron,0.02536466395,Lorries,,[G5916],reinforcing steel_market for reinforcing steel[GLO],6.74E+03,kilogram,-
--,Lead,0.001864211931,kilogram,Electronics,Lead,0.1431714763,Lorries,,[G5949],copper_market for copper[GLO],76.8,kilogram,-
--,Molybdenum,0.0001799204244,kilogram,Electronics,Molybdenum,0.01381788859,Lorries,,[G6507],"sodium hydroxide, without water, in 50% solution state_market for sodium hydroxide, without water, in 50% solution state[GLO]",0.381,kilogram,-
--,Nickel,0.001478797866,kilogram,Electronics,Nickel,0.1135716761,Lorries,,[G7926],"lime, hydrated, packed_market for lime, hydrated, packed[GLO]",0.31,kilogram,-
--,Nylon,0.004090981432,kilogram,Electronics,Nylon,0.314187374,Lorries,,[G8268],road vehicle factory_market for road vehicle factory[GLO],4.36E-07,unit,-
--,Palladium,0.00001852335219,kilogram,Electronics,Palladium,0.001422593448,Lorries,,[G8510],"heat, district or industrial, other than natural gas_market group for heat, district or industrial, other than natural gas[RER]",861,megajoule,-
--,Polyethylene,0.345094,kilogram,Electronics,Polyethylene,26.5032192,Lorries,,[G8652],cast iron_market for cast iron[GLO],2.31E+03,kilogram,-
--,Polyvinylchloride,0.02912535,kilogram,Electronics,Polyvinylchloride,2.23682688,Lorries,,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",374,kilogram,-
--,Selenium,0.00496,kilogram,Electronics,Selenium,0.380928,Lorries,,[G9564],"wire drawing, copper_market for wire drawing, copper[GLO]",76.8,kilogram,-
--,Silica,0.02291493916,kilogram,Electronics,Silica,1.759867328,Lorries,,[G10152],"nitric acid, without water, in 50% solution state_market for nitric acid, without water, in 50% solution state[GLO]",0.0985,kilogram,-
--,Silicon,0.00002100062507,kilogram,Electronics,Silicon,0.001612848005,Lorries,,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",25.6,kilogram,-
--,Silver,0.0006507853014,kilogram,Electronics,Silver,0.04998031114,Lorries,,[G11302],pitch_market for pitch[CH],25.6,kilogram,-
--,Steel,0.92,kilogram,Electronics,Steel,70.656,Lorries,,[G11702],"section bar rolling, steel_market for section bar rolling, steel[GLO]",3.62E+03,kilogram,-
--,Tin,0.003358535436,kilogram,Electronics,Tin,0.2579355215,Lorries,,[G11853],synthetic rubber_market for synthetic rubber[GLO],960,kilogram,-
--,Titanium,0.002391008194,kilogram,Electronics,Titanium,0.1836294293,Lorries,,[G12203],"sheet rolling, steel_market for sheet rolling, steel[GLO]",1.07E+03,kilogram,-
--,Zinc,0.0003469177719,kilogram,Electronics,Zinc,0.02664328488,Lorries,,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",12.8,kilogram,-
-,,,,,,,,,[G13317],lubricating oil_market for lubricating oil[GLO],156,kilogram,-
-,,,,,,,,,[G13850],tap water_market group for tap water[RER],1.64E+04,kilogram,-
-,,,,,,,,,[G14480],"heat, district or industrial, natural gas_market group for heat, district or industrial, natural gas[RER]",3.23E+04,megajoule,-
-,,,,,,,,,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",115,kilogram,-
-,,,,,,,,,,,,,
-,,,,,,,,,Economic outflows,,,,
-,,,,,,,,,Label,Name,Value,Unit,Uncertainty
-,,,,,,,,,[W4589],"used lorry, 40 metric ton_market for used lorry, 40 metric ton[GLO]",1,unit,-
-,,,,,,,,,[W5096],"wastewater, average_market for wastewater, average[CH]",1.55,cubic meter,-
-,,,,,,,,,[G6731],"lorry, 40 metric ton_lorry production, 40 metric ton[RER]",1,unit,-
-,,,,,,,,,[W10731],"wastewater, average_market for wastewater, average[Europe without Switzerland]",14.3,cubic meter,-
-,,,,,,,,,[W11172],wastewater from lorry production_market for wastewater from lorry production[GLO],2.18,cubic meter,-
-,,,,,,,,,,,,,
-,,,,,,,,,Environmental resources,,,,
-,,,,,,,,,Label,Name,Value,Unit,Uncertainty
-,,,,,,,,,[E709],"Water, well, in ground[('natural resource', 'in water')]",69.5,cubic meter,-
-,,,,,,,,,,,,,
-,,,,,,,,,Environmental emissions,,,,
-,,,,,,,,,Label,Name,Value,Unit,Uncertainty
-,,,,,,,,,[E744],"Ammonia[('air',)]",0.0223,kilogram,-
-,,,,,,,,,[E763],"Benzene[('air',)]",0.0131,kilogram,-
-,,,,,,,,,[E787],"Cadmium[('air',)]",1.73E-06,kilogram,-
-,,,,,,,,,[E795],"Carbon dioxide, fossil[('air',)]",633,kilogram,-
-,,,,,,,,,[E802],"Carbon monoxide, fossil[('air',)]",0.973,kilogram,-
-,,,,,,,,,[E815],"Chromium[('air',)]",0.000293,kilogram,-
-,,,,,,,,,[E828],"Copper[('air',)]",0.000293,kilogram,-
-,,,,,,,,,[E839],"Dinitrogen monoxide[('air',)]",0.0223,kilogram,-
-,,,,,,,,,[E924],"Lead[('air',)]",1.90E-08,kilogram,-
-,,,,,,,,,[E937],"Mercury[('air',)]",3.45E-09,kilogram,-
-,,,,,,,,,[E951],"Methane, fossil[('air',)]",0.0165,kilogram,-
-,,,,,,,,,[E968],"Nickel[('air',)]",1.21E-05,kilogram,-
-,,,,,,,,,[E976],"Nitrogen oxides[('air',)]",6,kilogram,-
-,,,,,,,,,[E979],"NMVOC, non-methane volatile organic compounds, unspecified origin[('air',)]",7.87,kilogram,-
-,,,,,,,,,[E989],"Particulates, < 2.5 um[('air',)]",0.254,kilogram,-
-,,,,,,,,,[E992],"Particulates, > 10 um[('air',)]",0.0109,kilogram,-
-,,,,,,,,,[E995],"Particulates, > 2.5 um, and < 10um[('air',)]",0.0212,kilogram,-
-,,,,,,,,,[E1046],"Selenium[('air',)]",1.73E-06,kilogram,-
-,,,,,,,,,[E1069],"Sulfur dioxide[('air',)]",0.12,kilogram,-
-,,,,,,,,,[E1092],"Toluene[('air',)]",0.00551,kilogram,-
-,,,,,,,,,[E1113],"Xylene[('air',)]",0.00551,kilogram,-
-,,,,,,,,,[E1117],"Zinc[('air',)]",0.000173,kilogram,-
-,,,,,,,,,[E1287],"BOD5, Biological Oxygen Demand[('water',)]",0.126,kilogram,-
-,,,,,,,,,[E1367],"COD, Chemical Oxygen Demand[('water',)]",0.126,kilogram,-
-,,,,,,,,,[E1393],"DOC, Dissolved Organic Carbon[('water',)]",0.0551,kilogram,-
-,,,,,,,,,[E1655],"TOC, Total Organic Carbon[('water',)]",0.0551,kilogram,-
-,,,,,,,,,[E1797],"Water[('air',)]",12.9,cubic meter,-
-,,,,,,,,,[E1801],"Water[('water',)]",54.9,cubic meter,-
+Flowid,Ecoinvent Flow,Eimass,Unit,Part,Unitmass,Material,Class,Source
+,,15336.6,,Lorry,,,Lorries,Ecoinvent
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",33.8,kilogram,Lorry,Ferrous metal,0.002203878304,Lorries,Ecoinvent
+[G621],"electronics, for control units_market for electronics, for control units[GLO]",76.8,kilogram,Lorry,,,Lorries,Ecoinvent
+[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",102,kilogram,Lorry,Paint,0.006650757013,Lorries,Ecoinvent
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",176,kilogram,Lorry,Aluminium,0.01147581602,Lorries,Ecoinvent
+[G3339],pig iron_market for pig iron[GLO],3.62E+03,kilogram,Lorry,Ferrous metal,2.36E-01,Lorries,Ecoinvent
+[G3787],lead_market for lead[GLO],73.6,kilogram,Lorry,Lead,0.004798977609,Lorries,Ecoinvent
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",589,kilogram,Lorry,Polyethylene,0.03840486157,Lorries,Ecoinvent
+[G4640],brass_market for brass[CH],51.2,kilogram,Lorry,Brass,0.003338419206,Lorries,Ecoinvent
+[G5916],reinforcing steel_market for reinforcing steel[GLO],6.74E+03,kilogram,Lorry,Ferrous metal,4.39E-01,Lorries,Ecoinvent
+[G5949],copper_market for copper[GLO],76.8,kilogram,Lorry,Copper,0.00500762881,Lorries,Ecoinvent
+[G8652],cast iron_market for cast iron[GLO],2.31E+03,kilogram,Lorry,Ferrous metal,1.51E-01,Lorries,Ecoinvent
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",374,kilogram,Lorry,Aluminium,0.02438610905,Lorries,Ecoinvent
+[G10528],"stone wool, packed_market for stone wool, packed[GLO]",25.6,kilogram,Lorry,Stone wool,0.001669209603,Lorries,Ecoinvent
+[G11853],synthetic rubber_market for synthetic rubber[GLO],960,kilogram,Lorry,Rubber,0.06259536012,Lorries,Ecoinvent
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",12.8,kilogram,Lorry,Chromium steel,0.0008346048016,Lorries,Ecoinvent
+[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",115,kilogram,Lorry,Glass,0.007498402514,Lorries,Ecoinvent
+-,Aluminium,0.00571165911,kilogram,Electronics,Aluminium,0.00002860186871,Lorries,Ecoinvent
+-,Barite,0.004640057609,kilogram,Electronics,Barite,0.00002323568616,Lorries,Ecoinvent
+-,Brass,0.001150474844,kilogram,Electronics,Brass,0.000005761150971,Lorries,Ecoinvent
+-,Chromium,0.000006919098143,kilogram,Electronics,Chromium,0.0000000346482752,Lorries,Ecoinvent
+-,Composites,0.01454668435,kilogram,Electronics,Composites,0.00007284439563,Lorries,Ecoinvent
+-,Copper,0.03275191158,kilogram,Electronics,Copper,0.000164009416,Lorries,Ecoinvent
+-,Glass,0.0004167149725,kilogram,Electronics,Glass,0.000002086753902,Lorries,Ecoinvent
+-,Gold,0.000545229443,kilogram,Electronics,Gold,0.000002730306666,Lorries,Ecoinvent
+-,Iron,0.0003302690618,kilogram,Electronics,Iron,0.000001653864869,Lorries,Ecoinvent
+-,Lead,0.001864211931,kilogram,Electronics,Lead,0.000009335281374,Lorries,Ecoinvent
+-,Molybdenum,0.0001799204244,kilogram,Electronics,Molybdenum,0.0000009009747007,Lorries,Ecoinvent
+-,Nickel,0.001478797866,kilogram,Electronics,Nickel,0.000007405270797,Lorries,Ecoinvent
+-,Nylon,0.004090981432,kilogram,Electronics,Nylon,0.00002048611648,Lorries,Ecoinvent
+-,Palladium,0.00001852335219,kilogram,Electronics,Palladium,0.00000009275807206,Lorries,Ecoinvent
+-,Polyethylene,0.345094,kilogram,Electronics,Polyethylene,0.001728102656,Lorries,Ecoinvent
+-,Polyvinylchloride,0.02912535,kilogram,Electronics,Polyvinylchloride,0.0001458489417,Lorries,Ecoinvent
+-,Selenium,0.00496,kilogram,Electronics,Selenium,0.0000248378389,Lorries,Ecoinvent
+-,Silica,0.02291493916,kilogram,Electronics,Silica,0.0001147495095,Lorries,Ecoinvent
+-,Silicon,0.00002100062507,kilogram,Electronics,Silicon,0.0000001051633351,Lorries,Ecoinvent
+-,Silver,0.0006507853014,kilogram,Electronics,Silver,0.000003258891224,Lorries,Ecoinvent
+-,Steel,0.92,kilogram,Electronics,Steel,0.004607018505,Lorries,Ecoinvent
+-,Tin,0.003358535436,kilogram,Electronics,Tin,0.00001681829881,Lorries,Ecoinvent
+-,Titanium,0.002391008194,kilogram,Electronics,Titanium,0.00001197328152,Lorries,Ecoinvent
+-,Zinc,0.0003469177719,kilogram,Electronics,Zinc,0.000001737235429,Lorries,Ecoinvent
