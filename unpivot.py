@@ -104,11 +104,12 @@ def UnpivotPleziervaartuigen():
                   header=True,
                   )
     
+    co['Onderwerp'] = 'Pleziervaart'
     co['Perioden'] = 2014
     co = co.rename(columns={'Vehicle':'Vtype',
                             'Aantal':'Waarde'})
     for vehicle in list(set(co['Vtype'])):
-        co.loc[co['Vtype'] == vehicle, ['Perioden','Vtype','Waarde']].to_csv(str('data/count/'+vehicle+'.csv') ,
+        co.loc[co['Vtype'] == vehicle, ['Perioden','Vtype','Waarde', 'Onderwerp']].to_csv(str('data/count/'+vehicle+'.csv') ,
                   index=False,
                   header=True,
                   )
@@ -142,12 +143,13 @@ def UnpivotWalpleziervaart():
                   index=False,
                   header=True,
                   )
-    
+        
+    co['Onderwerp'] = 'Walpleziervaart'
     co['Perioden'] = 2014
     co = co.rename(columns={'Vehicle':'Vtype',
                             'Aantal':'Waarde'})
     for vehicle in list(set(co['Vtype'])):
-        co.loc[co['Vtype'] == vehicle, ['Perioden','Vtype','Waarde']].to_csv(str('data/count/'+vehicle+'.csv') ,
+        co.loc[co['Vtype'] == vehicle, ['Perioden','Vtype','Waarde','Onderwerp']].to_csv(str('data/count/'+vehicle+'.csv') ,
                   index=False,
                   header=True,
                   )

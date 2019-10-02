@@ -173,8 +173,8 @@ def AddVehicleTypeColumn(db): #2
     db['perscars']['Vtype'] = (pd.Series(['Personalcar:']*len(db['perscars'])) 
                               + db['perscars']['Onderwerp']
                               )
-    db['compcars']['Vtype'] = (db['compcars']['Voertuigtype'] 
-                              + pd.Series([':']*len(db['compcars'])) 
+    db['compcars']['Vtype'] = (db['compcars']['Voertuigtype']
+                              + pd.Series([':']*len(db['compcars']))
                               + db['compcars']['Onderwerp']
                               )
     db['mobikes']['Vtype'] = (pd.Series(['Motorbike:']*len(db['mobikes'])) 
@@ -227,6 +227,8 @@ def CleanDataframes(db): #1
     db['compcars'] = db['compcars'][~db['compcars']['Voertuigtype'].str.contains('otaal')]
     db['compcars'].loc[:,'Onderwerp'] = db['compcars']['Onderwerp'].str.replace(' ','')
     db['compcars'].loc[:,'Onderwerp'] = db['compcars']['Onderwerp'].str.replace('kg','')
+    
+    db['compcars'] = db['compcars'].reset_index(drop=True)
     
     db['perscars'] = ReplaceValues(db['perscars'],
                                   'Onderwerp',
@@ -356,31 +358,51 @@ def CarAvgWeight(dba): # not used in stocks.py but keeping it for manual output
 
 #%% visualisation plots plotting defs
     
-def PrepMat(mat, 
-            Mat, 
-            include, 
-            exclude,
-            ):
-    ### filter for selected materials
-    if Mat is None: pass
-    else: mat = mat.loc[mat['Material'].isin(Mat)]
+def PrepMat(mat, materials, vehicles, classes):
     
-    ### exlcude or include certain vehicles. be sane plz
-    mat = mat.loc[~(mat['Vehicle'].isin(exclude))]
-    mat = mat.loc[mat['Vehicle'].isin(include)]
+    for each in [materials['include'], 
+                 vehicles['include'],
+                 classes['include'],
+                 ]:
+        each = StrToList(each)
+    
+    ### filter for selected materials
+    if materials['include'] == 'All': pass
+    else: mat = mat.loc[mat['Material'].isin(materials['include'])]
+    
+    ### exlcude or include certain classes. be sane plz, can be mutually exclusive
+    if classes['include'] == 'All':
+        classes['include'] = list(set(mat['Class']))
+    mat = mat.loc[mat['Class'].isin(classes['include'])]
+    if classes['exclude'] is None: pass
+    else: mat = mat.loc[~(mat['Class'].isin(classes['exclude']))]
+    
+    ### exlcude or include certain vehicles. be sane plz, can be mutually exclusive
+    if vehicles['include'] == 'All':
+        vehicles['include'] = [x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
+    mat = mat.loc[mat['Vehicle'].isin(vehicles['include'])]
+    if vehicles['exclude'] is None: pass
+    else: mat = mat.loc[~(mat['Vehicle'].isin(vehicles['exclude']))]
     
     return mat
+
     
 def PlotMass2Dim(
                mat, 
                Dim=['Material', 'Vehicle'],
-               Mat=None,
-               exclude=[None],
-               include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
+               materials = {'include' : 'All',
+                            'exclude' : None,
+                            },
+               vehicles = {'include' : 'All',
+                           'exclude' : None,
+                           },
+               classes = {'include' : 'All',
+                          'exclude' : None,
+                          },
                ):
     
     ### prepare mat df according to selection criteria
-    mat = PrepMat(mat, Mat, include, exclude)
+    mat = PrepMat(mat, materials, vehicles, classes)
         
     ### combine masses
     mat = mat.groupby(['Year',Dim[0],Dim[1]]).sum().reset_index(drop=False)
@@ -400,21 +422,36 @@ def PlotMass2Dim(
                                               traceorder='reversed', 
                                               font_size=10,
                                               ))
+    if materials['include'] == 'All':
+        materials['include'] = ['All']
+    
+    if vehicles['include'] == 'All':
+        vehicles['include'] = ['All']    
+    
     fig.show()
-    fig.write_image(str('figures/Mass'+Dim[0]+Dim[1]+'.pdf'))
+    fig.write_image(str('figures/Mass'
+                        +''.join(map(str, Dim))
+                        +'M-'.join(map(str, materials['include']))[0:25]
+                        +'V-'.join(map(str, vehicles['include']))[0:25]
+                        +'.pdf'))
 
     
 def PlotMass1Dim(
                mat,
                Dim='Vehicle',
-               Mat=None,
-               exclude=[None],
-               include=[x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
+               materials = {'include' : 'All',
+                            'exclude' : None,
+                            },
+               vehicles = {'include' : 'All',
+                           'exclude' : None,
+                           },
+               classes = {'include' : 'All',
+                          'exclude' : None,
+                          },
                ):
     
     ### prepare mat df according to selection criteria
-    mat = PrepMat(mat, Mat, include, exclude)
-
+    mat = PrepMat(mat, materials, vehicles, classes)
     
     ### combine masses
     mat = mat.groupby(['Year', Dim]).sum().reset_index(drop=False)
@@ -433,12 +470,26 @@ def PlotMass1Dim(
                                               traceorder='reversed', 
                                               font_size=10,
                                               ))
+    if materials['include'] == 'All':
+        materials['include'] = ['All']
+    
+    if vehicles['include'] == 'All':
+        vehicles['include'] = ['All']    
+    
     fig.show()
-    fig.write_image(str('figures/Mass'+Dim+'.pdf'))
-
+    fig.write_image(str('figures/Mass'
+                        +''.join(map(str, Dim))
+                        +'M-'.join(map(str, materials['include']))[0:25]
+                        +'V-'.join(map(str, vehicles['include']))[0:25]
+                        +'.pdf'))
     
 
 #%% simple defs
+    
+def StrToList(obj):
+    if isinstance(obj,list): pass
+    else: list(obj)
+    return obj
 
 def ReplaceValues(df, col, oldval, newval):
     df.loc[df.loc[:,col] == oldval, col] = newval

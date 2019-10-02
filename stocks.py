@@ -30,19 +30,20 @@ mat = func.CalcMass(dbx,
 
 func.PlotMass2Dim(mat, 
                   Dim=['Material', 'Vehicle'], 
-                  Mat=['Copper'],
-                  #include=['A330','B747'], #['A330','B747']
-                  #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+#                  Mat=['Copper'],
+#                  inclveh=['A330','B747'], #['A330','B747']
+#                  exclveh=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
                   )
 func.PlotMass2Dim(mat,
-                  Dim=['Class', 'Material'],
-                  #include=['A330','B747'], #['A330','B747']
-                  #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  Dim=['Vehicle', 'Material'],
+#                  Mat=['Copper'],
+#                  inclveh=['A330','B747'], #['A330','B747']
+#                  exclveh=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
                   )
 func.PlotMass1Dim(mat, 
-                  Dim='Vehicle',
-                  #include=['A330','B747'], #['A330','B747']
-                  #exclude=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  Dim='Class',
+#                  inclveh=['A330','B747'], #['A330','B747']
+#                  exclveh=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
                   )
 
     

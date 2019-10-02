@@ -1,4 +1,4 @@
-Flowid,Ecoinvent Flow,Eimass,Unit,Part,Unitmass,Material,Class,Source
+Flowid,Ecoinvent Flow,Eimass,Unit,Part,Material,Unitmass,Class,Source
 ,,15336.6,,Lorry,,,Lorries,Ecoinvent
 [G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",33.8,kilogram,Lorry,Ferrous metal,0.002203878304,Lorries,Ecoinvent
 [G621],"electronics, for control units_market for electronics, for control units[GLO]",76.8,kilogram,Lorry,,,Lorries,Ecoinvent
