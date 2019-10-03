@@ -399,6 +399,7 @@ def PlotMass2Dim(
                classes = {'include' : 'All',
                           'exclude' : None,
                           },
+               exportpdf=False,  
                ):
     
     ### prepare mat df according to selection criteria
@@ -429,11 +430,12 @@ def PlotMass2Dim(
         vehicles['include'] = ['All']    
     
     fig.show()
-    fig.write_image(str('figures/Mass'
-                        +''.join(map(str, Dim))
-                        +'M-'.join(map(str, materials['include']))[0:25]
-                        +'V-'.join(map(str, vehicles['include']))[0:25]
-                        +'.pdf'))
+    if exportpdf is True
+        fig.write_image(str('figures/Mass'
+                            +''.join(map(str, Dim))
+                            +'M-'.join(map(str, materials['include']))[0:25]
+                            +'V-'.join(map(str, vehicles['include']))[0:25]
+                            +'.pdf'))
 
     
 def PlotMass1Dim(
@@ -448,6 +450,7 @@ def PlotMass1Dim(
                classes = {'include' : 'All',
                           'exclude' : None,
                           },
+               exportpdf=False, 
                ):
     
     ### prepare mat df according to selection criteria
@@ -477,11 +480,12 @@ def PlotMass1Dim(
         vehicles['include'] = ['All']    
     
     fig.show()
-    fig.write_image(str('figures/Mass'
-                        +''.join(map(str, Dim))
-                        +'M-'.join(map(str, materials['include']))[0:25]
-                        +'V-'.join(map(str, vehicles['include']))[0:25]
-                        +'.pdf'))
+    if exportpdf is True
+        fig.write_image(str('figures/Mass'
+                            +''.join(map(str, Dim))
+                            +'M-'.join(map(str, materials['include']))[0:25]
+                            +'V-'.join(map(str, vehicles['include']))[0:25]
+                            +'.pdf'))
     
 
 #%% simple defs
