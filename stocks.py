@@ -30,20 +30,39 @@ mat = func.CalcMass(dbx,
 
 func.PlotMass2Dim(mat, 
                   Dim=['Material', 'Vehicle'], 
-#                  Mat=['Copper'],
-#                  inclveh=['A330','B747'], #['A330','B747']
-#                  exclveh=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  materials = {'include' : 'All',
+                               'exclude' : None,
+                               },
+                  vehicles = {'include' : 'All',
+                              'exclude' : None,
+                              },
+                  classes = {'include' : 'All',
+                             'exclude' : None,
+                             },                  
                   )
 func.PlotMass2Dim(mat,
                   Dim=['Vehicle', 'Material'],
-#                  Mat=['Copper'],
-#                  inclveh=['A330','B747'], #['A330','B747']
-#                  exclveh=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  materials = {'include' : 'All',
+                               'exclude' : None,
+                               },
+                  vehicles = {'include' : 'All',
+                              'exclude' : None,
+                              },
+                  classes = {'include' : 'All',
+                             'exclude' : None,
+                             },                  
                   )
 func.PlotMass1Dim(mat, 
                   Dim='Class',
-#                  inclveh=['A330','B747'], #['A330','B747']
-#                  exclveh=['icecar'], # ['bicycle', 'ebicycle'] ['evcar','icecar']
+                  materials = {'include' : 'All',
+                               'exclude' : None,
+                               },
+                  vehicles = {'include' : 'All',
+                              'exclude' : None,
+                              },
+                  classes = {'include' : 'All',
+                             'exclude' : None,
+                             },                  
                   )
 
     
