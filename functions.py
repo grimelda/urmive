@@ -430,7 +430,7 @@ def PlotMass2Dim(
         vehicles['include'] = ['All']    
     
     fig.show()
-    if exportpdf is True
+    if exportpdf is True:
         fig.write_image(str('figures/Mass'
                             +''.join(map(str, Dim))
                             +'M-'.join(map(str, materials['include']))[0:25]
@@ -480,7 +480,7 @@ def PlotMass1Dim(
         vehicles['include'] = ['All']    
     
     fig.show()
-    if exportpdf is True
+    if exportpdf is True:
         fig.write_image(str('figures/Mass'
                             +''.join(map(str, Dim))
                             +'M-'.join(map(str, materials['include']))[0:25]
