@@ -10,4 +10,6 @@ dependencies:
   - pip
   - pip:
     - plotly_express==0.4.0
+    - squarify==0.4.3
+    - colorlover==0.3.0
 
