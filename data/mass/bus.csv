@@ -1,0 +1,17 @@
+FlowId,EcoinventFlow,Partmass,Unit,Unitmass,Material,Class,MaterialGroup
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",22.8,kilogram,0.0021,"Steel, low alloy",Transit,Ferrous metals
+[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",30,kilogram,0.0028,Alkyd paint,Transit,Paint
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",1670,kilogram,0.1574,"Aluminium, cast alloy",Transit,Nonferrous metals
+[G3339],pig iron_market for pig iron[GLO],502,kilogram,0.0473,"Iron, pig",Transit,Ferrous metals
+[G3787],lead_market for lead[GLO],90,kilogram,0.0085,Lead,Transit,Nonferrous metals
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",553,kilogram,0.0521,"Polyethylene, high density",Transit,Polymers
+[G4640],brass_market for brass[CH],3,kilogram,0.0003,Brass,Transit,Nonferrous metals
+[G5542],"propylene glycol, liquid_market for propylene glycol, liquid[GLO]",26,kilogram,0.0025,Propylene glycol,Transit,Polymers
+[G5916],reinforcing steel_market for reinforcing steel[GLO],4540,kilogram,0.4279,"Steel, reinforcing",Transit,Ferrous metals
+[G5949],copper_market for copper[GLO],109,kilogram,0.0103,Copper,Transit,Nonferrous metals
+[G8652],cast iron_market for cast iron[GLO],1030,kilogram,0.0971,"Iron, cast",Transit,Ferrous metals
+[G10528],"stone wool, packed_market for stone wool, packed[GLO]",396,kilogram,0.0373,Stone wool,Transit,Insulation
+[G11302],pitch_market for pitch[CH],54,kilogram,0.0051,Pitch,Transit,Polymers
+[G11853],synthetic rubber_market for synthetic rubber[GLO],405,kilogram,0.0382,Rubber,Transit,Polymers
+[G12509],"flat glass, coated_market for flat glass, coated[GLO]",490,kilogram,0.0462,Glass,Transit,Glass
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",690,kilogram,0.0650,"Steel, chromium",Transit,"Steel, high alloy"
