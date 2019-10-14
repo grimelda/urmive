@@ -483,7 +483,7 @@ def TreeChart(mat,
               slx = [],
               cat = [],
               year = 2017,
-              scale = None
+              scale = None,
               exportpdf=False,
               ):
     import plotly.graph_objects as go
@@ -539,7 +539,7 @@ def TreeChart(mat,
         mode = 'text',
     ))
     if scale == None:
-        scale = 15*(mat.loc[mat[slx[0]].isin(slx[1]), 'Mass'].sum()/1e7)**0.37
+        scale = 150*(mat.loc[mat[slx[0]].isin(slx[1]), 'Mass'].sum()/1e7)**0.37
     fig.update_layout(
         height=scale,
         width=scale,
