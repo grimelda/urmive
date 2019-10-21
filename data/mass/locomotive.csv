@@ -1,0 +1,15 @@
+FlowId,EcoinventFlow,Partmass,Unit,Part,Unitmass,Material,Class,MaterialGroup
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",16400,kilogram,Locomotive,0.22,"Steel, low alloy",Transit,Ferrous metals
+[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",385,kilogram,Locomotive,0.01,Alkyd paint,Transit,Paint
+[G2072],"glued laminated timber, for outdoor use_market for glued laminated timber, for outdoor use[GLO]",445.5,kilogram,Locomotive,0.01,Wood,Transit,Wood
+[G2651],"polyvinylchloride, suspension polymerised_market for polyvinylchloride, suspension polymerised[GLO]",306,kilogram,Locomotive,0.00,Polyvinylchloride,Transit,Polymers
+[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",1780,kilogram,Locomotive,0.02,"Aluminium, cast alloy",Transit,Nonferrous metals
+[G3787],lead_market for lead[GLO],263,kilogram,Locomotive,0.00,Lead,Transit,Nonferrous metals
+[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",6340,kilogram,Locomotive,0.09,"Polyethylene, high density",Transit,Polymers
+[G5916],reinforcing steel_market for reinforcing steel[GLO],34200,kilogram,Locomotive,0.46,"Steel, reinforcing",Transit,Ferrous metals
+[G5949],copper_market for copper[GLO],6810,kilogram,Locomotive,0.09,Copper,Transit,Nonferrous metals
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",3770,kilogram,Locomotive,0.05,"Aluminium, wrought alloy",Transit,Nonferrous metals
+[G10390],"polyvinylchloride, emulsion polymerised_market for polyvinylchloride, emulsion polymerised[GLO]",44.8,kilogram,Locomotive,0.00,Polyvinylchloride,Transit,Polymers
+[G10528],"stone wool, packed_market for stone wool, packed[GLO]",32,kilogram,Locomotive,0.00,Stone wool,Transit,Insulation
+[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",2810,kilogram,Locomotive,0.04,"Steel, chromium",Transit,"Steels, high alloy"
+[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",235,kilogram,Locomotive,0.00,Glass,Transit,Glass

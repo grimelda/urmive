@@ -88,7 +88,12 @@ def CalcMass(
                                         'lorry40t',
                                         'bus',
                                         'hmaxin',
-                                        'hmax'
+                                        'hmax',
+                                        'tanker',
+                                        'bulker',
+                                        'ptrain',
+                                        'locomotive',
+#                                         'wagon',
                                         ])
     return mat
 
@@ -121,12 +126,12 @@ def RemapVehicles(dbx):
     ### preserve original vehicle names
     dbx['Vehiclenames'] = dbx['Vehicle']
     
-    ### manually set some avg weight values
-    dbx = SetWeightManual(dbx, slx={
-                                    'Seavessel:handel' : 87009621.9,
-                                    'Seavessel:waterbouw': 1880253.8,
-                                    'Seavessel:zeesleepvaart' : 378541.7,
-                                    })
+#     ### manually set some avg weight values
+#     dbx = SetWeightManual(dbx, slx={
+#                                     'Seavessel:handel' : 11097664, # compared to eurostat estimate: 87009621.9
+#                                     'Seavessel:waterbouw': 10483008, # compared to eurostat estimate: 1880253.8
+#                                     'Seavessel:zeesleepvaart' : 2052046, # compared to eurostat estimate: 378541.7
+#                                     })
     
     ### 
     MAP = pd.read_csv('data/datamap.csv', header=None, index_col=False)
@@ -180,9 +185,11 @@ def AddVehicleTypeColumn(db): #2
     db['planes']['Vtype'] = (pd.Series(['Aircraft:']*len(db['planes'])) 
                            + db['planes']['Onderwerp']
                            )
-    db['seaships']['Vtype'] = (pd.Series(['Seavessel:']*len(db['seaships'])) 
-                              + db['seaships']['Onderwerp']
-                              )
+    db['Vlootboek']['Vtype'] = db['Vlootboek'].loc[:,'VlootboekNaam']
+    db['Vlootboek'] = db['Vlootboek'].rename(columns={'VehicleAvgWeight':'Onderwerp'})
+    db['Vlootboek'] = db['Vlootboek'].loc[db['Vlootboek']['Flow']=='stock']
+
+
     db['inships']['Vtype'] = (pd.Series(['Inlandvessel:']*len(db['inships'])) 
                               + db['inships']['Onderwerp']
                               )
@@ -360,21 +367,21 @@ def PrepMat(mat, materials, vehicles, classes):
         each = StrToList(each)
     
     ### filter for selected materials
-    if materials['include'] == 'All': pass
+    if materials['include'] == ['All']: pass
     else: mat = mat.loc[mat['Material'].isin(materials['include'])]
     
     ### exlcude or include certain classes. be sane plz, can be mutually exclusive
-    if classes['include'] == 'All':
+    if classes['include'] == ['All']:
         classes['include'] = list(set(mat['Class']))
     mat = mat.loc[mat['Class'].isin(classes['include'])]
-    if classes['exclude'] is None: pass
+    if classes['exclude'] == [None]: pass
     else: mat = mat.loc[~(mat['Class'].isin(classes['exclude']))]
     
     ### exlcude or include certain vehicles. be sane plz, can be mutually exclusive
-    if vehicles['include'] == 'All':
+    if vehicles['include'] == ['All']:
         vehicles['include'] = [x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
     mat = mat.loc[mat['Vehicle'].isin(vehicles['include'])]
-    if vehicles['exclude'] is None: pass
+    if vehicles['exclude'] == [None]: pass
     else: mat = mat.loc[~(mat['Vehicle'].isin(vehicles['exclude']))]
     
     return mat
@@ -382,14 +389,14 @@ def PrepMat(mat, materials, vehicles, classes):
 def PlotMass2Dim(
                mat, 
                Dim=['Material', 'Vehicle'],
-               materials = {'include' : 'All',
-                            'exclude' : None,
+               materials = {'include' : ['All'],
+                            'exclude' : [None],
                             },
-               vehicles = {'include' : 'All',
-                           'exclude' : None,
+               vehicles = {'include' : ['All'],
+                           'exclude' : [None],
                            },
-               classes = {'include' : 'All',
-                          'exclude' : None,
+               classes = {'include' : ['All'],
+                          'exclude' : [None],
                           },
                exportpdf=False,  
                ):
@@ -415,11 +422,6 @@ def PlotMass2Dim(
                                               traceorder='reversed', 
                                               font_size=10,
                                               ))
-    if materials['include'] == 'All':
-        materials['include'] = ['All']
-    
-    if vehicles['include'] == 'All':
-        vehicles['include'] = ['All']    
     
     fig.show()
     if exportpdf is True:
@@ -433,14 +435,14 @@ def PlotMass2Dim(
 def PlotMass1Dim(
                mat,
                Dim='Vehicle',
-               materials = {'include' : 'All',
-                            'exclude' : None,
+               materials = {'include' : ['All'],
+                            'exclude' : [None],
                             },
-               vehicles = {'include' : 'All',
-                           'exclude' : None,
+               vehicles = {'include' : ['All'],
+                           'exclude' : [None],
                            },
-               classes = {'include' : 'All',
-                          'exclude' : None,
+               classes = {'include' : ['All'],
+                          'exclude' : [None],
                           },
                exportpdf=False, 
                ):
@@ -465,11 +467,6 @@ def PlotMass1Dim(
                                               traceorder='reversed', 
                                               font_size=10,
                                               ))
-    if materials['include'] == 'All':
-        materials['include'] = ['All']
-    
-    if vehicles['include'] == 'All':
-        vehicles['include'] = ['All']    
     
     fig.show()
     if exportpdf is True:
@@ -540,7 +537,8 @@ def TreeChart(mat,
         mode = 'text',
     ))
     if scale == None:
-        scale = 150*(mat.loc[mat[slx[0]].isin(slx[1]), 'Mass'].sum()/1e7)**0.37
+        scale = (mat.loc[mat['Year']==2011].loc[mat[slx[0]].isin(slx[1]), 'Mass'].sum()/300)**0.5
+
     fig.update_layout(
         height=scale,
         width=scale,

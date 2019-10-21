@@ -1,0 +1,7 @@
+FlowId,EcoinventFlow,Partmass,Unit,Part,Unitmass,Material,Class,MaterialGroup
+[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",21000,kilogram,Wagon,0.8876489982,"Steel, low alloy",Freighttrains,Ferrous metals
+[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",106,kilogram,Wagon,0.004480513991,Alkyd paint,Freighttrains,Paint
+[G2072],"glued laminated timber, for outdoor use_market for glued laminated timber, for outdoor use[GLO]",1440,kilogram,Wagon,0.06086735988,Wood,Freighttrains,Wood
+[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",1070,kilogram,Wagon,0.04522782991,"Aluminium, wrought alloy",Freighttrains,Nonferrous metals
+[G10528],"stone wool, packed_market for stone wool, packed[GLO]",32,kilogram,Wagon,0.001352607997,Stone wool,Freighttrains,Insulation
+[G11853],synthetic rubber_market for synthetic rubber[GLO],10,kilogram,Wagon,0.0004226899992,Rubber,Freighttrains,Polymers
