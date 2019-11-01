@@ -483,12 +483,15 @@ def TreeChart(mat,
               scale = None,
               exportpdf=False,
               lim=9,
+              values=False,
+              labels=False,
               ):
     import plotly.graph_objects as go
     import colorlover as cl
     import squarify
-
-    values, labels = SelectVehicleYear(mat, slx, cat, year, lim)
+    
+    if values is False and labels is False:
+        values, labels = SelectVehicleYear(mat, slx, cat, year, lim)
     
     fig = go.Figure()
 
