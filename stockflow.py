@@ -222,9 +222,11 @@ def WeibFit(path='ships.csv',
     factor=stock/lt
     ssf = sf*factor
     
-    plt.plot(range(len(data)), data)
-    plt.plot(range(len(data)), ssf)
+    plt.bar(range(len(data)), data, color=(0.2, 0.4, 0.6, 0.6), label='data')
+    plt.plot(range(len(data)), ssf, color='orange', label='shape: '+str(shape)+', lifetime: '+str(lt)+'y')
+    plt.legend(loc='upper right')
     plt.show()
+    plt.savefig('Weibull_'+path.split('.')[0]+'.png', dpi=300)
 
     print('rsquared: ', round(rsquared(data,ssf), 4))
     print('pearsonr: ', round(scipy.stats.pearsonr(data,ssf)[0], 4))

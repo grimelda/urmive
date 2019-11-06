@@ -11,11 +11,11 @@ startmodel = 1999
 endmodel = 2051
 x = np.linspace(startmodel, endmodel, (10*(endmodel-startmodel))+1)
 
-y = sf.LogisticSignal(x)
+#y = sf.LogisticSignal(x)
 y = sf.FlatSignal(x, step=True)
 
 
-AvgLt = 13*np.ones(len(x))
+AvgLt = 15*np.ones(len(x))
 
 #%%
 
@@ -35,6 +35,6 @@ sf.PlotHistograms(IOS, y)
 
 #%%
 
-ltcor = sf.LifeTimeCorrection(x, y, log=False)
+#ltcor = sf.LifeTimeCorrection(x, y, log=False)
 
 
