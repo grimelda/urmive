@@ -1,0 +1,20 @@
+Material Group,Flow ID,Ecoinvent Flow,Ecoinvmass,Unit,Part,Material,Unitmass,Class,Source
+Ferrous metals,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",6.62,kilogram,,"Steel, low alloy",6.75370E-02,Bicycles,Ecoinvent
+Paint,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",0.416,kilogram,,Alkyd paint,4.24402E-03,Bicycles,Ecoinvent
+Polymers,[G1240],"polypropylene, granulate_market for polypropylene, granulate[GLO]",7.35,kilogram,,Polypropylene,7.49844E-02,Bicycles,Ecoinvent
+Polymers,[G1902],"ethylene, average_market for ethylene, average[GLO]",1.24,kilogram,,Ethylene,1.26504E-02,Bicycles,Ecoinvent
+"Critical Raw Materials, CRM",[G2435],platinum_market for platinum[GLO],0.000107,kilogram,,Platinum,1.09161E-06,Bicycles,Ecoinvent
+Polymers,[G2651],"polyvinylchloride, suspension polymerised_market for polyvinylchloride, suspension polymerised[GLO]",2.09,kilogram,,Polyvinylchloride,2.13221E-02,Bicycles,Ecoinvent
+Nonferrous metals,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",4.8,kilogram,,"Aluminium, cast alloy",4.89694E-02,Bicycles,Ecoinvent
+Ferrous metals,[G3153],chromium_market for chromium[GLO],0.161,kilogram,,Chromium,1.64252E-03,Bicycles,Ecoinvent
+Nonferrous metals,[G3787],lead_market for lead[GLO],0.87,kilogram,,Lead,8.87571E-03,Bicycles,Ecoinvent
+Polymers,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",15.3,kilogram,,Polyethylene,1.56090E-01,Bicycles,Ecoinvent
+Chemicals,[G4605],sulfuric acid_market for sulfuric acid[GLO],0.0535,kilogram,,Sulfuric Acid,5.45805E-04,Bicycles,Ecoinvent
+Ferrous metals,[G5916],reinforcing steel_market for reinforcing steel[GLO],44.5,kilogram,,"Steel, reinforcing",4.53987E-01,Bicycles,Ecoinvent
+Nonferrous metals,[G5949],copper_market for copper[GLO],0.676,kilogram,,Copper,6.89653E-03,Bicycles,Ecoinvent
+Nonferrous metals,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",10.2,kilogram,,"Aluminium, wrought alloy",1.04060E-01,Bicycles,Ecoinvent
+Nonferrous metals,[G9685],zinc_market for zinc[GLO],0.394,kilogram,,Zinc,4.01957E-03,Bicycles,Ecoinvent
+Nonferrous metals,[G10288],"nickel, 99.5%_market for nickel, 99.5%[GLO]",0.0937,kilogram,,Nickel,9.55924E-04,Bicycles,Ecoinvent
+Polymers,[G10390],"polyvinylchloride, emulsion polymerised_market for polyvinylchloride, emulsion polymerised[GLO]",0.306,kilogram,,Polyvinylchloride,3.12180E-03,Bicycles,Ecoinvent
+"Critical Raw Materials, CRM",[G10948],palladium_market for palladium[GLO],2.01E-05,kilogram,,Palladium,2.05060E-07,Bicycles,Ecoinvent
+Polymers,[G11853],synthetic rubber_market for synthetic rubber[GLO],2.95,kilogram,,"Rubber, synthetic",3.00958E-02,Bicycles,Ecoinvent

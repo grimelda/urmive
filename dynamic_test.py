@@ -15,26 +15,27 @@ x = np.linspace(startmodel, endmodel, (10*(endmodel-startmodel))+1)
 y = sf.FlatSignal(x, step=True)
 
 
-AvgLt = 15*np.ones(len(x))
+AvgLs = 15*np.ones(len(x))
 
 #%%
 
 IOS, dt = sf.InOutStock(\
                         x,
                         y,
-                        AvgLt,
+                        AvgLs,
                         scaleflow = 'year', # either 'year' or 'dt'
-                        shape = 5.5, # shape for weibull distribution
-                        LtCorr = 1,#/0.923, # scales outflow to match expected outflow
+                        shape = 3, # shape for weibull distribution
+#                        dm=40,
+#                        lm=1.44, # 1.6 44 8
                         )
 
 #%%
 
-sf.PlotResponse(IOS, y)
-sf.PlotHistograms(IOS, y)
+sf.PlotResponse(IOS, y, figs=True)
+sf.PlotHistograms(IOS, y, figs=True)
 
 #%%
 
-#ltcor = sf.LifeTimeCorrection(x, y, log=False)
+#lscor = sf.LifespanCorrection(x, y, log=True)
 
 

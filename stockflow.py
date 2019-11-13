@@ -6,6 +6,66 @@ import scipy.stats
 
 
 
+def InOutStock(\
+               x,
+               y,
+               AvgLs,
+               scaleflow = 'dt', # either 'year' or 'dt'
+               shape = 5, # shape for weibull distribution
+               dm=False, # allows user to override deaths multiplier
+               lm=False, # allows user to override lifespan multiplier 
+               ):
+    
+    ### find time step size
+    dt = (max(x)-min(x))/len(x[:-1])
+    
+    ### calibration for deaths multiplier and lifespan multiplier
+    dmulti = 7.99 * shape**0.623#
+    ''' calibration factor for scale multiplier
+    p(k) = C * k(-T) * exp(-k/K) + Offset
+    Fitting target of lowest sum of squared absolute error = 6.6676704109128210E-02
+    '''
+    C =  5.8770581668489790E+00
+    T =  1.5621696972883667E+00
+    K =  3.5534833809179234E+13
+    Offset =  1.3218793763933294E+00
+    lsmulti = C * shape**-T * np.exp(-shape/K) + Offset
+    
+    ### this allows user to override calibration multipliers using dm and lm variables
+    if dm > 0:
+        dmulti = dm
+        lsmulti = lm
+    
+    ### outflow correction factors
+    LsCorr = 0.728+ 0.375*shape - 0.108*shape**2 + 0.012*shape**3 -4.67e-4*shape**4
+    
+    ### scale lifespan to match timestep
+    AvgLs= AvgLs/dt*LsCorr
+    
+    IOS = pd.DataFrame(columns=['x', 'Infl_dt', 'Outf_dt', 'Stock', 'Hist', 'Control'])
+    IOS['x'] = x
+    
+    ### makes histogram for first timestep from weibull survival function at t0
+    IOS.at[0, 'Hist'] = HistWeib_t0(x, dt, shape, AvgLs[0], y[0])
+    IOS.at[0, 'Stock'] = sum(IOS.loc[0, 'Hist'])
+    
+    ### calculates inflows, outflows, and stocks for each timestep
+    for t in IOS.index[1:]:
+        IOS = InOutFlow_dt(x, y, t, dt, shape, IOS, AvgLs[t], dmulti, lsmulti)
+    
+#    ### builds control curve, use to diagnose errors in mass balance
+#    IOS = ControlCurve(IOS)
+    
+    ### scales dataframe to fit yearly values or timestep values
+    IOS = ScaleFlowsToYear(IOS, dt, scaleflow)
+    
+    ### Notes the shape and lifespan values
+    IOS['shape'] = shape
+    IOS['lifespan'] = np.mean(AvgLs)
+    
+    return IOS, dt
+
+
 def Dstock_dt(\
               y,
               t,
@@ -17,63 +77,41 @@ def Dstock_dt(\
     dstock = y[t] - sum(hist) # scalar
     
     ### scalar for number of births in timestep 
-    if dstock > 0: # this represents 'births'
+    if dstock >= 0: # this represents 'births'
         hist = np.insert(hist, 0, dstock)[:len(hist)] # vector
-    if dstock <= 0: # this represents non-age-related deaths
+    if dstock < 0: # this represents non-age-related deaths
         deaths_ds = (hist*pdf)/sum(hist*pdf) * dstock # absolute negative vector
         hist = hist+deaths_ds # absolute positive vector
         
     return dstock, hist
 
 
-def WeibDist(x, dt, AvgLt, shape=5.5, loc = 0):
-    ### sets larger bin size- otherwise with high lifetimes, bin would overflow
-    binrange = range(0,int(len(x)*3))
-    weib = dict()
-    weib['pdf'] = scipy.stats.weibull_min.pdf(binrange, shape, loc, AvgLt)
-    weib['cdf'] = scipy.stats.weibull_min.cdf(binrange, shape, loc, AvgLt)
-    weib['sf'] = scipy.stats.weibull_min.sf(binrange, shape, loc, AvgLt)
-
-    return weib
-
-
 def Deaths_dt(hist, pdf, shape, dmulti):
 
-    ### vector describing deaths per age bin, 7.05 is an optimised parameter    
-    deaths_age = hist * pdf * dmulti#7.05
-    ### create new histogram with 
+    ### vector describing deaths per age bin
+    deaths_age = hist * pdf * dmulti
+    
+    ### create new histogram with subtracted deaths
     hist = hist-deaths_age
     deaths_age = sum(deaths_age)
             
     return deaths_age, hist
 
 
-def HistWeib_t0(x, dt, shape, AvgLt, y0):
-    ### vector, based on input weibull survival function
-    hist = WeibDist(x, dt, AvgLt, shape, loc = 0)['sf']
-    # normalise
-    hist = hist/sum(hist)
-    # scale to y0
-    hist = y0*hist
-    
-    return hist
-
-
 def InOutFlow_dt(\
-                 x,
+                 x, 
                  y,
                  t,
                  dt,
                  shape,
-                 IOS, #hist,
-                 AvgLt,
+                 IOS,
+                 AvgLs,
                  dmulti,
-                 ltmulti,
+                 lsmulti,
                  ):
     
-    ### formulates weilbull distribution
-    pdf = WeibDist(x, dt, AvgLt*ltmulti, shape, loc = 0)['pdf'] 
-    # 1.33/2.7 || 1.5/4 || 2/7.05 || 1.9/6.0 || GC: 1.7//19(s5.5)
+    ### formulates weibull distribution
+    pdf = WeibDist(x, dt, AvgLs*lsmulti, shape, loc = 0)['pdf'] 
 
     ### calculates age related deaths during timestep from previous ts histogram
     (deaths_age, 
@@ -91,63 +129,23 @@ def InOutFlow_dt(\
     IOS.at[t, 'Stock'] = sum(hist)
     if dstock > 0:
         IOS.at[t, 'Infl_dt'] = dstock
-        IOS.at[t, 'Outf_dt'] = deaths_age #sum(deaths_age)
+        IOS.at[t, 'Outf_dt'] = deaths_age
     if dstock <= 0:
         IOS.at[t, 'Infl_dt'] = 0
         IOS.at[t, 'Outf_dt'] = deaths_age - dstock # dstock is negative, so adds
 
-    return IOS
+    return IOS # results dataframe
 
 
-def InOutStock(\
-               x,
-               y,
-               AvgLt,
-               scaleflow = 'dt', # either 'year' or 'dt'
-               shape = 5.5, # shape for weibull distribution
-               LtCorr = 1/0.925, # corr factor, scales outflow to match expected
-               ):
-    
-    ### find time step size
-    dt = (max(x)-min(x))/len(x[:-1])
-    
-    ### calibration factors
-    dmulti = 7.99 * shape**0.623#3.27 * shape + 5.31
-    C =  5.8543132044497312E+00
-    T =  1.5839720757283211E+00
-    K =  1.4650451557974826E+13
-    Offset =  1.3522744683235266E+00
-    ltmulti = C * shape**-T * np.exp(-shape/K) + Offset#6.2 * shape**-0.763
-    '''
-    p(k) = C * k(-T) * exp(-k/K) + Offset
-    Fitting target of lowest sum of squared absolute error = 6.3588683778794508E-02
-    '''
-    
-    ### outflow correction factors
-    LtCorr = 0.942 + 0.181*shape - 0.0469*shape**2 + 3.39e-3*shape**3#1.11 + 0.0311*shape - 6.57e-3*shape**2
+def WeibDist(x, dt, AvgLs, shape=5.5, loc = 0):
+    ### sets larger bin size- otherwise with high lifespans, bin would overflow
+    binrange = range(0,int(len(x)*3))
+    weib = dict()
+    weib['pdf'] = scipy.stats.weibull_min.pdf(binrange, shape, loc, AvgLs)
+    weib['cdf'] = scipy.stats.weibull_min.cdf(binrange, shape, loc, AvgLs)
+    weib['sf'] = scipy.stats.weibull_min.sf(binrange, shape, loc, AvgLs)
 
-    
-    ### scale lifetime to match timestep
-    AvgLt= AvgLt/dt*LtCorr
-    
-    IOS = pd.DataFrame(columns=['x', 'Infl_dt', 'Outf_dt', 'Stock', 'Hist', 'Control'])
-    IOS['x'] = x
-    
-    ### makes histogram for first timestep from weibull survival function at t0
-    IOS.at[0, 'Hist'] = HistWeib_t0(x, dt, shape, AvgLt[0], y[0])
-    IOS.at[0, 'Stock'] = sum(IOS.loc[0, 'Hist'])
-    
-    ### calculates inflows, outflows, and stocks for each timestep
-    for t in IOS.index[1:]:
-        IOS = InOutFlow_dt(x, y, t, dt, shape, IOS, AvgLt[t], dmulti, ltmulti)
-    
-#    ### builds control curve, use to diagnose errors in mass balance
-#    IOS = ControlCurve(IOS)
-    
-    ### scales dataframe to fit yearly values or timestep values
-    IOS = ScaleFlowsToYear(IOS, dt, scaleflow)
-    
-    return IOS, dt
+    return weib
 
 
 def AvgAge(hist, dt):
@@ -159,25 +157,36 @@ def AvgAge(hist, dt):
     return AvgAge # in years
 
 
+def HistWeib_t0(x, dt, shape, AvgLs, y0):
+    ### vector, based on input weibull survival function
+    hist = WeibDist(x, dt, AvgLs, shape, loc = 0)['sf']
+    # normalise
+    hist = hist/sum(hist)
+    # scale to y0
+    hist = y0*hist
+    
+    return hist
+
+
 def ScaleFlowsToYear(IOS, dt, scaleflow):
     if scaleflow == 'dt':
         IOS = IOS.rename(columns={'Infl_dt':'Infl', 'Outf_dt':'Outf'})
         return IOS
     
     if scaleflow == 'year':        
-        ## use this if you dont want to scale years later on 
-        IOS = IOS.set_index('x', drop=True)
-        ### list of int years
-        years = list(IOS.index.astype('int').unique())
-        for year in years[1:-1]: # first and last years do not count
-            IOS.at[year,'Infl'] =  IOS.loc[((year<=IOS.index) & (IOS.index<year+1)),'Infl_dt'].sum()
-            IOS.at[year,'Outf'] =  IOS.loc[((year<=IOS.index) & (IOS.index<year+1)),'Outf_dt'].sum()
-        IOS = IOS.dropna(subset=['Infl'])
-        IOS = IOS.reset_index(drop=False)
+#        ## use this if you dont want to scale years later on 
+#        IOS = IOS.set_index('x', drop=True)
+#        ### list of int years
+#        years = list(IOS.index.astype('int').unique())
+#        for year in years[1:-1]: # first and last years do not count
+#            IOS.at[year,'Infl'] =  IOS.loc[((year<=IOS.index) & (IOS.index<year+1)),'Infl_dt'].sum()
+#            IOS.at[year,'Outf'] =  IOS.loc[((year<=IOS.index) & (IOS.index<year+1)),'Outf_dt'].sum()
+#        IOS = IOS.dropna(subset=['Infl'])
+#        IOS = IOS.reset_index(drop=False)
 
-#        ## alternative, dirty way (watch out mass balance looks wrong but isnt)    
-#        IOS['Infl'] = IOS['Infl_dt'].multiply(1/dt)
-#        IOS['Outf'] = IOS['Outf_dt'].multiply(1/dt)
+        ## alternative, dirty way (watch out mass balance looks wrong but isnt)    
+        IOS['Infl'] = IOS['Infl_dt'].multiply(1/dt)
+        IOS['Outf'] = IOS['Outf_dt'].multiply(1/dt)
 
         return IOS
     
@@ -207,32 +216,73 @@ def rsquared(x, y):
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(x, y)
     return r_value**2
 
-    
-def WeibFit(path='ships.csv',
-            typ='raw', # either raw or hist
-            lt=18,
-            stock=1250,
-            shape=2,
+def WeibFit(\
+            v = 'cars',
+            figs = False,
+            custom = False, # allows user to input custom dictionary.
+            onlydata = False, # gets rid of orange weibull fit curve
+            residuals = False, # 
             ):
-    data = pd.Series(list(pd.read_csv(str('data/cdf/'+path),header=None).loc[0,::-1]))
-    if typ=='raw':
-        data = np.histogram(data, bins=100)[0]
-
-    sf=scipy.stats.weibull_min.sf(range(len(data)), shape, 0, lt)
-    factor=stock/lt
-    ssf = sf*factor
     
-    plt.bar(range(len(data)), data, color=(0.2, 0.4, 0.6, 0.6), label='data')
-    plt.plot(range(len(data)), ssf, color='orange', label='shape: '+str(shape)+', lifetime: '+str(lt)+'y')
+    d = dict()
+    d[v] = custom
+    if d[v] is False:
+        ### dictionary describing characteristics of demographics for selected vehicles
+        d = dict(ex = dict(shape=5, stock=5000, lifespan=50, path='cars.csv'),
+                 bus = dict(shape=5, stock=9822, lifespan=18, path='cars.csv'),
+                 cars = dict(shape=5, stock=8222974, lifespan=18, path='cars.csv'),
+                 vans = dict(shape=2, stock=2.252e6, lifespan=21.5, path='vans.csv'),
+                 jets = dict(shape=10, stock=240, lifespan=20, path='jets.csv'),
+#                 jets = dict(shape=4, stock=240, lifespan=20, path='jets.csv'),
+                 ships = dict(shape=2, stock=1250, lifespan=30, path='ships.csv'),
+                 trucks = dict(shape=2.5, stock=58159, lifespan=17, path='trucks.csv'),
+                 trains = dict(shape=8, stock=1069, lifespan=40, path='trains.csv'),
+                 mopeds = dict(shape=5, stock=1178300, lifespan=18, path='mopeds.csv'),
+                 motorbikes = dict(shape=3.6, stock=655991, lifespan=38, path='motorbikes.csv'),
+                 bestelwagen = dict(shape=4.5, stock=852622, lifespan=16, path='bestelwagen.csv'),
+                 )
+    
+    df = pd.read_csv('data/cdf/'+d[v]['path'], header=0, index_col=0).drop(index=0)
+    df = df.drop(index=df.index[-1]).dropna()
+
+    factor = d[v]['stock'] / d[v]['lifespan']
+    sf = scipy.stats.weibull_min.sf(range(200), d[v]['shape'], 0, d[v]['lifespan'])
+    ssf = sf * factor
+    for i in df.index:
+        df.at[i, 'ssf'] = ssf[i]
+        
+    ###  descriptive statistics for fit:
+    rsqu = round(rsquared(df.Count, df.ssf), 3)
+    pear = round(scipy.stats.pearsonr(df.Count, df.ssf)[0], 3)
+    
+    plt.figure(figsize=(10,4))
+    plt.bar(df.index, df.Count, color=(0.2, 0.4, 0.6, 0.6), label='data')
+    if onlydata is False:
+        plt.plot(range(0,200), ssf, color='orange', label='Weibull:'\
+                                                              +'\nstock: ' + str(round(d[v]['stock']))\
+                                                              +'\nlifespan: ' + str(d[v]['lifespan'])+'y'\
+                                                              +'\nshape: ' + str(d[v]['shape'])\
+                                                              +'\nrsquared: ' + str(rsqu) \
+                                                              +'\npearsonr: ' + str(pear)\
+                                                              )
     plt.legend(loc='upper right')
-    plt.show()
-    plt.savefig('Weibull_'+path.split('.')[0]+'.png', dpi=300)
-
-    print('rsquared: ', round(rsquared(data,ssf), 4))
-    print('pearsonr: ', round(scipy.stats.pearsonr(data,ssf)[0], 4))
-
-    return ssf, data
+    plt.ylabel('Number of vehicles in age cohort')
+    plt.xlabel('Age cohorts, by year')
+    plt.savefig('figures/Weibull_' + v + '.pdf', dpi=300)        
     
+    if figs is True: 
+        plt.show()
+    
+    if residuals is True: 
+        plt.figure(figsize=(10,4))
+        plt.plot(df.index, 200*(df.Count-df.ssf)/max(df.ssf), 'r.', label='residual: relative difference between data and prediction')
+        plt.plot(range(200), np.zeros(200), 'g-')
+        plt.ylim(-100,100)
+        plt.legend(loc='upper right')
+#        fig.show()
+        
+    return df
+        
 
 def LogisticSignal(x):
     y = LogistiCurve(x, start=2e3, end=10e3, steepness=0.2, midpoint=2015)\
@@ -242,60 +292,72 @@ def LogisticSignal(x):
         
 
 def FlatSignal(x, step=False):
-    up = LogistiCurve(x, start=0, end=1e3, steepness=0.9, midpoint=2018)
-    down = LogistiCurve(x, start=1e3, end=0, steepness=0.9, midpoint=2022)
-    y = 2e3*np.ones(len(x))
+    yavg = 5e3
+    peak = 3e3
+    up = LogistiCurve(x, start=0, end=peak, steepness=0.9, midpoint=2018)
+    down = LogistiCurve(x, start=peak, end=0, steepness=0.9, midpoint=2022)
+    y = yavg*np.ones(len(x))
     if step is True:
-        y = y + up + down
+        y = y + up + down - peak
     return y
 
-def PlotResponse(IOS, y):
+def PlotResponse(IOS, y, figs=False):
     plt.figure(figsize=(10,4))
     #plt.plot(x, y, label='Input')
-    plt.plot(IOS['x'], IOS['Stock'], label='Stock')
-    plt.plot(IOS['x'], IOS['Infl'], label='Inflow')
-    plt.plot(IOS['x'], IOS['Outf'], label='Outflow')
+    plt.plot(IOS['x'], IOS['Stock'], 'k-', label='Stock')
+    plt.plot(IOS['x'], IOS['Infl'], 'b-', label='Inflow')
+    plt.plot(IOS['x'], IOS['Outf'], 'r-', label='Outflow')
     #plt.plot(IOS['x'], IOS['Control'], label='Control')
     plt.legend(loc='upper left')
     plt.ylim(-.0*max(y),1.2*max(y))
-    plt.show()
+    plt.ylabel('Number of units')
+    plt.xlabel('Year')
+    plt.savefig(str('figures/inoutstock.png'), dpi=300)
+    if figs is True: 
+        plt.show()
 
 
-def PlotHistograms(IOS, y):
-    plt.figure(figsize=(10,4))
-    plt.plot(IOS['Hist'][2])
-    plt.plot(IOS['Hist'][29])
-    plt.plot(IOS['Hist'][35])
-    plt.plot(IOS['Hist'][45])
-    plt.ylim(-1,1.2*max(IOS['Hist'][40]))
-    plt.show()
+def PlotHistograms(IOS, y, figs=False):
     
-def LifeTimeCorrection(x, y, log):
+    if figs is True:
+        plt.figure(figsize=(10,4))
+        plt.plot(IOS['Hist'][2], label='histogram t=2')
+        plt.plot(IOS['Hist'][29], label='histogram t=29')
+        plt.plot(IOS['Hist'][35], label='histogram t=35')
+        plt.plot(IOS['Hist'][45], label='histogram t=45')
+        plt.legend(loc='upper right')
+        plt.ylim(-1,2.*max(IOS['Hist'][40]))
+        plt.xlim(0, 1.5*len(IOS['Hist'][45][IOS['Hist'][45]>0.001]))
+        plt.ylabel('Number of units')
+        plt.xlabel('Age cohort')
+        plt.savefig('figures/inoutstock_hist.png', dpi=300)
+        plt.show()
+    
+def LifespanCorrection(x, y, log=True):
     
     i=0
-    ltcor = pd.DataFrame()
+    lscor = pd.DataFrame()
     
-    for lt in [2, 4, 7, 10, 20, 30, 50]:
-        AvgLt = lt*np.ones(len(x))
+    for ls in [2, 4, 7, 10, 20, 30, 50]:
+        AvgLs = ls*np.ones(len(x))
         
-        for shape in [1.2, 1.4, 1.8, 2, 3, 4, 5.5, 6]:
+        for shape in [1.2, 1.4, 1.8, 2, 3, 4, 5.5, 6, 8, 10]:
             IOS, dt = InOutStock(\
                                  x,
                                  y,
-                                 AvgLt,
+                                 AvgLs,
                                  scaleflow = 'dt', # either 'year' or 'dt'
                                  shape = shape, # shape for weibull distribution
-                                 LtCorr = 1,#/0.923, # scales outflow to match expected outflow
                                  )
-            ltcor.at[i, 'lifetime'] = lt
-            ltcor.at[i, 'shape'] = shape
-            ltcor.at[i, 'exp. lifetime'] = round(lt, 2)
-            ltcor.at[i, 'real lifetime'] = round(IOS['Stock'].mean()/IOS['Outf'].mean()*dt,2)
-            ltcor.at[i, 'lt factor'] = ltcor['real lifetime'][i]/ltcor['exp. lifetime'][i]
-            ltcor.at[i, 'exp. outflow'] = round(IOS['Stock'].mean()/lt, 2)
-            ltcor.at[i, 'real outflow'] = round(IOS['Outf'].mean()/dt,2)
-            ltcor.at[i, 'OF factor'] = ltcor['real outflow'][i]/ltcor['exp. outflow'][i]
+            lscor.at[i, 'lifespan'] = ls
+            lscor.at[i, 'shape'] = shape
+            lscor.at[i, 'exp. lifespan'] = round(ls, 2)
+            lscor.at[i, 'real lifespan'] = round(IOS['Stock'].mean()/IOS['Outf'].mean()*dt,2)
+            lscor.at[i, 'lt factor'] = lscor['real lifespan'][i]/lscor['exp. lifespan'][i]
+            lscor.at[i, 'exp. outflow'] = round(IOS['Stock'].mean()/ls, 2)
+            lscor.at[i, 'real outflow'] = round(IOS['Outf'].mean()/dt,2)
+            lscor.at[i, 'OF factor'] = lscor['real outflow'][i]/lscor['exp. outflow'][i]
             i+=1
             if log is True:
-                print(i, shape, lt)
-    return ltcor
+                print(i, shape, ls)
+    return lscor
