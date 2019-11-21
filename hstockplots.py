@@ -26,44 +26,44 @@ mat = stocks.CalcMass(dbx, dbm)
 
 #%%
 ### include and exclude are kinda mutually exclusive, be sane.
-'''
+
 stocks.PlotMass2Dim(mat, 
                     Dim=['Material', 'Vehicle'], 
-                    materials = {'include' : 'All',
-                                 'exclude' : None,
+                    materials = {'include' : ['All'],
+                                 'exclude' : [None],
                                  },
-                    vehicles = {'include' : 'All',
-                                'exclude' : None,
+                    vehicles = {'include' : ['All'],
+                                'exclude' : [None],
                                 },
-                    classes = {'include' : 'All',
-                               'exclude' : None,
+                    classes = {'include' : ['All'],
+                               'exclude' : [None],
                                },                  
                     )
 stocks.PlotMass2Dim(mat,
                     Dim=['Vehicle', 'Material'],
-                    materials = {'include' : 'All',
-                                 'exclude' : None,
+                    materials = {'include' : ['All'],
+                                 'exclude' : [None],
                                  },
-                    vehicles = {'include' : 'All',
-                                'exclude' : None,
+                    vehicles = {'include' : ['All'],
+                                'exclude' : [None],
                                 },
-                    classes = {'include' : 'All',
-                               'exclude' : None,
+                    classes = {'include' : ['All'],
+                               'exclude' : [None],
                                },                  
                     )
 stocks.PlotMass1Dim(mat, 
                     Dim='Class',
-                    materials = {'include' : 'All',
-                                 'exclude' : None,
+                    materials = {'include' : ['All'],
+                                 'exclude' : [None],
                                  },
-                    vehicles = {'include' : 'All',
-                                'exclude' : None,
+                    vehicles = {'include' : ['All'],
+                                'exclude' : [None],
                                 },
-                    classes = {'include' : 'All',
-                               'exclude' : None,
+                    classes = {'include' : ['All'],
+                               'exclude' : [None],
                                },                  
                     )
-'''
+
     
 #%%
 stocks.TimePrint(start); del start

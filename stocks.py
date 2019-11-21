@@ -39,7 +39,7 @@ def UnifyCountData(dbx,
                    endyear=2017,
                    ):
     
-    dbx = CleanDataframes(dbx)    
+    dbx = CleanDataframes(dbx)
     dbx = AddVehicleTypeColumn(dbx)
     Vtypes = MakeVehicleTypeList(dbx)
     dbx = CombineDataframes(dbx, startyear, endyear)
@@ -415,6 +415,8 @@ def PlotMass2Dim(
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
                   color = Dim[0], 
+                  width = 800,
+                  height = 500,
                   line_group = Dim[1],
                   #category_orders = {'idx' : list(mat.index)}
                   ).update_layout(legend=dict(
@@ -445,6 +447,7 @@ def PlotMass1Dim(
                           'exclude' : [None],
                           },
                exportpdf=False, 
+               category_orders=False
                ):
     
     ### prepare mat df according to selection criteria
@@ -462,6 +465,8 @@ def PlotMass1Dim(
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = 'Mass', 
                   color = Dim, 
+                  width = 800,
+                  height = 500,
                   ).update_layout(legend=dict(
                                               y=0.5, 
                                               traceorder='reversed', 
@@ -482,7 +487,7 @@ def TreeChart(mat,
               year = 2017,
               scale = None,
               exportpdf=False,
-              lim=9,
+              lim=8,
               values=False,
               labels=False,
               ):
@@ -490,11 +495,13 @@ def TreeChart(mat,
     import colorlover as cl
     import squarify
     
+    if lim>8: lim=8
+
     if values is False and labels is False:
         values, labels = SelectVehicleYear(mat, slx, cat, year, lim)
     
     fig = go.Figure()
-
+    
     x = 0.
     y = 0.
     width = 1.
@@ -540,7 +547,10 @@ def TreeChart(mat,
         mode = 'text',
     ))
     if scale == None:
-        scale = (mat.loc[mat['Year']==2011].loc[mat[slx[0]].isin(slx[1]), 'Mass'].sum()/300)**0.5
+        if len(slx)==2:
+            scale = (mat.loc[mat['Year']==2011].loc[mat[slx[0]].isin(slx[1]), 'Mass'].sum()/300)**0.5
+        if len(cat)==1:
+            scale = (mat.loc[mat['Year']==2011, 'Mass'].sum()/300)**0.5
 
     fig.update_layout(
         height=scale,
@@ -566,7 +576,7 @@ def DonutChart(mat,
                slx = [],
                cat = [],
                year = 2017,
-               lim = 9,
+               lim = 8,
                exportpdf=False,
                ):
     
@@ -577,7 +587,6 @@ def DonutChart(mat,
                                  values=values, 
                                  hole=.6)])
 
-    
     fig.show()
     if exportpdf is True:
         fig.write_image(str('figures/Donut'\
@@ -589,29 +598,35 @@ def DonutChart(mat,
 
 
 ### for plots, groupby materials for particular vehicle in particular year
-def SelectVehicleYear(mat, slx=[], cat=[], year=2017, lim=9):
+def SelectVehicleYear(mat, slx=[], cat=[], year=2017, lim=8):
     if len(cat)==0 and len(slx)==0:
         print('Please input either slx OR cat')
         
     if len(slx) == 2:
-        val = mat.loc[mat['Mass']>=0.1]\
-                 .loc[mat['Year']==year]\
+        val = mat.loc[mat['Year']==year]\
                  .loc[mat[slx[0]].isin(slx[1])]\
                  .groupby('Material').sum()\
                  .loc[:, 'Mass']\
-                 .sort_values(ascending=False)\
-                 .head(lim)
+                 .sort_values(ascending=False)
+        if len(val)>lim:
+            v = val[:lim]
+            v['Other'] = sum(val[lim:])
+        else: 
+            v=val
         
     if len(cat) == 1:
-        val = mat.loc[mat['Mass']>=0.1]\
-                 .loc[mat['Year']==year]\
+        val = mat.loc[mat['Year']==year]\
                  .groupby(cat).sum()\
                  .loc[:, 'Mass']\
-                 .sort_values(ascending=False)\
-                 .head(lim)
-        
-    values = val.astype('int')
-    labels = val.index.tolist()
+                 .sort_values(ascending=False)
+        if len(val)>lim:
+            v = val[:lim]
+            v['Other'] = sum(val[lim:])
+        else: 
+            v=val
+
+    values = v.astype('int')
+    labels = v.index.tolist()
     
     return values, labels
 

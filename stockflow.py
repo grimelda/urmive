@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
 import pandas as pd
 import numpy as np
 import scipy
 import scipy.stats
 
-
+#%%
 
 def InOutStock(\
                x,
@@ -80,6 +81,7 @@ def Dstock_dt(\
     if dstock >= 0: # this represents 'births'
         hist = np.insert(hist, 0, dstock)[:len(hist)] # vector
     if dstock < 0: # this represents non-age-related deaths
+        hist = np.insert(hist, 0, 0)[:len(hist)] # no births when dstock<0
         deaths_ds = (hist*pdf)/sum(hist*pdf) * dstock # absolute negative vector
         hist = hist+deaths_ds # absolute positive vector
         
@@ -293,7 +295,7 @@ def LogisticSignal(x):
 
 def FlatSignal(x, step=False):
     yavg = 5e3
-    peak = 3e3
+    peak = 1.5e3
     up = LogistiCurve(x, start=0, end=peak, steepness=0.9, midpoint=2018)
     down = LogistiCurve(x, start=peak, end=0, steepness=0.9, midpoint=2022)
     y = yavg*np.ones(len(x))
@@ -315,19 +317,49 @@ def PlotResponse(IOS, y, figs=False):
     plt.savefig(str('figures/inoutstock.png'), dpi=300)
     if figs is True: 
         plt.show()
+        
+def PlotHistograms(IOS, x, y, figs=False, sel = [.1, .3, .5, .7, .9], bar=False):
+    l=len(IOS['Hist'])
 
-
-def PlotHistograms(IOS, y, figs=False):
-    
-    if figs is True:
+    if len(sel)==1:
         plt.figure(figsize=(10,4))
-        plt.plot(IOS['Hist'][2], label='histogram t=2')
-        plt.plot(IOS['Hist'][29], label='histogram t=29')
-        plt.plot(IOS['Hist'][35], label='histogram t=35')
-        plt.plot(IOS['Hist'][45], label='histogram t=45')
+        for i in sel:
+            data = IOS['Hist'][int(i*l)]
+            plt.bar(range(len(data)), data, label='histogram t='+str(int(i*l+2000)))
+        plt.ylabel('Number of units')
+        plt.xlabel('Age cohort')
         plt.legend(loc='upper right')
-        plt.ylim(-1,2.*max(IOS['Hist'][40]))
-        plt.xlim(0, 1.5*len(IOS['Hist'][45][IOS['Hist'][45]>0.001]))
+        plt.savefig('figures/inoutstock_hist.png', dpi=300)
+        plt.show()
+    
+    if len(sel)>1:
+        if figs is True:
+            plt.figure(figsize=(10,4))
+            for i in sel:
+                plt.plot(IOS['Hist'][int(i*l)], label='histogram t='+str(int(i*l+2000)))
+    
+            plt.legend(loc='upper right')
+            plt.ylim(-1,2.*max(IOS['Hist'][int(0.3*l)]))
+            plt.xlim(0, 1.5*len(IOS['Hist'][int(0.3*l)][IOS['Hist'][int(0.3*l)]>0.001]))
+            plt.ylabel('Number of units')
+            plt.xlabel('Age cohort')
+            plt.savefig('figures/inoutstock_hist.png', dpi=300)
+            plt.show()
+
+
+
+def PlotHistograms1(IOS, x, y, figs=False, sel = [.1, .3, .5, .7, .9]):
+    w = 0.1
+    l=len(IOS['Hist'])
+    if figs is True:
+#        fig, ax = plt.subplots()
+        plt.figure(figsize=(10,4))
+        for i in sel:
+            plt.plot(IOS['Hist'][int(i*l)], label='histogram t='+str(int(i*l)))
+
+        plt.legend(loc='upper right')
+        plt.ylim(-1,2.*max(IOS['Hist'][int(0.3*l)]))
+        plt.xlim(0, 1.5*len(IOS['Hist'][int(0.3*l)][IOS['Hist'][int(0.3*l)]>0.001]))
         plt.ylabel('Number of units')
         plt.xlabel('Age cohort')
         plt.savefig('figures/inoutstock_hist.png', dpi=300)
