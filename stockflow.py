@@ -295,7 +295,7 @@ def LogisticSignal(x):
 
 def FlatSignal(x, step=False):
     yavg = 5e3
-    peak = 1.5e3
+    peak = -0.5e3
     up = LogistiCurve(x, start=0, end=peak, steepness=0.9, midpoint=2018)
     down = LogistiCurve(x, start=peak, end=0, steepness=0.9, midpoint=2022)
     y = yavg*np.ones(len(x))

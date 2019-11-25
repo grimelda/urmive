@@ -1,0 +1,6 @@
+Material Group,Material,Unitmass,Vehicle,Class,Component,Vehiclemass
+Material Group,,,balloon,Aircraft,Avg whole balloon weight,663.35
+Polymers,Nylon,4.1793E-01,balloon,Aircraft,"100,000 cu ft (2,800 m3) envelope",113.4
+Organic,Rattan,2.3402E-01,balloon,Aircraft,5-passenger basket,63.5
+Ferrous metals,Steel,8.3659E-02,balloon,Aircraft,double burner,22.7
+Ferrous metals,Steel,2.6439E-01,balloon,Aircraft,"3 20-gallon (75.7-liter) fuel tanks full of propane, empty",71.74

@@ -1,0 +1,21 @@
+Material Group,Material,Unitmass,Vehicle,Class,FlowId,EcoinventFlow,Partmass,Unit,Part
+Ferrous metals,Steel,4.1419E-02,ftrain,Freighttrains,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",24437.39138,kilogram,Locomotive
+Paint,Alkyd paint,9.7234E-04,ftrain,Freighttrains,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",573.6826634,kilogram,Locomotive
+Organic,Organic,1.1251E-03,ftrain,Freighttrains,[G2072],"glued laminated timber, for outdoor use_market for glued laminated timber, for outdoor use[GLO]",663.8327962,kilogram,Locomotive
+Polymers,Polyvinylchloride,7.7282E-04,ftrain,Freighttrains,[G2651],"polyvinylchloride, suspension polymerised_market for polyvinylchloride, suspension polymerised[GLO]",455.965961,kilogram,Locomotive
+Nonferrous metals,"Aluminium, cast alloy",4.4955E-03,ftrain,Freighttrains,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",2652.351015,kilogram,Locomotive
+Nonferrous metals,Lead,6.6422E-04,ftrain,Freighttrains,[G3787],lead_market for lead[GLO],391.8923129,kilogram,Locomotive
+Polymers,Polyethylene,1.6012E-02,ftrain,Freighttrains,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",9447.137886,kilogram,Locomotive
+Ferrous metals,Steel,8.6374E-02,ftrain,Freighttrains,[G5916],reinforcing steel_market for reinforcing steel[GLO],50960.90153,kilogram,Locomotive
+Nonferrous metals,Copper,1.7199E-02,ftrain,Freighttrains,[G5949],copper_market for copper[GLO],10147.47776,kilogram,Locomotive
+Nonferrous metals,"Aluminium, wrought alloy",9.5214E-03,ftrain,Freighttrains,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",5617.619847,kilogram,Locomotive
+Polymers,Polyvinylchloride,1.1315E-04,ftrain,Freighttrains,[G10390],"polyvinylchloride, emulsion polymerised_market for polyvinylchloride, emulsion polymerised[GLO]",66.75580083,kilogram,Locomotive
+Insulation,Stone wool,8.0818E-05,ftrain,Freighttrains,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",47.68271488,kilogram,Locomotive
+Ferrous metals,Chromium steel,7.0968E-03,ftrain,Freighttrains,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",4187.1384,kilogram,Locomotive
+Composites,Glass,5.9351E-04,ftrain,Freighttrains,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",350.1699374,kilogram,Locomotive
+Ferrous metals,Steel,7.2216E-01,ftrain,Freighttrains,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",426071.5191,kilogram,Wagon
+Paint,Alkyd paint,3.6452E-03,ftrain,Freighttrains,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",2150.646716,kilogram,Wagon
+Organic,Organic,4.9519E-02,ftrain,Freighttrains,[G2072],"glued laminated timber, for outdoor use_market for glued laminated timber, for outdoor use[GLO]",29216.33274,kilogram,Wagon
+Nonferrous metals,"Aluminium, wrought alloy",3.6796E-02,ftrain,Freighttrains,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",21709.35836,kilogram,Wagon
+Insulation,Stone wool,1.1004E-03,ftrain,Freighttrains,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",649.2518387,kilogram,Wagon
+Polymers,Rubber,3.4388E-04,ftrain,Freighttrains,[G11853],synthetic rubber_market for synthetic rubber[GLO],202.8911996,kilogram,Wagon

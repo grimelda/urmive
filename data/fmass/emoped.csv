@@ -1,0 +1,63 @@
+Material Group,Material,Unitmass,Vehicle,Class,Source,Flow ID,Ecoinvent Flow,Ecoinvmass,Unit,Proportion,Component
+Material Group,,,emoped,Bicycles,https://www.fastfuriousscooters.nl/elektrische-scooter/gst-e-nergy-pure,,Battery,0.127273,,,
+Material Group,,,emoped,Bicycles,Ecoinvent,,Powertrain,0.097745,,,
+Material Group,,,emoped,Bicycles,Ecoinvent,,Glider,0.774982,,,
+Ferrous metals,"Steel, low alloy",5.40503E-02,emoped,Bicycles,Ecoinvent,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.0828,kilogram,0.06974,glider
+Paint,Alkyd paint,3.39446E-03,emoped,Bicycles,Ecoinvent,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",0.0052,kilogram,0.00438,glider
+Polymers,Polypropylene,5.99906E-02,emoped,Bicycles,Ecoinvent,[G1240],"polypropylene, granulate_market for polypropylene, granulate[GLO]",0.0919,kilogram,0.07741,glider
+Polymers,Ethylene,1.01181E-02,emoped,Bicycles,Ecoinvent,[G1902],"ethylene, average_market for ethylene, average[GLO]",0.0155,kilogram,0.01306,glider
+Polymers,Polyvinylchloride,2.18029E-03,emoped,Bicycles,Ecoinvent,[G2651],"polyvinylchloride, suspension polymerised_market for polyvinylchloride, suspension polymerised[GLO]",0.00334,kilogram,0.00281,glider
+Nonferrous metals,"Aluminium, cast alloy",3.91669E-02,emoped,Bicycles,Ecoinvent,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.06,kilogram,0.05054,glider
+Ferrous metals,Chromium,1.31209E-03,emoped,Bicycles,Ecoinvent,[G3153],chromium_market for chromium[GLO],0.00201,kilogram,0.00169,glider
+Polymers,Polyethylene,1.24681E-01,emoped,Bicycles,Ecoinvent,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",0.191,kilogram,0.16088,glider
+Ferrous metals,"Steel, reinforcing",3.63599E-01,emoped,Bicycles,Ecoinvent,[G5916],reinforcing steel_market for reinforcing steel[GLO],0.557,kilogram,0.46917,glider
+Nonferrous metals,Copper,5.51600E-03,emoped,Bicycles,Ecoinvent,[G5949],copper_market for copper[GLO],0.00845,kilogram,0.00712,glider
+Nonferrous metals,"Aluminium, wrought alloy",8.29032E-02,emoped,Bicycles,Ecoinvent,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.127,kilogram,0.10697,glider
+Nonferrous metals,Zinc,3.21821E-03,emoped,Bicycles,Ecoinvent,[G9685],zinc_market for zinc[GLO],0.00493,kilogram,0.00415,glider
+Nonferrous metals,Nickel,7.63754E-04,emoped,Bicycles,Ecoinvent,[G10288],"nickel, 99.5%_market for nickel, 99.5%[GLO]",0.00117,kilogram,0.00099,glider
+Polymers,"Rubber, synthetic",2.40876E-02,emoped,Bicycles,Ecoinvent,[G11853],synthetic rubber_market for synthetic rubber[GLO],0.0369,kilogram,0.03108,glider
+Material Group,,,emoped,Bicycles,Ecoinvent,G1715,controller,,,0.12700,powertrain
+Material Group,,,emoped,Bicycles,Ecoinvent,G4117,charger,,,0.29900,powertrain
+Material Group,,,emoped,Bicycles,Ecoinvent,G13947,electric motor,,,0.57400,powertrain
+Nonferrous metals,Aluminium,1.70293E-04,emoped,Bicycles,Ecoinvent,,,,,0.00409,PCB
+Minerals,Barite,1.38344E-04,emoped,Bicycles,Ecoinvent,,,,,0.00332,PCB
+Nonferrous metals,Brass,3.43015E-05,emoped,Bicycles,Ecoinvent,,,,,0.00082,PCB
+Ferrous metals,Chromium,2.06293E-07,emoped,Bicycles,Ecoinvent,,,,,0.00000,PCB
+Composites,Composites,4.33710E-04,emoped,Bicycles,Ecoinvent,,,,,0.01042,PCB
+Nonferrous metals,Copper,9.76500E-04,emoped,Bicycles,Ecoinvent,,,,,0.02345,PCB
+Composites,Glass,1.24244E-05,emoped,Bicycles,Ecoinvent,,,,,0.00030,PCB
+Nonferrous metals,Gold,1.62560E-05,emoped,Bicycles,Ecoinvent,,,,,0.00039,PCB
+Ferrous metals,Iron,9.84699E-06,emoped,Bicycles,Ecoinvent,,,,,0.00024,PCB
+Nonferrous metals,Lead,5.55816E-05,emoped,Bicycles,Ecoinvent,,,,,0.00133,PCB
+Nonferrous metals,Molybdenum,5.36434E-06,emoped,Bicycles,Ecoinvent,,,,,0.00013,PCB
+Nonferrous metals,Nickel,4.40905E-05,emoped,Bicycles,Ecoinvent,,,,,0.00106,PCB
+Polymers,Nylon,1.21973E-04,emoped,Bicycles,Ecoinvent,,,,,0.00293,PCB
+"Critical Raw Materials, CRM",Palladium,5.52275E-07,emoped,Bicycles,Ecoinvent,,,,,0.00001,PCB
+Polymers,Polyethylene,1.02890E-02,emoped,Bicycles,Ecoinvent,,,,,0.24710,PCB
+Polymers,Polyvinylchloride,8.68374E-04,emoped,Bicycles,Ecoinvent,,,,,0.02085,PCB
+Minerals,Selenium,1.47883E-04,emoped,Bicycles,Ecoinvent,,,,,0.00355,PCB
+Minerals,Silica,6.83210E-04,emoped,Bicycles,Ecoinvent,,,,,0.01641,PCB
+Minerals,Silicon,6.26135E-07,emoped,Bicycles,Ecoinvent,,,,,0.00002,PCB
+Nonferrous metals,Silver,1.94032E-05,emoped,Bicycles,Ecoinvent,,,,,0.00047,PCB
+Ferrous metals,Steel,2.74299E-02,emoped,Bicycles,Ecoinvent,,,,,0.65875,PCB
+"Critical Raw Materials, CRM",Tin,1.00135E-04,emoped,Bicycles,Ecoinvent,,,,,0.00240,PCB
+Nonferrous metals,Titanium,7.12881E-05,emoped,Bicycles,Ecoinvent,,,,,0.00171,PCB
+Nonferrous metals,Zinc,1.03434E-05,emoped,Bicycles,Ecoinvent,,,,,0.00025,PCB
+Ferrous metals,"Steel, low alloy",3.15876E-02,emoped,Bicycles,Ecoinvent,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.563,kilogram,0.45444,Electric motor
+Polymers,Polyphenylene Sulfide,1.84588E-03,emoped,Bicycles,Ecoinvent,[G1942],polyphenylene sulfide_market for polyphenylene sulfide[GLO],0.0329,kilogram,0.02656,Electric motor
+Nonferrous metals,"Aluminium, cast alloy",2.31717E-02,emoped,Bicycles,Ecoinvent,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.413,kilogram,0.33336,Electric motor
+Nonferrous metals,Copper,9.81853E-03,emoped,Bicycles,Ecoinvent,[G5949],copper_market for copper[GLO],0.175,kilogram,0.14125,Electric motor
+"Critical Raw Materials, CRM",Neodymium,3.08582E-03,emoped,Bicycles,Ecoinvent,[G10041],"permanent magnet, for electric motor_market for permanent magnet, electric passenger car motor[GLO]",0.055,kilogram,0.04439,Electric motor
+"Critical Raw Materials, CRM",Limn2O4,4.25091E-02,emoped,GREET,,,,,,0.33400,Battery
+Nonferrous metals,"Aluminium, wrought alloy",2.43091E-02,emoped,GREET,,,,,,0.19100,Battery
+"Critical Raw Materials, CRM",Graphite/Carbon,1.85818E-02,emoped,GREET,,,,,,0.14600,Battery
+Nonferrous metals,Copper,1.38727E-02,emoped,GREET,,,,,,0.10900,Battery
+Polymers,Ethylene Carbonate,6.74545E-03,emoped,GREET,,,,,,0.05300,Battery
+Polymers,Dimethyl Carbonate,6.74545E-03,emoped,GREET,,,,,,0.05300,Battery
+Polymers,Plastic,4.07273E-03,emoped,GREET,,,,,,0.03200,Battery
+Polymers,Binder,3.18182E-03,emoped,GREET,,,,,,0.02500,Battery
+"Critical Raw Materials, CRM",Lipf6,2.29091E-03,emoped,GREET,,,,,,0.01800,Battery
+Ferrous metals,Steel,1.78182E-03,emoped,GREET,,,,,,0.01400,Battery
+Minerals,Electronicparts,1.52727E-03,emoped,GREET,,,,,,0.01200,Battery
+Polymers,Glycol,1.27273E-03,emoped,GREET,,,,,,0.01000,Battery
+Insulation,Thermal Insulation,3.81818E-04,emoped,GREET,,,,,,0.00300,Battery

@@ -18,7 +18,7 @@ x = np.linspace(startmodel, endmodel, (1*(endmodel-startmodel))+1)
 y = sf.FlatSignal(x, step=True)
 
 
-AvgLs = 15*np.ones(len(x))
+AvgLs = 21*np.ones(len(x))
 
 #%%
 
@@ -27,7 +27,7 @@ IOS, dt = sf.InOutStock(\
                         y,
                         AvgLs,
                         scaleflow = 'dt', # either 'year' or 'dt'
-                        shape = 5.5, # shape for weibull distribution
+                        shape = 2, # shape for weibull distribution
 #                        dm=40,
 #                        lm=1.44, # 1.6 44 8
                         )
@@ -35,7 +35,7 @@ IOS, dt = sf.InOutStock(\
 #%%
 
 sf.PlotResponse(IOS, y, figs=True)
-sf.PlotHistograms(IOS, x, y, figs=True, sel=[ .6])
+sf.PlotHistograms(IOS, x, y, figs=True, sel=[ .9])
 
 #%%
 

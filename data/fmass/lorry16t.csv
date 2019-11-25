@@ -1,0 +1,42 @@
+Material Group,Material,Unitmass,Vehicle,Class,Source,Flow ID,Ecoinvent Flow,Ecoinvmass,Unit,Part
+Material Group,,,lorry16t,Utilitycars,Ecoinvent,Lorry16t,-,6424.8,,Lorry
+Ferrous metals,Steel,1.77437E-03,lorry16t,Utilitycars,Ecoinvent,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",11.4,kilogram,Lorry
+Material Group,,,lorry16t,Utilitycars,Ecoinvent,[G621],"electronics, for control units_market for electronics, for control units[GLO]",30,kilogram,Lorry
+Paint,Paint,6.22587E-03,lorry16t,Utilitycars,Ecoinvent,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",40,kilogram,Lorry
+Nonferrous metals,Aluminium,1.07085E-02,lorry16t,Utilitycars,Ecoinvent,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",68.8,kilogram,Lorry
+Ferrous metals,"Iron, pig",2.53704E-01,lorry16t,Utilitycars,Ecoinvent,[G3339],pig iron_market for pig iron[GLO],1.63E+03,kilogram,Lorry
+Nonferrous metals,Lead,1.14556E-02,lorry16t,Utilitycars,Ecoinvent,[G3787],lead_market for lead[GLO],73.6,kilogram,Lorry
+Polymers,Polyethylene,3.57988E-02,lorry16t,Utilitycars,Ecoinvent,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",230,kilogram,Lorry
+Nonferrous metals,Brass,3.11294E-03,lorry16t,Utilitycars,Ecoinvent,[G4640],brass_market for brass[CH],20,kilogram,Lorry
+Ferrous metals,"Steel, reinforcing",3.51762E-01,lorry16t,Utilitycars,Ecoinvent,[G5916],reinforcing steel_market for reinforcing steel[GLO],2.26E+03,kilogram,Lorry
+Nonferrous metals,Copper,4.66941E-03,lorry16t,Utilitycars,Ecoinvent,[G5949],copper_market for copper[GLO],30,kilogram,Lorry
+Ferrous metals,"Iron, cast",2.25688E-01,lorry16t,Utilitycars,Ecoinvent,[G8652],cast iron_market for cast iron[GLO],1.45E+03,kilogram,Lorry
+Nonferrous metals,Aluminium,2.27244E-02,lorry16t,Utilitycars,Ecoinvent,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",146,kilogram,Lorry
+Insulation,Stone wool,1.55647E-03,lorry16t,Utilitycars,Ecoinvent,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",10,kilogram,Lorry
+Polymers,Rubber,5.83676E-02,lorry16t,Utilitycars,Ecoinvent,[G11853],synthetic rubber_market for synthetic rubber[GLO],375,kilogram,Lorry
+Ferrous metals,Chromium steel,7.78234E-04,lorry16t,Utilitycars,Ecoinvent,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",5,kilogram,Lorry
+Composites,Glass,7.00411E-03,lorry16t,Utilitycars,Ecoinvent,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",45,kilogram,Lorry
+Nonferrous metals,Aluminium,2.66701E-05,lorry16t,Utilitycars,Ecoinvent,-,Aluminium,0.00571165911,kilogram,Electronics
+Minerals,Barite,2.16663E-05,lorry16t,Utilitycars,Ecoinvent,-,Barite,0.004640057609,kilogram,Electronics
+Nonferrous metals,Brass,5.37203E-06,lorry16t,Utilitycars,Ecoinvent,-,Brass,0.001150474844,kilogram,Electronics
+Ferrous metals,Chromium,3.23081E-08,lorry16t,Utilitycars,Ecoinvent,-,Chromium,0.000006919098143,kilogram,Electronics
+Composites,Composites,6.79244E-05,lorry16t,Utilitycars,Ecoinvent,-,Composites,0.01454668435,kilogram,Electronics
+Nonferrous metals,Copper,1.52932E-04,lorry16t,Utilitycars,Ecoinvent,-,Copper,0.03275191158,kilogram,Electronics
+Composites,Glass,1.94581E-06,lorry16t,Utilitycars,Ecoinvent,-,Glass,0.0004167149725,kilogram,Electronics
+Nonferrous metals,Gold,2.54590E-06,lorry16t,Utilitycars,Ecoinvent,-,Gold,0.000545229443,kilogram,Electronics
+Ferrous metals,Iron,1.54216E-06,lorry16t,Utilitycars,Ecoinvent,-,Iron,0.0003302690618,kilogram,Electronics
+Nonferrous metals,Lead,8.70476E-06,lorry16t,Utilitycars,Ecoinvent,-,Lead,0.001864211931,kilogram,Electronics
+Nonferrous metals,Molybdenum,8.40122E-07,lorry16t,Utilitycars,Ecoinvent,-,Molybdenum,0.0001799204244,kilogram,Electronics
+Nonferrous metals,Nickel,6.90511E-06,lorry16t,Utilitycars,Ecoinvent,-,Nickel,0.001478797866,kilogram,Electronics
+Polymers,Nylon,1.91025E-05,lorry16t,Utilitycars,Ecoinvent,-,Nylon,0.004090981432,kilogram,Electronics
+"Critical Raw Materials, CRM",Palladium,8.64931E-08,lorry16t,Utilitycars,Ecoinvent,-,Palladium,0.00001852335219,kilogram,Electronics
+Polymers,Polyethylene,1.61138E-03,lorry16t,Utilitycars,Ecoinvent,-,Polyethylene,0.345094,kilogram,Electronics
+Polymers,Polyvinylchloride,1.35998E-04,lorry16t,Utilitycars,Ecoinvent,-,Polyvinylchloride,0.02912535,kilogram,Electronics
+Minerals,Selenium,2.31603E-05,lorry16t,Utilitycars,Ecoinvent,-,Selenium,0.00496,kilogram,Electronics
+Minerals,Silica,1.06999E-04,lorry16t,Utilitycars,Ecoinvent,-,Silica,0.02291493916,kilogram,Electronics
+Minerals,Silicon,9.80604E-08,lorry16t,Utilitycars,Ecoinvent,-,Silicon,0.00002100062507,kilogram,Electronics
+Nonferrous metals,Silver,3.03878E-06,lorry16t,Utilitycars,Ecoinvent,-,Silver,0.0006507853014,kilogram,Electronics
+Ferrous metals,Steel,4.29585E-03,lorry16t,Utilitycars,Ecoinvent,-,Steel,0.92,kilogram,Electronics
+"Critical Raw Materials, CRM",Tin,1.56824E-05,lorry16t,Utilitycars,Ecoinvent,-,Tin,0.003358535436,kilogram,Electronics
+Nonferrous metals,Titanium,1.11646E-05,lorry16t,Utilitycars,Ecoinvent,-,Titanium,0.002391008194,kilogram,Electronics
+Nonferrous metals,Zinc,1.61990E-06,lorry16t,Utilitycars,Ecoinvent,-,Zinc,0.0003469177719,kilogram,Electronics

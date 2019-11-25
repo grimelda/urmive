@@ -1,0 +1,7 @@
+Material Group,Material,Unitmass,Vehicle,Class,flowid,Ecoinvent Flow,Partmass,unit,Part
+Ferrous metals,"Steel, low alloy",2.95662E-01,Bicycle,Bicycles,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",4.9,kilogram,bicycle
+Polymers,Polyurethane,1.81017E-03,Bicycle,Bicycles,[G2509],"polyurethane, flexible foam_market for polyurethane, flexible foam[GLO]",0.03,kilogram,bicycle
+Polymers,Polyethylene,1.18265E-01,Bicycle,Bicycles,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",1.96,kilogram,bicycle
+Nonferrous metals,Aluminium,4.54353E-01,Bicycle,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",7.53,kilogram,bicycle
+Polymers,Rubber,3.39709E-02,Bicycle,Bicycles,[G11853],synthetic rubber_market for synthetic rubber[GLO],0.563,kilogram,bicycle
+Ferrous metals,Chromium steel,9.59392E-02,Bicycle,Bicycles,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",1.59,kilogram,bicycle

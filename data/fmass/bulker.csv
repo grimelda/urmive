@@ -1,0 +1,12 @@
+Material Group,Material,Unitmass,Vehicle,Class,Component,Materialgroup,Vehiclemass,Part
+Material Group,,,bulker,Seavessels,Bulker,,0.9472,
+Ferrous metals,Steel,6.6670E-01,bulker,Seavessels,,Ferrous Metals,0.6315,
+Ferrous metals,Steel,1.2669E-03,bulker,Seavessels,,Nonferrous Metals,0.0012,
+Nonferrous metals,Copper,5.2787E-02,bulker,Seavessels,Electrical equipment,Nonferrous Metals,0.05,
+Minerals,Minerals,2.6394E-03,bulker,Seavessels,,,0.0025,
+Polymers,Plastic,1.2669E-02,bulker,Seavessels,,,0.012,
+Organic,Organic,6.3345E-02,bulker,Seavessels,Joinery,,0.06,
+Material Group,,,bulker,Seavessels,Main Engine,Machinery,0.19,
+Ferrous metals,Steel,1.7451E-01,bulker,Seavessels,Main Engine,Machinery,0.1653,Main Engine
+Nonferrous metals,Copper,1.7451E-02,bulker,Seavessels,Main Engine,Machinery,0.01653,Main Engine
+Ferrous metals,Chromium steel,8.6254E-03,bulker,Seavessels,Main Engine,Machinery,0.00817,Main Engine

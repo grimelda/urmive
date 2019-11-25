@@ -1,0 +1,130 @@
+Material Group,Material,Unitmass,Vehicle,Class,Component Group,Component,Part Name,A330mass,Partmass,Simapro Material Name,Scaledmass
+Material Group,,,A330,Aircraft,Avg2jetPlane,Avg2jetPlane,Avg2jetPlane,99840.1,57103,,
+Ferrous metals,Iron,2.036456E-03,A330,Aircraft,Engine,GE CF6- 80E2,GE CF6-80E2,207.36,0.002076920997,"Iron-nickel-chromium alloy, at plant/RER U",118.5984197
+Nonferrous metals,Nickel,5.175993E-03,A330,Aircraft,Engine,GE CF6- 80E3,GE CF6-80E3,527.04,0.005278840867,"Iron-nickel-chromium alloy, at plant/RER U",301.43765
+Ferrous metals,Chromium,1.272785E-03,A330,Aircraft,Engine,GE CF6- 80E4,GE CF6-80E4,129.6,0.001298075623,"Iron-nickel-chromium alloy, at plant/RER U",74.1240123
+Nonferrous metals,Aluminium,1.233459E-03,A330,Aircraft,Engine,GE CF6- 80E5,GE CF6-80E5,125.5956635,0.001257968126,"Aluminium alloy, AlMg3, at plant/RER U",71.83375392
+"Critical Raw Materials, CRM",Magnesium,3.333247E-03,A330,Aircraft,Engine,GE CF6- 80E6,GE CF6-80E6,339.4043365,0.003399479132,"Aluminium alloy, AlMg3, at plant/RER U",194.1204569
+Composites,Composites,2.121309E-03,A330,Aircraft,Engine,GE CF6- 80E3,GE CF6-80E1,216,0.002163459372,Composites,123.5400205
+Nonferrous metals,Titanium,1.260804E-02,A330,Aircraft,Engine,GE CF6- 80E5,GE CF6-80E2,1283.8,0.01285856084,"Titanium zinc plate, without pre-weathering, at plant/DE U",734.2623996
+Nonferrous metals,Zinc,1.286534E-04,A330,Aircraft,Engine,GE CF6- 80E6,GE CF6-80E3,13.1,0.0001312098045,"Titanium zinc plate, without pre-weathering, at plant/DE U",7.492473465
+Nonferrous metals,Copper,1.286534E-04,A330,Aircraft,Engine,GE CF6- 80E7,GE CF6-80E4,13.1,0.0001312098045,"Titanium zinc plate, without pre-weathering, at plant/DE U",7.492473465
+Nonferrous metals,Nickel,1.447597E-02,A330,Aircraft,Engine,GE CF6- 80E5,GE CF6-80E1,1474,0.01476360701,"Nickel, 99,5%, at plant/DE U",843.046251
+Ferrous metals,Chromium,4.389930E-03,A330,Aircraft,Engine,GE CF6- 80E6,GE CF6-80E1,447,0.004477158977,"Chromium, at regional storage/RER U",255.6592091
+Nonferrous metals,Molybdenum,7.463863E-04,A330,Aircraft,Engine,GE CF6- 80E7,GE CF6-80E1,76,0.0007612171863,"Molybdenite, at plant/GLO U",43.46778499
+Ferrous metals,Iron,4.478318E-03,A330,Aircraft,Engine,GE CF6- 80E8,GE CF6-80E1,456,0.004567303118,"Cast iron, at plant/GLO U",260.8067099
+"Critical Raw Materials, CRM",Niobium and tantalum,9.231621E-04,A330,Aircraft,Engine,GE CF6- 80E9,GE CF6-80E1,94,0.0009415054672,"Tantalum, powder, capacitor-grade, at regional storage/GLO",53.7627867
+Composites,Composites,1.379833E-03,A330,Aircraft,Engine,Parts,inlet cowl,140.5,0.001407250193,Composites,80.35820777
+Nonferrous metals,Titanium,1.379833E-03,A330,Aircraft,Engine,Parts,inlet cowl,140.5,0.001407250193,"Titanium zinc plate, without pre-weathering, at plant/DE U",80.35820777
+Composites,Composites,6.138046E-04,A330,Aircraft,Engine,Parts,fan cowl,62.5,0.0006260009756,Composites,35.74653371
+Nonferrous metals,Titanium,6.138046E-04,A330,Aircraft,Engine,Parts,fan cowl,62.5,0.0006260009756,"Titanium zinc plate, without pre-weathering, at plant/DE U",35.74653371
+Composites,Composites,3.452037E-03,A330,Aircraft,Engine,Parts,thrust reverser,351.5,0.003520629487,Composites,201.0385056
+Nonferrous metals,Titanium,3.452037E-03,A330,Aircraft,Engine,Parts,thrust reverser,351.5,0.003520629487,"Titanium zinc plate, without pre-weathering, at plant/DE U",201.0385056
+Composites,Composites,2.995366E-04,A330,Aircraft,Engine,Parts,core cowl,30.5,0.0003054884761,Composites,17.44430845
+Nonferrous metals,Titanium,2.995366E-04,A330,Aircraft,Engine,Parts,core cowl,30.5,0.0003054884761,"Titanium zinc plate, without pre-weathering, at plant/DE U",17.44430845
+Composites,Composites,3.879245E-04,A330,Aircraft,Engine,Parts,primary nozzle,39.5,0.0003956326166,Composites,22.5918093
+Nonferrous metals,Titanium,3.879245E-04,A330,Aircraft,Engine,Parts,primary nozzle,39.5,0.0003956326166,"Titanium zinc plate, without pre-weathering, at plant/DE U",22.5918093
+Ferrous metals,Steel,2.139968E-02,A330,Aircraft,Engine,Pylon,removable leading edge,2179,0.02182489801,"Reinforcing steel, at plant/RER U",1246.267151
+Composites,Composites,1.885608E-03,A330,Aircraft,Engine,Pylon,removable leading edge,192,0.001923074997,Composites,109.8133515
+Composites,Composites,1.885608E-03,A330,Aircraft,Engine,Pylon,removable leading edge,192,0.001923074997,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",109.8133515
+Ferrous metals,Steel,3.611528E-02,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,main landing gear,3677.4,0.0368328958,"Reinforcing steel, at plant/RER U",2103.268849
+Nonferrous metals,Aluminium,2.006404E-03,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,main landing gear,204.3,0.002046271989,"Aluminium alloy, AlMg3, at plant/RER U",116.8482694
+Nonferrous metals,Titanium,2.006404E-03,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,main landing gear,204.3,0.002046271989,"Titanium zinc plate, without pre-weathering, at plant/DE U",116.8482694
+Ferrous metals,Steel,1.581161E-03,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG sidestray assembly inc. locking system,161,0.001612578513,"Reinforcing steel, at plant/RER U",92.08307083
+Nonferrous metals,Aluminium,8.740577E-05,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG sidestray assembly inc. locking system,8.9,0.00008914253892,"Aluminium alloy, AlMg3, at plant/RER U",5.0903064
+Nonferrous metals,Titanium,8.740577E-05,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG sidestray assembly inc. locking system,8.9,0.00008914253892,"Titanium zinc plate, without pre-weathering, at plant/DE U",5.0903064
+Ferrous metals,Steel,8.347742E-04,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG retraction actuator (wet),85,0.0008513613268,"Reinforcing steel, at plant/RER U",48.61528584
+Composites,Composites,3.378380E-04,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG leg fairing,34.4,0.0003445509369,Composites,19.67489215
+Composites,Composites,1.512414E-04,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG outer hinged doors,15.4,0.0001542466404,Composites,8.807945906
+Ferrous metals,Steel,1.545216E-02,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG wheels (4 off) with tires brakes and fans,1573.4,0.01575919896,"Reinforcing steel, at plant/RER U",899.8975382
+Nonferrous metals,Aluminium,8.583443E-04,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG wheels (4 off) with tires brakes and fans,87.4,0.0008753997642,"Aluminium alloy, AlMg3, at plant/RER U",49.98795274
+Nonferrous metals,Titanium,8.583443E-04,A330,Aircraft,Landing Gear,Main Landing Gear - Structure,MLG wheels (4 off) with tires brakes and fans,87.4,0.0008753997642,"Titanium zinc plate, without pre-weathering, at plant/DE U",49.98795274
+Ferrous metals,Steel,6.607483E-03,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,nose landing gear,672.8,0.006738775302,"Reinforcing steel, at plant/RER U",384.8042861
+Nonferrous metals,Aluminium,3.673006E-04,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,nose landing gear,37.4,0.0003745989838,"Aluminium alloy, AlMg3, at plant/RER U",21.39072577
+Nonferrous metals,Titanium,3.673006E-04,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,nose landing gear,37.4,0.0003745989838,"Titanium zinc plate, without pre-weathering, at plant/DE U",21.39072577
+Ferrous metals,Steel,1.291445E-03,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG telescopic strut,131.5,0.001317106053,"Reinforcing steel, at plant/RER U",75.21070692
+Nonferrous metals,Aluminium,7.169237E-05,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG telescopic strut,7.3,0.00007311691395,"Aluminium alloy, AlMg3, at plant/RER U",4.175195137
+Nonferrous metals,Titanium,7.169237E-05,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG telescopic strut,7.3,0.00007311691395,"Titanium zinc plate, without pre-weathering, at plant/DE U",4.175195137
+Ferrous metals,Steel,2.573069E-04,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG retraction actuator,26.2,0.000262419609,"Reinforcing steel, at plant/RER U",14.98494693
+Composites,Composites,4.910436E-05,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG leg fairing,5,0.00005008007804,Composites,2.859722697
+Composites,Composites,5.499689E-04,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG hinged doors forward (2 off),56,0.0005608968741,Composites,32.0288942
+Ferrous metals,Steel,1.863020E-03,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG wheels (2 off) with tires,189.7,0.001900038161,"Reinforcing steel, at plant/RER U",108.4978791
+Nonferrous metals,Aluminium,1.031192E-04,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG wheels (2 off) with tires,10.5,0.0001051681639,"Aluminium alloy, AlMg3, at plant/RER U",6.005417663
+Nonferrous metals,Titanium,1.031192E-04,A330,Aircraft,Landing Gear,Nose Landing Gear - Structure,NLG wheels (2 off) with tires,10.5,0.0001051681639,"Titanium zinc plate, without pre-weathering, at plant/DE U",6.005417663
+Nonferrous metals,Aluminium,2.209696E-01,A330,Aircraft,Fuselage,Fuselage - Cilinder,cilinder,22500,0.2253603512,"Aluminium alloy, AlMg3, at plant/RER U",12868.75213
+Composites,Composites,1.227609E-02,A330,Aircraft,Fuselage,Fuselage - Cilinder,cilinder,1250,0.01252001951,Composites,714.9306741
+Nonferrous metals,Titanium,1.227609E-02,A330,Aircraft,Fuselage,Fuselage - Cilinder,cilinder,1250,0.01252001951,"Titanium zinc plate, without pre-weathering, at plant/DE U",714.9306741
+Composites,Composites,1.227609E-03,A330,Aircraft,Fuselage,Fuselage - Cilinder,belly fairing,125,0.001252001951,Composites,71.49306741
+Composites,Composites,1.227609E-03,A330,Aircraft,Fuselage,Fuselage - Cilinder,belly fairing,125,0.001252001951,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",71.49306741
+Composites,Composites,2.749844E-04,A330,Aircraft,Fuselage,Fuselage - Cilinder,radome,28,0.0002804484371,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",16.0144471
+Nonferrous metals,Aluminium,1.286534E-03,A330,Aircraft,Fuselage,Fuselage - Cabin Doors,cabin door FWD,131,0.001312098045,"Aluminium alloy, AlMg3, at plant/RER U",74.92473465
+Nonferrous metals,Aluminium,1.217788E-03,A330,Aircraft,Fuselage,Fuselage - Cabin Doors,cabin door MID,124,0.001241985936,"Aluminium alloy, AlMg3, at plant/RER U",70.92112288
+Nonferrous metals,Aluminium,1.227609E-03,A330,Aircraft,Fuselage,Fuselage - Cabin Doors,cabin door AFT,125,0.001252001951,"Aluminium alloy, AlMg3, at plant/RER U",71.49306741
+Nonferrous metals,Aluminium,6.678194E-04,A330,Aircraft,Fuselage,Fuselage - Cabin Doors,emergency exit,68,0.0006810890614,"Aluminium alloy, AlMg3, at plant/RER U",38.89222867
+Nonferrous metals,Aluminium,1.865966E-03,A330,Aircraft,Fuselage,Fuselage - Cargo Doors,cargo door FWD,190,0.001903042966,"Aluminium alloy, AlMg3, at plant/RER U",108.6694625
+Nonferrous metals,Aluminium,1.973995E-03,A330,Aircraft,Fuselage,Fuselage - Cargo Doors,cargo door AFT,201,0.002013219137,"Aluminium alloy, AlMg3, at plant/RER U",114.9608524
+Nonferrous metals,Aluminium,3.339097E-04,A330,Aircraft,Fuselage,Fuselage - Cargo Doors,bulk cargo door,34,0.0003405445307,"Aluminium alloy, AlMg3, at plant/RER U",19.44611434
+Composites,Composites,3.209461E-03,A330,Aircraft,Fuselage,Fuselage - Landing Gear Doors,main landing gear doors,326.8,0.003273233901,Composites,186.9114754
+Nonferrous metals,Aluminium,1.689190E-04,A330,Aircraft,Fuselage,Fuselage - Landing Gear Doors,,17.2,0.0001722754685,"Aluminium alloy, AlMg3, at plant/RER U",9.837446076
+Ferrous metals,Steel,5.696106E-04,A330,Aircraft,Fuselage,Fuselage - Landing Gear Doors,nose landing gear main and intermediate doors,58,0.0005809289053,"Reinforcing steel, at plant/RER U",33.17278328
+Ferrous metals,Steel,4.124767E-04,A330,Aircraft,Fuselage,Fuselage - Control units flap and slat,"control unit, flap",42,0.0004206726556,"Reinforcing steel, at plant/RER U",24.02167065
+Ferrous metals,Steel,3.928349E-04,A330,Aircraft,Fuselage,Fuselage - Control units flap and slat,"control unit, slat",40,0.0004006406244,"Reinforcing steel, at plant/RER U",22.87778157
+Ferrous metals,Steel,1.050833E-03,A330,Aircraft,Fuselage,Fuselage - Actuator Trimmable Horizontal Stabilizer,"actuator, trimmable horizontal stabilizer",107,0.00107171367,"Reinforcing steel, at plant/RER U",61.19806571
+Ferrous metals,Iron,2.043469E-03,A330,Aircraft,Engine,GE CF6- 80E2,GE CF6-80E2,207.36,0.002076920997,"Iron-nickel-chromium alloy, at plant/RER U",118.5984197
+Nonferrous metals,Nickel,5.193816E-03,A330,Aircraft,Engine,GE CF6- 80E3,GE CF6-80E3,527.04,0.005278840867,"Iron-nickel-chromium alloy, at plant/RER U",301.43765
+Ferrous metals,Chromium,1.277168E-03,A330,Aircraft,Engine,GE CF6- 80E4,GE CF6-80E4,129.6,0.001298075623,"Iron-nickel-chromium alloy, at plant/RER U",74.1240123
+Nonferrous metals,Aluminium,1.237706E-03,A330,Aircraft,Engine,GE CF6- 80E5,GE CF6-80E5,125.5956635,0.001257968126,"Aluminium alloy, AlMg3, at plant/RER U",71.83375392
+"Critical Raw Materials, CRM",Magnesium,3.344725E-03,A330,Aircraft,Engine,GE CF6- 80E6,GE CF6-80E6,339.4043365,0.003399479132,"Aluminium alloy, AlMg3, at plant/RER U",194.1204569
+Composites,Composites,2.121309E-03,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,216,0.002163459372,Composites,123.5400205
+Nonferrous metals,Titanium,1.286534E-02,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,1310,0.01312098045,"Titanium zinc plate, without pre-weathering, at plant/DE U",749.2473465
+Nonferrous metals,Nickel,1.447597E-02,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,1474,0.01476360701,"Nickel, 99,5%, at plant/DE U",843.046251
+Composites,Composites,4.389930E-03,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,447,0.004477158977,"Chromium, at regional storage/RER U",255.6592091
+Nonferrous metals,Aluminium,7.463863E-04,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,76,0.0007612171863,"Molybdenite, at plant/GLO U",43.46778499
+Ferrous metals,Iron,4.478318E-03,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,456,0.004567303118,"Cast iron, at plant/GLO U",260.8067099
+"Critical Raw Materials, CRM",Niobium and tantalum,9.231621E-04,A330,Aircraft,Engine,GE CF6- 80E1,GE CF6-80E1,94,0.0009415054672,"Tantalum, powder, capacitor-grade, at regional storage/GLO",53.7627867
+Composites,Composites,1.379833E-03,A330,Aircraft,Engine,Parts,inlet cowl,140.5,0.001407250193,Composites,80.35820777
+Nonferrous metals,Titanium,1.379833E-03,A330,Aircraft,Engine,Parts,inlet cowl,140.5,0.001407250193,"Titanium zinc plate, without pre-weathering, at plant/DE U",80.35820777
+Composites,Composites,6.138046E-04,A330,Aircraft,Engine,Parts,fan cowl,62.5,0.0006260009756,Composites,35.74653371
+Nonferrous metals,Titanium,6.138046E-04,A330,Aircraft,Engine,Parts,fan cowl,62.5,0.0006260009756,"Titanium zinc plate, without pre-weathering, at plant/DE U",35.74653371
+Composites,Composites,3.452037E-03,A330,Aircraft,Engine,Parts,thrust reverser,351.5,0.003520629487,Composites,201.0385056
+Nonferrous metals,Titanium,3.452037E-03,A330,Aircraft,Engine,Parts,thrust reverser,351.5,0.003520629487,"Titanium zinc plate, without pre-weathering, at plant/DE U",201.0385056
+Composites,Composites,2.995366E-04,A330,Aircraft,Engine,Parts,core cowl,30.5,0.0003054884761,Composites,17.44430845
+Nonferrous metals,Titanium,2.995366E-04,A330,Aircraft,Engine,Parts,core cowl,30.5,0.0003054884761,"Titanium zinc plate, without pre-weathering, at plant/DE U",17.44430845
+Composites,Composites,3.879245E-04,A330,Aircraft,Engine,Parts,primary nozzle,39.5,0.0003956326166,Composites,22.5918093
+Nonferrous metals,Titanium,3.879245E-04,A330,Aircraft,Engine,Parts,primary nozzle,39.5,0.0003956326166,"Titanium zinc plate, without pre-weathering, at plant/DE U",22.5918093
+Ferrous metals,Steel,2.139968E-02,A330,Aircraft,Engine,Pylon,removable leading edge,2179,0.02182489801,"Reinforcing steel, at plant/RER U",1246.267151
+Composites,Composites,1.885608E-03,A330,Aircraft,Engine,Pylon,removable leading edge,192,0.001923074997,Composites,109.8133515
+Composites,Composites,1.885608E-03,A330,Aircraft,Engine,Pylon,removable leading edge,192,0.001923074997,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",109.8133515
+Composites,Composites,3.153482E-03,A330,Aircraft,Vertical stabiliser,Vertical Tail - Box,box,321.1,0.003216142612,Composites,183.6513916
+Composites,Composites,3.153482E-03,A330,Aircraft,Vertical stabiliser,Vertical Tail - Box,box,321.1,0.003216142612,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",183.6513916
+Nonferrous metals,Aluminium,3.319455E-04,A330,Aircraft,Vertical stabiliser,Vertical Tail - Box,box,33.8,0.0003385413276,"Aluminium alloy, AlMg3, at plant/RER U",19.33172543
+Composites,Composites,3.289992E-03,A330,Aircraft,Vertical stabiliser,Vertical Tail - Rudder,rudder,335,0.003355365229,Composites,191.6014207
+Composites,Composites,1.247251E-03,A330,Aircraft,Vertical stabiliser,Vertical Tail - Removable leading edge,removable leading edge,127,0.001272033982,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",72.63695649
+Nonferrous metals,Aluminium,6.579985E-05,A330,Aircraft,Vertical stabiliser,Vertical Tail - Removable leading edge,removable leading edge,6.7,0.00006710730458,"Aluminium alloy, AlMg3, at plant/RER U",3.832028413
+Composites,Composites,1.669548E-04,A330,Aircraft,Vertical stabiliser,Vertical Tail - Tip,tip,17,0.0001702722654,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",9.723057168
+Composites,Composites,2.946262E-04,A330,Aircraft,Vertical stabiliser,Vertical Tail - Fuselage fairing,fuselage fairing,30,0.0003004804683,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",17.15833618
+Composites,Composites,1.247251E-02,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Box,box,1270,0.01272033982,Composites,726.3695649
+Nonferrous metals,Aluminium,6.579985E-04,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Box,box,67,0.0006710730458,"Aluminium alloy, AlMg3, at plant/RER U",38.32028413
+Composites,Composites,2.651636E-03,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Elevator,elevator,270,0.002704324214,Composites,154.4250256
+Composites,Composites,1.787399E-03,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Removable leading edge,removable leading edge,182,0.001822914841,Composites,104.0939062
+Nonferrous metals,Aluminium,3.339097E-04,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Tip,tip,34,0.0003405445307,"Aluminium alloy, AlMg3, at plant/RER U",19.44611434
+Composites,Composites,5.303271E-04,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Tailplane fuselage fairing,Tail fuselage fairing,54,0.0005408648429,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",30.88500512
+Composites,Composites,2.651636E-03,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Elevator,elevator,270,0.002704324214,Composites,154.4250256
+Composites,Composites,1.787399E-03,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Removable leading edge,removable leading edge,182,0.001822914841,Composites,104.0939062
+Nonferrous metals,Aluminium,3.339097E-04,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Tip,tip,34,0.0003405445307,"Aluminium alloy, AlMg3, at plant/RER U",19.44611434
+Composites,Composites,5.303271E-04,A330,Aircraft,Horizontal stabiliser,Horizontal Tail - Tailplane fuselage fairing,Tail fuselage fairing,54,0.0005408648429,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",30.88500512
+Nonferrous metals,Aluminium,3.612706E-01,A330,Aircraft,Wings,Wings,Wings,36786,0.3684491502,"Aluminium alloy, AlMg3, at plant/RER U",21039.55182
+Ferrous metals,Steel,1.214842E-02,A330,Aircraft,Wings,Wings,Wings,1237,0.01238981131,"Reinforcing steel, at plant/RER U",707.4953951
+Composites,Composites,3.297849E-02,A330,Aircraft,Wings,Wings,Wings,3358,0.03363378041,"Glass fibre reinforced plastic, polyamide, injection moulding, at plant/RER U",1920.589763
+Nonferrous metals,Titanium,2.299066E-02,A330,Aircraft,Wings,Wings,Wings,2341,0.02344749254,"Titanium zinc plate, without pre-weathering, at plant/DE U",1338.922167
+"Critical Raw Materials, CRM",Magnesium,1.007782E-02,A330,Aircraft,Engine,CRM,CRM,,,,586.9082498
+Ferrous metals,Chromium,3.484604E-03,A330,Aircraft,Engine,CRM,CRM,,,,202.9351699
+Nonferrous metals,Aluminium,2.489003E-03,A330,Aircraft,Engine,CRM,CRM,,,,144.9536928
+"Critical Raw Materials, CRM",Cobalt,1.371600E-03,A330,Aircraft,Engine,CRM,CRM,,,,79.8787371
+Nonferrous metals,Molybdenum,9.956013E-04,A330,Aircraft,Engine,CRM,CRM,,,,57.98147712
+"Critical Raw Materials, CRM",Columbium,6.248987E-04,A330,Aircraft,Engine,CRM,CRM,,,,36.39262926
+"Critical Raw Materials, CRM",Tantalum,1.747598E-04,A330,Aircraft,Engine,CRM,CRM,,,,10.17759971
+"Critical Raw Materials, CRM",Tungsten,1.218023E-04,A330,Aircraft,Engine,CRM,CRM,,,,7.093478584
+"Critical Raw Materials, CRM",Vanadium,9.002778E-05,A330,Aircraft,Engine,CRM,CRM,,,,5.24300591
+"Critical Raw Materials, CRM",Rhenium,4.236601E-05,A330,Aircraft,Engine,CRM,CRM,,,,2.467296899
+"Critical Raw Materials, CRM",Hafnium,1.059150E-05,A330,Aircraft,Engine,CRM,CRM,,,,0.6168242247

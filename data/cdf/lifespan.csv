@@ -1,0 +1,46 @@
+VehicleName,Domain,Class,lifespan,shape,lifespan source,Vmass,Mat,Vehicle
+A330,Mobility,Airplanes,20,10,demographic data,181840.0,A330,A330
+B787,Mobility,Airplanes,20,10,demographic data,161000.0,B787,B787
+bike,Mobility,Bicycles,10,3,guess,16.3,bike,bike
+e-bike,Mobility,Bicycles,5,3,guess,24.5,ebike,ebike
+e-moped,Mobility,Bicycles,9,3,guess,100.0,emoped,emoped
+moped,Mobility,Bicycles,18,3,demographic data,100.0,moped,moped
+ev car,Mobility,Cars,9.5,5.5,demographic data,1936.5,ev,ev
+hev car,Mobility,Cars,19,5.5,demographic data,1211.3,hev,hev
+ice car,Mobility,Cars,19,5.5,demographic data,1121.0,ice,ice
+bus,Mobility,Transit,22.5,1.8,demographic data,10787.0,bus,bus
+train,Mobility,Transit,40,8,informed guess,155000.0,ptrain,ptrain
+walk,Mobility,Walking,1,1,-,,-,-
+l inland barge,Freight,Inland shipping,16.5,1.4,demographic data,1041700.0,hmax,lbarge
+m inland barge,Freight,Inland shipping,16.5,1.4,demographic data,625000.0,hmax,mbarge
+s inland barge,Freight,Inland shipping,16.5,1.4,demographic data,312500.0,hmax,sbarge
+xl inland barge,Freight,Inland shipping,16.5,1.4,demographic data,1458300.0,hmax,xlbarge
+16t lorry,Freight,Lorries,22.5,1.8,demographic data,8275.4,lorry16t,16tlorry
+28t lorry,Freight,Lorries,22.5,1.8,demographic data,14842.0,lorry28t,28tlorry
+40t lorry,Freight,Lorries,22.5,1.8,demographic data,21202.9,lorry40t,40tlorry
+Bagger schip,Freight,Sea shipping,16.5,1.4,demographic data,6893840.0,hmax,Bagger schip
+Bergings schip,Freight,Sea shipping,16.5,1.4,demographic data,157714.0,hmax,Bergings schip
+Bevoorradings schip,Freight,Sea shipping,16.5,1.4,demographic data,3988160.0,hmax,Bevoorradings schip
+Boorvaartuig,Freight,Sea shipping,16.5,1.4,demographic data,8430080.0,hmax,Boorvaartuig
+Bulk Carrier,Freight,Sea shipping,16.5,1.4,demographic data,15200512.0,bulker,Bulk Carrier
+Container schip,Freight,Sea shipping,16.5,1.4,demographic data,25822745.0,hmax,Container schip
+Cruise schip,Freight,Sea shipping,16.5,1.4,demographic data,50521512.0,hmax,Cruise schip
+Gas tanker,Freight,Sea shipping,16.5,1.4,demographic data,10860882.0,tanker,Gas tanker
+Koel schip,Freight,Sea shipping,16.5,1.4,demographic data,22681383.0,hmax,Koel schip
+Kust en zeesleepboot,Freight,Sea shipping,16.5,1.4,demographic data,1191696.0,hmax,Kust en zeesleepboot
+Meet- en peil vaartuig,Freight,Sea shipping,16.5,1.4,demographic data,390720.0,hmax,Meet- en peil vaartuig
+Multi purpose vessel,Freight,Sea shipping,16.5,1.4,demographic data,11472098.0,hmax,Multi purpose vessel
+Offshore support vessel,Freight,Sea shipping,16.5,1.4,demographic data,7314752.0,hmax,Offshore support vessel
+Olie-chemicalien tanker,Freight,Sea shipping,16.5,1.4,demographic data,15714330.0,tanker,Olie-chemicalien tanker
+Overig,Freight,Sea shipping,16.5,1.4,demographic data,3260956.0,hmax,Overig
+Ro-Ro Vessel,Freight,Sea shipping,16.5,1.4,demographic data,40004800.0,hmax,Ro-Ro Vessel
+Sleephopper zuiger,Freight,Sea shipping,16.5,1.4,demographic data,18308784.0,hmax,Sleephopper zuiger
+Snijkop zuiger,Freight,Sea shipping,16.5,1.4,demographic data,6112104.0,hmax,Snijkop zuiger
+Splijtbak - Omnibarge,Freight,Sea shipping,16.5,1.4,demographic data,2588672.0,hmax,Splijtbak - Omnibarge
+Steen storter schip,Freight,Sea shipping,16.5,1.4,demographic data,39362672.0,hmax,Steen storter schip
+Transport ponton,Freight,Sea shipping,16.5,1.4,demographic data,3789056.0,hmax,Transport ponton
+Veer schip,Freight,Sea shipping,16.5,1.4,demographic data,128216640.0,hmax,Veer schip
+Werk schip,Freight,Sea shipping,16.5,1.4,demographic data,1062400.0,hmax,Werk schip
+Zuiger schip,Freight,Sea shipping,16.5,1.4,demographic data,2284528.0,hmax,Zuiger schip
+Zware lading schip,Freight,Sea shipping,16.5,1.4,demographic data,32497905.0,hmax,Zware lading schip
+freight train,Freight,Train,40,4,informed guess,590000.0,ftrain,ftrain

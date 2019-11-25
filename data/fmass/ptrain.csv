@@ -1,0 +1,9 @@
+Material Group,Material,Unitmass,Vehicle,Class,FlowId,EcoinventFlow,Partmass,Unit
+Ferrous metals,Steel,1.3879E-01,ptrain,Transit,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",88800,kilogram
+Paint,Alkyd paint,1.9694E-02,ptrain,Transit,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",12600,kilogram
+Nonferrous metals,"Aluminium, cast alloy",4.5014E-02,ptrain,Transit,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",28800,kilogram
+Polymers,HDPE,2.4226E-01,ptrain,Transit,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",155000,kilogram
+Ferrous metals,Steel,3.6574E-01,ptrain,Transit,[G5916],reinforcing steel_market for reinforcing steel[GLO],234000,kilogram
+Nonferrous metals,Copper,5.3767E-02,ptrain,Transit,[G5949],copper_market for copper[GLO],34400,kilogram
+Nonferrous metals,"Aluminium, wrought alloy",9.5655E-02,ptrain,Transit,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",61200,kilogram
+Composites,Glass,3.9075E-02,ptrain,Transit,[G12509],"flat glass, coated_market for flat glass, coated[GLO]",25000,kilogram
