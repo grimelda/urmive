@@ -1,8 +1,8 @@
 VehicleName,Domain,Class,lifespan,shape,lifespan source,Vmass,Mat,Vehicle
 A330,Mobility,Airplanes,20,10,demographic data,181840.0,A330,A330
 B787,Mobility,Airplanes,20,10,demographic data,161000.0,B787,B787
-bike,Mobility,Bicycles,10,3,guess,16.3,bike,bike
-e-bike,Mobility,Bicycles,5,3,guess,24.5,ebike,ebike
+bike,Mobility,Bicycles,22.7,3,demographic data,16.3,bike,bike
+e-bike,Mobility,Bicycles,7,3,guess,24.5,ebike,ebike
 e-moped,Mobility,Bicycles,9,3,guess,100.0,emoped,emoped
 moped,Mobility,Bicycles,18,3,demographic data,100.0,moped,moped
 ev car,Mobility,Cars,9.5,5.5,demographic data,1936.5,ev,ev

@@ -203,7 +203,6 @@ def CarsFirst(x, poly, PW='BAU'):
 
 def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='BAU'):
     STV = dict()
-    keys = ['ice', 'ev', 'hev', 'ptrain', 'bus', 'ebike', 'bike', 'emoped', 'moped', 'walk']
     
     ### cars per person kilometer
     CarPerPkm = 6.34e6/136.5
@@ -334,18 +333,14 @@ def RoadFirst(x, poly, PW='BAU'):
 
 def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BAU'):
     STV = dict()
-    keys = ['40tlorry', '28tlorry', '16tlorry', 'ftrain', 'xlbarge', 'lbarge', 'mbarge', 'sbarge']
     
     ### lorries per ton kilometer
     lorry16PerT = 240000/54.1*28/16
     lorry28PerT = 240000/54.1*28/28
     lorry40PerT = 240000/54.1*28/40
-    L16Curve = InnoDiff(x, start=lorry16PerT, end=lorry16PerT,
-                        steepness=1, midpoint=2035 )
-    L28Curve = InnoDiff(x, start=lorry28PerT, end=lorry28PerT,
-                        steepness=1, midpoint=2035 )
-    L40Curve = InnoDiff(x, start=lorry40PerT, end=lorry40PerT,
-                        steepness=1, midpoint=2035 )
+    L16Curve = InnoDiff(x, start=lorry16PerT, end=lorry16PerT*0.75 if PW=='RC' else lorry16PerT, steepness=1, midpoint=2035 )
+    L28Curve = InnoDiff(x, start=lorry28PerT, end=lorry28PerT*0.75 if PW=='RC' else lorry28PerT, steepness=1, midpoint=2035 )
+    L40Curve = InnoDiff(x, start=lorry40PerT, end=lorry40PerT*0.75 if PW=='RC' else lorry40PerT, steepness=1, midpoint=2035 )
     STV['16tlorry'] = L16Curve 
     STV['28tlorry'] = L28Curve
     STV['40tlorry'] = L40Curve
@@ -361,10 +356,10 @@ def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BA
     LbPerT = 943/46.6
     MbPerT = 1280/46.6
     SbPerT = 2536/46.6
-    xlbCurve = InnoDiff(x, start=XlbPerT, end=XlbPerT, steepness=1, midpoint=2035 )
-    lbCurve = InnoDiff(x, start=LbPerT, end=LbPerT, steepness=1, midpoint=2035 )
-    mbCurve = InnoDiff(x, start=MbPerT, end=MbPerT, steepness=1, midpoint=2035 )
-    sbCurve = InnoDiff(x, start=SbPerT, end=SbPerT, steepness=1, midpoint=2035 )
+    xlbCurve = InnoDiff(x, start=XlbPerT, end=XlbPerT*0.75 if PW=='RC' else XlbPerT, steepness=1, midpoint=2035 )
+    lbCurve = InnoDiff(x, start=LbPerT, end=LbPerT*0.75 if PW=='RC' else LbPerT, steepness=1, midpoint=2035 )
+    mbCurve = InnoDiff(x, start=MbPerT, end=MbPerT*0.75 if PW=='RC' else MbPerT, steepness=1, midpoint=2035 )
+    sbCurve = InnoDiff(x, start=SbPerT, end=SbPerT*0.75 if PW=='RC' else SbPerT, steepness=1, midpoint=2035 )
     STV['xlbarge']  = xlbCurve
     STV['lbarge']  = lbCurve  
     STV['mbarge']  = mbCurve  
