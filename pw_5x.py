@@ -1,6 +1,8 @@
 import os
 import pandas as pd
 import pathways as pw
+import plotly.express as px
+import stocks
 
 #RA = pw.RunPW('RA', figs=True, wlo='laag')
 
@@ -46,3 +48,26 @@ for v in dbm['Vtype'].unique():
     df['Minflow'] = df['Inflow'] * df['Unitmass'] * df['Vmass']
     df['Moutflow'] = df['Outflow'] * df['Unitmass'] * df['Vmass']
     mat = pd.concat([mat, df], ignore_index=True, sort=False)
+    
+#%%
+df = mat.loc[mat['PW']=='BAU'].loc[mat['Class'].isin(['Cars','Bicycles','Transit', 'Airplanes'])]
+#fig = px.area(df, x = 'Year', y = 'Stock', 
+#              color = 'Class', 
+#              line_group = 'Vehicle',
+#              ).update_layout(yaxis_title="Mass of vehicles in NL",
+#                              legend=dict(\
+#                                          y=0.5, 
+#                                          traceorder='reversed', 
+#                                          font_size=10,
+#                                          ))
+#fig.show()
+
+stocks.PlotMass2Dim(df, 
+                    Dim=['Class', 'Material'], 
+                    materials = dict(include = ['All'], exclude = [None]),
+                    vehicles = dict(include = ['All'], exclude = [None]),
+                    classes = dict(include = ['All'], exclude = [None]),#['Cars','Bicycles','Transit', 'Airplanes']),
+#                     exportpdf = True,
+                    flow='Stock',
+                    )
+

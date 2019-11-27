@@ -14,31 +14,15 @@ def InOutStock(\
                scaleflow = 'dt', # either 'year' or 'dt'
                shape = 5, # shape for weibull distribution
                dm=False, # allows user to override deaths multiplier
-               lm=False, # allows user to override lifespan multiplier 
+               lm=False, # allows user to override lifespan multiplier
+               dtype='jz',
                ):
+    
     
     ### find time step size
     dt = (max(x)-min(x))/len(x[:-1])
     
-    ### calibration for deaths multiplier and lifespan multiplier
-    dmulti = 7.99 * shape**0.623#
-    ''' calibration factor for scale multiplier
-    p(k) = C * k(-T) * exp(-k/K) + Offset
-    Fitting target of lowest sum of squared absolute error = 6.6676704109128210E-02
-    '''
-    C =  5.8770581668489790E+00
-    T =  1.5621696972883667E+00
-    K =  3.5534833809179234E+13
-    Offset =  1.3218793763933294E+00
-    lsmulti = C * shape**-T * np.exp(-shape/K) + Offset
-    
-    ### this allows user to override calibration multipliers using dm and lm variables
-    if dm > 0:
-        dmulti = dm
-        lsmulti = lm
-    
-    ### outflow correction factors
-    LsCorr = 0.728+ 0.375*shape - 0.108*shape**2 + 0.012*shape**3 -4.67e-4*shape**4
+    dmulti, lsmulti, LsCorr = WeibCalib(shape, dtype, lm, dm)
     
     ### scale lifespan to match timestep
     AvgLs= AvgLs/dt*LsCorr
@@ -52,10 +36,10 @@ def InOutStock(\
     
     ### calculates inflows, outflows, and stocks for each timestep
     for t in IOS.index[1:]:
-        IOS = InOutFlow_dt(x, y, t, dt, shape, IOS, AvgLs[t], dmulti, lsmulti)
+        IOS = InOutFlow_dt(x, y, t, dt, shape, IOS, AvgLs[t], dmulti, lsmulti, dtype)
     
-#    ### builds control curve, use to diagnose errors in mass balance
-#    IOS = ControlCurve(IOS)
+    ### builds control curve, use to diagnose errors in mass balance
+    IOS = ControlCurve(IOS)
     
     ### scales dataframe to fit yearly values or timestep values
     IOS = ScaleFlowsToYear(IOS, dt, scaleflow)
@@ -66,12 +50,55 @@ def InOutStock(\
     
     return IOS, dt
 
+def WeibCalib(shape, dtype, lm, dm):
+
+    if dtype=='jz':
+        dm=False
+        lm=False
+    
+    if dtype=='jz':
+        ### calibration for deaths multiplier and lifespan multiplier
+        dmulti = 7.99 * shape**0.623#
+        ''' calibration factor for scale multiplier
+        p(k) = C * k(-T) * exp(-k/K) + Offset
+        Fitting target of lowest sum of squared absolute error = 6.6676704109128210E-02
+        '''
+        C =  5.8770581668489790E+00
+        T =  1.5621696972883667E+00
+        K =  3.5534833809179234E+13
+        Offset =  1.3218793763933294E+00
+        lsmulti = C * shape**-T * np.exp(-shape/K) + Offset
+        ### outflow correction factors
+        LsCorr = 0.728+ 0.375*shape - 0.108*shape**2 + 0.012*shape**3 -4.67e-4*shape**4
+
+
+    if dtype=='sf':
+        '''
+        y = a * (x-b)c + Offset
+    
+        Fitting target of lowest sum of squared absolute error = 6.5036114209651166E-04
+        '''
+        a =  2.8898197136614545E+00
+        b =  6.9387346583097098E-01
+        c = -1.5430109179510860E+00
+        Offset =  9.4214863283546935E-01
+        lsmulti = a * (shape-b)**c + Offset
+        dmulti = 1
+        LsCorr = 1
+    
+    ### this allows user to override calibration multipliers using dm and lm variables
+    if dtype=='cdf':
+        dmulti = dm
+        lsmulti = lm
+        LsCorr = 1
+    
+    return dmulti, lsmulti, LsCorr
+
 
 def Dstock_dt(\
               y,
               t,
               hist,
-              pdf,
               ):
     
     ### calculates stock change at begin of current time step (after age deaths)
@@ -79,25 +106,44 @@ def Dstock_dt(\
     
     ### scalar for number of births in timestep 
     if dstock >= 0: # this represents 'births'
-        hist = np.insert(hist, 0, dstock)[:len(hist)] # vector
+        hist[0] = dstock
     if dstock < 0: # this represents non-age-related deaths
-        hist = np.insert(hist, 0, 0)[:len(hist)] # no births when dstock<0
-        deaths_ds = (hist*pdf)/sum(hist*pdf) * dstock # absolute negative vector
+        deaths_ds = hist - (sum(hist)-dstock)/sum(hist)*hist # absolute negative vector
         hist = hist+deaths_ds # absolute positive vector
+#        hist = (sum(hist)-dstock)/sum(hist) * hist
         
     return dstock, hist
 
 
-def Deaths_dt(hist, pdf, shape, dmulti):
-
-    ### vector describing deaths per age bin
-    deaths_age = hist * pdf * dmulti
+def Deaths_dt(hist, dt, pdf, cdf, sf, shape, AvgLs, dmulti, dtype='jz'):
     
-    ### create new histogram with subtracted deaths
-    hist = hist-deaths_age
-    deaths_age = sum(deaths_age)
+    ###   C D F   methode
+    if dtype=='cdf':
+        stock = sum(hist)
+        ### vector describing deaths per age cohort
+        deaths_age = stock/AvgLs * (np.append(cdf,1)[1:] - cdf)    
+        ### subtract deaths from histogram
+        hist = hist - deaths_age    
+        ### shift histogram to next time step
+        hist = np.append(0,hist)[:-1]
+    
+    ###   S F   method
+    if dtype=='sf':
+        hist0 = hist
+        hist = hist * sf #np.append(sf,0)[1:]
+        deaths_age = hist0-hist
+        hist = np.append(0,hist)[:-1]
+    
+#    ###   P D F   methode
+    if dtype=='jz':
+        ### vector describing deaths per age bin
+        deaths_age = hist * pdf * dmulti
+        ### create new histogram with subtracted deaths
+        hist = hist-deaths_age
+        ### shift histogram for next timestep
+        hist = np.append(0,hist)[:-1]
             
-    return deaths_age, hist
+    return sum(deaths_age), hist
 
 
 def InOutFlow_dt(\
@@ -110,20 +156,24 @@ def InOutFlow_dt(\
                  AvgLs,
                  dmulti,
                  lsmulti,
+                 dtype,
                  ):
     
     ### formulates weibull distribution
     pdf = WeibDist(x, dt, AvgLs*lsmulti, shape, loc = 0)['pdf'] 
+    cdf = WeibDist(x, dt, AvgLs*lsmulti, shape, loc = 0)['cdf']
+    sf = WeibDist(x, dt, AvgLs*lsmulti, shape, loc = 0)['sf']
+
 
     ### calculates age related deaths during timestep from previous ts histogram
     (deaths_age, 
      hist,
-     )= Deaths_dt(IOS.loc[t-1,'Hist'], pdf, shape, dmulti)
+     )= Deaths_dt(IOS.loc[t-1,'Hist'], dt, pdf, cdf, sf, shape, AvgLs, dmulti, dtype=dtype)
         
     ### calculates stock change during timestep
     (dstock,
      hist,
-     ) = Dstock_dt(y, t, hist, pdf)
+     ) = Dstock_dt(y, t, hist)
     
     ### fill IOS dataframe    
     IOS.at[t, 'dstock'] = dstock
@@ -139,9 +189,10 @@ def InOutFlow_dt(\
     return IOS # results dataframe
 
 
-def WeibDist(x, dt, AvgLs, shape=5.5, loc = 0):
+def WeibDist(x, dt, AvgLs, shape=5, loc = 0):
     ### sets larger bin size- otherwise with high lifespans, bin would overflow
-    binrange = range(0,int(len(x)*3))
+    binrange = range(0, int(len(x)*5))
+    ### calculates weibull distros over selected range
     weib = dict()
     weib['pdf'] = scipy.stats.weibull_min.pdf(binrange, shape, loc, AvgLs)
     weib['cdf'] = scipy.stats.weibull_min.cdf(binrange, shape, loc, AvgLs)
@@ -293,14 +344,13 @@ def LogisticSignal(x):
     return y 
         
 
-def FlatSignal(x, step=False):
+def FlatSignal(x, step=0):
     yavg = 5e3
-    peak = -0.5e3
-    up = LogistiCurve(x, start=0, end=peak, steepness=0.9, midpoint=2018)
+    peak = yavg*step
+    up = LogistiCurve(x, start=0, end=0, steepness=0.9, midpoint=2018)
     down = LogistiCurve(x, start=peak, end=0, steepness=0.9, midpoint=2022)
     y = yavg*np.ones(len(x))
-    if step is True:
-        y = y + up + down - peak
+    y = y + up + down - peak
     return y
 
 def PlotResponse(IOS, y, figs=False):
@@ -318,7 +368,7 @@ def PlotResponse(IOS, y, figs=False):
     if figs is True: 
         plt.show()
         
-def PlotHistograms(IOS, x, y, figs=False, sel = [.1, .3, .5, .7, .9], bar=False):
+def PlotHistograms(IOS, x, y, dt, figs=False, sel = [.1, .3, .5, .7, .9], bar=False):
     l=len(IOS['Hist'])
 
     if len(sel)==1:
@@ -336,11 +386,11 @@ def PlotHistograms(IOS, x, y, figs=False, sel = [.1, .3, .5, .7, .9], bar=False)
         if figs is True:
             plt.figure(figsize=(10,4))
             for i in sel:
-                plt.plot(IOS['Hist'][int(i*l)], label='histogram t='+str(int(i*l+2000)))
+                plt.plot(IOS['Hist'][int(i*l)], label='histogram t='+str(int(i*l*dt+2000)))
     
             plt.legend(loc='upper right')
-            plt.ylim(-1,2.*max(IOS['Hist'][int(0.3*l)]))
-            plt.xlim(0, 1.5*len(IOS['Hist'][int(0.3*l)][IOS['Hist'][int(0.3*l)]>0.001]))
+            plt.ylim(-100,2.*max(IOS['Hist'][int(0.3*l)]))
+            plt.xlim(0, 2*len(IOS['Hist'][int(0.3*l)][IOS['Hist'][int(0.3*l)]>0.001]))
             plt.ylabel('Number of units')
             plt.xlabel('Age cohort')
             plt.savefig('figures/inoutstock_hist.png', dpi=300)

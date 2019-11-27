@@ -398,7 +398,8 @@ def PlotMass2Dim(
                classes = {'include' : ['All'],
                           'exclude' : [None],
                           },
-               exportpdf=False,  
+               exportpdf=False,
+               flow='Mass',
                ):
     
     ### prepare mat df according to selection criteria
@@ -409,11 +410,11 @@ def PlotMass2Dim(
     
     ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
     for i in range(len(Dim)):
-        mat[str(Dim[i]+'Sum')] = mat[Dim[i]].map(dict(mat.groupby(by=Dim[i]).sum()['Mass']))
+        mat[str(Dim[i]+'Sum')] = mat[Dim[i]].map(dict(mat.groupby(by=Dim[i]).sum()[flow]))
     mat = mat.sort_values([str(Dim[0]+'Sum'), str(Dim[1]+'Sum')], ascending=[True, True])
     
     ### plot the shit
-    fig = px.area(mat, x = 'Year', y = 'Mass', 
+    fig = px.area(mat, x = 'Year', y = flow, 
                   color = Dim[0], 
                   width = 800,
                   height = 500,
@@ -447,7 +448,8 @@ def PlotMass1Dim(
                           'exclude' : [None],
                           },
                exportpdf=False, 
-               category_orders=False
+               category_orders=False,
+               flow='Mass',
                ):
     
     ### prepare mat df according to selection criteria
@@ -458,12 +460,12 @@ def PlotMass1Dim(
     
     ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
     mat[str(Dim+'Sum')] = mat[Dim].map(dict(mat.groupby(by=Dim)
-                                           .sum()['Mass']
+                                           .sum()[flow]
                                            .sort_values(ascending=False)))
     mat = mat.sort_values(str(Dim+'Sum'), ascending=True)
     
     ### plot the shit
-    fig = px.area(mat, x = 'Year', y = 'Mass', 
+    fig = px.area(mat, x = 'Year', y = flow, 
                   color = Dim, 
                   width = 800,
                   height = 500,

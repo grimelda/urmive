@@ -4,7 +4,6 @@ import numpy as np
 import scipy
 import scipy.stats
 import stockflow as sf
-from scipy.optimize import curve_fit
 
 #%%
 startmodel = 1999
@@ -15,10 +14,10 @@ endmodel = 2051
 x = np.linspace(startmodel, endmodel, (1*(endmodel-startmodel))+1)
 
 #y = sf.LogisticSignal(x)
-y = sf.FlatSignal(x, step=True)
+y = sf.FlatSignal(x, step=-.2)
 
 
-AvgLs = 21*np.ones(len(x))
+AvgLs = 15*np.ones(len(x))
 
 #%%
 
@@ -27,15 +26,16 @@ IOS, dt = sf.InOutStock(\
                         y,
                         AvgLs,
                         scaleflow = 'dt', # either 'year' or 'dt'
-                        shape = 2, # shape for weibull distribution
-#                        dm=40,
-#                        lm=1.44, # 1.6 44 8
+                        shape = 7, # shape for weibull distribution
+#                        dm=1,
+#                        lm=1,
+                        dtype='jz'
                         )
 
 #%%
 
 sf.PlotResponse(IOS, y, figs=True)
-sf.PlotHistograms(IOS, x, y, figs=True, sel=[ .9])
+sf.PlotHistograms(IOS, x, y, dt, figs=True, sel=[ 0, .1/5, 3.5/5])
 
 #%%
 
