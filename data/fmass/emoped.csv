@@ -48,16 +48,16 @@ Polymers,Polyphenylene Sulfide,1.84588E-03,emoped,Bicycles,Ecoinvent,[G1942],pol
 Nonferrous metals,"Aluminium, cast alloy",2.31717E-02,emoped,Bicycles,Ecoinvent,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.413,kilogram,0.33336,Electric motor
 Nonferrous metals,Copper,9.81853E-03,emoped,Bicycles,Ecoinvent,[G5949],copper_market for copper[GLO],0.175,kilogram,0.14125,Electric motor
 "Critical Raw Materials, CRM",Neodymium,3.08582E-03,emoped,Bicycles,Ecoinvent,[G10041],"permanent magnet, for electric motor_market for permanent magnet, electric passenger car motor[GLO]",0.055,kilogram,0.04439,Electric motor
-"Critical Raw Materials, CRM",Limn2O4,4.25091E-02,emoped,GREET,,,,,,0.33400,Battery
-Nonferrous metals,"Aluminium, wrought alloy",2.43091E-02,emoped,GREET,,,,,,0.19100,Battery
-"Critical Raw Materials, CRM",Graphite/Carbon,1.85818E-02,emoped,GREET,,,,,,0.14600,Battery
-Nonferrous metals,Copper,1.38727E-02,emoped,GREET,,,,,,0.10900,Battery
-Polymers,Ethylene Carbonate,6.74545E-03,emoped,GREET,,,,,,0.05300,Battery
-Polymers,Dimethyl Carbonate,6.74545E-03,emoped,GREET,,,,,,0.05300,Battery
-Polymers,Plastic,4.07273E-03,emoped,GREET,,,,,,0.03200,Battery
-Polymers,Binder,3.18182E-03,emoped,GREET,,,,,,0.02500,Battery
-"Critical Raw Materials, CRM",Lipf6,2.29091E-03,emoped,GREET,,,,,,0.01800,Battery
-Ferrous metals,Steel,1.78182E-03,emoped,GREET,,,,,,0.01400,Battery
-Minerals,Electronicparts,1.52727E-03,emoped,GREET,,,,,,0.01200,Battery
-Polymers,Glycol,1.27273E-03,emoped,GREET,,,,,,0.01000,Battery
-Insulation,Thermal Insulation,3.81818E-04,emoped,GREET,,,,,,0.00300,Battery
+"Critical Raw Materials, CRM",LiMn2O4,4.25091E-02,emoped,Bicycles,GREET,,,,,0.33400,Battery
+Nonferrous metals,"Aluminium, wrought alloy",2.43091E-02,emoped,Bicycles,GREET,,,,,0.19100,Battery
+"Critical Raw Materials, CRM",Graphite,1.85818E-02,emoped,Bicycles,GREET,,,,,0.14600,Battery
+Nonferrous metals,Copper,1.38727E-02,emoped,Bicycles,GREET,,,,,0.10900,Battery
+Polymers,Ethylene Carbonate,6.74545E-03,emoped,Bicycles,GREET,,,,,0.05300,Battery
+Polymers,Dimethyl Carbonate,6.74545E-03,emoped,Bicycles,GREET,,,,,0.05300,Battery
+Polymers,Plastic,4.07273E-03,emoped,Bicycles,GREET,,,,,0.03200,Battery
+Polymers,Binder,3.18182E-03,emoped,Bicycles,GREET,,,,,0.02500,Battery
+"Critical Raw Materials, CRM",LiPF6,2.29091E-03,emoped,Bicycles,GREET,,,,,0.01800,Battery
+Ferrous metals,Steel,1.78182E-03,emoped,Bicycles,GREET,,,,,0.01400,Battery
+Minerals,Electronicparts,1.52727E-03,emoped,Bicycles,GREET,,,,,0.01200,Battery
+Polymers,Glycol,1.27273E-03,emoped,Bicycles,GREET,,,,,0.01000,Battery
+Insulation,Thermal Insulation,3.81818E-04,emoped,Bicycles,GREET,,,,,0.00300,Battery

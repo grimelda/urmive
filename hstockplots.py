@@ -1,5 +1,6 @@
 import time; start = time.time()
 import stocks
+import pandas as pd
 
 #%%
 ### calc materials from vehicle units
@@ -19,6 +20,11 @@ import stocks
  ) = stocks.UnifyMassData(dbx, dbm)
 
 mat = stocks.CalcMass(dbx, dbm)
+hmm = pd.read_csv('data/hist_materials_map.csv', header=0,index_col=None)
+mat = pd.merge(mat, hmm, on='Material', how='outer')
+mat.at[:, 'Mass'] = mat.loc[:, 'Mass'].multiply(0.001)
+
+
 
 
 #mat.loc[mat['Vehicle']=='hmax','Mass'] * mat.loc[mat['Vehicle']=='hmax','Onderwerp'].astype('int')

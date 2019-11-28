@@ -5,13 +5,13 @@ Ferrous metals,Steel,7.0468E-03,hev,Cars,Body,Front/rear bumpers,100%
 Polymers,Plastic,6.3280E-03,hev,Cars,Body,Body hardware,89.8%
 Ferrous metals,Steel,3.7348E-04,hev,Cars,Body,Body hardware,5.3%
 Polymers,Rubber,1.6208E-04,hev,Cars,Body,Body hardware,2.3%
-Nonferrous metals,Copper,1.4094E-04,hev,Cars,Body,Body hardware,2%
-Composites,Glass,4.2281E-05,hev,Cars,Body,Body hardware,0.6%
+Copper,Copper,1.4094E-04,hev,Cars,Body,Body hardware,2%
+Glass,Glass,4.2281E-05,hev,Cars,Body,Body hardware,0.6%
 Ferrous metals,Steel,3.5234E-03,hev,Cars,Body,Weld blanks and fasteners (electronics to body),50%
 Polymers,Plastic,3.5234E-03,hev,Cars,Body,Weld blanks and fasteners (electronics to body),50%
 Ferrous metals,Steel,3.5234E-03,hev,Cars,Body,Weld blanks and fasteners (other systems to body),50%
 Polymers,Plastic,3.5234E-03,hev,Cars,Body,Weld blanks and fasteners (other systems to body),50%
-Composites,Glass,2.8187E-02,hev,Cars,Body,Glass,100%
+Glass,Glass,2.8187E-02,hev,Cars,Body,Glass,100%
 Paint,Paint,8.3280E-03,hev,Cars,Exterior,Paint,100%
 Polymers,Plastic,6.5958E-03,hev,Cars,Exterior,Exterior trim,93.6%
 Ferrous metals,Steel,3.0301E-04,hev,Cars,Exterior,Exterior trim,4.3%
@@ -19,45 +19,45 @@ Polymers,Rubber,1.0570E-04,hev,Cars,Exterior,Exterior trim,1.5%
 Organic,Organic,4.2281E-05,hev,Cars,Exterior,Exterior trim,0.6%
 Polymers,Rubber,1.2812E-03,hev,Cars,Exterior,Sealers/deadeners,100%
 Polymers,Plastic,4.1576E-03,hev,Cars,Exterior,Exterior electrical,59%
-Nonferrous metals,Copper,2.8892E-03,hev,Cars,Exterior,Exterior electrical,41%
+Copper,Copper,2.8892E-03,hev,Cars,Exterior,Exterior electrical,41%
 Ferrous metals,Steel,7.8091E-03,hev,Cars,Interior,Instrument panel,46%
 Polymers,Plastic,7.9789E-03,hev,Cars,Interior,Instrument panel,47%
 Organic,Organic,6.7905E-04,hev,Cars,Interior,Instrument panel,4%
-Nonferrous metals,"Aluminium, wrought alloy",1.6976E-04,hev,Cars,Interior,Instrument panel,1%
+Aluminium,"Aluminium, wrought alloy",1.6976E-04,hev,Cars,Interior,Instrument panel,1%
 Polymers,Rubber,1.6976E-04,hev,Cars,Interior,Instrument panel,1%
 "Critical Raw Materials, CRM",Magnesium,1.6976E-04,hev,Cars,Interior,Instrument panel,1%
 Polymers,Plastic,1.0547E-02,hev,Cars,Interior,Trim & insulation,67.2%
 Ferrous metals,Steel,4.6300E-03,hev,Cars,Interior,Trim & insulation,29.5%
 Organic,Organic,5.0224E-04,hev,Cars,Interior,Trim & insulation,3.2%
-Nonferrous metals,"Aluminium, wrought alloy",1.5695E-05,hev,Cars,Interior,Trim & insulation,0.1%
+Aluminium,"Aluminium, wrought alloy",1.5695E-05,hev,Cars,Interior,Trim & insulation,0.1%
 Polymers,Plastic,1.1504E-02,hev,Cars,Interior,Door modules,65.3%
 Organic,Organic,5.7431E-03,hev,Cars,Interior,Door modules,32.6%
 Ferrous metals,Steel,3.1710E-04,hev,Cars,Interior,Door modules,1.8%
-Composites,Glass,5.2851E-05,hev,Cars,Interior,Door modules,0.3%
+Glass,Glass,5.2851E-05,hev,Cars,Interior,Door modules,0.3%
 Ferrous metals,Steel,2.4523E-02,hev,Cars,Interior,Seating & restraint,58%
 Polymers,Plastic,1.6489E-02,hev,Cars,Interior,Seating & restraint,39%
 Organic,Organic,1.2684E-03,hev,Cars,Interior,Seating & restraint,3%
 Material Group,,0.0000E+00,hev,Cars,Interior,Seating & restraint,
 Ferrous metals,Steel,7.9206E-03,hev,Cars,Interior,HVAC,56.2%
-Nonferrous metals,"Aluminium, wrought alloy",3.0301E-03,hev,Cars,Interior,HVAC,21.5%
-Nonferrous metals,Copper,2.3536E-03,hev,Cars,Interior,HVAC,16.7%
+Aluminium,"Aluminium, wrought alloy",3.0301E-03,hev,Cars,Interior,HVAC,21.5%
+Copper,Copper,2.3536E-03,hev,Cars,Interior,HVAC,16.7%
 Polymers,Plastic,3.3824E-04,hev,Cars,Interior,HVAC,2.4%
 Polymers,Rubber,2.8187E-04,hev,Cars,Interior,HVAC,2%
-Nonferrous metals,Zinc,7.0468E-05,hev,Cars,Interior,HVAC,0.5%
+Other nonferrous metals,Zinc,7.0468E-05,hev,Cars,Interior,HVAC,0.5%
 Other,Other,9.8655E-05,hev,Cars,Interior,HVAC,0.7%
 Polymers,Plastic,4.1576E-03,hev,Cars,Interior,Interior electrical,59%
-Nonferrous metals,Copper,2.8892E-03,hev,Cars,Interior,Interior electrical,41%
+Copper,Copper,2.8892E-03,hev,Cars,Interior,Interior electrical,41%
 Ferrous metals,Steel,3.5234E-03,hev,Cars,Interior,Weld blanks and fasteners (interior to body),50%
 Polymers,Plastic,3.5234E-03,hev,Cars,Interior,Weld blanks and fasteners (interior to body),50%
 Ferrous metals,"Iron, cast",3.8917E-02,hev,Cars,Powertrain,Engine,50%
-Nonferrous metals,"Aluminium, cast alloy",2.3350E-02,hev,Cars,Powertrain,Engine,30%
+Aluminium,"Aluminium, cast alloy",2.3350E-02,hev,Cars,Powertrain,Engine,30%
 Ferrous metals,Steel,7.7835E-03,hev,Cars,Powertrain,Engine,10%
 Polymers,Plastic,3.5026E-03,hev,Cars,Powertrain,Engine,4.5%
 Polymers,Rubber,3.5026E-03,hev,Cars,Powertrain,Engine,4.5%
-Nonferrous metals,Copper,7.7835E-04,hev,Cars,Powertrain,Engine,1%
+Copper,Copper,7.7835E-04,hev,Cars,Powertrain,Engine,1%
 Material Group,,0.0000E+00,hev,Cars,Powertrain,Engine,
 Composites,Carbon Fiber Composite,0.0000E+00,hev,Cars,Powertrain,Fuel cell stack,62.8%
-Nonferrous metals,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Powertrain,Fuel cell stack,23.2%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Powertrain,Fuel cell stack,23.2%
 Polymers,Perfluorosulfonic Acid,0.0000E+00,hev,Cars,Powertrain,Fuel cell stack,5.4%
 Minerals,Carbon Paper,0.0000E+00,hev,Cars,Powertrain,Fuel cell stack,5.0%
 Ferrous metals,Steel,0.0000E+00,hev,Cars,Powertrain,Fuel cell stack,1.5%
@@ -70,18 +70,18 @@ Polymers,Plastic,5.1249E-03,hev,Cars,Powertrain,Powertrain thermal,50%
 Ferrous metals,Steel,2.0497E-02,hev,Cars,Powertrain,Exhaust,99.985%
 "Critical Raw Materials, CRM",Platinum,3.0750E-06,hev,Cars,Powertrain,Exhaust,0.015%
 Polymers,Plastic,4.1576E-03,hev,Cars,Powertrain,Powertrain electrical,59%
-Nonferrous metals,Copper,2.8892E-03,hev,Cars,Powertrain,Powertrain electrical,41%
+Copper,Copper,2.8892E-03,hev,Cars,Powertrain,Powertrain electrical,41%
 Polymers,Plastic,7.5593E-04,hev,Cars,Powertrain,Emission control electronics,59%
-Nonferrous metals,Copper,5.2530E-04,hev,Cars,Powertrain,Emission control electronics,41%
+Copper,Copper,5.2530E-04,hev,Cars,Powertrain,Emission control electronics,41%
 Ferrous metals,Steel,7.0468E-03,hev,Cars,Powertrain,Weld blanks and fasteners (powertrain to body),100%
 Ferrous metals,Steel,0.0000E+00,hev,Cars,Powertrain,Transmission (ICEV),30%
-Nonferrous metals,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Powertrain,Transmission (ICEV),30%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Powertrain,Transmission (ICEV),30%
 Ferrous metals,"Iron, cast",0.0000E+00,hev,Cars,Powertrain,Transmission (ICEV),30%
 Polymers,Plastic,0.0000E+00,hev,Cars,Powertrain,Transmission (ICEV),5%
 Polymers,Rubber,0.0000E+00,hev,Cars,Powertrain,Transmission (ICEV),5%
 Ferrous metals,Steel,4.1470E-02,hev,Cars,Powertrain,Transmission (HEV/FCV),60.5%
-Nonferrous metals,"Aluminium, wrought alloy",1.3709E-02,hev,Cars,Powertrain,Transmission (HEV/FCV),20%
-Nonferrous metals,Copper,1.3024E-02,hev,Cars,Powertrain,Transmission (HEV/FCV),19%
+Aluminium,"Aluminium, wrought alloy",1.3709E-02,hev,Cars,Powertrain,Transmission (HEV/FCV),20%
+Copper,Copper,1.3024E-02,hev,Cars,Powertrain,Transmission (HEV/FCV),19%
 Organic,Organic,2.0564E-04,hev,Cars,Powertrain,Transmission (HEV/FCV),0.3%
 Polymers,Plastic,1.3709E-04,hev,Cars,Powertrain,Transmission (HEV/FCV),0.2%
 Ferrous metals,Steel,2.1140E-02,hev,Cars,Chassis,Cradle,100%
@@ -95,49 +95,49 @@ Ferrous metals,Steel,2.9148E-02,hev,Cars,Chassis,Wheels,100%
 Polymers,Rubber,1.9315E-02,hev,Cars,Chassis,Tires,67%
 Ferrous metals,Steel,9.5131E-03,hev,Cars,Chassis,Tires,33%
 Ferrous metals,Steel,1.2556E-02,hev,Cars,Chassis,Steering system,80%
-Nonferrous metals,"Aluminium, wrought alloy",2.3543E-03,hev,Cars,Chassis,Steering system,15%
+Aluminium,"Aluminium, wrought alloy",2.3543E-03,hev,Cars,Chassis,Steering system,15%
 Polymers,Rubber,7.8475E-04,hev,Cars,Chassis,Steering system,5%
 Polymers,Plastic,4.1576E-03,hev,Cars,Chassis,Chassis electrical,59%
-Nonferrous metals,Copper,2.8892E-03,hev,Cars,Chassis,Chassis electrical,41%
+Copper,Copper,2.8892E-03,hev,Cars,Chassis,Chassis electrical,41%
 Ferrous metals,Steel,7.0468E-03,hev,Cars,Chassis,Weld blanks and fasteners (chassis to body),100%
 Ferrous metals,Steel,7.0535E-03,hev,Cars,Chassis,Generator,36.1%
-Nonferrous metals,"Aluminium, cast alloy",7.0535E-03,hev,Cars,Chassis,Generator,36.1%
-Nonferrous metals,Copper,5.3341E-03,hev,Cars,Chassis,Generator,27.3%
+Aluminium,"Aluminium, cast alloy",7.0535E-03,hev,Cars,Chassis,Generator,36.1%
+Copper,Copper,5.3341E-03,hev,Cars,Chassis,Generator,27.3%
 Ferrous metals,Steel,7.0535E-03,hev,Cars,Chassis,Motor,36.1%
-Nonferrous metals,"Aluminium, cast alloy",7.0535E-03,hev,Cars,Chassis,Motor,36.1%
-Nonferrous metals,Copper,5.3341E-03,hev,Cars,Chassis,Motor,27.3%
+Aluminium,"Aluminium, cast alloy",7.0535E-03,hev,Cars,Chassis,Motor,36.1%
+Copper,Copper,5.3341E-03,hev,Cars,Chassis,Motor,27.3%
 Ferrous metals,Steel,8.6483E-04,hev,Cars,Chassis,Controller/inverter,5.0%
-Nonferrous metals,"Aluminium, cast alloy",8.1294E-03,hev,Cars,Chassis,Controller/inverter,47.0%
-Nonferrous metals,Copper,1.4183E-03,hev,Cars,Chassis,Controller/inverter,8.2%
+Aluminium,"Aluminium, cast alloy",8.1294E-03,hev,Cars,Chassis,Controller/inverter,47.0%
+Copper,Copper,1.4183E-03,hev,Cars,Chassis,Controller/inverter,8.2%
 Polymers,Rubber,6.3997E-04,hev,Cars,Chassis,Controller/inverter,3.7%
 Polymers,Plastic,4.1166E-03,hev,Cars,Chassis,Controller/inverter,23.8%
 Organic,Organic,2.1275E-03,hev,Cars,Chassis,Controller/inverter,12.3%
 Ferrous metals,Steel,0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),36.8%
 Composites,Carbon Fiber Composite,0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),25.7%
-Nonferrous metals,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),16.7%
-Nonferrous metals,Copper,0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),9.6%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),16.7%
+Copper,Copper,0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),9.6%
 Polymers,Plastic,0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),8.7%
 Polymers,Rubber,0.0000E+00,hev,Cars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),1.5%
-Nonferrous metals,Lead,4.8623E-03,hev,Cars,Battery,Pb-Ac Battery,69%
+Other nonferrous metals,Lead,4.8623E-03,hev,Cars,Battery,Pb-Ac Battery,69%
 Organic,Water,9.9359E-04,hev,Cars,Battery,Pb-Ac Battery,14.1%
 Chemicals,Sulfuric Acid,5.5669E-04,hev,Cars,Battery,Pb-Ac Battery,7.9%
 Polymers,Plastic,4.2985E-04,hev,Cars,Battery,Pb-Ac Battery,6.1%
 Composites,Fiberglass,1.4798E-04,hev,Cars,Battery,Pb-Ac Battery,2.1%
 Other,Other,5.6374E-05,hev,Cars,Battery,Pb-Ac Battery,0.8%
-Nonferrous metals,Nickel,6.9552E-03,hev,Cars,Battery,Ni-MH Battery,28.2%
+Other nonferrous metals,Nickel,6.9552E-03,hev,Cars,Battery,Ni-MH Battery,28.2%
 Ferrous metals,Steel,5.8453E-03,hev,Cars,Battery,Ni-MH Battery,23.7%
 Polymers,Plastic,5.5493E-03,hev,Cars,Battery,Ni-MH Battery,22.5%
 Ferrous metals,Iron,2.9596E-03,hev,Cars,Battery,Ni-MH Battery,12%
 "Critical Raw Materials, CRM",Rare Earth Metals,1.5538E-03,hev,Cars,Battery,Ni-MH Battery,6.3%
-Nonferrous metals,Copper,9.6188E-04,hev,Cars,Battery,Ni-MH Battery,3.9%
+Copper,Copper,9.6188E-04,hev,Cars,Battery,Ni-MH Battery,3.9%
 "Critical Raw Materials, CRM",Cobalt,4.4395E-04,hev,Cars,Battery,Ni-MH Battery,1.8%
 "Critical Raw Materials, CRM",Magnesium,2.4664E-04,hev,Cars,Battery,Ni-MH Battery,1%
-Nonferrous metals,"Aluminium, wrought alloy",1.2332E-04,hev,Cars,Battery,Ni-MH Battery,0.5%
+Aluminium,"Aluminium, wrought alloy",1.2332E-04,hev,Cars,Battery,Ni-MH Battery,0.5%
 Polymers,Rubber,2.4664E-05,hev,Cars,Battery,Ni-MH Battery,0.1%
 "Critical Raw Materials, CRM",LiMn2O4,3.5458E-03,hev,Cars,Battery,Li-Ion HEV Battery,27.0%
-Nonferrous metals,"Aluminium, wrought alloy",3.1124E-03,hev,Cars,Battery,Li-Ion HEV Battery,23.7%
-Nonferrous metals,Copper,1.7335E-03,hev,Cars,Battery,Li-Ion HEV Battery,13.2%
-"Critical Raw Materials, CRM",Graphite,1.6022E-03,hev,Cars,Battery,Li-Ion HEV Battery,12.2%
+Aluminium,"Aluminium, wrought alloy",3.1124E-03,hev,Cars,Battery,Li-Ion HEV Battery,23.7%
+Copper,Copper,1.7335E-03,hev,Cars,Battery,Li-Ion HEV Battery,13.2%
+Minerals,Graphite,1.6022E-03,hev,Cars,Battery,Li-Ion HEV Battery,12.2%
 Polymers,Plastic,5.9097E-04,hev,Cars,Battery,Li-Ion HEV Battery,4.5%
 Polymers,Ethylene Carbonate,5.7783E-04,hev,Cars,Battery,Li-Ion HEV Battery,4.4%
 Polymers,Dimethyl Carbonate,5.7783E-04,hev,Cars,Battery,Li-Ion HEV Battery,4.4%
@@ -148,9 +148,9 @@ Polymers,Binder,2.7578E-04,hev,Cars,Battery,Li-Ion HEV Battery,2.1%
 Minerals,Electronicparts,1.9699E-04,hev,Cars,Battery,Li-Ion HEV Battery,1.5%
 Insulation,Thermal Insulation,5.2530E-05,hev,Cars,Battery,Li-Ion HEV Battery,0.4%
 "Critical Raw Materials, CRM",LiMn2O4,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,27.8%
-Nonferrous metals,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,22.9%
-Nonferrous metals,Copper,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,14.8%
-"Critical Raw Materials, CRM",Graphite,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,12.2%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,22.9%
+Copper,Copper,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,14.8%
+Minerals,Graphite,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,12.2%
 Polymers,Ethylene Carbonate,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,4.9%
 Polymers,Dimethyl Carbonate,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,4.9%
 Polymers,Plastic,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,4.3%
@@ -161,9 +161,9 @@ Polymers,Glycol,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,1.3%
 Minerals,Electronicparts,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,0.9%
 Insulation,Thermal Insulation,0.0000E+00,hev,Cars,Battery,Li-Ion PHEV Battery,0.3%
 "Critical Raw Materials, CRM",LiMn2O4,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,33.4%
-Nonferrous metals,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,19.1%
-"Critical Raw Materials, CRM",Graphite,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,14.6%
-Nonferrous metals,Copper,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,10.9%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,19.1%
+Minerals,Graphite,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,14.6%
+Copper,Copper,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,10.9%
 Polymers,Ethylene Carbonate,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,5.3%
 Polymers,Dimethyl Carbonate,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,5.3%
 Polymers,Plastic,0.0000E+00,hev,Cars,Battery,Li-Ion EV Battery,3.2%

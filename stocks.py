@@ -13,7 +13,10 @@ import plotly.graph_objects as go
 
 #%% high level defs
 
-def CalcStocks(start=2000, end=2017):
+def CalcStocks(
+        start=2000, 
+        end=2017,
+        ):
     ### calc materials from vehicle units
     (
      dbx,
@@ -31,6 +34,7 @@ def CalcStocks(start=2000, end=2017):
      ) = UnifyMassData(dbx, dbm)
 
     mat = CalcMass(dbx, dbm) 
+    
     return mat
 
 
@@ -93,8 +97,19 @@ def CalcMass(
                                         'bulker',
                                         'ptrain',
                                         'locomotive',
+                                        'motorbike',
+                                        'ev',
+                                        'hev',
+                                        'icev',
+                                        'icevan2',
 #                                         'wagon',
                                         ])
+    
+    hmm = pd.read_csv('data/hist_materials_map.csv', header=0,index_col=None)
+    mat = pd.merge(mat, hmm, on='Material', how='outer')
+    
+    mat.at[:, 'Mass'] = mat.loc[:, 'Mass'].multiply(0.001)
+    mat = mat[mat['Mass']>0]
     return mat
 
 def FixMatColumnTypes(df):
@@ -126,18 +141,20 @@ def RemapVehicles(dbx):
     ### preserve original vehicle names
     dbx['Vehiclenames'] = dbx['Vehicle']
     
-#     ### manually set some avg weight values
-#     dbx = SetWeightManual(dbx, slx={
-#                                     'Seavessel:handel' : 11097664, # compared to eurostat estimate: 87009621.9
-#                                     'Seavessel:waterbouw': 10483008, # compared to eurostat estimate: 1880253.8
-#                                     'Seavessel:zeesleepvaart' : 2052046, # compared to eurostat estimate: 378541.7
-#                                     })
-    
     ### 
     MAP = pd.read_csv('data/datamap.csv', header=None, index_col=False)
     for i in range(len(MAP)):
         dbx.loc[:,'Vehicle'] = dbx.loc[:,'Vehicle'].replace(MAP.loc[i,0],MAP.loc[i,1])
 
+    ### manually set some avg weight values
+    dbx = SetWeightManual(dbx, slx={\
+                                    'ev' : 1936.5,
+                                    'hev' : 1211.3,
+                                    'icev' : 1121.0,
+#                                    'Seavessel:handel' : 11097664, # compared to eurostat estimate: 87009621.9
+#                                    'Seavessel:waterbouw': 10483008, # compared to eurostat estimate: 1880253.8
+#                                    'Seavessel:zeesleepvaart' : 2052046, # compared to eurostat estimate: 378541.7
+                                    })
     return dbx
 
 
@@ -176,9 +193,9 @@ def AddVehicleTypeColumn(db): #2
                               + pd.Series([':']*len(db['compcars']))
                               + db['compcars']['Onderwerp']
                               )
-    db['mobikes']['Vtype'] = (pd.Series(['Motorbike:']*len(db['mobikes'])) 
-                              + db['mobikes']['Onderwerp']
-                              )
+#    db['Motorbikes']['Vtype'] = (pd.Series(['Motorbikes:']*len(db['Motorbikes'])) 
+#                              + db['Motorbikes']['Onderwerp']
+#                              )
     db['mopeds']['Vtype'] = (pd.Series(['Mopeds:']*len(db['mopeds'])) 
                               + db['mopeds']['Onderwerp']
                               )
@@ -419,11 +436,14 @@ def PlotMass2Dim(
                   width = 800,
                   height = 500,
                   line_group = Dim[1],
-                  #category_orders = {'idx' : list(mat.index)}
-                  ).update_layout(legend=dict(
+                  ).update_layout(\
+                                  xaxis_title="Year",
+                                  yaxis_title="Mass [tons]",
+                                  font = dict(size=11,
+                                              family='Lato, sans serif'),
+                                  legend=dict(
                                               y=0.5, 
-                                              traceorder='reversed', 
-                                              font_size=10,
+                                              traceorder='reversed',
                                               ))
     
     fig.show()
@@ -469,10 +489,14 @@ def PlotMass1Dim(
                   color = Dim, 
                   width = 800,
                   height = 500,
-                  ).update_layout(legend=dict(
+                  ).update_layout(\
+                                  xaxis_title="Year",
+                                  yaxis_title="Mass [tons]",
+                                  font = dict(size=11,
+                                              family='Lato, sans serif'),
+                                  legend=dict(
                                               y=0.5, 
-                                              traceorder='reversed', 
-                                              font_size=10,
+                                              traceorder='reversed',
                                               ))
     
     fig.show()
@@ -492,6 +516,7 @@ def TreeChart(mat,
               lim=8,
               values=False,
               labels=False,
+              val='Material'
               ):
     import plotly.graph_objects as go
     import colorlover as cl
@@ -500,7 +525,7 @@ def TreeChart(mat,
     if lim>8: lim=8
 
     if values is False and labels is False:
-        values, labels = SelectVehicleYear(mat, slx, cat, year, lim)
+        values, labels = SelectVehicleYear(mat, slx, cat, year, lim, val)
     
     fig = go.Figure()
     
@@ -600,14 +625,14 @@ def DonutChart(mat,
 
 
 ### for plots, groupby materials for particular vehicle in particular year
-def SelectVehicleYear(mat, slx=[], cat=[], year=2017, lim=8):
+def SelectVehicleYear(mat, slx=[], cat=[], year=2017, lim=8, val='Material'):
     if len(cat)==0 and len(slx)==0:
         print('Please input either slx OR cat')
         
     if len(slx) == 2:
         val = mat.loc[mat['Year']==year]\
                  .loc[mat[slx[0]].isin(slx[1])]\
-                 .groupby('Material').sum()\
+                 .groupby(val).sum()\
                  .loc[:, 'Mass']\
                  .sort_values(ascending=False)
         if len(val)>lim:
