@@ -112,16 +112,18 @@ def CalcMass(
     mat = mat[mat['Mass']>0]
     return mat
 
-def FixMatColumnTypes(df):
-    coltypes = dict(\
-                    Value='int',
-                    Year='int',
-                    Unitmass='float',
-                    Mass='float',
-                    Vehicle='str',
-                    Onderwerp='str',
-                    Class='str',
-                    )
+def FixMatColumnTypes(\
+                      df,
+                      coltypes = dict(\
+                                      Value='int',
+                                      Year='int',
+                                      Unitmass='float',
+                                      Mass='float',
+                                      Vehicle='str',
+                                      Onderwerp='str',
+                                      Class='str',
+                                      )
+                      ):
     for key in coltypes.keys():
         df.loc[:,key] = df.loc[:,key].astype(coltypes[key])
         
@@ -417,6 +419,8 @@ def PlotMass2Dim(
                           },
                exportpdf=False,
                flow='Mass',
+               category_orders={},
+               groupnorm='',
                ):
     
     ### prepare mat df according to selection criteria
@@ -436,6 +440,8 @@ def PlotMass2Dim(
                   width = 800,
                   height = 500,
                   line_group = Dim[1],
+                  groupnorm=groupnorm,
+                  category_orders=category_orders,
                   ).update_layout(\
                                   xaxis_title="Year",
                                   yaxis_title="Mass [tons]",
@@ -468,8 +474,9 @@ def PlotMass1Dim(
                           'exclude' : [None],
                           },
                exportpdf=False, 
-               category_orders=False,
+               category_orders={},
                flow='Mass',
+               groupnorm='',
                ):
     
     ### prepare mat df according to selection criteria
@@ -479,7 +486,7 @@ def PlotMass1Dim(
     mat = mat.groupby(['Year', Dim]).sum().reset_index(drop=False)
     
     ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
-    mat[str(Dim+'Sum')] = mat[Dim].map(dict(mat.groupby(by=Dim)
+    mat[str(Dim+'Sum')] = mat[Dim].map(dict(mat[mat['Year']==max(mat['Year'])].groupby(by=Dim)
                                            .sum()[flow]
                                            .sort_values(ascending=False)))
     mat = mat.sort_values(str(Dim+'Sum'), ascending=True)
@@ -489,6 +496,8 @@ def PlotMass1Dim(
                   color = Dim, 
                   width = 800,
                   height = 500,
+                  groupnorm=groupnorm,
+                  category_orders=category_orders,
                   ).update_layout(\
                                   xaxis_title="Year",
                                   yaxis_title="Mass [tons]",
@@ -612,7 +621,11 @@ def DonutChart(mat,
     # Use `hole` to create a donut-like pie chart
     fig = go.Figure(data=[go.Pie(labels=labels, 
                                  values=values, 
-                                 hole=.6)])
+                                 hole=.6)]).update_layout(\
+                                              font = dict(size=11,
+                                                          family='Lato, sans serif'),
+                                                          )
+
 
     fig.show()
     if exportpdf is True:

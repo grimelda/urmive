@@ -108,7 +108,7 @@ def WeibCorr(x, start=2000, scale=10, shape=2, magn=1e3):
 
 def CarsFirst(x, poly, PW='BAU'):
     df = pd.DataFrame()
-    keys = ['ice', 'ev', 'hev', 'ptrain', 'bus', 'ebike', 'bike', 'emoped', 'moped', 'walk']
+    keys = ['icev', 'ev', 'hev', 'ptrain', 'bus', 'ebike', 'bike', 'emoped', 'moped', 'walk']
     for key in keys:
         temp = pd.DataFrame()
         temp['Year'] = x
@@ -128,7 +128,7 @@ def CarsFirst(x, poly, PW='BAU'):
     
     st=0.99; en=st;
     if PW=='ST': en=0.15 
-    D['ice'] = InnoDiff(x,start=st,end=en,
+    D['icev'] = InnoDiff(x,start=st,end=en,
                         steepness=0.3,midpoint=2030)
 
     st=0.01; en=st; 
@@ -166,9 +166,9 @@ def CarsFirst(x, poly, PW='BAU'):
     
     ones = np.ones(len(x))
     ### cars
-    df.loc[df['Vehicle']=='ice', 'Share'] = D['drive'] * D['ice']
-    df.loc[df['Vehicle']=='ev', 'Share'] = D['drive'] * (ones - D['ice']) * D['ev']
-    df.loc[df['Vehicle']=='hev', 'Share'] = D['drive'] * (ones - D['ice'])* (ones - D['ev'])
+    df.loc[df['Vehicle']=='icev', 'Share'] = D['drive'] * D['icev']
+    df.loc[df['Vehicle']=='ev', 'Share'] = D['drive'] * (ones - D['icev']) * D['ev']
+    df.loc[df['Vehicle']=='hev', 'Share'] = D['drive'] * (ones - D['icev'])* (ones - D['ev'])
 
     ### public transport
     df.loc[df['Vehicle']=='ptrain', 'Share'] = (ones - D['drive']) * D['public'] * D['ptrain']
@@ -185,7 +185,7 @@ def CarsFirst(x, poly, PW='BAU'):
     for i in df['Vehicle'].unique():
         df.loc[df['Vehicle']==i, 'Person-kilometers'] = df.loc[df['Vehicle']==i, 'Share'].multiply(poly)
         
-    modemap = {'Driving' : ['ice', 'ev', 'hev'],
+    modemap = {'Driving' : ['icev', 'ev', 'hev'],
                'Transit' : ['ptrain', 'bus'],
                'Cycling' : ['ebike', 'bike', 'moped', 'emoped'],
                'Walking' : ['walk'],
@@ -209,11 +209,12 @@ def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='
     CarCurve = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*0.5,
                         steepness=0.3, midpoint=2030 )
     CarCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=2.3e5)
-    STV['ice'] = CarPerPkm*np.ones(len(CarCorr))
+#    STV['icev'] = CarPerPkm*np.ones(len(CarCorr))
+    STV['icev'] = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*1.22, steepness=.37, midpoint=2007 )
     if PW=='RA':
-        STV['ice'] = CarCurve + CarCorr 
-    STV['ev'] = STV['ice']
-    STV['hev'] = STV['ice']
+        STV['icev'] = CarCurve + CarCorr 
+    STV['ev'] = STV['icev']
+    STV['hev'] = STV['icev']
     StackPlot(x, CarCurve, CarCorr, 'CarsPerPersonkm.png', figs=False)
     
     ### bikes per person kilometer, assumed to be constant
@@ -221,7 +222,8 @@ def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='
     BikeCurve = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*0.75,
                       steepness=0.3, midpoint=2030 )
     BikeCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=5e6)
-    STV['bike'] = BikePerPkm*np.ones(len(BikeCorr))
+#    STV['bike'] = BikePerPkm*np.ones(len(BikeCorr))
+    STV['bike'] = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*1.42, steepness=.37, midpoint=2014 )
     if PW=='RA':
         STV['bike'] = BikeCurve +  BikeCorr
     STV['ebike'] = STV['bike']
@@ -335,9 +337,9 @@ def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BA
     STV = dict()
     
     ### lorries per ton kilometer
-    lorry16PerT = 240000/54.1*28/16
-    lorry28PerT = 240000/54.1*28/28
-    lorry40PerT = 240000/54.1*28/40
+    lorry16PerT = 73418/54.1 * 20.3/16 #136000/54.1*28/16
+    lorry28PerT = 73418/54.1 * 20.3/28 #136000/54.1*28/28
+    lorry40PerT = 73418/54.1 * 20.3/40 #236000/54.1*28/40
     L16Curve = InnoDiff(x, start=lorry16PerT, end=lorry16PerT*0.75 if PW=='RC' else lorry16PerT, steepness=1, midpoint=2035 )
     L28Curve = InnoDiff(x, start=lorry28PerT, end=lorry28PerT*0.75 if PW=='RC' else lorry28PerT, steepness=1, midpoint=2035 )
     L40Curve = InnoDiff(x, start=lorry40PerT, end=lorry40PerT*0.75 if PW=='RC' else lorry40PerT, steepness=1, midpoint=2035 )
@@ -352,10 +354,10 @@ def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BA
     STV['ftrain']  = trainCurve
 
     ### inland barges per ton-kilometer
-    XlbPerT = 623/46.6
-    LbPerT = 943/46.6
-    MbPerT = 1280/46.6
-    SbPerT = 2536/46.6
+    XlbPerT = 5382/46.6 * 3500/1553
+    LbPerT = 5382/46.6 * 2500/1553
+    MbPerT = 5382/46.6 * 1500/1553
+    SbPerT = 5382/46.6 * 750/1553
     xlbCurve = InnoDiff(x, start=XlbPerT, end=XlbPerT*0.75 if PW=='RC' else XlbPerT, steepness=1, midpoint=2035 )
     lbCurve = InnoDiff(x, start=LbPerT, end=LbPerT*0.75 if PW=='RC' else LbPerT, steepness=1, midpoint=2035 )
     mbCurve = InnoDiff(x, start=MbPerT, end=MbPerT*0.75 if PW=='RC' else MbPerT, steepness=1, midpoint=2035 )
@@ -416,7 +418,6 @@ def Flights(x, poly, PW='BAU'):
 
 def ServiceToFlightVehicles(x, df, service='Person-movements', figs=False, PW='BAU'):
     STV = dict()
-    keys = ['A330', 'B787']
     
     ### aircraft per passenger movements 
     PM = np.array(df.groupby('Year')['Person-movements'].sum())
@@ -599,14 +600,13 @@ def RunPW(PW, figs=False, wlo='laag'):
     ### read data for vehicles
     lifespan = pd.read_csv('data/cdf/lifespan.csv', header=0, index_col=None)
     for v in vios.keys():
-    #     print(v)
-        vios[v]['lifespan'] = np.ones(len(x))*lifespan.loc[lifespan['Vehicle']==v, 'lifespan'].values
+#        print(v)
+        vios[v]['lifespan'] = np.ones(len(x))*lifespan.loc[lifespan['Vehiclename']==v, 'lifespan'].values[0]
         if PW=='RC': vios[v]['lifespan'] = vios[v]['lifespan'] * ((0.0164 * x) - 31.8)
-        vios[v]['Mat'] = lifespan.loc[lifespan['Vehicle']==v, 'Mat'].values[0]
-        vios[v]['shape'] = lifespan.loc[lifespan['Vehicle']==v, 'shape'].values[0]
-        vios[v]['Class'] = lifespan.loc[lifespan['Vehicle']==v, 'Class'].values[0]
-        vios[v]['Vmass'] = lifespan.loc[lifespan['Vehicle']==v, 'Vmass'].values[0]
-        vios[v]['VehicleName'] = lifespan.loc[lifespan['Vehicle']==v, 'VehicleName'].values[0]
+        vios[v]['Vehicle'] = lifespan.loc[lifespan['Vehiclename']==v, 'Vehicle'].values[0]
+        vios[v]['shape'] = lifespan.loc[lifespan['Vehiclename']==v, 'shape'].values[0]
+        vios[v]['Class'] = lifespan.loc[lifespan['Vehiclename']==v, 'Class'].values[0]
+        vios[v]['Vmass'] = lifespan.loc[lifespan['Vehiclename']==v, 'Vmass'].values[0]
     
     ### calculate in and outflows, store in dictionary
     for v in vios.keys():
@@ -626,14 +626,15 @@ def RunPW(PW, figs=False, wlo='laag'):
     for key in vios.keys():
         temp = pd.DataFrame()
         temp.at[:, 'Year'] = pd.Series(x)
-        temp.at[:, 'Vehicle'] = key
+        temp.at[:, 'Vehiclename'] = key
         temp.at[:, 'Stock'] = pd.Series(vios[key]['s'])
         temp.at[:, 'Inflow'] = pd.Series(vios[key]['i'])
         temp.at[:, 'Outflow'] = pd.Series(vios[key]['o'])
         temp.at[:, 'Class'] = vios[key]['Class']
-        temp.at[:, 'Mat'] = vios[key]['Mat']
+        temp.at[:, 'Vehicle'] = vios[key]['Vehicle']
         temp.at[:, 'Vmass'] = vios[key]['Vmass']
-        temp.at[:, 'VehicleName'] = vios[key]['VehicleName']
+        temp.at[:, 'lifespan'] = vios[key]['lifespan'].mean()
+
         VIOS = pd.concat([VIOS, temp], ignore_index=True, sort=False)
     
     ### drops trailing year entries
