@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,6 +7,7 @@ import seaborn as sns
 import scipy
 import scipy.stats
 import stockflow as sf
+import stocks
 
 #####   F U N C T I O N S
 
@@ -119,50 +121,32 @@ def CarsFirst(x, poly, PW='BAU'):
     D = dict()
         
     ### for drive first
+    st=.76; en=.1 if PW=='TF' else st
+    D['drive'] = InnoDiff(x, start=st, end=en, steepness=0.25, midpoint=2035)
     
+    st=.999; en=.15 if PW=='ST' else st
+    D['icev'] = InnoDiff(x,start=st,end=en, steepness=0.3,midpoint=2030)
 
-    st=0.76; en=st; 
-    if PW=='TF': en=0.1 
-    D['drive'] = InnoDiff(x, start=st, end=en,
-                          steepness=0.25, midpoint=2035)
-    
-    st=0.99; en=st;
-    if PW=='ST': en=0.15 
-    D['icev'] = InnoDiff(x,start=st,end=en,
-                        steepness=0.3,midpoint=2030)
+    st=.01; en=.95 if PW=='ST' else st
+    D['ev'] = InnoDiff(x, start=st, end=en, steepness=0.3, midpoint=2025)
 
-    st=0.01; en=st; 
-    if PW=='ST': en=0.95 
-    D['ev'] = InnoDiff(x, start=st, end=en,
-                   steepness=0.3, midpoint=2025)
-
-    st=0.5; en=st;
-    if PW=='TF': en=0.72 
-    D['public'] = InnoDiff(x, start=st, end=en,
-                     steepness=0.2, midpoint=2030 )
+    st=.5; en=.72 if PW=='TF' else st
+    D['public'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2030 )
 
     # no changes modelled 
-    D['ptrain'] = InnoDiff(x, start=0.77, end=0.77,
-                      steepness=1,  midpoint=2040 )
+    D['ptrain'] = InnoDiff(x, start=0.77, end=0.77, steepness=1,  midpoint=2040 )
 
     # no changes modelled 
-    D['cycle'] = InnoDiff(x, start=0.80, end=0.80,
-                     steepness=1, midpoint=2035 )
+    D['cycle'] = InnoDiff(x, start=0.80, end=0.80, steepness=1, midpoint=2035 )
 
-    st=0.93; en=st;
-    if PW=='TF': en=0.85 
-    D['bicycle'] = InnoDiff(x, start=st, end=en,
-                     steepness=0.3, midpoint=2030 )
+    st=.93; en=.85 if PW=='TF' else st
+    D['bicycle'] = InnoDiff(x, start=st, end=en, steepness=0.3, midpoint=2030 )
 
-    st=1; en=.9;
-    if PW=='ST': en=0.8 
-    D['bike'] = InnoDiff(x, start=st, end=en,
-                     steepness=0.25, midpoint=2022 )
+    st=.999; en=.8 if PW=='ST' else .9
+    D['bike'] = InnoDiff(x, start=st, end=en, steepness=0.25, midpoint=2022 )
 
-    st=0.999; en=st;
-    if PW=='ST': en=0.001 
-    D['moped'] = InnoDiff(x, start=st, end=en,
-                      steepness=0.3, midpoint=2025 )
+    st=.999; en=.01 if PW=='ST' else st
+    D['moped'] = InnoDiff(x, start=st, end=en, steepness=0.3, midpoint=2025 )
     
     ones = np.ones(len(x))
     ### cars
@@ -209,10 +193,8 @@ def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='
     CarCurve = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*0.5,
                         steepness=0.3, midpoint=2030 )
     CarCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=2.3e5)
-#    STV['icev'] = CarPerPkm*np.ones(len(CarCorr))
     STV['icev'] = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*1.22, steepness=.37, midpoint=2007 )
-    if PW=='RA':
-        STV['icev'] = CarCurve + CarCorr 
+    if PW=='RA': STV['icev'] = CarCurve + CarCorr 
     STV['ev'] = STV['icev']
     STV['hev'] = STV['icev']
     StackPlot(x, CarCurve, CarCorr, 'CarsPerPersonkm.png', figs=False)
@@ -222,31 +204,26 @@ def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='
     BikeCurve = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*0.75,
                       steepness=0.3, midpoint=2030 )
     BikeCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=5e6)
-#    STV['bike'] = BikePerPkm*np.ones(len(BikeCorr))
     STV['bike'] = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*1.42, steepness=.37, midpoint=2014 )
-    if PW=='RA':
-        STV['bike'] = BikeCurve +  BikeCorr
+    if PW=='RA': STV['bike'] = BikeCurve +  BikeCorr
     STV['ebike'] = STV['bike']
     StackPlot(x, BikeCurve, BikeCorr, 'BikesPerPersonkm.png', figs=False)
     
     ### train capacity per person kilometer, assumed to be constant
     TrainPerPkm = 1301/17.1
-    TrainCurve = InnoDiff(x, start=TrainPerPkm, end=TrainPerPkm,
-                      steepness=1, midpoint=2035 )
+    TrainCurve = InnoDiff(x, start=TrainPerPkm, end=TrainPerPkm, steepness=1, midpoint=2035 )
     STV['ptrain'] = TrainCurve
 
     ### buses per person kilometer, assumed to be constant
     BusPerPkm = 11634/6.7
-    BusCurve = InnoDiff(x, start=BusPerPkm, end=BusPerPkm,
-                      steepness=1, midpoint=2035 )
+    BusCurve = InnoDiff(x, start=BusPerPkm, end=BusPerPkm, steepness=1, midpoint=2035 )
     STV['bus'] = BusCurve
     
     ### mopeds per person kilometer, assumed to be constant
     MopedPerPkm = 0.7e6/1
     st=MopedPerPkm; en=st
     if PW=='ST': en=en*0.3
-    MopedCurve = InnoDiff(x, start=st, end=en,
-                      steepness=0.3, midpoint=2035 )
+    MopedCurve = InnoDiff(x, start=st, end=en, steepness=0.3, midpoint=2035 )
     STV['moped'] = MopedCurve
     STV['emoped'] = MopedCurve
     
@@ -271,34 +248,26 @@ def RoadFirst(x, poly, PW='BAU'):
         df = pd.concat([df, temp], ignore_index=True, sort=False)
         
     D = dict()
-    st=.6; en=st
-    if PW=='TF': en=.29
-    D['ROAD'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.2, midpoint=2035)
-    st=.06; en=st
-    if PW=='ST': en=.1
-    D['16TL'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.2, midpoint=2030)
-    st=.22; en=st
-    if PW=='ST': en=.4
-    D['40TL'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.2, midpoint=2030)
-    st=.11; en=st
-    if PW=='ST': en=.4
-    D['RAIL'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.2, midpoint=2030)
-    st=.47; en=st
-    if PW=='ST': en=.2
-    D['SBARGE'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.1, midpoint=2030)
-    st=.45; en=st
-    if PW=='ST': en=.2
-    D['MBARGE'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.1, midpoint=2030)
-    st=.6; en=st
-    if PW=='ST': en=.4
-    D['LBARGE'] = InnoDiff(x, start=st, end=en,
-                         steepness=0.1, midpoint=2030)
+    st=.6; en=.29 if PW=='TF' else st
+    D['ROAD'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2035)
+    
+    st=.06; en=.1 if PW=='ST' else st
+    D['16TL'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2030)
+    
+    st=.22; en=.4 if PW=='ST' else st
+    D['40TL'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2030)
+    
+    st=.11; en=.4 if PW=='TF' else st
+    D['RAIL'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2030)
+    
+    st=.47; en=.2 if PW=='ST' else st
+    D['SBARGE'] = InnoDiff(x, start=st, end=en, steepness=0.1, midpoint=2030)
+    
+    st=.45; en=.2 if PW=='ST' else st
+    D['MBARGE'] = InnoDiff(x, start=st, end=en, steepness=0.1, midpoint=2030)
+    
+    st=.6; en=.4 if PW=='ST' else st
+    D['LBARGE'] = InnoDiff(x, start=st, end=en, steepness=0.1, midpoint=2030)
     
     
     ones = np.ones(len(x))
@@ -354,10 +323,10 @@ def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BA
     STV['ftrain']  = trainCurve
 
     ### inland barges per ton-kilometer
-    XlbPerT = 5382/46.6 * 3500/1553
-    LbPerT = 5382/46.6 * 2500/1553
-    MbPerT = 5382/46.6 * 1500/1553
-    SbPerT = 5382/46.6 * 750/1553
+    XlbPerT = 5382/46.6 * 1153/3500
+    LbPerT = 5382/46.6 * 1553/2500
+    MbPerT = 5382/46.6 * 1553/1500
+    SbPerT = 5382/46.6 * 1553/750
     xlbCurve = InnoDiff(x, start=XlbPerT, end=XlbPerT*0.75 if PW=='RC' else XlbPerT, steepness=1, midpoint=2035 )
     lbCurve = InnoDiff(x, start=LbPerT, end=LbPerT*0.75 if PW=='RC' else LbPerT, steepness=1, midpoint=2035 )
     mbCurve = InnoDiff(x, start=MbPerT, end=MbPerT*0.75 if PW=='RC' else MbPerT, steepness=1, midpoint=2035 )
@@ -454,7 +423,7 @@ def SeaVessels(x, poly, driver='SeaTGW', PW='BAU'):
     for i in df['Vehicle'].unique():
         df.loc[df['Vehicle']==i, driver] = df.loc[df['Vehicle']==i, 'Share'].multiply(poly)
     
-    modemap = {'Sea vessels' : keys,
+    modemap = {'Seavessels' : keys,
                }
     for key in list(modemap.keys()):
         for i in range(len(modemap[key])):
@@ -674,3 +643,110 @@ def RunPW(PW, figs=False, wlo='laag'):
                                                   ))
         fig.show()
     return VIOS
+
+
+def PW5(\
+        PWs=['BAU', 'ST', 'RA', 'RC', 'TF'],
+        recalc_mass=False,
+        recalc_pw=False,
+        ):
+    
+    ### force mass recalc if pw are recalculated
+    if recalc_pw is True: 
+        recalc_mass=True
+    
+    if recalc_mass is False:
+        mat = pd.read_csv('data/PW5.csv', 
+                          index_col=False,
+                          na_filter=False,
+                          dtype = {\
+                                   'Year':'int16',
+                                   'Vehiclename':'str',
+                                   'Stock':'float64',
+                                   'Inflow':'float64',
+                                   'Outflow':'float64',
+                                   'Vehicle':'str',
+                                   'Class':'str',
+                                   'Vmass':'float64',
+                                   'lifespan':'float16',
+                                   'PW':'str',
+                                   'wlo':'str',
+                                   'Material Group':'str',
+                                   'Material':'str',
+                                   'Unitmass':'float64',
+                                   'Component':'str',
+                                   'Mstock':'float64',
+                                   'Minflow':'float64',
+                                   'Moutflow':'float64',
+                                   }
+                          )
+        
+    if recalc_mass is True:
+        
+        if recalc_pw is False:
+            dbx = pd.read_csv('data/VIOS.csv', index_col=False)
+            
+        if recalc_pw is True:
+            
+            dbx = pd.DataFrame()
+            for PW in PWs:
+                print('\nPathway: '+PW)
+                df = RunPW(PW, figs=False, wlo='laag')
+                dbx = pd.concat([dbx, df], ignore_index=True, sort=False)
+            
+            dbx = stocks.FixMatColumnTypes(dbx,
+                                    coltypes = {'Year':'int16',
+                                                'Vehicle':'str',
+                                                'Stock':'float64',
+                                                'Inflow':'float64',
+                                                'Outflow':'float64',
+                                                'Class':'str',
+                                                'Vehiclename':'str',
+                                                'Vmass':'float64',
+                                                'lifespan':'float16',
+                                                'PW':'str',
+                                                'wlo':'str',
+                                                })
+            dbx.to_csv('data/VIOS.csv', index=False)
+        
+        ### DO THE MASS CALCULATION
+        
+        ### prepare mass dataframe
+        path = 'data/fmass/'
+        cols = ['Material Group', 'Material', 'Unitmass', 'Vehicle', 'Component']
+        dbm = pd.DataFrame()
+        for i in os.listdir(path):
+            df = pd.read_csv(path+i)
+            if 'Component' not in df.columns: df['Component'] = ''
+            dbm = pd.concat([dbm, df[cols]], ignore_index=True, sort=False)
+        dbm = dbm[dbm['Unitmass']>0]
+        dbm = stocks.FixMatColumnTypes(dbm,
+                                coltypes = {'Material Group':'str',
+                                            'Material':'str',
+                                            'Unitmass':'float64',
+                                            'Vehicle':'str',
+                                            'Component':'str',
+                                            })
+        mat = pd.DataFrame()
+        for v in dbm['Vehicle'].unique():
+            df = pd.merge(dbx.loc[dbx['Vehicle']==v],
+                          dbm.loc[dbm['Vehicle']==v],
+                          on='Vehicle',
+                          how='outer',
+                          )
+            df['Mstock'] = df['Stock'] * df['Unitmass'] * df['Vmass']
+            df['Minflow'] = df['Inflow'] * df['Unitmass'] * df['Vmass']
+            df['Moutflow'] = df['Outflow'] * df['Unitmass'] * df['Vmass']
+            mat = pd.concat([mat, df], ignore_index=True, sort=False)
+        mat = mat.dropna(subset=['Year'])
+        mat = stocks.FixMatColumnTypes(mat,
+                        coltypes = {\
+                                    'Year':'int16',
+                                    'Mstock':'float64',
+                                    'Minflow':'float64',
+                                    'Moutflow':'float64',
+                                    })
+
+        
+        mat.to_csv('data/PW5.csv', index=False)
+    return mat

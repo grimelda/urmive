@@ -1,10 +1,37 @@
+
 import os
 import pandas as pd
 import pathways as pw
 import plotly.express as px
 import stocks
 
-#RA = pw.RunPW('RA', figs=True, wlo='laag')
+
+#%% 
+mat = pw.PW5(\
+             PWs=['BAU'],#, 'ST', 'RA', 'RC', 'TF']
+#             recalc_mass=True,
+#             recalc_pw=True,
+             )
+
+#%%
+
+PW='BAU'
+
+stocks.PlotMass2Dim(mat[mat['PW']==PW], 
+                    Dim=['Class', 'Material'], 
+                    materials = dict(include = ['All'], exclude = [None]),
+                    vehicles = dict(include = ['All'], exclude = [None]),
+                    classes = dict(include = ['All'], exclude = [None]),#['Cars','Bicycles','Transit', 'Airplanes']),
+#                     exportpdf = True,
+                    flow='Minflow',
+                    pathway=PW,
+                    )
+
+
+#%%
+
+
+'''
 
 #%%
 if not os.path.exists('data/PW5.csv'):
@@ -92,4 +119,6 @@ stocks.PlotMass2Dim(df,
 #                     exportpdf = True,
                     flow='Mstock',
                     )
+
+'''
 
