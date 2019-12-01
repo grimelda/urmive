@@ -20,14 +20,6 @@ import pandas as pd
  ) = stocks.UnifyMassData(dbx, dbm)
 
 mat = stocks.CalcMass(dbx, dbm)
-#hmm = pd.read_csv('data/hist_materials_map.csv', header=0,index_col=None)
-#mat = pd.merge(mat, hmm, on='Material', how='outer')
-#mat.at[:, 'Mass'] = mat.loc[:, 'Mass'].multiply(0.001)
-
-
-
-
-#mat.loc[mat['Vehicle']=='hmax','Mass'] * mat.loc[mat['Vehicle']=='hmax','Onderwerp'].astype('int')
 
 
 #%%
@@ -78,7 +70,7 @@ mat = stocks.CalcMass(dbx, dbm)
 #                               },                  
 #                    )
 stocks.PlotMass1Dim(mat, 
-                    Dim='Vehicle',
+                    Dim=['Vehicle'],
                     materials = {'include' : ['All'],
                                  'exclude' : [None],
                                  },

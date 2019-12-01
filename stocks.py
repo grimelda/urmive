@@ -421,6 +421,7 @@ def PlotMass2Dim(
                flow='Mass',
                category_orders={},
                groupnorm='',
+               pathway='',
                ):
     
     ### prepare mat df according to selection criteria
@@ -454,7 +455,9 @@ def PlotMass2Dim(
     
     fig.show()
     if exportpdf is True:
-        fig.write_image(str('figures/Sarea'
+        fig.write_image(str('figures/'
+                            +pathway
+                            +'Sarea'
                             +''.join(map(str, Dim))
                             +'M-'.join(map(str, materials['include']))[0:25]
                             +'V-'.join(map(str, vehicles['include']))[0:25]
@@ -463,7 +466,7 @@ def PlotMass2Dim(
     
 def PlotMass1Dim(
                mat,
-               Dim='Vehicle',
+               Dim=['Vehicle'],
                materials = {'include' : ['All'],
                             'exclude' : [None],
                             },
@@ -477,8 +480,9 @@ def PlotMass1Dim(
                category_orders={},
                flow='Mass',
                groupnorm='',
+               pathway='',
                ):
-    
+    Dim=Dim[0]
     ### prepare mat df according to selection criteria
     mat = PrepMat(mat, materials, vehicles, classes)
     
@@ -510,7 +514,9 @@ def PlotMass1Dim(
     
     fig.show()
     if exportpdf is True:
-        fig.write_image(str('figures/Sarea'
+        fig.write_image(str('figures/'
+                            +pathway
+                            +'Sarea'
                             +''.join(map(str, Dim))
                             +'M-'.join(map(str, materials['include']))[0:25]
                             +'V-'.join(map(str, vehicles['include']))[0:25]
