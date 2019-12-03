@@ -14,10 +14,10 @@ endmodel = 2051
 x = np.linspace(startmodel, endmodel, (1*(endmodel-startmodel))+1)
 
 #y = sf.LogisticSignal(x)
-y = sf.FlatSignal(x, step=-.2)
+y = sf.FlatSignal(x, step=-0)
 
-
-AvgLs = 15*np.ones(len(x))
+AvgLs = 15 * ((0.0164 * x) - 31.8)
+#AvgLs = 15*np.ones(len(x))
 
 #%%
 

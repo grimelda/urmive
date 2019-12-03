@@ -46,7 +46,7 @@ def InOutStock(\
     
     ### Notes the shape and lifespan values
     IOS['shape'] = shape
-    IOS['lifespan'] = np.mean(AvgLs)
+#    IOS['lifespan'] = np.mean(AvgLs)
     
     return IOS, dt
 
@@ -179,6 +179,7 @@ def InOutFlow_dt(\
     IOS.at[t, 'dstock'] = dstock
     IOS.at[t, 'Hist'] = hist
     IOS.at[t, 'Stock'] = sum(hist)
+    IOS.at[t, 'lifespan'] = AvgLs
     if dstock > 0:
         IOS.at[t, 'Infl_dt'] = dstock
         IOS.at[t, 'Outf_dt'] = deaths_age
