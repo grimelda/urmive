@@ -51,15 +51,16 @@ def InnoDiff(x, start=0, end=1, steepness=1, midpoint=2030):
     return y
 
 
-def BinaryShifts(x, D, mode, figs=False):
+def BinaryShifts(x, D, mode, figs=False, PW='err'):
     for key in D.keys():
         pal = sns.color_palette("Set1")
         y = [D[key], 1-D[key] ]
         plt.stackplot(x, y, colors=pal, alpha=0.6 )
-        plt.savefig(str('figures/WLOHP_Share'\
+        plt.savefig(str('figures/Binary'\
+                        +'_'+PW
                         +'_'+mode
                         +key
-                        +'.png'), dpi=300)
+                        +'.pdf'))#, dpi=300)
         if figs is True:
             plt.show()
         plt.clf()
@@ -71,21 +72,40 @@ def PlotService(x, df, y='Share',
                 savefig='pdf', 
                 color='Mode',
                 group='Vehicle',
+                PW='BAU'
                 ):
     fig = px.area(df, x = 'Year', y = y, 
                       color = color, 
                       line_group = group,
-                      width = 800,
-                      height = 500,
-                      ).update_layout(legend=dict(
-                                                  y=0.5, 
-                                                  traceorder='reversed', 
-                                                  font_size=10,
-                                                  ))
+                      width = 950,
+                      height = 400,
+                      ).update_layout(\
+#                                      xaxis_title="Year",
+#                                      yaxis_title="Mass [tons]" if ylabel is False else ylabel,
+                                      font = dict(
+                                              size=11,
+                                              family='Lato, sans serif'
+                                              ),
+                                      legend=dict(
+                                              y=0.5, 
+                                              traceorder='reversed',
+                                              ),
+                                      margin=dict(
+                                              l=50,r=0,b=30,t=0,pad=1
+                                              )
+                                      )
+    fig.for_each_trace(
+        lambda trace: trace.update(name=trace.name.replace('Mode=', '')),
+        )
+    fig.for_each_trace(
+        lambda trace: trace.update(name=trace.name.replace('Vehicle=', '')),
+        )
+
     if figs is True:
         fig.show()
         
-    fig.write_image(str('figures/WLO_'\
+    fig.write_image(str('figures/'\
+                                +PW+'_'\
                                 +scn+'_'\
                                 +y+'_'\
                                 +str(int(min(x)))\
@@ -124,10 +144,10 @@ def CarsFirst(x, poly, PW='BAU'):
     st=.76; en=.1 if PW=='TF' else st
     D['drive'] = InnoDiff(x, start=st, end=en, steepness=0.25, midpoint=2035)
     
-    st=.999; en=.15 if PW=='ST' else st
+    st=.99999; en=.15 if PW=='ST' else st
     D['icev'] = InnoDiff(x,start=st,end=en, steepness=0.3,midpoint=2030)
 
-    st=.01; en=.95 if PW=='ST' else st
+    st=.00001; en=.95 if PW=='ST' else st
     D['ev'] = InnoDiff(x, start=st, end=en, steepness=0.3, midpoint=2025)
 
     st=.5; en=.72 if PW=='TF' else st
@@ -142,7 +162,7 @@ def CarsFirst(x, poly, PW='BAU'):
     st=.93; en=.85 if PW=='TF' else st
     D['bicycle'] = InnoDiff(x, start=st, end=en, steepness=0.3, midpoint=2030 )
 
-    st=.999; en=.8 if PW=='ST' else .9
+    st=.999; en=.8 if PW=='ST' else st
     D['bike'] = InnoDiff(x, start=st, end=en, steepness=0.25, midpoint=2022 )
 
     st=.999; en=.01 if PW=='ST' else st
@@ -190,24 +210,24 @@ def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='
     
     ### cars per person kilometer
     CarPerPkm = 6.34e6/136.5
-    CarCurve = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*0.5,
-                        steepness=0.3, midpoint=2030 )
-    CarCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=2.3e5)
+#    CarCurve = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*0.5,
+#                        steepness=0.3, midpoint=2030 )
+#    CarCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=2.3e5)
     STV['icev'] = InnoDiff(x, start=CarPerPkm, end=CarPerPkm*1.22, steepness=.37, midpoint=2007 )
-    if PW=='RA': STV['icev'] = CarCurve + CarCorr 
+    if PW=='RA': STV['icev'] = STV['icev'] - InnoDiff(x, start=0, end=CarPerPkm*0.59, steepness=.3, midpoint=2030 )
     STV['ev'] = STV['icev']
     STV['hev'] = STV['icev']
-    StackPlot(x, CarCurve, CarCorr, 'CarsPerPersonkm.png', figs=False)
+#    StackPlot(x, CarCurve, CarCorr, 'CarsPerPersonkm.png', figs=False)
     
     ### bikes per person kilometer, assumed to be constant
     BikePerPkm = 17.8e6/15.5/20*19
-    BikeCurve = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*0.75,
-                      steepness=0.3, midpoint=2030 )
-    BikeCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=5e6)
+#    BikeCurve = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*0.75,
+#                      steepness=0.3, midpoint=2030 )
+#    BikeCorr = WeibCorr(x, start=2000, scale=20, shape=3, magn=5e6)
     STV['bike'] = InnoDiff(x, start=BikePerPkm, end=BikePerPkm*1.42, steepness=.37, midpoint=2014 )
-    if PW=='RA': STV['bike'] = BikeCurve +  BikeCorr
+    if PW=='RA': STV['bike'] = STV['bike'] - InnoDiff(x, start=0, end=CarPerPkm*0.47, steepness=.3, midpoint=2030 )
     STV['ebike'] = STV['bike']
-    StackPlot(x, BikeCurve, BikeCorr, 'BikesPerPersonkm.png', figs=False)
+#    StackPlot(x, BikeCurve, BikeCorr, 'BikesPerPersonkm.png', figs=False)
     
     ### train capacity per person kilometer, assumed to be constant
     TrainPerPkm = 1301/17.1
@@ -239,7 +259,7 @@ def ServiceToPersonVehicles(x, df, service='Person-kilometers', figs=False, PW='
 
 def RoadFirst(x, poly, PW='BAU'):
     df = pd.DataFrame()
-    keys = ['40tlorry', '28tlorry', '16tlorry', 'ftrain', 'xlbarge', 'lbarge', 'mbarge', 'sbarge']
+    keys = ['evan', 'icevan', '40tlorry', '28tlorry', '16tlorry', 'ftrain', 'xlbarge', 'lbarge', 'mbarge', 'sbarge']
     for key in keys:
         temp = pd.DataFrame()
         temp['Year'] = x
@@ -248,6 +268,12 @@ def RoadFirst(x, poly, PW='BAU'):
         df = pd.concat([df, temp], ignore_index=True, sort=False)
         
     D = dict()
+    st=.0797; en=.0797
+    D['VAN'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2035)
+
+    st=.001; en=.85 if PW=='ST' else st
+    D['EVAN'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2035)
+
     st=.6; en=.29 if PW=='TF' else st
     D['ROAD'] = InnoDiff(x, start=st, end=en, steepness=0.2, midpoint=2035)
     
@@ -271,22 +297,25 @@ def RoadFirst(x, poly, PW='BAU'):
     
     
     ones = np.ones(len(x))
-    df.loc[df['Vehicle']=='16tlorry', 'Share'] = D['ROAD'] * D['16TL']
-    df.loc[df['Vehicle']=='28tlorry', 'Share'] = D['ROAD'] * (ones - D['16TL']) * (ones - D['40TL'])
-    df.loc[df['Vehicle']=='40tlorry', 'Share'] = D['ROAD'] * (ones - D['16TL']) * D['40TL']
+    df.loc[df['Vehicle']=='evan', 'Share'] = D['VAN'] * D['EVAN']
+    df.loc[df['Vehicle']=='icevan', 'Share'] = D['VAN'] * (ones - D['EVAN'])
+
+    df.loc[df['Vehicle']=='16tlorry', 'Share'] = (ones - D['VAN']) * D['ROAD'] * D['16TL']
+    df.loc[df['Vehicle']=='28tlorry', 'Share'] = (ones - D['VAN']) * D['ROAD'] * (ones - D['16TL']) * (ones - D['40TL'])
+    df.loc[df['Vehicle']=='40tlorry', 'Share'] = (ones - D['VAN']) * D['ROAD'] * (ones - D['16TL']) * D['40TL']
 
     df.loc[df['Vehicle']=='ftrain', 'Share'] = (ones - D['ROAD']) * D['RAIL']
     
-    df.loc[df['Vehicle']=='sbarge', 'Share'] = (ones - D['ROAD']) * (ones - D['RAIL']) * D['SBARGE']
-    df.loc[df['Vehicle']=='mbarge', 'Share'] = (ones - D['ROAD']) * (ones - D['RAIL']) * (ones - D['SBARGE']) * D['MBARGE'] 
-    df.loc[df['Vehicle']=='lbarge', 'Share'] = (ones - D['ROAD']) * (ones - D['RAIL']) * (ones - D['SBARGE']) * (ones - D['MBARGE']) * D['LBARGE'] 
-    df.loc[df['Vehicle']=='xlbarge', 'Share'] = (ones - D['ROAD']) * (ones - D['RAIL']) * (ones - D['SBARGE']) * (ones - D['MBARGE']) * (ones - D['LBARGE'])
+    df.loc[df['Vehicle']=='sbarge', 'Share'] = (ones - D['VAN']) * (ones - D['ROAD']) * (ones - D['RAIL']) * D['SBARGE']
+    df.loc[df['Vehicle']=='mbarge', 'Share'] = (ones - D['VAN']) * (ones - D['ROAD']) * (ones - D['RAIL']) * (ones - D['SBARGE']) * D['MBARGE'] 
+    df.loc[df['Vehicle']=='lbarge', 'Share'] = (ones - D['VAN']) * (ones - D['ROAD']) * (ones - D['RAIL']) * (ones - D['SBARGE']) * (ones - D['MBARGE']) * D['LBARGE'] 
+    df.loc[df['Vehicle']=='xlbarge', 'Share'] = (ones - D['VAN']) * (ones - D['ROAD']) * (ones - D['RAIL']) * (ones - D['SBARGE']) * (ones - D['MBARGE']) * (ones - D['LBARGE'])
     
     df['Ton-kilometers'] = None
     for i in df['Vehicle'].unique():
         df.loc[df['Vehicle']==i, 'Ton-kilometers'] = df.loc[df['Vehicle']==i, 'Share'].multiply(poly)
     
-    modemap = {'Road' : ['40tlorry', '28tlorry', '16tlorry'],
+    modemap = {'Road' : ['evan', 'icevan', '40tlorry', '28tlorry', '16tlorry'],
                'Rail' : ['ftrain'],
                'Inland' : ['xlbarge', 'lbarge', 'mbarge', 'sbarge'],
                }
@@ -304,14 +333,18 @@ def RoadFirst(x, poly, PW='BAU'):
 
 def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BAU'):
     STV = dict()
-    
+    vanPerT = 852632/10
+    VanCurve = InnoDiff(x, start=vanPerT, end=vanPerT*0.75 if PW=='RA' else vanPerT, steepness=.2, midpoint=2035 )
+    STV['evan'] = VanCurve 
+    STV['icevan'] = VanCurve 
+
     ### lorries per ton kilometer
     lorry16PerT = 73418/54.1 * 20.3/16 #136000/54.1*28/16
     lorry28PerT = 73418/54.1 * 20.3/28 #136000/54.1*28/28
     lorry40PerT = 73418/54.1 * 20.3/40 #236000/54.1*28/40
-    L16Curve = InnoDiff(x, start=lorry16PerT, end=lorry16PerT*0.75 if PW=='RC' else lorry16PerT, steepness=1, midpoint=2035 )
-    L28Curve = InnoDiff(x, start=lorry28PerT, end=lorry28PerT*0.75 if PW=='RC' else lorry28PerT, steepness=1, midpoint=2035 )
-    L40Curve = InnoDiff(x, start=lorry40PerT, end=lorry40PerT*0.75 if PW=='RC' else lorry40PerT, steepness=1, midpoint=2035 )
+    L16Curve = InnoDiff(x, start=lorry16PerT, end=lorry16PerT*0.75 if PW=='RA' else lorry16PerT, steepness=.2, midpoint=2035 )
+    L28Curve = InnoDiff(x, start=lorry28PerT, end=lorry28PerT*0.75 if PW=='RA' else lorry28PerT, steepness=.2, midpoint=2035 )
+    L40Curve = InnoDiff(x, start=lorry40PerT, end=lorry40PerT*0.75 if PW=='RA' else lorry40PerT, steepness=.2, midpoint=2035 )
     STV['16tlorry'] = L16Curve 
     STV['28tlorry'] = L28Curve
     STV['40tlorry'] = L40Curve
@@ -323,14 +356,14 @@ def ServiceToFreightVehicles(x, df, service='Ton-kilometers', figs=False, PW='BA
     STV['ftrain']  = trainCurve
 
     ### inland barges per ton-kilometer
-    XlbPerT = 5382/46.6 * 1153/3500
-    LbPerT = 5382/46.6 * 1553/2500
-    MbPerT = 5382/46.6 * 1553/1500
-    SbPerT = 5382/46.6 * 1553/750
-    xlbCurve = InnoDiff(x, start=XlbPerT, end=XlbPerT*0.75 if PW=='RC' else XlbPerT, steepness=1, midpoint=2035 )
-    lbCurve = InnoDiff(x, start=LbPerT, end=LbPerT*0.75 if PW=='RC' else LbPerT, steepness=1, midpoint=2035 )
-    mbCurve = InnoDiff(x, start=MbPerT, end=MbPerT*0.75 if PW=='RC' else MbPerT, steepness=1, midpoint=2035 )
-    sbCurve = InnoDiff(x, start=SbPerT, end=SbPerT*0.75 if PW=='RC' else SbPerT, steepness=1, midpoint=2035 )
+    XlbPerT = 2.45 * 5382/46.6 * 1153/3500
+    LbPerT = 2.45 * 5382/46.6 * 1553/2500
+    MbPerT = 2.45 * 5382/46.6 * 1553/1500
+    SbPerT = 2.45 *5382/46.6 * 1553/750
+    xlbCurve = InnoDiff(x, start=XlbPerT, end=XlbPerT*0.75 if PW=='RA' else XlbPerT, steepness=.2, midpoint=2035 )
+    lbCurve = InnoDiff(x, start=LbPerT, end=LbPerT*0.75 if PW=='RA' else LbPerT, steepness=.2, midpoint=2035 )
+    mbCurve = InnoDiff(x, start=MbPerT, end=MbPerT*0.75 if PW=='RA' else MbPerT, steepness=.2, midpoint=2035 )
+    sbCurve = InnoDiff(x, start=SbPerT, end=SbPerT*0.75 if PW=='RA' else SbPerT, steepness=.2, midpoint=2035 )
     STV['xlbarge']  = xlbCurve
     STV['lbarge']  = lbCurve  
     STV['mbarge']  = mbCurve  
@@ -448,13 +481,13 @@ def ServiceToSeaVehicles(x, df, service='SeaTGW', figs=False, PW='BAU'):
     ### for output
     df['VehicleCount'] = None
     for key in keys:
-        df.at[df['Vehicle']==key, 'VehicleCount'] = (1400 / 6070 * GDP) * df.loc[df['Vehicle']==key, 'Share']
+        df.at[df['Vehicle']==key, 'VehicleCount'] = (0.84 * 1400 / 6070 * GDP) * df.loc[df['Vehicle']==key, 'Share']
 
     return df, STV
 
 def RunPW(PW, figs=False, wlo='laag'):
     ### set x-axis and fidelity.
-    startmodel = 1999
+    startmodel = 2000
     endmodel = 2051
     x = np.linspace(startmodel, endmodel, endmodel-startmodel+1)
     
@@ -487,71 +520,71 @@ def RunPW(PW, figs=False, wlo='laag'):
     ###   P E R S O N A L   T R A N S P O R T 
     if wlo=='hoog':    
         dfP, DP = CarsFirst(x, PolyHP, PW=PW)
-        BinaryShifts(x, DP, 'HoogPerson')
+        BinaryShifts(x, DP, 'HoogPerson', PW=PW)
         dfP, STVp = ServiceToPersonVehicles(x, dfP, PW=PW)
         PlotService(x, dfP, y='Share', scn='HoogPerson')
-        PlotService(x, dfP, y='Person-kilometers', scn='HoogPerson', figs=figs)
-        PlotService(x, dfP, y='VehicleCount', scn='HoogPerson', figs=figs)
+        PlotService(x, dfP, y='Person-kilometers', scn='HoogPerson', figs=figs, PW=PW)
+        PlotService(x, dfP, y='VehicleCount', scn='HoogPerson', figs=figs, PW=PW)
     
     if wlo=='laag':
         dfP, DP = CarsFirst(x, PolyLP, PW=PW)
-        BinaryShifts(x, DP, 'LaagPerson')
+        BinaryShifts(x, DP, 'LaagPerson', PW=PW)
         dfP, STVp = ServiceToPersonVehicles(x, dfP, PW=PW)
         PlotService(x, dfP, y='Share', scn='LaagPerson')
-        PlotService(x, dfP, y='Person-kilometers', scn='LaagPerson', figs=figs)
-        PlotService(x, dfP, y='VehicleCount', scn='LaagPerson', figs=figs)
+        PlotService(x, dfP, y='Person-kilometers', scn='LaagPerson', figs=figs, PW=PW)
+        PlotService(x, dfP, y='VehicleCount', scn='LaagPerson', figs=figs, PW=PW)
     
     ###   F R E I G H T   T R A N S P O R T 
     if wlo=='hoog':    
         dfF, DF = RoadFirst(x, PolyHF)
-        BinaryShifts(x, DF, 'HoogFreight')
+        BinaryShifts(x, DF, 'HoogFreight', PW=PW)
         dfF, STVf = ServiceToFreightVehicles(x, dfF, PW=PW)
         PlotService(x, dfF, y='Share', scn='HoogFreight')
-        PlotService(x, dfF, y='Ton-kilometers', scn='HoogFreight', figs=figs)
-        PlotService(x, dfF, y='VehicleCount', scn='HoogFreight', figs=figs)
+        PlotService(x, dfF, y='Ton-kilometers', scn='HoogFreight', figs=figs, PW=PW)
+        PlotService(x, dfF, y='VehicleCount', scn='HoogFreight', figs=figs, PW=PW)
     
     if wlo=='laag':
         dfF, DF = RoadFirst(x, PolyLF, PW=PW)
-        BinaryShifts(x, DF, 'LaagFreight')
+        BinaryShifts(x, DF, 'LaagFreight', PW=PW)
         dfF, STVf = ServiceToFreightVehicles(x, dfF, PW=PW)
         PlotService(x, dfF, y='Share', scn='LaagFreight')
-        PlotService(x, dfF, y='Ton-kilometers', scn='LaagFreight', figs=figs)
-        PlotService(x, dfF, y='VehicleCount', scn='LaagFreight', figs=figs)
+        PlotService(x, dfF, y='Ton-kilometers', scn='LaagFreight', figs=figs, PW=PW)
+        PlotService(x, dfF, y='VehicleCount', scn='LaagFreight', figs=figs, PW=PW)
     
     ### F L I G H T   M O D E L I N G 
     if wlo=='hoog':    
         dfAC, DAC = Flights(x, PolyHAC)
-        BinaryShifts(x, DAC, 'HoogAir')
-        dfAC, STVac = ServiceToFlightVehicles(x, dfAC, service='Person-movements')
+        BinaryShifts(x, DAC, 'HoogAir', PW=PW)
+        dfAC, STVac = ServiceToFlightVehicles(x, dfAC, service='Person-movements', PW=PW)
         PlotService(x, dfAC, y='Share', scn='HoogAir')
-        PlotService(x, dfAC, y='Person-movements', scn='HoogAir')
-        PlotService(x, dfAC, y='VehicleCount', scn='HoogAir', figs=figs, color='Vehicle')
+        PlotService(x, dfAC, y='Person-movements', scn='HoogAir', figs=figs, PW=PW)
+        PlotService(x, dfAC, y='VehicleCount', scn='HoogAir', figs=figs, color='Vehicle', PW=PW)
     
     if wlo=='laag':
         dfAC, DAC = Flights(x, PolyLAC, PW=PW)
-        BinaryShifts(x, DAC, 'LaagAir')
+        BinaryShifts(x, DAC, 'LaagAir', PW=PW)
         dfAC, STVlac = ServiceToFlightVehicles(x, dfAC, service='Person-movements', PW=PW)
         PlotService(x, dfAC, y='Share', scn='LaagAir')
-        PlotService(x, dfAC, y='Person-movements', scn='LaagAir')
-        PlotService(x, dfAC, y='VehicleCount', scn='LaagAir', figs=figs, color='Vehicle')
+        PlotService(x, dfAC, y='Person-movements', scn='LaagAir', figs=figs, PW=PW)
+        PlotService(x, dfAC, y='VehicleCount', scn='LaagAir', figs=figs, color='Vehicle', PW=PW)
     
     
     ### S E A   M O D E L I N G    
     if wlo=='hoog':    
         dfSV, DSV = SeaVessels(x, PolyHSV)
         BinaryShifts(x, DSV, 'HoogTGW')
-        dfSV, STVhsv = ServiceToSeaVehicles(x, dfSV, service='SeaTGW')
+        dfSV, STVhsv = ServiceToSeaVehicles(x, dfSV, service='SeaTGW', PW=PW)
         PlotService(x, dfSV, y='Share', scn='HoogSea')
-        PlotService(x, dfSV, y='SeaTGW', scn='HoogSea')
-        PlotService(x, dfSV, y='VehicleCount', scn='HoogSea', figs=figs, color='Vehicle')
+        PlotService(x, dfSV, y='SeaTGW', scn='HoogSea', figs=figs, PW=PW)
+        PlotService(x, dfSV, y='VehicleCount', scn='HoogSea', figs=figs, color='Vehicle', PW=PW)
     
     if wlo=='laag':
         dfSV, DSV = SeaVessels(x, PolyLSV, PW=PW)
         BinaryShifts(x, DSV, 'LaagTGW')
         dfSV, STVlsv = ServiceToSeaVehicles(x, dfSV, service='SeaTGW', PW=PW)
         PlotService(x, dfSV, y='Share', scn='LaagSea')
-        PlotService(x, dfSV, y='SeaTGW', scn='LaagSea')
-        PlotService(x, dfSV, y='VehicleCount', scn='LaagSea', figs=figs, color='Vehicle')
+        PlotService(x, dfSV, y='SeaTGW', scn='LaagSea', figs=figs, PW=PW)
+        PlotService(x, dfSV, y='VehicleCount', scn='LaagSea', figs=figs, color='Vehicle', PW=PW)
 
     
     ### combines all dataframes to a single Vehicle Count dataframe
@@ -571,7 +604,7 @@ def RunPW(PW, figs=False, wlo='laag'):
     for v in vios.keys():
 #        print(v)
         vios[v]['lifespan'] = np.ones(len(x))*lifespan.loc[lifespan['Vehiclename']==v, 'lifespan'].values[0]
-        if PW=='RC': vios[v]['lifespan'] = vios[v]['lifespan'] * ((0.0164 * x) - 31.8)
+        if PW=='RC': vios[v]['lifespan'] = vios[v]['lifespan'] * np.append(np.ones(20),((0.0164 * x) - 31.8))[:-20]
         vios[v]['Vehicle'] = lifespan.loc[lifespan['Vehiclename']==v, 'Vehicle'].values[0]
         vios[v]['shape'] = lifespan.loc[lifespan['Vehiclename']==v, 'shape'].values[0]
         vios[v]['Class'] = lifespan.loc[lifespan['Vehiclename']==v, 'Class'].values[0]
@@ -589,6 +622,8 @@ def RunPW(PW, figs=False, wlo='laag'):
                                 )
         vios[v]['i'] = np.array(IOS['Infl'])
         vios[v]['o'] = np.array(IOS['Outf'])
+        vios[v]['lifespan'] = np.array(IOS['lifespan'])
+
     
     ### serve vios dictionary to dataframe
     VIOS = pd.DataFrame()
@@ -602,7 +637,7 @@ def RunPW(PW, figs=False, wlo='laag'):
         temp.at[:, 'Class'] = vios[key]['Class']
         temp.at[:, 'Vehicle'] = vios[key]['Vehicle']
         temp.at[:, 'Vmass'] = vios[key]['Vmass']
-        temp.at[:, 'lifespan'] = vios[key]['lifespan'].mean()
+        temp.at[:, 'lifespan'] = vios[key]['lifespan']
 
         VIOS = pd.concat([VIOS, temp], ignore_index=True, sort=False)
     
@@ -680,6 +715,7 @@ def PW5(\
                                    'Moutflow':'float64',
                                    }
                           )
+        dbx = pd.read_csv('data/VIOS.csv', index_col=False)
         
     if recalc_mass is True:
         
@@ -709,44 +745,56 @@ def PW5(\
                                                 })
             dbx.to_csv('data/VIOS.csv', index=False)
         
-        ### DO THE MASS CALCULATION
-        
-        ### prepare mass dataframe
-        path = 'data/fmass/'
-        cols = ['Material Group', 'Material', 'Unitmass', 'Vehicle', 'Component']
-        dbm = pd.DataFrame()
-        for i in os.listdir(path):
-            df = pd.read_csv(path+i)
-            if 'Component' not in df.columns: df['Component'] = ''
-            dbm = pd.concat([dbm, df[cols]], ignore_index=True, sort=False)
-        dbm = dbm[dbm['Unitmass']>0]
-        dbm = stocks.FixMatColumnTypes(dbm,
-                                coltypes = {'Material Group':'str',
-                                            'Material':'str',
-                                            'Unitmass':'float64',
-                                            'Vehicle':'str',
-                                            'Component':'str',
-                                            })
-        mat = pd.DataFrame()
-        for v in dbm['Vehicle'].unique():
-            df = pd.merge(dbx.loc[dbx['Vehicle']==v],
-                          dbm.loc[dbm['Vehicle']==v],
-                          on='Vehicle',
-                          how='outer',
-                          )
-            df['Mstock'] = df['Stock'] * df['Unitmass'] * df['Vmass']
-            df['Minflow'] = df['Inflow'] * df['Unitmass'] * df['Vmass']
-            df['Moutflow'] = df['Outflow'] * df['Unitmass'] * df['Vmass']
-            mat = pd.concat([mat, df], ignore_index=True, sort=False)
-        mat = mat.dropna(subset=['Year'])
-        mat = stocks.FixMatColumnTypes(mat,
-                        coltypes = {\
-                                    'Year':'int16',
-                                    'Mstock':'float64',
-                                    'Minflow':'float64',
-                                    'Moutflow':'float64',
-                                    })
+    ### DO THE MASS CALCULATION
+    
+    ### prepare mass dataframe
+    path = 'data/fmass/'
+    cols = ['Material Group', 'Material', 'Unitmass', 'Vehicle', 'Component']
+    dbm = pd.DataFrame()
+    for i in os.listdir(path):
+        df = pd.read_csv(path+i)
+        if 'Component' not in df.columns: df['Component'] = ''
+        dbm = pd.concat([dbm, df[cols]], ignore_index=True, sort=False)
+    dbm = dbm[dbm['Unitmass']>0]
+    dbm = stocks.FixMatColumnTypes(dbm,
+                            coltypes = {'Material Group':'str',
+                                        'Material':'str',
+                                        'Unitmass':'float64',
+                                        'Vehicle':'str',
+                                        'Component':'str',
+                                        })
+    mat = pd.DataFrame()
+    for v in dbm['Vehicle'].unique():
+        df = pd.merge(dbx.loc[dbx['Vehicle']==v],
+                      dbm.loc[dbm['Vehicle']==v],
+                      on='Vehicle',
+                      how='outer',
+                      )
+        df['Mstock'] = df['Stock'] * df['Unitmass'] * df['Vmass'] /1e3
+        df['Minflow'] = df['Inflow'] * df['Unitmass'] * df['Vmass'] /1e3
+        df['Moutflow'] = df['Outflow'] * df['Unitmass'] * df['Vmass'] /1e3
+        mat = pd.concat([mat, df], ignore_index=True, sort=False)
+    mat = mat.dropna(subset=['Year'])
+    mat = stocks.FixMatColumnTypes(mat,
+                    coltypes = {\
+                                'Year':'int16',
+                                'Mstock':'float64',
+                                'Minflow':'float64',
+                                'Moutflow':'float64',
+                                })
+    
+    mat = mat.drop(columns=['Component', 'wlo', 'lifespan'])
+    mat
+    mat.to_csv('data/PW5.csv', index=False)
+    
+    first = 2020
+    last = 2051
+    mat['MinflowCum'] = 0
+    mat['MoutflowCum'] = 0
+    for year in list(range(first,last)):
+        mat.loc[mat['Year']==year, 'MinflowCum'] = mat.loc[mat['Year']==year, 'Minflow'] + np.array(mat.loc[mat['Year']==year-1, 'MinflowCum'])
+        mat.loc[mat['Year']==year, 'MoutflowCum'] = mat.loc[mat['Year']==year, 'Moutflow'] + np.array(mat.loc[mat['Year']==year-1, 'MoutflowCum'])
 
         
-        mat.to_csv('data/PW5.csv', index=False)
-    return mat
+    
+    return dbx, dbm, mat

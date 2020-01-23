@@ -1,17 +1,17 @@
 Material Group,Material,Unitmass,Vehicle,Class,Part,Partmass,Scaledmass
-Nonferrous metals,Aluminium,7.699006E-01,B747,Aircraft,Structure,,148635
-Ferrous metals,Steel,1.235643E-01,B747,Aircraft,Structure,,23855
-Nonferrous metals,Titanium,3.446643E-03,B747,Aircraft,Structure,,665.4
+Aluminium,Aluminium,7.699006E-01,B747,Aircraft,Structure,,148635
+"Metals, ferrous",Steel,1.235643E-01,B747,Aircraft,Structure,,23855
+"Metals, other nonferrous",Titanium,3.446643E-03,B747,Aircraft,Structure,,665.4
 Composites,Composites,9.504945E-03,B747,Aircraft,Structure,,1835
-Other,Other,9.504945E-03,B747,Aircraft,Structure,,1835
+Unknown,Other,9.504945E-03,B747,Aircraft,Structure,,1835
 ,Engine,,B747,Aircraft,Engine,16232,
-Nonferrous metals,Titanium,3.457313E-02,B747,Aircraft,Engine,0.4112,6674.5984
-Nonferrous metals,Nickel,1.857297E-02,B747,Aircraft,Engine,0.2209,3585.6488
+"Metals, other nonferrous",Titanium,3.457313E-02,B747,Aircraft,Engine,0.4112,6674.5984
+"Metals, other nonferrous",Nickel,1.857297E-02,B747,Aircraft,Engine,0.2209,3585.6488
 "Critical Raw Materials, CRM",Magnesium,1.600016E-02,B747,Aircraft,Engine,0.1903,3088.9496
-Ferrous metals,Chromium,5.532373E-03,B747,Aircraft,Engine,0.0658,1068.0656
-Nonferrous metals,Aluminium,3.951695E-03,B747,Aircraft,Engine,0.047,762.904
+"Metals, ferrous",Chromium,5.532373E-03,B747,Aircraft,Engine,0.0658,1068.0656
+Aluminium,Aluminium,3.951695E-03,B747,Aircraft,Engine,0.047,762.904
 "Critical Raw Materials, CRM",Cobalt,2.177636E-03,B747,Aircraft,Engine,0.0259,420.4088
-Nonferrous metals,Molybdenum,1.580678E-03,B747,Aircraft,Engine,0.0188,305.1616
+"Metals, other nonferrous",Molybdenum,1.580678E-03,B747,Aircraft,Engine,0.0188,305.1616
 "Critical Raw Materials, CRM",Columbium,9.921277E-04,B747,Aircraft,Engine,0.0118,191.5376
 "Critical Raw Materials, CRM",Tantalum,2.774594E-04,B747,Aircraft,Engine,0.0033,53.5656
 "Critical Raw Materials, CRM",Tungsten,1.933808E-04,B747,Aircraft,Engine,0.0023,37.3336

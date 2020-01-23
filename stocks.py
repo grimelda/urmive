@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 
 #%% high level defs
@@ -69,8 +70,9 @@ def CalcMass(
     
     missing = list(set(dbx['Vehicle']) - set(dbm.keys()))
     if len(missing) > 0:
-        print('No material data was found for',len(missing),'vehicle types...\n')
-    
+#        print('No material data was found for',len(missing),'vehicle types...\n')
+        pass
+        
     mat = pd.DataFrame() 
     for key in list(dbm.keys()):
         df = dbx.loc[dbx['Vehicle'] == key].merge(
@@ -101,15 +103,27 @@ def CalcMass(
                                         'ev',
                                         'hev',
                                         'icev',
-                                        'icevan2',
+#                                        'icevan',
 #                                         'wagon',
                                         ])
     
     hmm = pd.read_csv('data/hist_materials_map.csv', header=0,index_col=None)
     mat = pd.merge(mat, hmm, on='Material', how='outer')
     
+    domainmap = {'Aircraft' : 'Passenger',
+                 'Bicycles' : 'Passenger',
+                 'Cars' : 'Passenger',
+                 'Inlandvessels' : 'Freight',
+                 'Pleziervaartuigen' : 'Passenger',
+                 'Seavessels' : 'Freight',
+                 'Transit' : 'Passenger',
+                 'Utilitycars' : 'Freight'}
+
+    mat['Domain'] = mat['Class'].map(domainmap)
+    
     mat.at[:, 'Mass'] = mat.loc[:, 'Mass'].multiply(0.001)
     mat = mat[mat['Mass']>0]
+    
     return mat
 
 def FixMatColumnTypes(\
@@ -377,31 +391,38 @@ def CarAvgWeight(dba): # not used in stocks.py but keeping it for manual output
 
 #%%
 ###  visualisation plots plotting defs
-def PrepMat(mat, materials, vehicles, classes):
-    
-    for each in [materials['include'], 
-                 vehicles['include'],
-                 classes['include'],
-                 ]:
-        each = StrToList(each)
-    
+def PrepMat(mat, materials, vehicles, classes, matgroup, domain):
+        
     ### filter for selected materials
-    if materials['include'] == ['All']: pass
-    else: mat = mat.loc[mat['Material'].isin(materials['include'])]
+    if not materials['include'] == ['All']: 
+        mat = mat.loc[mat['Material'].isin(materials['include'])]
+    if not materials['exclude'] == [None]:
+        mat = mat.loc[~(mat['Material'].isin(materials['exclude']))]
     
     ### exlcude or include certain classes. be sane plz, can be mutually exclusive
-    if classes['include'] == ['All']:
-        classes['include'] = list(set(mat['Class']))
-    mat = mat.loc[mat['Class'].isin(classes['include'])]
-    if classes['exclude'] == [None]: pass
-    else: mat = mat.loc[~(mat['Class'].isin(classes['exclude']))]
+    if not classes['include'] == ['All']: 
+        mat = mat.loc[mat['Class'].isin(classes['include'])]
+    if not classes['exclude'] == [None]: 
+        mat = mat.loc[~(mat['Class'].isin(classes['exclude']))]
     
     ### exlcude or include certain vehicles. be sane plz, can be mutually exclusive
-    if vehicles['include'] == ['All']:
-        vehicles['include'] = [x.replace('.csv','') for x in os.listdir('data/mass/') if x.endswith('.csv')]
-    mat = mat.loc[mat['Vehicle'].isin(vehicles['include'])]
-    if vehicles['exclude'] == [None]: pass
-    else: mat = mat.loc[~(mat['Vehicle'].isin(vehicles['exclude']))]
+    if not vehicles['include'] == ['All']:
+        mat = mat.loc[mat['Vehicle'].isin(vehicles['include'])]
+    if not vehicles['exclude'] == [None]:
+        mat = mat.loc[~(mat['Vehicle'].isin(vehicles['exclude']))]
+    
+    ### exlcude or include certain material groups. be sane plz, can be mutually exclusive
+    if not matgroup['include'] == ['All']:
+        mat = mat.loc[mat['Material Group'].isin(matgroup['include'])]
+    if not matgroup['exclude'] == [None]: 
+        mat = mat.loc[~(mat['Material Group'].isin(matgroup['exclude']))]
+        
+    ### exlcude or include certain domains. be sane plz, can be mutually exclusive
+    if not domain['include'] == ['All']:
+        mat = mat.loc[mat['Domain'].isin(domain['include'])]
+    if not domain['exclude'] == [None]: 
+        mat = mat.loc[~(mat['Domain'].isin(domain['exclude']))]
+
     
     return mat
 
@@ -417,15 +438,26 @@ def PlotMass2Dim(
                classes = {'include' : ['All'],
                           'exclude' : [None],
                           },
+               matgroup = {'include' : ['All'],
+                           'exclude' : [None],
+                           },
+               domain = {'include' : ['All'], 
+                         'exclude' : [None],
+                         },
                exportpdf=False,
+               filename=False,
                flow='Mass',
                category_orders={},
                groupnorm='',
-               pathway='',
+               pathway='Hist',
+               ylabel=False,
+               filetype='pdf',
+               w=None,
+               h=None,
                ):
     
     ### prepare mat df according to selection criteria
-    mat = PrepMat(mat, materials, vehicles, classes)
+    mat = PrepMat(mat, materials, vehicles, classes, matgroup, domain)
         
     ### combine masses
     mat = mat.groupby(['Year',Dim[0],Dim[1]]).sum().reset_index(drop=False)
@@ -438,30 +470,46 @@ def PlotMass2Dim(
     ### plot the shit
     fig = px.area(mat, x = 'Year', y = flow, 
                   color = Dim[0], 
-                  width = 800,
-                  height = 500,
+                  width = w,
+                  height = h,
                   line_group = Dim[1],
                   groupnorm=groupnorm,
                   category_orders=category_orders,
                   ).update_layout(\
                                   xaxis_title="Year",
-                                  yaxis_title="Mass [tons]",
-                                  font = dict(size=11,
-                                              family='Lato, sans serif'),
+                                  yaxis_title="Mass [tons]" if ylabel is False else ylabel,
+                                  font = dict(
+                                          size=11,
+                                          family='Lato, sans serif'
+                                          ),
                                   legend=dict(
-                                              y=0.5, 
-                                              traceorder='reversed',
-                                              ))
-    
+                                          y=0.5, 
+                                          traceorder='reversed',
+                                          ),
+                                  margin=dict(
+                                          l=50,r=0,b=30,t=0,pad=1
+                                          )
+                                  )
+    fig.for_each_trace(
+        lambda trace: trace.update(name=trace.name.replace(Dim[0]+'=', '')),
+        )
+
     fig.show()
+        
+    pathstring = str('figures/'
+                     +pathway+'_'
+                     +''.join(map(str, Dim))+'_'
+                     +'MG-'+''.join(map(str, matgroup['include']))+'_'
+                     +'D-'+''.join(map(str, domain['include']))+'_'
+                     +'C-'+''.join(map(str, classes['include']))
+                     +'.'+filetype) if filename is False else 'figures/'+filename
+    
     if exportpdf is True:
-        fig.write_image(str('figures/'
-                            +pathway
-                            +'Sarea'
-                            +''.join(map(str, Dim))
-                            +'M-'.join(map(str, materials['include']))[0:25]
-                            +'V-'.join(map(str, vehicles['include']))[0:25]
-                            +'.pdf'))
+        fig.write_image(
+                pathstring, 
+#                 dpi=300 if filetype=='png' else None,
+                )
+    
 
     
 def PlotMass1Dim(
@@ -476,51 +524,83 @@ def PlotMass1Dim(
                classes = {'include' : ['All'],
                           'exclude' : [None],
                           },
-               exportpdf=False, 
+               matgroup = {'include' : ['All'],
+                           'exclude' : [None],
+                           },
+               domain = {'include' : ['All'], 
+                         'exclude' : [None],
+                         },
+               exportpdf=False,
+               filename=False,
                category_orders={},
                flow='Mass',
                groupnorm='',
-               pathway='',
+               pathway='Hist',
+               ylabel="Mass [tons]",
+               filetype='pdf',
+               w=None,
+               h=None,
                ):
     Dim=Dim[0]
     ### prepare mat df according to selection criteria
-    mat = PrepMat(mat, materials, vehicles, classes)
+    mat = PrepMat(mat, materials, vehicles, classes, matgroup, domain)
     
     ### combine masses
     mat = mat.groupby(['Year', Dim]).sum().reset_index(drop=False)
     
     ### allow sorting by material and vehicle in plot. mat[mat['Year']==max(mat['Year'])]
-    mat[str(Dim+'Sum')] = mat[Dim].map(dict(mat[mat['Year']==max(mat['Year'])].groupby(by=Dim)
+    mat[str(Dim+'Sum')] = mat[Dim].map(dict(mat[mat['Year']==max(mat['Year'])]\
+                                           .groupby(by=Dim)
                                            .sum()[flow]
-                                           .sort_values(ascending=False)))
+                                           .sort_values(ascending=False))
+                                           )
     mat = mat.sort_values(str(Dim+'Sum'), ascending=True)
     
     ### plot the shit
-    fig = px.area(mat, x = 'Year', y = flow, 
+    fig = px.bar(mat, x = 'Year', y = flow, 
                   color = Dim, 
-                  width = 800,
-                  height = 500,
-                  groupnorm=groupnorm,
+                  width = w,
+                  height = h,
+#                  groupnorm=groupnorm,
                   category_orders=category_orders,
                   ).update_layout(\
                                   xaxis_title="Year",
-                                  yaxis_title="Mass [tons]",
-                                  font = dict(size=11,
-                                              family='Lato, sans serif'),
+                                  yaxis_title=ylabel,
+                                  font = dict(
+                                          size=11,
+                                          family='Lato, sans serif'
+                                          ),
                                   legend=dict(
-                                              y=0.5, 
-                                              traceorder='reversed',
-                                              ))
+                                          y=0.5, 
+                                          traceorder='reversed',
+                                          ),
+                                  margin=dict(
+                                          l=50,r=0,b=30,t=0,pad=1
+                                          ),
+                                  bargap=0,
+                                  )
+    fig.for_each_trace(
+            lambda trace: trace.update(name=trace.name.replace(Dim+'=', '')),
+            )
     
     fig.show()
+    
+    pathstring = str('figures/'
+                     +pathway+'_'
+                     +''.join(map(str, Dim))+'_'
+                     +'MG-'+''.join(map(str, matgroup['include']))+'_'
+                     +'D-'+''.join(map(str, domain['include']))+'_'
+                     +'C-'+''.join(map(str, classes['include']))
+                     +ylabel.split('[')[0]
+                     +'.'+filetype).replace(' ','') if filename is False else 'figures/'+filename
+    
     if exportpdf is True:
-        fig.write_image(str('figures/'
-                            +pathway
-                            +'Sarea'
-                            +''.join(map(str, Dim))
-                            +'M-'.join(map(str, materials['include']))[0:25]
-                            +'V-'.join(map(str, vehicles['include']))[0:25]
-                            +'.pdf'))
+        fig.write_image(
+                pathstring, 
+#                 dpi=300 if filetype=='png' else None,
+                )
+    
+
         
 def TreeChart(mat,
               slx = [],
@@ -555,7 +635,6 @@ def TreeChart(mat,
     colorlover = list(reversed(cl.scales[str(len(values))]['seq']['Blues']))
     shapes = []
     annotations = []
-    counter = 0
 
     for r, val, color, label in zip(rects, values, colorlover, labels):
         shapes.append(

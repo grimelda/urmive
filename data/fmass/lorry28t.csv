@@ -1,34 +1,34 @@
 Material Group,Material,Unitmass,Vehicle,Class,Source,Flowid,Ecoinvent Flow,Eimass,Unit,Part
 Material Group,,,lorry28t,Utilitycars,Ecoinvent,lorry28t,,10471.16,,Lorry
-Ferrous metals,"Steel, low alloy",1.900458E-03,lorry28t,Utilitycars,Ecoinvent,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",19.9,kilogram,Lorry
+"Metals, ferrous","Steel, low alloy",1.900458E-03,lorry28t,Utilitycars,Ecoinvent,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",19.9,kilogram,Lorry
 Material Group,,,lorry28t,Utilitycars,Ecoinvent,[G621],"electronics, for control units_market for electronics, for control units[GLO]",49,kilogram,Lorry
 Paint,Paint,6.236176E-03,lorry28t,Utilitycars,Ecoinvent,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",65.3,kilogram,Lorry
-Nonferrous metals,Aluminium,1.069605E-02,lorry28t,Utilitycars,Ecoinvent,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",112,kilogram,Lorry
-Ferrous metals,"Iron, pig",2.807712E-01,lorry28t,Utilitycars,Ecoinvent,[G3339],pig iron_market for pig iron[GLO],2.94E+03,kilogram,Lorry
-Nonferrous metals,Lead,7.028830E-03,lorry28t,Utilitycars,Ecoinvent,[G3787],lead_market for lead[GLO],73.6,kilogram,Lorry
+Aluminium,Aluminium,1.069605E-02,lorry28t,Utilitycars,Ecoinvent,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",112,kilogram,Lorry
+"Metals, ferrous","Iron, pig",2.807712E-01,lorry28t,Utilitycars,Ecoinvent,[G3339],pig iron_market for pig iron[GLO],2.94E+03,kilogram,Lorry
+"Metals, other nonferrous",Lead,7.028830E-03,lorry28t,Utilitycars,Ecoinvent,[G3787],lead_market for lead[GLO],73.6,kilogram,Lorry
 Polymers,Polyethylene,3.581265E-02,lorry28t,Utilitycars,Ecoinvent,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",375,kilogram,Lorry
-Nonferrous metals,Brass,3.113313E-03,lorry28t,Utilitycars,Ecoinvent,[G4640],brass_market for brass[CH],32.6,kilogram,Lorry
+Copper,Brass,3.113313E-03,lorry28t,Utilitycars,Ecoinvent,[G4640],brass_market for brass[CH],32.6,kilogram,Lorry
 Polymers,Polypropylene,3.428464E-03,lorry28t,Utilitycars,Ecoinvent,[G5542],"propylene glycol, liquid_market for propylene glycol, liquid[GLO]",35.9,kilogram,Lorry
-Ferrous metals,"Steel, reinforcing",3.791366E-01,lorry28t,Utilitycars,Ecoinvent,[G5916],reinforcing steel_market for reinforcing steel[GLO],3.97E+03,kilogram,Lorry
-Nonferrous metals,Copper,4.679520E-03,lorry28t,Utilitycars,Ecoinvent,[G5949],copper_market for copper[GLO],49,kilogram,Lorry
-Ferrous metals,"Iron, cast",1.719007E-01,lorry28t,Utilitycars,Ecoinvent,[G8652],cast iron_market for cast iron[GLO],1.80E+03,kilogram,Lorry
-Nonferrous metals,Aluminium,2.282460E-02,lorry28t,Utilitycars,Ecoinvent,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",239,kilogram,Lorry
+"Metals, ferrous","Steel, reinforcing",3.791366E-01,lorry28t,Utilitycars,Ecoinvent,[G5916],reinforcing steel_market for reinforcing steel[GLO],3.97E+03,kilogram,Lorry
+Copper,Copper,4.679520E-03,lorry28t,Utilitycars,Ecoinvent,[G5949],copper_market for copper[GLO],49,kilogram,Lorry
+"Metals, ferrous","Iron, cast",1.719007E-01,lorry28t,Utilitycars,Ecoinvent,[G8652],cast iron_market for cast iron[GLO],1.80E+03,kilogram,Lorry
+Aluminium,Aluminium,2.282460E-02,lorry28t,Utilitycars,Ecoinvent,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",239,kilogram,Lorry
 Insulation,Stone wool,1.556657E-03,lorry28t,Utilitycars,Ecoinvent,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",16.3,kilogram,Lorry
 Polymers,Rubber,5.844625E-02,lorry28t,Utilitycars,Ecoinvent,[G11853],synthetic rubber_market for synthetic rubber[GLO],612,kilogram,Lorry
-Ferrous metals,Chromium steel,7.792833E-04,lorry28t,Utilitycars,Ecoinvent,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",8.16,kilogram,Lorry
-Composites,Glass,7.009730E-03,lorry28t,Utilitycars,Ecoinvent,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",73.4,kilogram,Lorry
-Nonferrous metals,Aluminium,2.672782E-05,lorry28t,Utilitycars,Ecoinvent,-,Aluminium,0.00571165911,kilogram,Electronics
+"Metals, ferrous",Chromium steel,7.792833E-04,lorry28t,Utilitycars,Ecoinvent,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",8.16,kilogram,Lorry
+Glass,Glass,7.009730E-03,lorry28t,Utilitycars,Ecoinvent,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",73.4,kilogram,Lorry
+Aluminium,Aluminium,2.672782E-05,lorry28t,Utilitycars,Ecoinvent,-,Aluminium,0.00571165911,kilogram,Electronics
 Minerals,Barite,2.171324E-05,lorry28t,Utilitycars,Ecoinvent,-,Barite,0.004640057609,kilogram,Electronics
-Nonferrous metals,Brass,5.383670E-06,lorry28t,Utilitycars,Ecoinvent,-,Brass,0.001150474844,kilogram,Electronics
-Ferrous metals,Chromium,3.237806E-08,lorry28t,Utilitycars,Ecoinvent,-,Chromium,0.000006919098143,kilogram,Electronics
+Copper,Brass,5.383670E-06,lorry28t,Utilitycars,Ecoinvent,-,Brass,0.001150474844,kilogram,Electronics
+"Metals, ferrous",Chromium,3.237806E-08,lorry28t,Utilitycars,Ecoinvent,-,Chromium,0.000006919098143,kilogram,Electronics
 Composites,Composites,6.807150E-05,lorry28t,Utilitycars,Ecoinvent,-,Composites,0.01454668435,kilogram,Electronics
-Nonferrous metals,Copper,1.532632E-04,lorry28t,Utilitycars,Ecoinvent,-,Copper,0.03275191158,kilogram,Electronics
-Composites,Glass,1.950026E-06,lorry28t,Utilitycars,Ecoinvent,-,Glass,0.0004167149725,kilogram,Electronics
-Nonferrous metals,Gold,2.551412E-06,lorry28t,Utilitycars,Ecoinvent,-,Gold,0.000545229443,kilogram,Electronics
-Ferrous metals,Iron,1.545501E-06,lorry28t,Utilitycars,Ecoinvent,-,Iron,0.0003302690618,kilogram,Electronics
-Nonferrous metals,Lead,8.723617E-06,lorry28t,Utilitycars,Ecoinvent,-,Lead,0.001864211931,kilogram,Electronics
-Nonferrous metals,Molybdenum,8.419412E-07,lorry28t,Utilitycars,Ecoinvent,-,Molybdenum,0.0001799204244,kilogram,Electronics
-Nonferrous metals,Nickel,6.920064E-06,lorry28t,Utilitycars,Ecoinvent,-,Nickel,0.001478797866,kilogram,Electronics
+Copper,Copper,1.532632E-04,lorry28t,Utilitycars,Ecoinvent,-,Copper,0.03275191158,kilogram,Electronics
+Glass,Glass,1.950026E-06,lorry28t,Utilitycars,Ecoinvent,-,Glass,0.0004167149725,kilogram,Electronics
+"Metals, other nonferrous",Gold,2.551412E-06,lorry28t,Utilitycars,Ecoinvent,-,Gold,0.000545229443,kilogram,Electronics
+"Metals, ferrous",Iron,1.545501E-06,lorry28t,Utilitycars,Ecoinvent,-,Iron,0.0003302690618,kilogram,Electronics
+"Metals, other nonferrous",Lead,8.723617E-06,lorry28t,Utilitycars,Ecoinvent,-,Lead,0.001864211931,kilogram,Electronics
+"Metals, other nonferrous",Molybdenum,8.419412E-07,lorry28t,Utilitycars,Ecoinvent,-,Molybdenum,0.0001799204244,kilogram,Electronics
+"Metals, other nonferrous",Nickel,6.920064E-06,lorry28t,Utilitycars,Ecoinvent,-,Nickel,0.001478797866,kilogram,Electronics
 Polymers,Nylon,1.914383E-05,lorry28t,Utilitycars,Ecoinvent,-,Nylon,0.004090981432,kilogram,Electronics
 "Critical Raw Materials, CRM",Palladium,8.668039E-08,lorry28t,Utilitycars,Ecoinvent,-,Palladium,0.00001852335219,kilogram,Electronics
 Polymers,Polyethylene,1.614874E-03,lorry28t,Utilitycars,Ecoinvent,-,Polyethylene,0.345094,kilogram,Electronics
@@ -36,8 +36,8 @@ Polymers,Polyvinylchloride,1.362927E-04,lorry28t,Utilitycars,Ecoinvent,-,Polyvin
 Minerals,Selenium,2.321042E-05,lorry28t,Utilitycars,Ecoinvent,-,Selenium,0.00496,kilogram,Electronics
 Minerals,Silica,1.072309E-04,lorry28t,Utilitycars,Ecoinvent,-,Silica,0.02291493916,kilogram,Electronics
 Minerals,Silicon,9.827284E-08,lorry28t,Utilitycars,Ecoinvent,-,Silicon,0.00002100062507,kilogram,Electronics
-Nonferrous metals,Silver,3.045363E-06,lorry28t,Utilitycars,Ecoinvent,-,Silver,0.0006507853014,kilogram,Electronics
-Ferrous metals,Steel,4.305158E-03,lorry28t,Utilitycars,Ecoinvent,-,Steel,0.92,kilogram,Electronics
-"Critical Raw Materials, CRM",Tin,1.571633E-05,lorry28t,Utilitycars,Ecoinvent,-,Tin,0.003358535436,kilogram,Electronics
-Nonferrous metals,Titanium,1.118877E-05,lorry28t,Utilitycars,Ecoinvent,-,Titanium,0.002391008194,kilogram,Electronics
-Nonferrous metals,Zinc,1.623409E-06,lorry28t,Utilitycars,Ecoinvent,-,Zinc,0.0003469177719,kilogram,Electronics
+"Metals, other nonferrous",Silver,3.045363E-06,lorry28t,Utilitycars,Ecoinvent,-,Silver,0.0006507853014,kilogram,Electronics
+"Metals, ferrous",Steel,4.305158E-03,lorry28t,Utilitycars,Ecoinvent,-,Steel,0.92,kilogram,Electronics
+"Metals, other nonferrous",Tin,1.571633E-05,lorry28t,Utilitycars,Ecoinvent,-,Tin,0.003358535436,kilogram,Electronics
+"Metals, other nonferrous",Titanium,1.118877E-05,lorry28t,Utilitycars,Ecoinvent,-,Titanium,0.002391008194,kilogram,Electronics
+"Metals, other nonferrous",Zinc,1.623409E-06,lorry28t,Utilitycars,Ecoinvent,-,Zinc,0.0003469177719,kilogram,Electronics

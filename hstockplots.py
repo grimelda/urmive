@@ -23,64 +23,31 @@ mat = stocks.CalcMass(dbx, dbm)
 
 
 #%%
-### include and exclude are kinda mutually exclusive, be sane.
-#stocks.PlotMass2Dim(mat[mat['Class']=='Inlandvessels'], 
-#                    Dim=['Vehiclenames', 'Material'], 
-#                    materials = dict(include = ['All'], exclude = [None]),
-#                    vehicles = dict(include = ['All'], exclude = [None]),
-#                    classes = dict(include = ['All'], exclude = ['Pleziervaartuigen']),
-##                     exportpdf = True,
-#                    flow='Value',
-#                    )
-### include and exclude are kinda mutually exclusive, be sane.
-#stocks.PlotMass1Dim(mat[mat['Vehicle']=='icevan2'],
-#                    Dim='Vehiclenames',
-#                    materials = dict(include = ['All'], exclude = [None]),
-#                    vehicles = dict(include = ['All'], exclude = [None]),
-#                    classes = dict(include = ['All'], exclude = [None]),#['Pleziervaartuigen', 'Seavessels', 'Inlandvessels']),
-#                    exportpdf = True,
-#                    flow='Value',
-#                    groupnorm='percent',
-#                    category_orders={'Vehiclenames':['Bestelauto:10000','Bestelauto:3249','Bestelauto:2749','Bestelauto:2249','Bestelauto:1749','Bestelauto:1249','Bestelauto:749','Bestelauto:250']},
-#                    )
 
-
-#stocks.PlotMass2Dim(mat, 
-#                    Dim=['Material', 'Vehicle'], 
-#                    materials = {'include' : ['All'],
-#                                 'exclude' : [None],
-#                                 },
-#                    vehicles = {'include' : ['All'],
-#                                'exclude' : [None],
-#                                },
-#                    classes = {'include' : ['All'],
-#                               'exclude' : [None],
-#                               },                  
-#                    )
-#stocks.PlotMass2Dim(mat,
-#                    Dim=['Vehicle', 'Material'],
-#                    materials = {'include' : ['All'],
-#                                 'exclude' : [None],
-#                                 },
-#                    vehicles = {'include' : ['All'],
-#                                'exclude' : [None],
-#                                },
-#                    classes = {'include' : ['All'],
-#                               'exclude' : [None],
-#                               },                  
-#                    )
 stocks.PlotMass1Dim(mat, 
                     Dim=['Vehicle'],
                     materials = {'include' : ['All'],
                                  'exclude' : [None],
                                  },
+                    matgroup = {'include' : ['Critical Raw Materials, CRM'],
+                                'exclude' : [None],
+                                },
                     vehicles = {'include' : ['All'],
                                 'exclude' : [None],
                                 },
-                    classes = {'include' : ['All'],
+                    classes = {'include' : ['All'], #'Cars','Bicycles','Transit','Aircraft'
                                'exclude' : [None],
-                               },                  
+                               },
+                    domain = {'include' : ['All'], 
+                              'exclude' : [None],
+                              },
+                    exportpdf=True,
+#                    category_orders={'Class':['Inlandvessels', 'Seavessels', 'Cars','Utilitycars','Bicycles','Transit','Aircraft'][::-1]},
+                    w=800,
+                    h=400,
                     )
+
+
 
     
 #%%

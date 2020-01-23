@@ -1,34 +1,34 @@
 Material Group,Material,Unitmass,Vehicle,Class,flowid,Ecoinvent Flow,Partmass,unit,Part
-Ferrous metals,Steel,1.6279E-01,ebike,Bicycles,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",4.9,kilogram,bicycle
+"Metals, ferrous",Steel,1.6279E-01,ebike,Bicycles,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",4.9,kilogram,bicycle
 Polymers,Polyurethane,9.9665E-04,ebike,Bicycles,[G2509],"polyurethane, flexible foam_market for polyurethane, flexible foam[GLO]",0.03,kilogram,bicycle
-Nonferrous metals,Aluminium,8.0064E-02,ebike,Bicycles,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",2.41,kilogram,bicycle
+Aluminium,Aluminium,8.0064E-02,ebike,Bicycles,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",2.41,kilogram,bicycle
 Polymers,Polyethylene,6.5115E-02,ebike,Bicycles,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",1.96,kilogram,bicycle
 Ceramics,,1.4618E-01,ebike,Bicycles,[G6662],"electric motor, vehicle_market for electric motor, vehicle[GLO]",4.4,kilogram,bicycle
-Nonferrous metals,Aluminium,1.7010E-01,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",5.12,kilogram,bicycle
+Aluminium,Aluminium,1.7010E-01,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",5.12,kilogram,bicycle
 Polymers,Rubber,1.8704E-02,ebike,Bicycles,[G11853],synthetic rubber_market for synthetic rubber[GLO],0.563,kilogram,bicycle
-Ferrous metals,Chromium steel,5.2823E-02,ebike,Bicycles,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",1.59,kilogram,bicycle
+"Metals, ferrous",Chromium steel,5.2823E-02,ebike,Bicycles,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",1.59,kilogram,bicycle
 Ceramics,,8.6376E-02,ebike,Bicycles,[G13179],"battery, Li-ion, rechargeable, prismatic_market for battery, Li-ion, rechargeable, prismatic[GLO]",2.6,kilogram,bicycle
-Ferrous metals,Steel,2.4916E-02,ebike,Bicycles,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.75,kilogram,evengine
-Nonferrous metals,Aluminium,1.7541E-03,ebike,Bicycles,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.0528,kilogram,evengine
-Nonferrous metals,Copper,2.9900E-03,ebike,Bicycles,[G5949],copper_market for copper[GLO],0.09,kilogram,evengine
-Nonferrous metals,Aluminium,3.7208E-03,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.112,kilogram,evengine
+"Metals, ferrous",Steel,2.4916E-02,ebike,Bicycles,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",0.75,kilogram,evengine
+Aluminium,Aluminium,1.7541E-03,ebike,Bicycles,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",0.0528,kilogram,evengine
+Copper,Copper,2.9900E-03,ebike,Bicycles,[G5949],copper_market for copper[GLO],0.09,kilogram,evengine
+Aluminium,Aluminium,3.7208E-03,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.112,kilogram,evengine
 Ceramics,,2.6544E-02,ebike,Bicycles,[G4317],"battery cell, Li-ion_market for battery cell, Li-ion[GLO]",0.799,kilogram,battery
-Ferrous metals,Steel,4.8171E-03,ebike,Bicycles,[G5916],reinforcing steel_market for reinforcing steel[GLO],0.145,kilogram,battery
+"Metals, ferrous",Steel,4.8171E-03,ebike,Bicycles,[G5916],reinforcing steel_market for reinforcing steel[GLO],0.145,kilogram,battery
 Ceramics,,1.2392E-02,ebike,Bicycles,[G6193],"cable, data cable in infrastructure_market for cable, data cable in infrastructure[GLO]",0.373,meter,battery
 Polymers,Polyethylene,1.1362E-03,ebike,Bicycles,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",0.0342,kilogram,evcable
-Nonferrous metals,Copper,5.1494E-04,ebike,Bicycles,[G5949],copper_market for copper[GLO],0.0155,kilogram,evcable
+Copper,Copper,5.1494E-04,ebike,Bicycles,[G5949],copper_market for copper[GLO],0.0155,kilogram,evcable
 Minerals,Silica,6.5779E-04,ebike,Bicycles,[G6812],glass fibre_market for glass fibre[GLO],0.0198,kilogram,evcable
 Ceramics,,1.0863E-02,ebike,Bicycles,[G258],"cathode, LiMn2O4, for lithium-ion battery_market for cathode, LiMn2O4, for lithium-ion battery[GLO]",0.327,kilogram,batcell
 Polymers,Polyethylene,2.4352E-03,ebike,Bicycles,[G3102],"polyethylene, low density, granulate_market for polyethylene, low density, granulate[GLO]",0.0733,kilogram,batcell
 Ceramics,,1.7840E-03,ebike,Bicycles,[G7974],battery separator_market for battery separator[GLO],0.0537,kilogram,batcell
-Nonferrous metals,Aluminium,5.4816E-04,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.0165,kilogram,batcell
+Aluminium,Aluminium,5.4816E-04,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.0165,kilogram,batcell
 Polymers,Ethylene Carbonate,5.3155E-03,ebike,Bicycles,[G11860],ethylene carbonate_market for ethylene carbonate[GLO],0.16,kilogram,batcell
 Ceramics,,1.3322E-02,ebike,Bicycles,[G11941],"anode, graphite, for lithium-ion battery_market for anode, graphite, for lithium-ion battery[GLO]",0.401,kilogram,batcell
 "Critical Raw Materials, CRM",LiPF6,6.3121E-04,ebike,Bicycles,[G14613],lithium hexafluorophosphate_market for lithium hexafluorophosphate[GLO],0.019,kilogram,batcell
-Nonferrous metals,Aluminium,1.3056E-02,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.393,kilogram,cathode
-"Critical Raw Materials, CRM",LiMn2O4,2.0697E-02,ebike,Bicycles,[G14004],lithium manganese oxide_market for lithium manganese oxide[GLO],0.623,kilogram,cathode
+Aluminium,Aluminium,1.3056E-02,ebike,Bicycles,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",0.393,kilogram,cathode
+"Critical Raw Materials, CRM",Limn2O4,2.0697E-02,ebike,Bicycles,[G14004],lithium manganese oxide_market for lithium manganese oxide[GLO],0.623,kilogram,cathode
 "Critical Raw Materials, CRM",Graphite,1.6412E-02,ebike,Bicycles,[G1987],"graphite, battery grade_market for graphite, battery grade[GLO]",0.494,kilogram,anode
-Nonferrous metals,Copper,1.7408E-02,ebike,Bicycles,[G5949],copper_market for copper[GLO],0.524,kilogram,anode
+Copper,Copper,1.7408E-02,ebike,Bicycles,[G5949],copper_market for copper[GLO],0.524,kilogram,anode
 Polymers,Polyvinylfluoride,6.3786E-03,ebike,Bicycles,[G2574],polyvinylfluoride_market for polyvinylfluoride[GLO],0.192,kilogram,batsep
 Minerals,Silica,7.2423E-03,ebike,Bicycles,[G7183],silica sand_market for silica sand[GLO],0.218,kilogram,batsep
 Polymers,Polyethylene,1.1661E-02,ebike,Bicycles,[G7578],"fleece, polyethylene_market for fleece, polyethylene[GLO]",0.351,kilogram,batsep

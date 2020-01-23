@@ -1,17 +1,17 @@
 Material Group,Material,Unitmass,Vehicle,Class,Part,Partmass,Scaledmass
-Nonferrous metals,Aluminium,1.999096E-01,B787,Aircraft,,,22135.4
-Ferrous metals,Steel,9.995481E-02,B787,Aircraft,,,11067.7
-Nonferrous metals,Titanium,7.663485E-02,B787,Aircraft,,,8485.6
+Aluminium,Aluminium,1.999096E-01,B787,Aircraft,,,22135.4
+"Metals, ferrous",Steel,9.995481E-02,B787,Aircraft,,,11067.7
+"Metals, other nonferrous",Titanium,7.663485E-02,B787,Aircraft,,,8485.6
 Composites,Composites,5.002256E-01,B787,Aircraft,,,55388.5
-Other,Other,4.997772E-02,B787,Aircraft,,,5533.9
+Unknown,Other,4.997772E-02,B787,Aircraft,,,5533.9
 ,Engine,0.000000E+00,B787,Aircraft,Engine,8116,
-Nonferrous metals,Titanium,3.013988E-02,B787,Aircraft,Engine,0.4112,3337.2992
-Nonferrous metals,Nickel,1.619139E-02,B787,Aircraft,Engine,0.2209,1792.8244
+"Metals, other nonferrous",Titanium,3.013988E-02,B787,Aircraft,Engine,0.4112,3337.2992
+"Metals, other nonferrous",Nickel,1.619139E-02,B787,Aircraft,Engine,0.2209,1792.8244
 "Critical Raw Materials, CRM",Magnesium,1.394849E-02,B787,Aircraft,Engine,0.1903,1544.4748
-Ferrous metals,Chromium,4.822967E-03,B787,Aircraft,Engine,0.0658,534.0328
-Nonferrous metals,Aluminium,3.444976E-03,B787,Aircraft,Engine,0.047,381.452
+"Metals, ferrous",Chromium,4.822967E-03,B787,Aircraft,Engine,0.0658,534.0328
+Aluminium,Aluminium,3.444976E-03,B787,Aircraft,Engine,0.047,381.452
 "Critical Raw Materials, CRM",Cobalt,1.898402E-03,B787,Aircraft,Engine,0.0259,210.2044
-Nonferrous metals,Molybdenum,1.377990E-03,B787,Aircraft,Engine,0.0188,152.5808
+"Metals, other nonferrous",Molybdenum,1.377990E-03,B787,Aircraft,Engine,0.0188,152.5808
 "Critical Raw Materials, CRM",Columbium,8.649089E-04,B787,Aircraft,Engine,0.0118,95.7688
 "Critical Raw Materials, CRM",Tantalum,2.418813E-04,B787,Aircraft,Engine,0.0033,26.7828
 "Critical Raw Materials, CRM",Tungsten,1.685839E-04,B787,Aircraft,Engine,0.0023,18.6668

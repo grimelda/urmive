@@ -1,17 +1,17 @@
 Material Group,Material,Unitmass,Vehicle,Class,FlowId,EcoinventFlow,Partmass,Unit
-Ferrous metals,"Steel, low alloy",2.14875E-03,bus,Transit,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",22.8,kilogram
+"Metals, ferrous","Steel, low alloy",2.14875E-03,bus,Transit,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",22.8,kilogram
 Paint,Alkyd paint,2.82731E-03,bus,Transit,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",30,kilogram
-Nonferrous metals,"Aluminium, cast alloy",1.57387E-01,bus,Transit,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",1670,kilogram
-Ferrous metals,"Iron, pig",4.73103E-02,bus,Transit,[G3339],pig iron_market for pig iron[GLO],502,kilogram
-Nonferrous metals,Lead,8.48192E-03,bus,Transit,[G3787],lead_market for lead[GLO],90,kilogram
+Aluminium,"Aluminium, cast alloy",1.57387E-01,bus,Transit,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",1670,kilogram
+"Metals, ferrous","Iron, pig",4.73103E-02,bus,Transit,[G3339],pig iron_market for pig iron[GLO],502,kilogram
+"Metals, other nonferrous",Lead,8.48192E-03,bus,Transit,[G3787],lead_market for lead[GLO],90,kilogram
 Polymers,Polyethylene,5.21167E-02,bus,Transit,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",553,kilogram
-Nonferrous metals,Brass,2.82731E-04,bus,Transit,[G4640],brass_market for brass[CH],3,kilogram
+Copper,Brass,2.82731E-04,bus,Transit,[G4640],brass_market for brass[CH],3,kilogram
 Polymers,Propylene glycol,2.45033E-03,bus,Transit,[G5542],"propylene glycol, liquid_market for propylene glycol, liquid[GLO]",26,kilogram
-Ferrous metals,"Steel, reinforcing",4.27866E-01,bus,Transit,[G5916],reinforcing steel_market for reinforcing steel[GLO],4540,kilogram
-Nonferrous metals,Copper,1.02726E-02,bus,Transit,[G5949],copper_market for copper[GLO],109,kilogram
-Ferrous metals,"Iron, cast",9.70709E-02,bus,Transit,[G8652],cast iron_market for cast iron[GLO],1030,kilogram
+"Metals, ferrous","Steel, reinforcing",4.27866E-01,bus,Transit,[G5916],reinforcing steel_market for reinforcing steel[GLO],4540,kilogram
+Copper,Copper,1.02726E-02,bus,Transit,[G5949],copper_market for copper[GLO],109,kilogram
+"Metals, ferrous","Iron, cast",9.70709E-02,bus,Transit,[G8652],cast iron_market for cast iron[GLO],1030,kilogram
 Insulation,Stone wool,3.73205E-02,bus,Transit,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",396,kilogram
 Polymers,"Rubber, synthetic",5.08915E-03,bus,Transit,[G11302],pitch_market for pitch[CH],54,kilogram
 Polymers,Rubber,3.81687E-02,bus,Transit,[G11853],synthetic rubber_market for synthetic rubber[GLO],405,kilogram
-Composites,Glass,4.61794E-02,bus,Transit,[G12509],"flat glass, coated_market for flat glass, coated[GLO]",490,kilogram
-Ferrous metals,Chromium steel,6.50281E-02,bus,Transit,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",690,kilogram
+Glass,Glass,4.61794E-02,bus,Transit,[G12509],"flat glass, coated_market for flat glass, coated[GLO]",490,kilogram
+"Metals, ferrous",Chromium steel,6.50281E-02,bus,Transit,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",690,kilogram

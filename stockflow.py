@@ -7,6 +7,9 @@ import scipy.stats
 
 #%%
 
+
+
+
 def InOutStock(\
                x,
                y,
@@ -58,7 +61,7 @@ def WeibCalib(shape, dtype, lm, dm):
     
     if dtype=='jz':
         ### calibration for deaths multiplier and lifespan multiplier
-        dmulti = 7.99 * shape**0.623#
+        dmulti = 3.41*shape +4.92 ### 3.41*shape +4.92 is better ###7.99 * shape**0.623
         ''' calibration factor for scale multiplier
         p(k) = C * k(-T) * exp(-k/K) + Offset
         Fitting target of lowest sum of squared absolute error = 6.6676704109128210E-02
@@ -91,6 +94,12 @@ def WeibCalib(shape, dtype, lm, dm):
         dmulti = dm
         lsmulti = lm
         LsCorr = 1
+        
+    if dtype=='override':
+        dmulti=dm
+        lsmulti=lm
+        LsCorr=1
+
     
     return dmulti, lsmulti, LsCorr
 
@@ -277,20 +286,20 @@ def WeibFit(\
             onlydata = False, # gets rid of orange weibull fit curve
             residuals = False, # 
             ):
-    
+    binsize=120
     d = dict()
     d[v] = custom
     if d[v] is False:
         ### dictionary describing characteristics of demographics for selected vehicles
         d = dict(ex = dict(shape=5, stock=5000, lifespan=50, path='cars.csv'),
-                 bus = dict(shape=5, stock=9822, lifespan=18, path='cars.csv'),
+                 bus = dict(shape=5, stock=9822, lifespan=18, path='bus.csv'),
                  cars = dict(shape=5, stock=8222974, lifespan=18, path='cars.csv'),
                  vans = dict(shape=2, stock=2.252e6, lifespan=21.5, path='vans.csv'),
-                 jets = dict(shape=10, stock=240, lifespan=20, path='jets.csv'),
+                 jets = dict(shape=7, stock=240, lifespan=20, path='jets.csv'),
 #                 jets = dict(shape=4, stock=240, lifespan=20, path='jets.csv'),
                  ships = dict(shape=2, stock=1250, lifespan=30, path='ships.csv'),
                  trucks = dict(shape=2.5, stock=58159, lifespan=17, path='trucks.csv'),
-                 trains = dict(shape=8, stock=1069, lifespan=40, path='trains.csv'),
+                 trains = dict(shape=7, stock=1069, lifespan=40, path='trains.csv'),
                  mopeds = dict(shape=5, stock=1178300, lifespan=18, path='mopeds.csv'),
                  motorbikes = dict(shape=3.6, stock=655991, lifespan=38, path='motorbikes.csv'),
                  bestelwagen = dict(shape=4.5, stock=852622, lifespan=16, path='bestelwagen.csv'),
@@ -300,7 +309,7 @@ def WeibFit(\
     df = df.drop(index=df.index[-1]).dropna()
 
     factor = d[v]['stock'] / d[v]['lifespan']
-    sf = scipy.stats.weibull_min.sf(range(200), d[v]['shape'], 0, d[v]['lifespan'])
+    sf = scipy.stats.weibull_min.sf(range(binsize), d[v]['shape'], 0, d[v]['lifespan'])
     ssf = sf * factor
     for i in df.index:
         df.at[i, 'ssf'] = ssf[i]
@@ -309,10 +318,10 @@ def WeibFit(\
     rsqu = round(rsquared(df.Count, df.ssf), 3)
     pear = round(scipy.stats.pearsonr(df.Count, df.ssf)[0], 3)
     
-    plt.figure(figsize=(10,4))
+    plt.figure(figsize=(7,4))
     plt.bar(df.index, df.Count, color=(0.2, 0.4, 0.6, 0.6), label='data')
     if onlydata is False:
-        plt.plot(range(0,200), ssf, color='orange', label='Weibull:'\
+        plt.plot(range(0,binsize), ssf, color='orange', label='Weibull:'\
                                                               +'\nstock: ' + str(round(d[v]['stock']))\
                                                               +'\nlifespan: ' + str(d[v]['lifespan'])+'y'\
                                                               +'\nshape: ' + str(d[v]['shape'])\
@@ -321,7 +330,8 @@ def WeibFit(\
                                                               )
     plt.legend(loc='upper right')
     plt.ylabel('Number of vehicles in age cohort')
-    plt.xlabel('Age cohorts, by year')
+    plt.xlabel('Age cohorts i')
+    plt.xlim(0,0.5*binsize)
     plt.savefig('figures/Weibull_' + v + '.pdf', dpi=300)        
     
     if figs is True: 
@@ -329,9 +339,10 @@ def WeibFit(\
     
     if residuals is True: 
         plt.figure(figsize=(10,4))
-        plt.plot(df.index, 200*(df.Count-df.ssf)/max(df.ssf), 'r.', label='residual: relative difference between data and prediction')
-        plt.plot(range(200), np.zeros(200), 'g-')
+        plt.plot(df.index, binsize*(df.Count-df.ssf)/max(df.ssf), 'r.', label='residual: relative difference between data and prediction')
+        plt.plot(range(binsize), np.zeros(binsize), 'g-')
         plt.ylim(-100,100)
+        plt.xlim(0,0.8*binsize)
         plt.legend(loc='upper right')
 #        fig.show()
         
@@ -345,28 +356,28 @@ def LogisticSignal(x):
     return y 
         
 
-def FlatSignal(x, step=0):
+def FlatSignal(x, step=0, restore=True, at=2020):
     yavg = 5e3
     peak = yavg*step
-    up = LogistiCurve(x, start=0, end=0, steepness=0.9, midpoint=2018)
-    down = LogistiCurve(x, start=peak, end=0, steepness=0.9, midpoint=2022)
+    up = LogistiCurve(x, start=0, end=peak if restore is True else 0, steepness=0.9, midpoint=at-2)
+    down = LogistiCurve(x, start=peak, end=0, steepness=0.9, midpoint=at+2)
     y = yavg*np.ones(len(x))
     y = y + up + down - peak
     return y
 
 def PlotResponse(IOS, y, figs=False):
-    plt.figure(figsize=(10,4))
+    plt.figure(figsize=(10,8))
     #plt.plot(x, y, label='Input')
-    plt.plot(IOS['x'], IOS['Stock'], 'k-', label='Stock')
-    plt.plot(IOS['x'], IOS['Infl'], 'b-', label='Inflow')
-    plt.plot(IOS['x'], IOS['Outf'], 'r-', label='Outflow')
+    plt.plot(IOS['x'], IOS['Stock'], 'k-', label='Stock [units]')
+    plt.plot(IOS['x'], IOS['Infl'], 'b-', label='Inflow [units/year]')
+    plt.plot(IOS['x'], IOS['Outf'], 'r-', label='Outflow [units/year]')
     #plt.plot(IOS['x'], IOS['Control'], label='Control')
-    plt.legend(loc='upper left')
+    plt.legend(loc='best')
     plt.ylim(-.0*max(y),1.2*max(y))
     plt.ylabel('Number of units')
     plt.xlabel('Year')
-    plt.savefig(str('figures/inoutstock.png'), dpi=300)
-    if figs is True: 
+    if figs is True:
+        plt.savefig(str('figures/inoutstock'+str(int(IOS['shape'].mean()))+'.pdf'))#, dpi=300)
         plt.show()
         
 def PlotHistograms(IOS, x, y, dt, figs=False, sel = [.1, .3, .5, .7, .9], bar=False):

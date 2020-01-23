@@ -1,7 +1,7 @@
 Material Group,Material,Unitmass,Vehicle,Class,FlowId,EcoinventFlow,Partmass,Unit,Part
-Ferrous metals,"Steel, low alloy",8.87649E-01,wagon,Freighttrains,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",21000,kilogram,Wagon
+"Metals, ferrous","Steel, low alloy",8.87649E-01,wagon,Freighttrains,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",21000,kilogram,Wagon
 Paint,Alkyd paint,4.48051E-03,wagon,Freighttrains,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",106,kilogram,Wagon
 Organic,Organic,6.08674E-02,wagon,Freighttrains,[G2072],"glued laminated timber, for outdoor use_market for glued laminated timber, for outdoor use[GLO]",1440,kilogram,Wagon
-Nonferrous metals,"Aluminium, wrought alloy",4.52278E-02,wagon,Freighttrains,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",1070,kilogram,Wagon
+Aluminium,"Aluminium, wrought alloy",4.52278E-02,wagon,Freighttrains,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",1070,kilogram,Wagon
 Insulation,Stone wool,1.35261E-03,wagon,Freighttrains,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",32,kilogram,Wagon
 Polymers,Rubber,4.22690E-04,wagon,Freighttrains,[G11853],synthetic rubber_market for synthetic rubber[GLO],10,kilogram,Wagon

@@ -1,11 +1,11 @@
 Domain,Class,lifespan,shape,lifespan source,Vmass,Vehicle,Vehiclename
-Mobility,Aircraft,20,10,demographic data,181840.0,A330,A330
-Mobility,Aircraft,20,10,demographic data,161000.0,B787,B787
+Mobility,Aircraft,20,8,demographic data,181840.0,A330,A330
+Mobility,Aircraft,20,8,demographic data,161000.0,B787,B787
 Mobility,Bicycles,10,3,guess,16.3,bike,bike
 Mobility,Bicycles,5,3,guess,24.5,ebike,ebike
 Mobility,Bicycles,9,3,guess,100.0,emoped,emoped
 Mobility,Bicycles,18,3,demographic data,100.0,moped,moped
-Mobility,Cars,9.5,5.5,demographic data,1936.5,ev,ev
+Mobility,Cars,9.5,5.5,demographic data,1776.0,ev,ev
 Mobility,Cars,19,5.5,demographic data,1211.3,hev,hev
 Mobility,Cars,19,5.5,demographic data,1121.0,icev,icev
 Mobility,Transit,22.5,1.8,demographic data,10787.0,bus,bus
@@ -15,9 +15,11 @@ Freight,Inlandvessels,45,1.4,demographic data,1041700.0,hmaxin,lbarge
 Freight,Inlandvessels,45,1.4,demographic data,625000.0,hmaxin,mbarge
 Freight,Inlandvessels,45,1.4,demographic data,312500.0,hmaxin,sbarge
 Freight,Inlandvessels,45,1.4,demographic data,1458300.0,hmaxin,xlbarge
-Freight,Utilitycars,22.5,1.8,demographic data,8275.4,lorry16t,16tlorry
-Freight,Utilitycars,22.5,1.8,demographic data,14842.0,lorry28t,28tlorry
-Freight,Utilitycars,22.5,1.8,demographic data,21202.9,lorry40t,40tlorry
+Freight,Utilitycars,21.5,2,demographic data,1694.0,icevan,icevan
+Freight,Utilitycars,21.5,2,demographic data,2683.8,evan,evan
+Freight,Utilitycars,17,2.5,demographic data,8275.4,lorry16t,16tlorry
+Freight,Utilitycars,17,2.5,demographic data,14842.0,lorry28t,28tlorry
+Freight,Utilitycars,17,2.5,demographic data,21202.9,lorry40t,40tlorry
 Freight,Seavessels,35,1.4,demographic data,6893840.0,hmax,Bagger schip
 Freight,Seavessels,35,1.4,demographic data,157714.0,hmax,Bergings schip
 Freight,Seavessels,35,1.4,demographic data,3988160.0,hmax,Bevoorradings schip

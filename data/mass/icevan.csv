@@ -1,208 +1,175 @@
-Material Group,Material/Component,Unit,Component,Unitmass,Part,Material,Class,Hawkinsmass
-Avgcar,Avgcar,kg,Avgcar,,,,,1231.645477
-Ferrous metals,"Fe, cast, machined",kg,Crankcase,2.413844E-02,icemotor,Iron,Utilitycars,29.73
-Other,Tools,kg,Crankcase,1.217883E-06,icemotor,Steel,Utilitycars,0.0015
-Ferrous metals,"Shavings, Fe, cast, machined",kg,Crankcase,3.871244E-03,icemotor,Iron,Utilitycars,4.768
-Ferrous metals,"Scrap, Fe, cast, machined",kg,Crankcase,2.005447E-04,icemotor,Steel,Utilitycars,0.247
-Other,Emulsion,kg,Crankcase,4.814697E-04,icemotor,Emulsion,Utilitycars,0.593
-Ferrous metals,"Fe, forged, machined",kg,Crankshaft,6.715406E-03,icemotor,Iron,Utilitycars,8.271
-Other,Tools,kg,Crankshaft,3.108849E-05,icemotor,Steel,Utilitycars,0.03829
-Ferrous metals,"Shavings, Fe, forged, machined",kg,Crankshaft,1.110709E-03,icemotor,Iron,Utilitycars,1.368
-Ferrous metals,"Scrap, Fe, forged, machined",kg,Crankshaft,4.421727E-05,icemotor,Iron,Utilitycars,0.05446
-Other,Emulsion,kg,Crankshaft,9.036691E-04,icemotor,Emulsion,Utilitycars,1.113
-Ferrous metals,"Fe, cast, machined",kg,Flywheel,5.153269E-03,icemotor,Iron,Utilitycars,6.347
-Other,Tools,kg,Flywheel,1.087975E-06,icemotor,Steel,Utilitycars,0.00134
-Ferrous metals,"Shavings, Fe, cast, machined",kg,Flywheel,9.556321E-04,icemotor,Iron,Utilitycars,1.177
-Ferrous metals,"Scrap, Fe, cast, machined",kg,Flywheel,1.217883E-05,icemotor,Steel,Utilitycars,0.015
-Other,Emulsion,kg,Flywheel,7.583351E-04,icemotor,Emulsion,Utilitycars,0.934
-Ferrous metals,"Steel, cast, heat treat",kg,Ring gear,4.100206E-04,icemotor,Steel,Utilitycars,0.505
-Other,Tools,kg,Ring gear,1.083916E-05,icemotor,Steel,Utilitycars,0.01335
-Ferrous metals,"Shavings, Steel, cast, heat treated",kg,Ring gear,1.997328E-04,icemotor,Steel,Utilitycars,0.246
-Ferrous metals,"Scrap, Steel, cast, heat treated",kg,Ring gear,2.614389E-06,icemotor,Steel,Utilitycars,0.00322
-Other,Emulsion,kg,Ring gear,5.439877E-04,icemotor,Emulsion,Utilitycars,0.67
-Ferrous metals,"Fe, cast, machined",kg,"Connecting rod, 4 pc.",1.209764E-03,icemotor,Iron,Utilitycars,1.49
-Other,Tools,kg,"Connecting rod, 4 pc.",4.652313E-06,icemotor,Steel,Utilitycars,0.00573
-Ferrous metals,"Shavings, Fe, cast, machined",kg,"Connecting rod, 4 pc.",6.324872E-04,icemotor,Iron,Utilitycars,0.779
-Ferrous metals,"Scrap, Fe, cast, machined",kg,"Connecting rod, 4 pc.",1.431418E-05,icemotor,Steel,Utilitycars,0.01763
-Other,Emulsion,kg,"Connecting rod, 4 pc.",7.339774E-04,icemotor,Emulsion,Utilitycars,0.904
-Non-ferrous metals,"Al, cast, machined",kg,Cylinder head,6.501059E-03,icemotor,Aluminium,Utilitycars,8.007
-Other,Tools,kg,Cylinder head,3.653649E-07,icemotor,Steel,Utilitycars,0.00045
-Non-ferrous metals,"Shavings, Al, cast, machined",kg,Cylinder head,1.614913E-03,icemotor,Aluminium,Utilitycars,1.989
-Non-ferrous metals,"Scrap, Al, cast, machined",kg,Cylinder head,7.632066E-07,icemotor,Aluminium,Utilitycars,0.00094
-Other,Emulsion,kg,Cylinder head,7.201748E-04,icemotor,Emulsion,Utilitycars,0.887
-Ferrous metals,"Steel, extruded",kg,Camshaft,7.063721E-05,icemotor,Steel,Utilitycars,0.087
-Ferrous metals,"Steel, extruded, machined",kg,Camshaft,1.705036E-03,icemotor,Steel,Utilitycars,2.1
-Other,Tools,kg,Camshaft,1.127760E-05,icemotor,Steel,Utilitycars,0.01389
-Ferrous metals,"Shavings, Steel, extruded, machined",kg,Camshaft,3.401953E-04,icemotor,Steel,Utilitycars,0.419
-Ferrous metals,"Scrap, Steel, extruded, machined",kg,Camshaft,3.509127E-05,icemotor,Steel,Utilitycars,0.04322
-Other,Emulsion,kg,Camshaft,5.756527E-04,icemotor,Emulsion,Utilitycars,0.709
-Ferrous metals,"Steel, extruded",kg,"Intake valve, 4 pc.",1.924255E-04,icemotor,Steel,Utilitycars,0.237
-Other,Tools,kg,"Intake valve, 4 pc.",3.222843E-04,icemotor,Steel,Utilitycars,0.39694
-Ferrous metals,"Shavings, Steel, extruded, machined",kg,"Intake valve, 4 pc.",4.384379E-05,icemotor,Steel,Utilitycars,0.054
-Ferrous metals,"Scrap, Steel, extruded, machined",kg,"Intake valve, 4 pc.",8.111100E-06,icemotor,Steel,Utilitycars,0.00999
-Other,Emulsion,kg,"Intake valve, 4 pc.",1.115581E-03,icemotor,Emulsion,Utilitycars,1.374
-Ferrous metals,"Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",2.476362E-04,icemotor,Iron,Utilitycars,0.305
-Other,Tools,kg,"Hydraulic valve lifter, 8 pc",2.914800E-06,icemotor,Steel,Utilitycars,0.00359
-Ferrous metals,"Shavings, Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",1.380267E-05,icemotor,Iron,Utilitycars,0.017
-Ferrous metals,"Scrap, Fe, cast, machined",kg,"Hydraulic valve lifter, 8 pc",5.675334E-06,icemotor,Steel,Utilitycars,0.00699
-Other,Emulsion,kg,"Hydraulic valve lifter, 8 pc",5.334327E-04,icemotor,Emulsion,Utilitycars,0.657
-Non-ferrous metals,"Al, cast",kg,Block and other,1.607605E-04,icemotor,Aluminium,Utilitycars,0.198
-Non-ferrous metals,"Al, cast, machined",kg,Block and other,1.517726E-02,icemotor,Aluminium,Utilitycars,18.693
-Non-ferrous metals,"Al, no specification",kg,Block and other,9.970402E-04,icemotor,Aluminium,Utilitycars,1.228
-Non-ferrous metals,"Al, rolled, stamped",kg,Block and other,1.380267E-03,icemotor,Aluminium,Utilitycars,1.7
-Ferrous metals,"Fe, cast",kg,Block and other,1.234121E-04,icemotor,Iron,Utilitycars,0.152
-Ferrous metals,"Fe, cast, machined",kg,Block and other,2.325182E-02,icemotor,Iron,Utilitycars,28.638
-Ferrous metals,"Fe, forged, machined",kg,Block and other,1.163403E-02,icemotor,Iron,Utilitycars,14.329
-Ferrous metals,"Steel, cast, heat treat",kg,Block and other,7.567113E-04,icemotor,Steel,Utilitycars,0.932
-Ferrous metals,"Steel, cast, machined",kg,Block and other,6.170607E-03,icemotor,Steel,Utilitycars,7.6
-Ferrous metals,"Steel, col rolled, stamped",kg,Block and other,3.491264E-03,icemotor,Steel,Utilitycars,4.3
-Ferrous metals,"Steel, cold rolled",kg,Block and other,2.979754E-04,icemotor,Steel,Utilitycars,0.367
-Ferrous metals,"Steel, extruded",kg,Block and other,1.929127E-03,icemotor,Steel,Utilitycars,2.376
-Ferrous metals,"Steel, galvanized, stamped",kg,Block and other,2.192189E-03,icemotor,Steel,Utilitycars,2.7
-Ferrous metals,"Steel, no specification",kg,Block and other,4.171655E-03,icemotor,Steel,Utilitycars,5.138
-Ferrous metals,"Steel, other",kg,Block and other,2.192189E-03,icemotor,Steel,Utilitycars,2.7
-Polymers,"Plastic, injection molded",kg,Block and other,9.743063E-04,icemotor,Plastic,Utilitycars,1.2
-Polymers,"Rubber, injection molded",kg,Block and other,8.119220E-05,icemotor,Rubber,Utilitycars,0.1
-Polymers,"Rubber, no specification",kg,Block and other,4.391759E-04,icemotor,Rubber,Utilitycars,0.540909
-Polymers,"Rubber, other",kg,Block and other,8.119220E-05,icemotor,Rubber,Utilitycars,0.1
-Other,"Other, other",kg,Block and other,4.871532E-04,icemotor,Plastic,Utilitycars,0.6
-Other,Paint,kg,Paint/Paint shop,9.575322E-03,interior,Paint,Utilitycars,11.79340162
-Polymers,"Polypropylene, 25% Fiberglass (PP-GF25)",kg,Under body finisher,7.031244E-04,interior,Polypropylene,Utilitycars,0.866
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Bumper covers (4),3.897225E-04,interior,Polypropylene,Utilitycars,0.48
-Polymers,Polypropylene (PP),kg,Wheel arc closures (4),3.111285E-03,interior,Polypropylene,Utilitycars,3.832
-Polymers,"Nylon 66, 30% Mineral powder (PA66-MD30)",kg,Road wheel finishers (4),1.331552E-04,interior,Nylon,Utilitycars,0.164
-Polymers,Ethylene propylene diene monomer (EPDM-TD10),kg,Bumpers (2),4.116444E-03,interior,EPDM,Utilitycars,5.07
-Polymers,Polypropylene (PP),kg,Bumpers (2),4.116444E-03,interior,Polypropylene,Utilitycars,5.07
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,Rear lamps (2),7.347894E-04,interior,ABS,Utilitycars,0.905
-Polymers,Polymethyl methacrylate (PMMA),kg,Rear lamps (2),7.347894E-04,interior,Polymethylmethacrylate,Utilitycars,0.905
-Polymers,Acrylonitrile styrene acrylate (ASA),kg,Radiator Grille,2.240905E-04,interior,ASA,Utilitycars,0.276
-Ferous metals,Steel (GREET),kg,"Other, exterior trim (GREET data)",3.483944E-04,interior,Steel,Utilitycars,0.429098382
-Polymers,Rubber (GREET),kg,"Other, exterior trim (GREET data)",1.215329E-04,interior,Rubber,Utilitycars,0.149685482
-Polymers,Rubber (GREET),kg,Sealers/deadeners,7.307298E-04,interior,Rubber,Utilitycars,0.9
-Non-ferrous metals,Copper,kg,Exterior electrical (GREET data),3.321900E-03,interior,Copper,Utilitycars,4.091403177
-Polymers,Other plastic (GREET),kg,Exterior electrical (GREET data),4.780295E-03,interior,Plastic,Utilitycars,5.887628963
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,Centre console,4.741624E-04,interior,ABS,Utilitycars,0.584
-Polymers,Polypropylene ether (PE),kg,Dashboard,3.004923E-03,interior,Polypropylene,Utilitycars,3.701
-Polymers,Polystyrene (PS),kg,Dashboard,3.004923E-03,interior,Polystyrene,Utilitycars,3.701
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,Glove Box,1.734265E-03,interior,ABS,Utilitycars,2.136
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Air Duct,1.932374E-04,interior,Polypropylene,Utilitycars,0.238
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Steering Column Finisher,7.307298E-05,interior,Polypropylene,Utilitycars,0.09
-Ferous metals,Steel (GREET),kg,"Other, Instrument panel (GREET data)",8.978705E-03,interior,Steel,Utilitycars,11.05858198
-Non-ferrous metals,Wrought Aluminium,kg,"Other, Instrument panel (GREET data)",1.951892E-04,interior,Aluminium,Utilitycars,0.240403956
-Non-ferrous metals,Magnesium,kg,"Other, Instrument panel (GREET data)",1.951892E-04,interior,Magnesium,Utilitycars,0.240403956
-Polymers,Rubber (GREET),kg,"Other, Instrument panel (GREET data)",1.951892E-04,interior,Rubber,Utilitycars,0.240403956
-Polymers,Polypropylene ether (PE),kg,B post finishers (2),1.761871E-04,interior,Polypropylene,Utilitycars,0.217
-Polymers,Polypropylene (PP),kg,B post finishers (2),1.761871E-04,interior,Polypropylene,Utilitycars,0.217
-Polymers,Polypropylene ether (PE),kg,C post finishers (2),3.288284E-04,interior,Polypropylene,Utilitycars,0.405
-Polymers,Polypropylene (PP),kg,C post finishers (2),3.288284E-04,interior,Polypropylene,Utilitycars,0.405
-Polymers,Polypropylene ether (PE),kg,Sill finishers (2),3.288284E-04,interior,Polypropylene,Utilitycars,0.405
-Polymers,Polypropylene (PP),kg,Sill finishers (2),3.288284E-04,interior,Polypropylene,Utilitycars,0.405
-Polymers,Polypropylene ether (PE),kg,A post finishers (2),3.288284E-04,interior,Polypropylene,Utilitycars,0.405
-Polymers,Polypropylene (PP),kg,A post finishers (2),3.288284E-04,interior,Polypropylene,Utilitycars,0.405
-Ferous metals,Steel (GREET),kg,"Other, Trim and Insulation (GREET data)",5.323511E-03,interior,Steel,Utilitycars,6.556677708
-Non-ferrous metals,Wrought Aluminium,kg,"Other, Trim and Insulation (GREET data)",1.804580E-05,interior,Aluminium,Utilitycars,0.022226026
-Polymers,Other plastic (GREET),kg,"Other, Trim and Insulation (GREET data)",9.801432E-03,interior,Plastic,Utilitycars,12.07188956
-Polymers,Other plastic (GREET),kg,"Doors, including trunk lid, interior plastics etc.",9.743063E-03,interior,Plastic,Utilitycars,12
-Polymers,Polyurethane (polyether type) (PUR-E),kg,Squab pads,2.840915E-03,interior,Polyurethane,Utilitycars,3.499
-Polymers,Polyurethane (polyether type) (PUR-E),kg,Cushion pads,4.403053E-03,interior,Polyurethane,Utilitycars,5.423
-Polymers,Polyethylene terephthalate (PET),kg,Seat Belts (2),3.069065E-04,interior,PET,Utilitycars,0.378
-Polymers,Nylon 6 (PA6),kg,Height Controls (2),2.159712E-04,interior,Nylon,Utilitycars,0.266
-Polymers,Polyurethane (polyether type) (PUR-E),kg,Head Rest Pads (4),4.027133E-04,interior,Polyurethane,Utilitycars,0.496
-Ferous metals,Steel (GREET),kg,"Other, Seating and restraint (GREET data)",2.819564E-02,interior,Steel,Utilitycars,34.72703185
-Polymers,Other plastic (GREET),kg,"Other, Seating and restraint (GREET data)",1.224797E-02,interior,Plastic,Utilitycars,15.08516099
-Ferous metals,Rolled steel (MUSES),kg,HVAC (GREET),5.033916E-03,interior,Steel,Utilitycars,6.2
-Ferous metals,EAF steel (MUSES),kg,HVAC (GREET),8.119220E-05,interior,Steel,Utilitycars,0.1
-Ferous metals,Galvanized steel (MUSES),kg,HVAC (GREET),4.303186E-03,interior,Steel,Utilitycars,5.3
-Ferous metals,Stainless steel (MUSES),kg,HVAC (GREET),9.743063E-04,interior,Steel,Utilitycars,1.2
-Non-ferrous metals,Cast Aluminium,kg,HVAC (GREET),4.303186E-03,interior,Aluminium,Utilitycars,5.3
-Non-ferrous metals,Extruded aluminum (MUSES),kg,HVAC (GREET),9.743063E-03,interior,Aluminium,Utilitycars,12
-Non-ferrous metals,Rolled aluminum (MUSES),kg,HVAC (GREET),7.307298E-04,interior,Aluminium,Utilitycars,0.9
-Non-ferrous metals,Copper,kg,HVAC (GREET),2.706133E-03,interior,Copper,Utilitycars,3.332996735
-Non-ferrous metals,Zinc,kg,HVAC (GREET),8.102195E-05,interior,Zinc,Utilitycars,0.099790321
-Non-ferrous metals,Other metals,kg,HVAC (GREET),6.495376E-04,interior,Metal,Utilitycars,0.8
-Polymers,Acrylonitrile butadiene styrene (ABS),kg,HVAC (GREET),1.136691E-03,interior,ABS,Utilitycars,1.4
-Polymers,Polypropylene ether (PE),kg,HVAC (GREET),3.247688E-03,interior,Polypropylene,Utilitycars,4
-Polymers,Nylon 66 (PA66),kg,HVAC (GREET),1.623844E-04,interior,Nylon,Utilitycars,0.2
-Polymers,Other plastic (GREET),kg,HVAC (GREET),8.119220E-03,interior,Plastic,Utilitycars,10
-Polymers,Rubber (GREET),kg,HVAC (GREET),2.516958E-03,interior,Rubber,Utilitycars,3.1
-Polymers,Extruded rubber (MUSES),kg,HVAC (GREET),7.307298E-04,interior,Rubber,Utilitycars,0.9
-Other,Other,kg,HVAC (GREET),1.134307E-04,interior,Other,Utilitycars,0.13970645
-Non-ferrous metals,Copper,kg,Interior electrical (GREET),3.321900E-03,interior,Copper,Utilitycars,4.091403177
-Polymers,Other plastic (GREET),kg,Interior electrical (GREET),4.780295E-03,interior,Plastic,Utilitycars,5.887628963
-Ferous metals,Steel (GREET),kg,Weld blanks and fasteners (interior to body) (GREET),4.051098E-03,interior,Steel,Utilitycars,4.98951607
-Polymers,Other plastic (GREET),kg,Weld blanks and fasteners (interior to body) (GREET),4.051098E-03,interior,Plastic,Utilitycars,4.98951607
-Polymers,"Nylon 6, 10% Glass fiber, 20% Minerals (PA6-(GF10+MX20))",kg,Engine Finisher,1.048191E-03,interior,Nylon,Utilitycars,1.291
-Polymers,High density polyethylene (PE-HD),kg,Wash Fluid Tank,4.985201E-04,interior,Polyethylene,Utilitycars,0.614
-Polymers,"Nylon 66, 25% Glass fiber (PA66-GF25)",kg,Steering Oil Tank,1.810586E-04,interior,Nylon,Utilitycars,0.223
-Polymers,Polypropylene ether (PE),kg,Brake Fluid Tank,5.115108E-05,interior,Polypropylene,Utilitycars,0.063
-Polymers,Polypropylene (PP),kg,Brake Fluid Tank,5.115108E-05,interior,Polypropylene,Utilitycars,0.063
-Polymers,"Polypropylene, 20% Talc (PP-TD20)",kg,Wheel Arc Finisher,1.271470E-03,interior,Polypropylene,Utilitycars,1.566
-Polymers,Polypropylene (PP),kg,Load Space Finishers (2),1.375396E-03,interior,Polypropylene,Utilitycars,1.694
-Polymers,Polypropylene ether (PE),kg,Latch Finisher,2.557554E-04,interior,Polypropylene,Utilitycars,0.315
-Polymers,Polypropylene (PP),kg,Latch Finisher,2.557554E-04,interior,Polypropylene,Utilitycars,0.315
-Polymers,Polypropylene ether (PE),kg,Tool Box,1.250360E-04,interior,Polypropylene,Utilitycars,0.154
-Ferous metals,Steel,kg,"Brakes, hardware",8.601985E-03,brakes,Steel,Utilitycars,10.594596
-Ferous metals,Cast iron,kg,"Brakes, hardware",1.474626E-02,brakes,Iron,Utilitycars,18.16216457
-Friction Materials,Barium Sulfate,kg,"Brakes, friction material",1.071737E-11,brakes,Barium sulphate,Utilitycars,1.32E-08
-Friction Materials,Brass,kg,"Brakes, friction material",1.071737E-12,brakes,Brass,Utilitycars,1.32E-09
-Friction Materials,Aluminum Oxide,kg,"Brakes, friction material",1.071737E-11,brakes,Aluminium,Utilitycars,1.32E-08
-Friction Materials,Fibrous Glass,kg,"Brakes, friction material",1.071737E-11,brakes,Glassfibre,Utilitycars,1.32E-08
-Friction Materials,Phenol Formaldehyde Resin,kg,"Brakes, friction material",5.358685E-12,brakes,Resin,Utilitycars,6.60E-09
-Friction Materials,Silica sand,kg,"Brakes, friction material",6.144275E-04,brakes,Silica,Utilitycars,0.756756834
-Friction Materials,Ceramic,kg,"Brakes, friction material",1.228855E-03,brakes,Ceramic,Utilitycars,1.513513667
-Ferous metals,Steel,kg,Cradle,2.430659E-02,chassis,Steel,Utilitycars,29.93709642
-Ferous metals,Steel,kg,Driveshaft/axle,6.002990E-02,chassis,Steel,Utilitycars,73.93555631
-Ferous metals,Steel,kg,Corner suspension,3.314534E-02,chassis,Steel,Utilitycars,40.8233133
-Ferous metals,Steel,kg,Steering system,1.443664E-02,chassis,Steel,Utilitycars,17.7808209
-Non-ferrous metals,Wrought Aluminium,kg,Steering system,2.706870E-03,chassis,Aluminium,Utilitycars,3.33390392
-Polymers,Rubber,kg,Steering system,9.022899E-04,chassis,Rubber,Utilitycars,1.111301307
-Non-ferrous metals,Copper,kg,Chassis electrical,3.321900E-03,chassis,Copper,Utilitycars,4.091403177
-Polymers,Plastic,kg,Chassis electrical,4.780295E-03,chassis,Plastic,Utilitycars,5.887628963
-Ferous metals,Steel,kg,Weld blanks and fasteners (chassis to body),8.102195E-03,chassis,Steel,Utilitycars,9.97903214
-Ferous metals,galv steel,kg,Body-in-white,1.714932E-01,doors,Steel,Utilitycars,211.2188312
-Scrap,"Scrap, galv steel",kg,Body-in-white,3.603182E-02,doors,Steel,Utilitycars,44.37843259
-Ferous metals,Rolled steel,kg,Body panels,1.552178E-02,doors,Steel,Utilitycars,19.11733046
-Ferous metals,EAF steel,kg,Body panels,8.376274E-03,doors,Steel,Utilitycars,10.3166
-Ferous metals,galv steel,kg,Body panels,3.717060E-03,doors,Steel,Utilitycars,4.5781
-Ferous metals,hot rolled steel,kg,Body panels,2.716312E-02,doors,Steel,Utilitycars,33.45532831
-Scrap,"Scrap, Rolled steel",kg,Body panels,3.261226E-03,doors,Steel,Utilitycars,4.016673876
-Scrap,"Scrap, EAF steel",kg,Body panels,1.759909E-03,doors,Steel,Utilitycars,2.167583899
-Scrap,"Scrap, galv steel",kg,Body panels,7.809781E-04,doors,Steel,Utilitycars,0.961888204
-Scrap,"Scrap, hot rolled steel",kg,Body panels,5.707145E-03,doors,Steel,Utilitycars,7.029179283
-Ferous metals,galv steel,kg,Bumpers,6.847279E-03,doors,Steel,Utilitycars,8.43342
-Scrap,"Scrap, galv steel",kg,Bumpers,1.438657E-03,doors,Steel,Utilitycars,1.77191569
-Ferous metals,EAF steel,kg,Body hardware,2.982352E-04,doors,Steel,Utilitycars,0.36732
-Ferous metals,stainless steel,kg,Body hardware,6.467408E-05,doors,Steel,Utilitycars,0.079655544
-Non-ferrous metals,Copper,kg,Body hardware,1.620439E-04,doors,Copper,Utilitycars,0.199580643
-Glass,Glass,kg,Body hardware,4.861317E-05,doors,Glass,Utilitycars,0.059874193
-Polymers,Plastic,kg,Body hardware,4.993876E-03,doors,Plastic,Utilitycars,6.150684932
-Polymers,Rubber,kg,Body hardware,1.863505E-04,doors,Rubber,Utilitycars,0.229517739
-Scrap,"Scrap, EAF steel",kg,Body hardware,6.266112E-05,doors,Steel,Utilitycars,0.07717629
-Scrap,"Scrap, stainless steel",kg,Body hardware,1.358844E-05,doors,Steel,Utilitycars,0.016736141
-Scrap,"Scrap, glass",kg,Body hardware,2.558588E-06,doors,Glass,Utilitycars,0.003151273
-Ferous metals,EAF steel,kg,Weld blanks and fasteners (electronics to body),3.423639E-03,doors,Steel,Utilitycars,4.216709878
-Polymers,Plastic,kg,Weld blanks and fasteners (electronics to body),2.780555E-03,doors,Plastic,Utilitycars,3.424657534
-Scrap,"Scrap, EAF steel",kg,Weld blanks and fasteners (electronics to body),7.193286E-04,doors,Steel,Utilitycars,0.885957819
-Ferous metals,EAF steel,kg,Weld blanks and fasteners (other systems to body),3.423639E-03,doors,Steel,Utilitycars,4.216709878
-Polymers,Plastic,kg,Weld blanks and fasteners (other systems to body),2.780555E-03,doors,Plastic,Utilitycars,3.424657534
-Scrap,"Scrap, EAF steel",kg,Weld blanks and fasteners (other systems to body),7.193286E-04,doors,Steel,Utilitycars,0.885957819
-Ferous metals,galv steel,kg,"Doors, including trunk lid",7.550874E-02,doors,Steel,Utilitycars,93
-Glass,Glass,kg,"Doors, including trunk lid",6.076646E-05,doors,Glass,Utilitycars,0.074842741
-Polymers,Plastic,kg,"Doors, including trunk lid",9.743063E-03,doors,Plastic,Utilitycars,12
-Scrap,"Scrap, galv steel",kg,"Doors, including trunk lid",1.586487E-02,doors,Steel,Utilitycars,19.53989712
-Scrap,"Scrap, glass",kg,"Doors, including trunk lid",3.198235E-06,doors,Glass,Utilitycars,0.003939092
-Glass,Glass,kg,Windscreen glass,9.418295E-03,doors,Glass,Utilitycars,11.6
-Scrap,"Scrap, glass",kg,Windscreen glass,4.956997E-04,doors,Glass,Utilitycars,0.610526316
-Glass,Glass,kg,Rear screen glass,3.710483E-03,doors,Glass,Utilitycars,4.57
-Scrap,"Scrap, glass",kg,Rear screen glass,1.952886E-04,doors,Glass,Utilitycars,0.240526316
-Glass,Glass,kg,Side body glass (6),1.017338E-02,doors,Glass,Utilitycars,12.53
-Scrap,"Scrap, glass",kg,Side body glass (6),5.354412E-04,doors,Glass,Utilitycars,0.659473684
-polymers,Rubber,kg,Tires (x4),1.470006E-02,wheels,Rubber,Utilitycars,18.10526316
-Other,Graphite,kg,Tires (x4),6.762028E-03,wheels,Graphite,Utilitycars,8.328421053
-Ferrous metals,Steel (tires),kg,Tires (x4),4.606019E-03,wheels,Steel,Utilitycars,5.672982456
-Textiles,Textiles,kg,Tires (x4),1.568006E-03,wheels,Textile,Utilitycars,1.93122807
-Non-ferrous metals,Zinc oxide,kg,Tires (x4),2.940012E-04,wheels,Zinc,Utilitycars,0.362105263
-Other,Sulphur,kg,Tires (x4),2.940012E-04,wheels,Sulphur,Utilitycars,0.362105263
-Other,Additives,kg,Tires (x4),2.450010E-03,wheels,Other,Utilitycars,3.01754386
-Ferrous metals,Steel (wheels),kg,Wheels (x4),3.351363E-02,wheels,Steel,Utilitycars,41.27691
-Non-ferrous metals,Lead,kg,Wheels (x4),2.435766E-04,wheels,Lead,Utilitycars,0.3
+Material Group,Material,Unitmass,Vehicle,Class,Component,Part,Part%
+Ferrous metals,Steel,1.6809E-01,icev,Utilitycars,Body,Body-in-white,100%
+Ferrous metals,Steel,5.3691E-02,icev,Utilitycars,Body,Body panels,100%
+Ferrous metals,Steel,6.7114E-03,icev,Utilitycars,Body,Front/rear bumpers,100%
+Polymers,Plastic,6.0268E-03,icev,Utilitycars,Body,Body hardware,89.8%
+Ferrous metals,Steel,3.5570E-04,icev,Utilitycars,Body,Body hardware,5.3%
+Polymers,Rubber,1.5436E-04,icev,Utilitycars,Body,Body hardware,2.3%
+Copper,Copper,1.3423E-04,icev,Utilitycars,Body,Body hardware,2%
+Glass,Glass,4.0268E-05,icev,Utilitycars,Body,Body hardware,0.6%
+Ferrous metals,Steel,3.3557E-03,icev,Utilitycars,Body,Weld blanks and fasteners (electronics to body),50%
+Polymers,Plastic,3.3557E-03,icev,Utilitycars,Body,Weld blanks and fasteners (electronics to body),50%
+Ferrous metals,Steel,3.3557E-03,icev,Utilitycars,Body,Weld blanks and fasteners (other systems to body),50%
+Polymers,Plastic,3.3557E-03,icev,Utilitycars,Body,Weld blanks and fasteners (other systems to body),50%
+Glass,Glass,2.6846E-02,icev,Utilitycars,Body,Glass,100%
+Paint,Paint,7.9317E-03,icev,Utilitycars,Exterior,Paint,100%
+Polymers,Plastic,6.2819E-03,icev,Utilitycars,Exterior,Exterior trim,93.6%
+Ferrous metals,Steel,2.8859E-04,icev,Utilitycars,Exterior,Exterior trim,4.3%
+Polymers,Rubber,1.0067E-04,icev,Utilitycars,Exterior,Exterior trim,1.5%
+Organic,Organic,4.0268E-05,icev,Utilitycars,Exterior,Exterior trim,0.6%
+Polymers,Rubber,1.2203E-03,icev,Utilitycars,Exterior,Sealers/deadeners,100%
+Polymers,Plastic,3.9597E-03,icev,Utilitycars,Exterior,Exterior electrical,59%
+Copper,Copper,2.7517E-03,icev,Utilitycars,Exterior,Exterior electrical,41%
+Ferrous metals,Steel,7.4375E-03,icev,Utilitycars,Interior,Instrument panel,46%
+Polymers,Plastic,7.5991E-03,icev,Utilitycars,Interior,Instrument panel,47%
+Organic,Organic,6.4674E-04,icev,Utilitycars,Interior,Instrument panel,4%
+Aluminium,"Aluminium, wrought alloy",1.6168E-04,icev,Utilitycars,Interior,Instrument panel,1%
+Polymers,Rubber,1.6168E-04,icev,Utilitycars,Interior,Instrument panel,1%
+"Critical Raw Materials, CRM",Magnesium,1.6168E-04,icev,Utilitycars,Interior,Instrument panel,1%
+Polymers,Plastic,1.0045E-02,icev,Utilitycars,Interior,Trim & insulation,67.2%
+Ferrous metals,Steel,4.4097E-03,icev,Utilitycars,Interior,Trim & insulation,29.5%
+Organic,Organic,4.7834E-04,icev,Utilitycars,Interior,Trim & insulation,3.2%
+Aluminium,"Aluminium, wrought alloy",1.4948E-05,icev,Utilitycars,Interior,Trim & insulation,0.1%
+Polymers,Plastic,1.0956E-02,icev,Utilitycars,Interior,Door modules,65.3%
+Organic,Organic,5.4698E-03,icev,Utilitycars,Interior,Door modules,32.6%
+Ferrous metals,Steel,3.0201E-04,icev,Utilitycars,Interior,Door modules,1.8%
+Glass,Glass,5.0336E-05,icev,Utilitycars,Interior,Door modules,0.3%
+Ferrous metals,Steel,2.3356E-02,icev,Utilitycars,Interior,Seating & restraint,58%
+Polymers,Plastic,1.5705E-02,icev,Utilitycars,Interior,Seating & restraint,39%
+Organic,Organic,1.2081E-03,icev,Utilitycars,Interior,Seating & restraint,3%
+Material Group,,0.0000E+00,icev,Utilitycars,Interior,Seating & restraint,
+Ferrous metals,Steel,7.5436E-03,icev,Utilitycars,Interior,HVAC,56.2%
+Aluminium,"Aluminium, wrought alloy",2.8859E-03,icev,Utilitycars,Interior,HVAC,21.5%
+Copper,Copper,2.2416E-03,icev,Utilitycars,Interior,HVAC,16.7%
+Polymers,Plastic,3.2215E-04,icev,Utilitycars,Interior,HVAC,2.4%
+Polymers,Rubber,2.6846E-04,icev,Utilitycars,Interior,HVAC,2%
+Other nonferrous metals,Zinc,6.7114E-05,icev,Utilitycars,Interior,HVAC,0.5%
+Other,Other,9.3960E-05,icev,Utilitycars,Interior,HVAC,0.7%
+Polymers,Plastic,3.9597E-03,icev,Utilitycars,Interior,Interior electrical,59%
+Copper,Copper,2.7517E-03,icev,Utilitycars,Interior,Interior electrical,41%
+Ferrous metals,Steel,3.3557E-03,icev,Utilitycars,Interior,Weld blanks and fasteners (interior to body),50%
+Polymers,Plastic,3.3557E-03,icev,Utilitycars,Interior,Weld blanks and fasteners (interior to body),50%
+Ferrous metals,"Iron, cast",6.8639E-02,icev,Utilitycars,Powertrain,Engine,50%
+Aluminium,"Aluminium, cast alloy",4.1184E-02,icev,Utilitycars,Powertrain,Engine,30%
+Ferrous metals,Steel,1.3728E-02,icev,Utilitycars,Powertrain,Engine,10%
+Polymers,Plastic,6.1775E-03,icev,Utilitycars,Powertrain,Engine,4.5%
+Polymers,Rubber,6.1775E-03,icev,Utilitycars,Powertrain,Engine,4.5%
+Copper,Copper,1.3728E-03,icev,Utilitycars,Powertrain,Engine,1%
+Material Group,,0.0000E+00,icev,Utilitycars,Powertrain,Engine,
+Composites,Carbon Fiber Composite,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,62.8%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,23.2%
+Polymers,Perfluorosulfonic Acid,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,5.4%
+Minerals,Carbon Paper,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,5.0%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,1.5%
+Polymers,Polytetrafluoroethylene,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,1.4%
+Polymers,Carbon/Perfluorosulfonic Acid Suspension,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,0.6%
+"Critical Raw Materials, CRM",Platinum,0.0000E+00,icev,Utilitycars,Powertrain,Fuel cell stack,0.1%
+Ferrous metals,Steel,3.6303E-02,icev,Utilitycars,Powertrain,Engine fuel storage system,100%
+Ferrous metals,Steel,8.0842E-03,icev,Utilitycars,Powertrain,Powertrain thermal,50%
+Polymers,Plastic,8.0842E-03,icev,Utilitycars,Powertrain,Powertrain thermal,50%
+Ferrous metals,Steel,3.0197E-02,icev,Utilitycars,Powertrain,Exhaust,99.985%
+"Critical Raw Materials, CRM",Platinum,4.5302E-06,icev,Utilitycars,Powertrain,Exhaust,0.015%
+Polymers,Plastic,3.9597E-03,icev,Utilitycars,Powertrain,Powertrain electrical,59%
+Copper,Copper,2.7517E-03,icev,Utilitycars,Powertrain,Powertrain electrical,41%
+Polymers,Plastic,3.9597E-03,icev,Utilitycars,Powertrain,Emission control electronics,59%
+Copper,Copper,2.7517E-03,icev,Utilitycars,Powertrain,Emission control electronics,41%
+Ferrous metals,Steel,6.7114E-03,icev,Utilitycars,Powertrain,Weld blanks and fasteners (powertrain to body),100%
+Ferrous metals,Steel,1.7663E-02,icev,Utilitycars,Powertrain,Transmission (ICEV),30%
+Aluminium,"Aluminium, wrought alloy",1.7663E-02,icev,Utilitycars,Powertrain,Transmission (ICEV),30%
+Ferrous metals,"Iron, cast",1.7663E-02,icev,Utilitycars,Powertrain,Transmission (ICEV),30%
+Polymers,Plastic,2.9439E-03,icev,Utilitycars,Powertrain,Transmission (ICEV),5%
+Polymers,Rubber,2.9439E-03,icev,Utilitycars,Powertrain,Transmission (ICEV),5%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Powertrain,Transmission (HEV/FCV),60.5%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Powertrain,Transmission (HEV/FCV),20%
+Copper,Copper,0.0000E+00,icev,Utilitycars,Powertrain,Transmission (HEV/FCV),19%
+Organic,Organic,0.0000E+00,icev,Utilitycars,Powertrain,Transmission (HEV/FCV),0.3%
+Polymers,Plastic,0.0000E+00,icev,Utilitycars,Powertrain,Transmission (HEV/FCV),0.2%
+Ferrous metals,Steel,2.0134E-02,icev,Utilitycars,Chassis,Cradle,100%
+Ferrous metals,Steel,4.9725E-02,icev,Utilitycars,Chassis,Driveshaft/axle,100%
+Ferrous metals,Steel,1.6779E-02,icev,Utilitycars,Chassis,Differential,100%
+Ferrous metals,Steel,2.7456E-02,icev,Utilitycars,Chassis,Corner suspension,100%
+Ferrous metals,Iron,1.5375E-02,icev,Utilitycars,Chassis,Braking system,60%
+Ferrous metals,Steel,8.9689E-03,icev,Utilitycars,Chassis,Braking system,35%
+Ceramics,Friction Material,1.2813E-03,icev,Utilitycars,Chassis,Braking system,5%
+Ferrous metals,Steel,2.7761E-02,icev,Utilitycars,Chassis,Wheels,100%
+Polymers,Rubber,1.8395E-02,icev,Utilitycars,Chassis,Tires,67%
+Ferrous metals,Steel,9.0604E-03,icev,Utilitycars,Chassis,Tires,33%
+Ferrous metals,Steel,1.1959E-02,icev,Utilitycars,Chassis,Steering system,80%
+Aluminium,"Aluminium, wrought alloy",2.2422E-03,icev,Utilitycars,Chassis,Steering system,15%
+Polymers,Rubber,7.4741E-04,icev,Utilitycars,Chassis,Steering system,5%
+Polymers,Plastic,3.9597E-03,icev,Utilitycars,Chassis,Chassis electrical,59%
+Copper,Copper,2.7517E-03,icev,Utilitycars,Chassis,Chassis electrical,41%
+Ferrous metals,Steel,6.7114E-03,icev,Utilitycars,Chassis,Weld blanks and fasteners (chassis to body),100%
+Ferrous metals,Steel,6.7178E-03,icev,Utilitycars,Chassis,Generator,36.1%
+Aluminium,"Aluminium, cast alloy",6.7178E-03,icev,Utilitycars,Chassis,Generator,36.1%
+Copper,Copper,5.0802E-03,icev,Utilitycars,Chassis,Generator,27.3%
+Ferrous metals,Steel,6.7178E-03,icev,Utilitycars,Chassis,Motor,36.1%
+Aluminium,"Aluminium, cast alloy",6.7178E-03,icev,Utilitycars,Chassis,Motor,36.1%
+Copper,Copper,5.0802E-03,icev,Utilitycars,Chassis,Motor,27.3%
+Ferrous metals,Steel,8.2367E-04,icev,Utilitycars,Chassis,Controller/inverter,5.0%
+Aluminium,"Aluminium, cast alloy",7.7425E-03,icev,Utilitycars,Chassis,Controller/inverter,47.0%
+Copper,Copper,1.3508E-03,icev,Utilitycars,Chassis,Controller/inverter,8.2%
+Polymers,Rubber,6.0952E-04,icev,Utilitycars,Chassis,Controller/inverter,3.7%
+Polymers,Plastic,3.9207E-03,icev,Utilitycars,Chassis,Controller/inverter,23.8%
+Organic,Organic,2.0262E-03,icev,Utilitycars,Chassis,Controller/inverter,12.3%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),36.8%
+Composites,Carbon Fiber Composite,0.0000E+00,icev,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),25.7%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),16.7%
+Copper,Copper,0.0000E+00,icev,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),9.6%
+Polymers,Plastic,0.0000E+00,icev,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),8.7%
+Polymers,Rubber,0.0000E+00,icev,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),1.5%
+Other nonferrous metals,Lead,7.5778E-03,icev,Utilitycars,Battery,Pb-Ac Battery,69%
+Organic,Water,1.5485E-03,icev,Utilitycars,Battery,Pb-Ac Battery,14.1%
+Chemicals,Sulfuric Acid,8.6760E-04,icev,Utilitycars,Battery,Pb-Ac Battery,7.9%
+Polymers,Plastic,6.6992E-04,icev,Utilitycars,Battery,Pb-Ac Battery,6.1%
+Composites,Fiberglass,2.3063E-04,icev,Utilitycars,Battery,Pb-Ac Battery,2.1%
+Other,Other,8.7858E-05,icev,Utilitycars,Battery,Pb-Ac Battery,0.8%
+Other nonferrous metals,Nickel,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,28.2%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,23.7%
+Polymers,Plastic,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,22.5%
+Ferrous metals,Iron,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,12%
+"Critical Raw Materials, CRM",Rare Earth Metals,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,6.3%
+Copper,Copper,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,3.9%
+"Critical Raw Materials, CRM",Cobalt,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,1.8%
+"Critical Raw Materials, CRM",Magnesium,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,1%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,0.5%
+Polymers,Rubber,0.0000E+00,icev,Utilitycars,Battery,Ni-MH Battery,0.1%
+"Critical Raw Materials, CRM",LiMn2O4,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,27.0%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,23.7%
+Copper,Copper,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,13.2%
+Minerals,Graphite,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,12.2%
+Polymers,Plastic,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,4.5%
+Polymers,Ethylene Carbonate,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,4.4%
+Polymers,Dimethyl Carbonate,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,4.4%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,2.8%
+Polymers,Glycol,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,2.3%
+Polymers,Binder,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,2.1%
+"Critical Raw Materials, CRM",LiPF6,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,1.5%
+Minerals,Electronicparts,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,1.5%
+Insulation,Thermal Insulation,0.0000E+00,icev,Utilitycars,Battery,Li-Ion HEV Battery,0.4%
+"Critical Raw Materials, CRM",LiMn2O4,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,27.8%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,22.9%
+Copper,Copper,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,14.8%
+Minerals,Graphite,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,12.2%
+Polymers,Ethylene Carbonate,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,4.9%
+Polymers,Dimethyl Carbonate,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,4.9%
+Polymers,Plastic,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,4.3%
+Polymers,Binder,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,2.1%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,1.9%
+"Critical Raw Materials, CRM",LiPF6,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,1.7%
+Polymers,Glycol,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,1.3%
+Minerals,Electronicparts,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,0.9%
+Insulation,Thermal Insulation,0.0000E+00,icev,Utilitycars,Battery,Li-Ion PHEV Battery,0.3%
+"Critical Raw Materials, CRM",LiMn2O4,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,33.4%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,19.1%
+Minerals,Graphite,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,14.6%
+Copper,Copper,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,10.9%
+Polymers,Ethylene Carbonate,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,5.3%
+Polymers,Dimethyl Carbonate,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,5.3%
+Polymers,Plastic,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,3.2%
+Polymers,Binder,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,2.5%
+"Critical Raw Materials, CRM",LiPF6,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,1.8%
+Ferrous metals,Steel,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,1.4%
+Minerals,Electronicparts,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,1.2%
+Polymers,Glycol,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,1.0%
+Insulation,Thermal Insulation,0.0000E+00,icev,Utilitycars,Battery,Li-Ion EV Battery,0.3%

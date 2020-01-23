@@ -1,0 +1,175 @@
+Material Group,Material,Unitmass,Vehicle,Class,Component,Part,Part%
+"Metals, ferrous",Steel,1.6809E-01,icevan,Utilitycars,Body,Body-in-white,100%
+"Metals, ferrous",Steel,5.3691E-02,icevan,Utilitycars,Body,Body panels,100%
+"Metals, ferrous",Steel,6.7114E-03,icevan,Utilitycars,Body,Front/rear bumpers,100%
+Polymers,Plastic,6.0268E-03,icevan,Utilitycars,Body,Body hardware,89.8%
+"Metals, ferrous",Steel,3.5570E-04,icevan,Utilitycars,Body,Body hardware,5.3%
+Polymers,Rubber,1.5436E-04,icevan,Utilitycars,Body,Body hardware,2.3%
+Copper,Copper,1.3423E-04,icevan,Utilitycars,Body,Body hardware,2%
+Glass,Glass,4.0268E-05,icevan,Utilitycars,Body,Body hardware,0.6%
+"Metals, ferrous",Steel,3.3557E-03,icevan,Utilitycars,Body,Weld blanks and fasteners (electronics to body),50%
+Polymers,Plastic,3.3557E-03,icevan,Utilitycars,Body,Weld blanks and fasteners (electronics to body),50%
+"Metals, ferrous",Steel,3.3557E-03,icevan,Utilitycars,Body,Weld blanks and fasteners (other systems to body),50%
+Polymers,Plastic,3.3557E-03,icevan,Utilitycars,Body,Weld blanks and fasteners (other systems to body),50%
+Glass,Glass,2.6846E-02,icevan,Utilitycars,Body,Glass,100%
+Paint,Paint,7.9317E-03,icevan,Utilitycars,Exterior,Paint,100%
+Polymers,Plastic,6.2819E-03,icevan,Utilitycars,Exterior,Exterior trim,93.6%
+"Metals, ferrous",Steel,2.8859E-04,icevan,Utilitycars,Exterior,Exterior trim,4.3%
+Polymers,Rubber,1.0067E-04,icevan,Utilitycars,Exterior,Exterior trim,1.5%
+Organic,Organic,4.0268E-05,icevan,Utilitycars,Exterior,Exterior trim,0.6%
+Polymers,Rubber,1.2203E-03,icevan,Utilitycars,Exterior,Sealers/deadeners,100%
+Polymers,Plastic,3.9597E-03,icevan,Utilitycars,Exterior,Exterior electrical,59%
+Copper,Copper,2.7517E-03,icevan,Utilitycars,Exterior,Exterior electrical,41%
+"Metals, ferrous",Steel,7.4375E-03,icevan,Utilitycars,Interior,Instrument panel,46%
+Polymers,Plastic,7.5991E-03,icevan,Utilitycars,Interior,Instrument panel,47%
+Organic,Organic,6.4674E-04,icevan,Utilitycars,Interior,Instrument panel,4%
+Aluminium,"Aluminium, wrought alloy",1.6168E-04,icevan,Utilitycars,Interior,Instrument panel,1%
+Polymers,Rubber,1.6168E-04,icevan,Utilitycars,Interior,Instrument panel,1%
+"Critical Raw Materials, CRM",Magnesium,1.6168E-04,icevan,Utilitycars,Interior,Instrument panel,1%
+Polymers,Plastic,1.0045E-02,icevan,Utilitycars,Interior,Trim & insulation,67.2%
+"Metals, ferrous",Steel,4.4097E-03,icevan,Utilitycars,Interior,Trim & insulation,29.5%
+Organic,Organic,4.7834E-04,icevan,Utilitycars,Interior,Trim & insulation,3.2%
+Aluminium,"Aluminium, wrought alloy",1.4948E-05,icevan,Utilitycars,Interior,Trim & insulation,0.1%
+Polymers,Plastic,1.0956E-02,icevan,Utilitycars,Interior,Door modules,65.3%
+Organic,Organic,5.4698E-03,icevan,Utilitycars,Interior,Door modules,32.6%
+"Metals, ferrous",Steel,3.0201E-04,icevan,Utilitycars,Interior,Door modules,1.8%
+Glass,Glass,5.0336E-05,icevan,Utilitycars,Interior,Door modules,0.3%
+"Metals, ferrous",Steel,2.3356E-02,icevan,Utilitycars,Interior,Seating & restraint,58%
+Polymers,Plastic,1.5705E-02,icevan,Utilitycars,Interior,Seating & restraint,39%
+Organic,Organic,1.2081E-03,icevan,Utilitycars,Interior,Seating & restraint,3%
+Material Group,,0.0000E+00,icevan,Utilitycars,Interior,Seating & restraint,
+"Metals, ferrous",Steel,7.5436E-03,icevan,Utilitycars,Interior,HVAC,56.2%
+Aluminium,"Aluminium, wrought alloy",2.8859E-03,icevan,Utilitycars,Interior,HVAC,21.5%
+Copper,Copper,2.2416E-03,icevan,Utilitycars,Interior,HVAC,16.7%
+Polymers,Plastic,3.2215E-04,icevan,Utilitycars,Interior,HVAC,2.4%
+Polymers,Rubber,2.6846E-04,icevan,Utilitycars,Interior,HVAC,2%
+"Metals, other nonferrous",Zinc,6.7114E-05,icevan,Utilitycars,Interior,HVAC,0.5%
+Unknown,Other,9.3960E-05,icevan,Utilitycars,Interior,HVAC,0.7%
+Polymers,Plastic,3.9597E-03,icevan,Utilitycars,Interior,Interior electrical,59%
+Copper,Copper,2.7517E-03,icevan,Utilitycars,Interior,Interior electrical,41%
+"Metals, ferrous",Steel,3.3557E-03,icevan,Utilitycars,Interior,Weld blanks and fasteners (interior to body),50%
+Polymers,Plastic,3.3557E-03,icevan,Utilitycars,Interior,Weld blanks and fasteners (interior to body),50%
+"Metals, ferrous","Iron, cast",6.8639E-02,icevan,Utilitycars,Powertrain,Engine,50%
+Aluminium,"Aluminium, cast alloy",4.1184E-02,icevan,Utilitycars,Powertrain,Engine,30%
+"Metals, ferrous",Steel,1.3728E-02,icevan,Utilitycars,Powertrain,Engine,10%
+Polymers,Plastic,6.1775E-03,icevan,Utilitycars,Powertrain,Engine,4.5%
+Polymers,Rubber,6.1775E-03,icevan,Utilitycars,Powertrain,Engine,4.5%
+Copper,Copper,1.3728E-03,icevan,Utilitycars,Powertrain,Engine,1%
+Material Group,,0.0000E+00,icevan,Utilitycars,Powertrain,Engine,
+Composites,Carbon Fiber Composite,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,62.8%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,23.2%
+Polymers,Perfluorosulfonic Acid,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,5.4%
+Minerals,Carbon Paper,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,5.0%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,1.5%
+Polymers,Polytetrafluoroethylene,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,1.4%
+Polymers,Carbon/Perfluorosulfonic Acid Suspension,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,0.6%
+"Critical Raw Materials, CRM",Platinum,0.0000E+00,icevan,Utilitycars,Powertrain,Fuel cell stack,0.1%
+"Metals, ferrous",Steel,3.6303E-02,icevan,Utilitycars,Powertrain,Engine fuel storage system,100%
+"Metals, ferrous",Steel,8.0842E-03,icevan,Utilitycars,Powertrain,Powertrain thermal,50%
+Polymers,Plastic,8.0842E-03,icevan,Utilitycars,Powertrain,Powertrain thermal,50%
+"Metals, ferrous",Steel,3.0197E-02,icevan,Utilitycars,Powertrain,Exhaust,99.985%
+"Critical Raw Materials, CRM",Platinum,4.5302E-06,icevan,Utilitycars,Powertrain,Exhaust,0.015%
+Polymers,Plastic,3.9597E-03,icevan,Utilitycars,Powertrain,Powertrain electrical,59%
+Copper,Copper,2.7517E-03,icevan,Utilitycars,Powertrain,Powertrain electrical,41%
+Polymers,Plastic,3.9597E-03,icevan,Utilitycars,Powertrain,Emission control electronics,59%
+Copper,Copper,2.7517E-03,icevan,Utilitycars,Powertrain,Emission control electronics,41%
+"Metals, ferrous",Steel,6.7114E-03,icevan,Utilitycars,Powertrain,Weld blanks and fasteners (powertrain to body),100%
+"Metals, ferrous",Steel,1.7663E-02,icevan,Utilitycars,Powertrain,Transmission (ICEV),30%
+Aluminium,"Aluminium, wrought alloy",1.7663E-02,icevan,Utilitycars,Powertrain,Transmission (ICEV),30%
+"Metals, ferrous","Iron, cast",1.7663E-02,icevan,Utilitycars,Powertrain,Transmission (ICEV),30%
+Polymers,Plastic,2.9439E-03,icevan,Utilitycars,Powertrain,Transmission (ICEV),5%
+Polymers,Rubber,2.9439E-03,icevan,Utilitycars,Powertrain,Transmission (ICEV),5%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Powertrain,Transmission (HEV/FCV),60.5%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Powertrain,Transmission (HEV/FCV),20%
+Copper,Copper,0.0000E+00,icevan,Utilitycars,Powertrain,Transmission (HEV/FCV),19%
+Organic,Organic,0.0000E+00,icevan,Utilitycars,Powertrain,Transmission (HEV/FCV),0.3%
+Polymers,Plastic,0.0000E+00,icevan,Utilitycars,Powertrain,Transmission (HEV/FCV),0.2%
+"Metals, ferrous",Steel,2.0134E-02,icevan,Utilitycars,Chassis,Cradle,100%
+"Metals, ferrous",Steel,4.9725E-02,icevan,Utilitycars,Chassis,Driveshaft/axle,100%
+"Metals, ferrous",Steel,1.6779E-02,icevan,Utilitycars,Chassis,Differential,100%
+"Metals, ferrous",Steel,2.7456E-02,icevan,Utilitycars,Chassis,Corner suspension,100%
+"Metals, ferrous",Iron,1.5375E-02,icevan,Utilitycars,Chassis,Braking system,60%
+"Metals, ferrous",Steel,8.9689E-03,icevan,Utilitycars,Chassis,Braking system,35%
+Ceramics,Friction Material,1.2813E-03,icevan,Utilitycars,Chassis,Braking system,5%
+"Metals, ferrous",Steel,2.7761E-02,icevan,Utilitycars,Chassis,Wheels,100%
+Polymers,Rubber,1.8395E-02,icevan,Utilitycars,Chassis,Tires,67%
+"Metals, ferrous",Steel,9.0604E-03,icevan,Utilitycars,Chassis,Tires,33%
+"Metals, ferrous",Steel,1.1959E-02,icevan,Utilitycars,Chassis,Steering system,80%
+Aluminium,"Aluminium, wrought alloy",2.2422E-03,icevan,Utilitycars,Chassis,Steering system,15%
+Polymers,Rubber,7.4741E-04,icevan,Utilitycars,Chassis,Steering system,5%
+Polymers,Plastic,3.9597E-03,icevan,Utilitycars,Chassis,Chassis electrical,59%
+Copper,Copper,2.7517E-03,icevan,Utilitycars,Chassis,Chassis electrical,41%
+"Metals, ferrous",Steel,6.7114E-03,icevan,Utilitycars,Chassis,Weld blanks and fasteners (chassis to body),100%
+"Metals, ferrous",Steel,6.7178E-03,icevan,Utilitycars,Chassis,Generator,36.1%
+Aluminium,"Aluminium, cast alloy",6.7178E-03,icevan,Utilitycars,Chassis,Generator,36.1%
+Copper,Copper,5.0802E-03,icevan,Utilitycars,Chassis,Generator,27.3%
+"Metals, ferrous",Steel,6.7178E-03,icevan,Utilitycars,Chassis,Motor,36.1%
+Aluminium,"Aluminium, cast alloy",6.7178E-03,icevan,Utilitycars,Chassis,Motor,36.1%
+Copper,Copper,5.0802E-03,icevan,Utilitycars,Chassis,Motor,27.3%
+"Metals, ferrous",Steel,8.2367E-04,icevan,Utilitycars,Chassis,Controller/inverter,5.0%
+Aluminium,"Aluminium, cast alloy",7.7425E-03,icevan,Utilitycars,Chassis,Controller/inverter,47.0%
+Copper,Copper,1.3508E-03,icevan,Utilitycars,Chassis,Controller/inverter,8.2%
+Polymers,Rubber,6.0952E-04,icevan,Utilitycars,Chassis,Controller/inverter,3.7%
+Polymers,Plastic,3.9207E-03,icevan,Utilitycars,Chassis,Controller/inverter,23.8%
+Organic,Organic,2.0262E-03,icevan,Utilitycars,Chassis,Controller/inverter,12.3%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),36.8%
+Composites,Carbon Fiber Composite,0.0000E+00,icevan,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),25.7%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),16.7%
+Copper,Copper,0.0000E+00,icevan,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),9.6%
+Polymers,Plastic,0.0000E+00,icevan,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),8.7%
+Polymers,Rubber,0.0000E+00,icevan,Utilitycars,Chassis,Fuel cell auxiliaries (includes H2 fuel storage),1.5%
+"Metals, other nonferrous",Lead,7.5778E-03,icevan,Utilitycars,Battery,Pb-Ac Battery,69%
+Organic,Water,1.5485E-03,icevan,Utilitycars,Battery,Pb-Ac Battery,14.1%
+Chemicals,Sulfuric Acid,8.6760E-04,icevan,Utilitycars,Battery,Pb-Ac Battery,7.9%
+Polymers,Plastic,6.6992E-04,icevan,Utilitycars,Battery,Pb-Ac Battery,6.1%
+Composites,Fiberglass,2.3063E-04,icevan,Utilitycars,Battery,Pb-Ac Battery,2.1%
+Unknown,Other,8.7858E-05,icevan,Utilitycars,Battery,Pb-Ac Battery,0.8%
+"Metals, other nonferrous",Nickel,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,28.2%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,23.7%
+Polymers,Plastic,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,22.5%
+"Metals, ferrous",Iron,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,12%
+"Critical Raw Materials, CRM",Rare Earth Metals,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,6.3%
+Copper,Copper,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,3.9%
+"Critical Raw Materials, CRM",Cobalt,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,1.8%
+"Critical Raw Materials, CRM",Magnesium,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,1%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,0.5%
+Polymers,Rubber,0.0000E+00,icevan,Utilitycars,Battery,Ni-MH Battery,0.1%
+"Critical Raw Materials, CRM",Limn2O4,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,27.0%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,23.7%
+Copper,Copper,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,13.2%
+"Critical Raw Materials, CRM",Graphite/Carbon,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,12.2%
+Polymers,Plastic,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,4.5%
+Polymers,Ethylene Carbonate,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,4.4%
+Polymers,Dimethyl Carbonate,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,4.4%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,2.8%
+Polymers,Glycol,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,2.3%
+Polymers,Binder,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,2.1%
+"Critical Raw Materials, CRM",Lipf6,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,1.5%
+Minerals,Electronicparts,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,1.5%
+Insulation,Thermal Insulation,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion HEV Battery,0.4%
+"Critical Raw Materials, CRM",Limn2O4,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,27.8%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,22.9%
+Copper,Copper,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,14.8%
+"Critical Raw Materials, CRM",Graphite/Carbon,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,12.2%
+Polymers,Ethylene Carbonate,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,4.9%
+Polymers,Dimethyl Carbonate,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,4.9%
+Polymers,Plastic,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,4.3%
+Polymers,Binder,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,2.1%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,1.9%
+"Critical Raw Materials, CRM",Lipf6,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,1.7%
+Polymers,Glycol,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,1.3%
+Minerals,Electronicparts,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,0.9%
+Insulation,Thermal Insulation,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion PHEV Battery,0.3%
+"Critical Raw Materials, CRM",Limn2O4,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,33.4%
+Aluminium,"Aluminium, wrought alloy",0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,19.1%
+"Critical Raw Materials, CRM",Graphite/Carbon,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,14.6%
+Copper,Copper,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,10.9%
+Polymers,Ethylene Carbonate,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,5.3%
+Polymers,Dimethyl Carbonate,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,5.3%
+Polymers,Plastic,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,3.2%
+Polymers,Binder,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,2.5%
+"Critical Raw Materials, CRM",Lipf6,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,1.8%
+"Metals, ferrous",Steel,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,1.4%
+Minerals,Electronicparts,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,1.2%
+Polymers,Glycol,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,1.0%
+Insulation,Thermal Insulation,0.0000E+00,icevan,Utilitycars,Battery,Li-Ion EV Battery,0.3%

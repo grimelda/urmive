@@ -1,15 +1,15 @@
 Material Group,Material,Unitmass,Vehicle,Class,FlowId,EcoinventFlow,Partmass,Unit,Part
-Ferrous metals,"Steel, low alloy",2.2216E-01,locomotive,Freighttrains,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",16400,kilogram,Locomotive
+"Metals, ferrous","Steel, low alloy",2.2216E-01,locomotive,Freighttrains,[G330],"steel, low-alloyed, hot rolled_market for steel, low-alloyed, hot rolled[GLO]",16400,kilogram,Locomotive
 Paint,Alkyd paint,5.2153E-03,locomotive,Freighttrains,[G1028],"alkyd paint, white, without solvent, in 60% solution state_market for alkyd paint, white, without solvent, in 60% solution state[GLO]",385,kilogram,Locomotive
 Organic,Organic,6.0348E-03,locomotive,Freighttrains,[G2072],"glued laminated timber, for outdoor use_market for glued laminated timber, for outdoor use[GLO]",445.5,kilogram,Locomotive
 Polymers,Polyvinylchloride,4.1451E-03,locomotive,Freighttrains,[G2651],"polyvinylchloride, suspension polymerised_market for polyvinylchloride, suspension polymerised[GLO]",306,kilogram,Locomotive
-Nonferrous metals,"Aluminium, cast alloy",2.4112E-02,locomotive,Freighttrains,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",1780,kilogram,Locomotive
-Nonferrous metals,Lead,3.5627E-03,locomotive,Freighttrains,[G3787],lead_market for lead[GLO],263,kilogram,Locomotive
+Aluminium,"Aluminium, cast alloy",2.4112E-02,locomotive,Freighttrains,[G3058],"aluminium, cast alloy_market for aluminium, cast alloy[GLO]",1780,kilogram,Locomotive
+"Metals, other nonferrous",Lead,3.5627E-03,locomotive,Freighttrains,[G3787],lead_market for lead[GLO],263,kilogram,Locomotive
 Polymers,Polyethylene,8.5883E-02,locomotive,Freighttrains,[G3952],"polyethylene, high density, granulate_market for polyethylene, high density, granulate[GLO]",6340,kilogram,Locomotive
-Ferrous metals,"Steel, reinforcing",4.6328E-01,locomotive,Freighttrains,[G5916],reinforcing steel_market for reinforcing steel[GLO],34200,kilogram,Locomotive
-Nonferrous metals,Copper,9.2250E-02,locomotive,Freighttrains,[G5949],copper_market for copper[GLO],6810,kilogram,Locomotive
-Nonferrous metals,"Aluminium, wrought alloy",5.1069E-02,locomotive,Freighttrains,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",3770,kilogram,Locomotive
+"Metals, ferrous","Steel, reinforcing",4.6328E-01,locomotive,Freighttrains,[G5916],reinforcing steel_market for reinforcing steel[GLO],34200,kilogram,Locomotive
+Copper,Copper,9.2250E-02,locomotive,Freighttrains,[G5949],copper_market for copper[GLO],6810,kilogram,Locomotive
+Aluminium,"Aluminium, wrought alloy",5.1069E-02,locomotive,Freighttrains,[G9173],"aluminium, wrought alloy_market for aluminium, wrought alloy[GLO]",3770,kilogram,Locomotive
 Polymers,Polyvinylchloride,6.0687E-04,locomotive,Freighttrains,[G10390],"polyvinylchloride, emulsion polymerised_market for polyvinylchloride, emulsion polymerised[GLO]",44.8,kilogram,Locomotive
 Insulation,Stone wool,4.3348E-04,locomotive,Freighttrains,[G10528],"stone wool, packed_market for stone wool, packed[GLO]",32,kilogram,Locomotive
-Ferrous metals,Chromium steel,3.8065E-02,locomotive,Freighttrains,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",2810,kilogram,Locomotive
-Composites,Glass,3.1834E-03,locomotive,Freighttrains,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",235,kilogram,Locomotive
+"Metals, ferrous",Chromium steel,3.8065E-02,locomotive,Freighttrains,[G12999],"steel, chromium steel 18/8, hot rolled_market for steel, chromium steel 18/8, hot rolled[GLO]",2810,kilogram,Locomotive
+Glass,Glass,3.1834E-03,locomotive,Freighttrains,[G14716],"flat glass, uncoated_market for flat glass, uncoated[GLO]",235,kilogram,Locomotive
