@@ -642,7 +642,7 @@ def RunPW(PW, figs=False, wlo='laag'):
         VIOS = pd.concat([VIOS, temp], ignore_index=True, sort=False)
     
     ### drops trailing year entries
-    VIOS = VIOS.loc[~(VIOS['Year'].isin([1999.0,2051.0]))]
+    VIOS = VIOS.loc[~(VIOS['Year'].isin([startmodel,endmodel]))]
     VIOS['PW'] = PW
     VIOS['wlo'] = wlo
     
@@ -703,9 +703,9 @@ def PW5(\
                                    'Vehicle':'str',
                                    'Class':'str',
                                    'Vmass':'float64',
-                                   'lifespan':'float16',
+#                                   'lifespan':'float16',
                                    'PW':'str',
-                                   'wlo':'str',
+#                                   'wlo':'str',
                                    'Material Group':'str',
                                    'Material':'str',
                                    'Unitmass':'float64',
