@@ -575,7 +575,7 @@ def PlotMass1Dim(
                                           traceorder='reversed',
                                           ),
                                   margin=dict(
-                                          l=50,r=0,b=30,t=0,pad=1
+                                          l=50,r=130,b=30,t=0,pad=1,autoexpand=False
                                           ),
                                   bargap=0,
                                   )
